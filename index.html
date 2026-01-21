@@ -3,182 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoCodes - Códigos Roblox Atualizados Diariamente</title>
-    <meta name="description" content="Encontre códigos atualizados para os jogos mais populares do Roblox. Recompensas grátis, pets exclusivos e muito mais!">
+    <title>YoCodes - Melhores Códigos Roblox</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero-header">
+
+    <header>
         <div class="container">
-            <div class="hero-content">
-                <div class="brand-logo">
-                    <h1>YO<span>CODES</span></h1>
-                    <span class="pro-badge">PRO</span>
-                </div>
-                <p class="hero-subtitle">Os códigos mais recentes para os melhores jogos do Roblox, atualizados diariamente.</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Jogos</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Códigos Ativos</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number">Diário</span>
-                        <span class="stat-label">Atualizações</span>
-                    </div>
-                </div>
-            </div>
+            <h1>Yo<span>Codes</span> <small class="pro-tag">PRO</small></h1>
+            <p>Encontre códigos atualizados para os seus jogos favoritos do Roblox.</p>
         </div>
     </header>
 
-    <!-- Search Section -->
-    <section class="search-section">
-        <div class="container">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Buscar jogos..." class="search-input">
-                <span class="search-icon">🔍</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Games Grid -->
     <main class="container">
-        <section class="games-section">
-            <div class="section-header">
-                <h2>Jogos Populares</h2>
-                <p>Clique em um jogo para ver todos os códigos disponíveis</p>
+        <div class="grid-jogos">
+            
+            <a href="jogos/pet-and-tame.html" class="card">
+                <span class="badge-new">NEW</span>
+                <div class="card-img-container">
+                    <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" alt="Pet and Tame">
+                </div>
+                <div class="card-info">
+                    <h3>Pet and Tame RPG</h3>
+                    <p>Pegue moedas e pets grátis agora!</p>
+                    <span class="btn-ver">Ver Códigos →</span>
+                </div>
+            </a>
+
             </div>
-
-            <div class="grid-jogos" id="gamesGrid">
-                <!-- Pet and Tame RPG -->
-                <a href="jogos/pet-and-tame.html" class="game-card" data-game="pet and tame rpg">
-                    <div class="card-badge new">NOVO</div>
-                    <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" alt="Pet and Tame RPG" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Pet and Tame RPG</h3>
-                        <p class="card-description">Códigos para moedas, pets exclusivos e bônus de XP</p>
-                        <div class="card-meta">
-                            <span class="meta-item">
-                                <span class="meta-icon">🎟️</span>
-                                2 códigos ativos
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <span class="btn-view">Ver Códigos →</span>
-                    </div>
-                </a>
-
-                <!-- Exemplo de mais jogos (você pode adicionar mais conforme necessário) -->
-                <a href="#" class="game-card coming-soon" data-game="blox fruits">
-                    <div class="card-badge soon">EM BREVE</div>
-                    <div class="card-image placeholder">
-                        <span class="placeholder-emoji">🍎</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Blox Fruits</h3>
-                        <p class="card-description">Em breve os códigos mais recentes</p>
-                    </div>
-                </a>
-
-                <a href="#" class="game-card coming-soon" data-game="adopt me">
-                    <div class="card-badge soon">EM BREVE</div>
-                    <div class="card-image placeholder">
-                        <span class="placeholder-emoji">🐾</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Adopt Me</h3>
-                        <p class="card-description">Em breve os códigos mais recentes</p>
-                    </div>
-                </a>
-
-                <a href="#" class="game-card coming-soon" data-game="tower defense">
-                    <div class="card-badge soon">EM BREVE</div>
-                    <div class="card-image placeholder">
-                        <span class="placeholder-emoji">🗼</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Tower Defense</h3>
-                        <p class="card-description">Em breve os códigos mais recentes</p>
-                    </div>
-                </a>
-
-                <a href="#" class="game-card coming-soon" data-game="bee swarm">
-                    <div class="card-badge soon">EM BREVE</div>
-                    <div class="card-image placeholder">
-                        <span class="placeholder-emoji">🐝</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Bee Swarm Simulator</h3>
-                        <p class="card-description">Em breve os códigos mais recentes</p>
-                    </div>
-                </a>
-
-                <a href="#" class="game-card coming-soon" data-game="brookhaven">
-                    <div class="card-badge soon">EM BREVE</div>
-                    <div class="card-image placeholder">
-                        <span class="placeholder-emoji">🏡</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Brookhaven</h3>
-                        <p class="card-description">Em breve os códigos mais recentes</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Empty State (quando a busca não encontra nada) -->
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <div class="empty-icon">🔍</div>
-                <h3>Nenhum jogo encontrado</h3>
-                <p>Tente buscar por outro nome ou confira nossos jogos disponíveis</p>
-            </div>
-        </section>
-
-        <!-- Info Section -->
-        <section class="info-section">
-            <div class="info-card">
-                <div class="info-icon">⚡</div>
-                <h3>Códigos Verificados</h3>
-                <p>Todos os códigos são testados manualmente antes de serem publicados</p>
-            </div>
-            <div class="info-card">
-                <div class="info-icon">🔄</div>
-                <h3>Atualizações Diárias</h3>
-                <p>Verificamos e atualizamos nossos códigos todos os dias</p>
-            </div>
-            <div class="info-card">
-                <div class="info-icon">🎮</div>
-                <h3>Mais Jogos</h3>
-                <p>Novos jogos sendo adicionados constantemente</p>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>YO<span>CODES</span></h3>
-                    <p>YoCodes é um site de códigos Roblox que ajuda jogadores a conseguir recompensas no jogo para os títulos mais populares. Encontre códigos funcionais e seja notificado quando novos códigos forem lançados.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 YoCodes - Todos os direitos reservados</p>
-                <p class="footer-disclaimer">YoCodes não é afiliado, associado, endossado ou patrocinado oficialmente pela Roblox Corporation.</p>
-            </div>
+            <p>YoCodes is a Roblox code finder that helps players get in-game rewards for the top games. Find working codes and get notified when new codes release for the most popular Roblox games.</p>
+            <p class="copyright">© 2026 YoCodes - All Rights Reserved</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
