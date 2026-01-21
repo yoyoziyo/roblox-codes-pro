@@ -10,25 +10,23 @@
 
     <nav class="game-nav-bar">
         <div class="container nav-search-wrapper">
-            <a href="../index.html" class="btn-back-home">
-                <span>←</span> Início
-            </a>
-            
+            <a href="../index.html" class="btn-back-home">← Início</a>
             <div class="fake-search-trigger" onclick="location.href='../index.html'">
-                <span style="font-size: 1.1rem;">🔍</span> Pesquisar outro jogo no YoCodes...
+                🔍 Pesquisar outro jogo...
             </div>
-
-            <a href="../index.html" class="nav-logo" style="text-decoration: none; color: #fff; font-weight: 800; font-size: 1.3rem;">Yo<span style="color: #00ff88;">Codes</span></a>
+            <a href="../index.html" class="nav-logo" style="text-decoration: none; color: #fff; font-weight: 800;">
+                YoCodes<span class="pro-tag">PRO</span>
+            </a>
         </div>
     </nav>
 
     <header class="game-header-v2">
         <div class="container">
             <div class="game-intro">
-                <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" class="game-logo-large" alt="Pet and Tame Logo">
+                <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" class="game-logo-large">
                 <div class="game-text">
-                    <h1>Pet and Tame <span>Codes</span></h1>
-                    <p>Lista atualizada com todos os códigos ativos para pets, gemas e boosts.</p>
+                    <h1>Pet and Tame</h1>
+                    <p>Encontre os códigos ativos e expire pets incríveis.</p>
                 </div>
             </div>
         </div>
@@ -37,53 +35,50 @@
     <main class="container">
         <div class="content-narrow">
             
-            <div class="code-card">
-                <span style="font-size: 1.8rem; font-weight: 800; letter-spacing: 1px;">RELEASE</span>
-                <button class="btn-copy" onclick="copyCode('RELEASE', this)">COPIAR</button>
-            </div>
-            
-            <div class="code-card">
-                <span style="font-size: 1.8rem; font-weight: 800; letter-spacing: 1px;">TAME2024</span>
-                <button class="btn-copy" onclick="copyCode('TAME2024', this)">COPIAR</button>
-            </div>
-
-            <section class="redeem-guide">
-                <h2>Como resgatar os códigos?</h2>
-                <ul class="redeem-steps">
-                    <li><span class="step-number">1</span> Inicie o <strong>Pet and Tame</strong> no seu Roblox.</li>
-                    <li><span class="step-number">2</span> No menu lateral, procure pelo botão de <strong>Codes</strong> (ícone de pássaro ou azul).</li>
-                    <li><span class="step-number">3</span> Copie um código da nossa lista e cole no campo de texto.</li>
-                    <li><span class="step-number">4</span> Clique em resgatar e aproveite sua recompensa gratuita!</li>
-                </ul>
+            <section class="codes-section">
+                <h2>Códigos Ativos</h2>
+                
+                <div class="code-card">
+                    <span class="code-val">RELEASE</span>
+                    <button class="btn-copy" onclick="copyCode('RELEASE', this)">COPIAR</button>
+                </div>
+                
+                <div class="code-card">
+                    <span class="code-val">TAME2024</span>
+                    <button class="btn-copy" onclick="copyCode('TAME2024', this)">COPIAR</button>
+                </div>
             </section>
 
-            <div class="community-banner">
-                <div class="banner-left">
-                    <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" class="group-logo" alt="Outfits Central Logo">
-                    <div class="banner-text">
-                        <h4>Quer skins de anime e itens grátis?</h4>
-                        <p>Junte-se a milhares de jogadores no nosso grupo!</p>
-                    </div>
-                </div>
-                <a href="https://www.roblox.com/communities/33319096" target="_blank" class="banner-link">OUTFITS CENTRAL</a>
+            <section class="how-to-redeem">
+                <h2>Como Resgatar?</h2>
+                <ol>
+                    <li>Abra o Pet and Tame no Roblox.</li>
+                    <li>Clique no ícone de <strong>Códigos</strong> no menu.</li>
+                    <li>Insira o código no campo de texto.</li>
+                    <li>Resgate sua recompensa instantaneamente!</li>
+                </ol>
+            </section>
+
+            <div class="promo-banner">
+                <p>Quer skins exclusivas? 
+                   <a href="https://www.roblox.com/communities/33319096" target="_blank" class="btn-promo">Participe do Grupo Outfits Central</a>
+                </p>
             </div>
 
-            <section class="more-games-section">
-                <p class="more-games-title">Outras Páginas de Códigos</p>
+            <section class="more-games">
+                <p style="color: #444; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Veja Também</p>
                 <div class="mini-grid">
-                    <a href="../index.html" class="mini-btn">Blox Fruits</a>
-                    <a href="../index.html" class="mini-btn">Brookhaven</a>
-                    <a href="../index.html" class="mini-btn">Anime Adventures</a>
-                    <a href="../index.html" class="mini-btn">Adopt Me</a>
-                    <a href="../index.html" class="mini-btn">Blade Ball</a>
+                    <a href="../index.html" class="mini-card">Blox Fruits</a>
+                    <a href="../index.html" class="mini-card">Brookhaven</a>
+                    <a href="../index.html" class="mini-card">Adopt Me</a>
+                    <a href="../index.html" class="mini-card">Blade Ball</a>
                 </div>
             </section>
-
         </div>
     </main>
 
-    <footer style="padding: 60px 0; text-align: center; border-top: 1px solid #222; margin-top: 50px; color: #444; font-size: 0.9rem; font-weight: 600;">
-        YoCodes PRO &copy; 2026 - O seu buscador de códigos definitivo.
+    <footer class="main-footer">
+        YoCodes PRO &copy; 2026 - O melhor buscador de Roblox.
     </footer>
 
     <script src="../script.js"></script>
