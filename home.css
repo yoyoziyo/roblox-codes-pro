@@ -30,16 +30,10 @@
     gap: 25px;
     padding-bottom: 80px;
 }
-/* No home.css, adicione/atualize: */
-.badge-new {
-    position: absolute; top: 15px; right: 15px; font-weight: 800;
-    font-size: 0.65rem; background: #00ff88; color: #000;
-    padding: 3px 8px; border-radius: 4px; z-index: 10;
-}
 
-.card { position: relative; } /* Necessário para posicionar a badge */
 .card {
-    display: none; 
+    display: none; /* Lógica de busca */
+    position: relative;
     background: #141418; border: 1px solid #222; border-radius: 20px;
     text-decoration: none; color: white; overflow: hidden;
     transition: 0.3s;
@@ -56,3 +50,9 @@
 .card-info { padding: 20px; }
 .card-info h3 { font-size: 1.3rem; margin-bottom: 5px; }
 .card-info p { color: #00ff88; font-weight: 600; font-size: 0.9rem; }
+
+.badge-new {
+    position: absolute; top: 15px; right: 15px; font-weight: 800;
+    font-size: 0.65rem; background: #00ff88; color: #000;
+    padding: 3px 8px; border-radius: 4px; z-index: 10;
+}
