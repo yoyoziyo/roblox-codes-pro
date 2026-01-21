@@ -93,3 +93,62 @@ h1 span { color: #00ff88; }
     font-weight: 600;
     font-size: 0.9rem;
 }
+
+/* Container da Tabela para Scroll Mobile */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: #141418;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; /* Garante o scroll lateral no mobile */
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #222;
+}
+
+th {
+    background: #1e1e24;
+    color: #00ff88;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background: #1e1e24;
+    transform: scale(1.01); /* Leve levantamento */
+    transition: 0.2s;
+}
+
+.code-text {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #00ffee;
+    font-weight: bold;
+}
+
+/* Feedback visual do botão */
+.btn-copy {
+    background: #2a2a32;
+    border: 1px solid #444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-copy.copied {
+    border-color: #00ff88;
+    color: #00ff88;
+}
