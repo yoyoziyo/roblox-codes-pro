@@ -17,14 +17,16 @@ function filterGames() {
 function copyCode(text, button) {
     navigator.clipboard.writeText(text).then(() => {
         const oldText = button.innerText;
+        const card = button.parentElement; // Pega o card pai
+        
         button.innerText = "COPIADO!";
         button.style.background = "#ffffff";
-        button.style.color = "#000";
+        card.style.borderColor = "#00ff88"; // Brilha a borda do card
 
         setTimeout(() => { 
             button.innerText = oldText; 
             button.style.background = "#00ff88";
-            button.style.color = "#000";
+            card.style.borderColor = "#222"; // Volta ao normal
         }, 2000);
     });
 }
