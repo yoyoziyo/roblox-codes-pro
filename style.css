@@ -40,10 +40,12 @@ body {
 }
 .btn-back-home:hover { border-color: #00ff88; transform: translateX(-5px); }
 
+/* Barra Fake sem a lupa */
 .fake-search-trigger {
     flex-grow: 1; max-width: 500px; background: #0a0a0c;
     border: 1px solid #222; padding: 12px 20px; border-radius: 12px;
     color: #666; font-size: 0.9rem; cursor: pointer; transition: 0.3s;
+    text-align: left;
 }
 .fake-search-trigger:hover { border-color: #00ff88; }
 
@@ -79,14 +81,22 @@ body {
 .btn-copy:hover { transform: scale(1.1); }
 .btn-copy:active { transform: scale(0.95); }
 
-/* GUIA DE RESGATE (HOW TO REDEEM) */
+/* GUIA DE RESGATE (LISTA CENTRALIZADA E NÚMEROS DESTACADOS) */
 .how-to-redeem {
     background: #141418; padding: 40px; border-radius: 16px;
     border-top: 4px solid #00ff88; margin-top: 60px; text-align: center;
 }
-.how-to-redeem h2 { margin-bottom: 20px; font-size: 1.4rem; }
-.how-to-redeem ol { display: inline-block; text-align: left; color: #aaa; padding-left: 20px; max-width: 450px; }
-.how-to-redeem li { margin-bottom: 12px; }
+.how-to-redeem h2 { margin-bottom: 25px; font-size: 1.4rem; font-weight: 800; }
+.how-to-redeem ul { 
+    list-style: none; display: inline-block; text-align: center; 
+    color: #aaa; max-width: 500px; 
+}
+.how-to-redeem li { 
+    margin-bottom: 15px; font-size: 1rem;
+}
+.how-to-redeem li span { 
+    color: #ffffff; font-weight: 800; margin-right: 8px; 
+}
 
 /* BANNER DE COMUNIDADE (PROMO) */
 .promo-banner {
@@ -95,10 +105,10 @@ body {
     margin: 60px 0; display: flex; flex-direction: column; 
     align-items: center; text-align: center; gap: 20px;
 }
-.promo-text p { font-size: 1.1rem; color: #fff; margin-bottom: 5px; }
+.promo-text p { font-size: 1rem; color: #ccc; margin-bottom: 8px; line-height: 1.5; }
+.promo-text strong { color: #fff; }
 .group-logo-promo { width: 70px; height: 70px; border-radius: 14px; border: 2px solid #222; object-fit: cover; }
 .btn-promo { color: #00ff88; font-weight: 800; text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
-.btn-promo:hover { text-decoration: underline; }
 
 /* MAIS JOGOS (MINI GRID) */
 .more-games { text-align: center; margin: 80px 0 40px; }
