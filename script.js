@@ -2,27 +2,32 @@ function filterGames() {
     const input = document.getElementById('gameSearch');
     const filter = input.value.toLowerCase();
     const grid = document.getElementById('gameGrid');
+    const cards = grid.getElementsByClassName('card');
     
-    if (grid) {
-        const cards = grid.getElementsByClassName('card');
-        for (let i = 0; i < cards.length; i++) {
-            let name = cards[i].querySelector('h3').innerText.toLowerCase();
-            
-            if (filter === "") {
-                cards[i].style.display = "none";
-            } else if (name.indexOf(filter) > -1) {
-                cards[i].style.display = "block";
-            } else {
-                cards[i].style.display = "none";
-            }
+    // Converter para Array para usar forEach (mais moderno)
+    Array.from(cards).forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        
+        // Se o input estiver vazio, esconde. Se contiver o termo, mostra.
+        if (filter !== "" && title.includes(filter)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
         }
-    }
+    });
 }
 
 function copyCode(text, button) {
     navigator.clipboard.writeText(text).then(() => {
         const oldText = button.innerText;
         button.innerText = "COPIADO!";
-        setTimeout(() => { button.innerText = oldText; }, 2000);
+        button.style.background = "#ffffff";
+        button.style.color = "#000";
+
+        setTimeout(() => { 
+            button.innerText = oldText; 
+            button.style.background = "#00ff88";
+            button.style.color = "#000";
+        }, 2000);
     });
 }
