@@ -1,58 +1,115 @@
 /* =========================================
-   HOME - BUSCA E GRID
+   HOME LAYOUT - TOP GAMES & DESIGN
    ========================================= */
-.hero-section { text-align: center; padding: 100px 20px 60px; }
-.hero-section h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; }
 
-.search-main {
-    max-width: 600px;
-    margin: 0 auto 50px;
-    position: relative;
+/* Espaçamento geral */
+.top-games-section {
+    padding: 60px 0;
 }
 
-.search-main input {
-    width: 100%;
-    padding: 20px 30px;
-    border-radius: 50px;
-    border: 2px solid #222;
-    background: #141418;
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
     color: #fff;
-    font-size: 1.1rem;
-    outline: none;
-    transition: 0.3s;
 }
 
-.search-main input:focus { border-color: #00ff88; box-shadow: 0 0 20px rgba(0, 255, 136, 0.1); }
-
-.grid-jogos {
+/* Grid de Top Games */
+.top-games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    padding-bottom: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
 }
 
-.card {
-    display: none; /* Lógica de busca */
+/* Card Estilo Roblox (Referência Imagem 2) */
+.top-game-card {
+    background: #11111b; /* Azul marinho profundo */
+    border: 1px solid #1e1e2d;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
     position: relative;
-    background: #141418; border: 1px solid #222; border-radius: 20px;
-    text-decoration: none; color: white; overflow: hidden;
-    transition: 0.3s;
-    animation: fadeIn 0.3s ease-in-out;
+    transition: 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.top-game-card:hover {
+    background: #181825;
+    transform: translateY(-5px);
+    border-color: #00ff88;
 }
 
-.card:hover { transform: translateY(-8px); border-color: #00ff88; }
-.card-img-container img { width: 100%; height: 200px; object-fit: cover; }
-.card-info { padding: 20px; }
-.card-info h3 { font-size: 1.3rem; margin-bottom: 5px; }
-.card-info p { color: #00ff88; font-weight: 600; font-size: 0.9rem; }
+/* Ranking (O circulo com número) */
+.game-rank {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 28px;
+    height: 28px;
+    background: #313244;
+    color: #a6adc8;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #11111b;
+}
 
-.badge-new {
-    position: absolute; top: 15px; right: 15px; font-weight: 800;
-    font-size: 0.65rem; background: #00ff88; color: #000;
-    padding: 3px 8px; border-radius: 4px; z-index: 10;
+/* Imagem quadrada pequena do card */
+.top-game-card img {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Info do Jogo */
+.top-game-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-game-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+}
+
+.top-game-players {
+    color: #00ff88; /* Verde neon para destaque */
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.top-game-players small {
+    color: #585b70;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+/* Ajuste do Footer na Home */
+.main-footer {
+    margin-top: 40px;
+    padding: 40px 0;
+    border-top: 1px solid #1e1e2d;
+    text-align: center;
+    color: #585b70;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .top-games-grid {
+        grid-template-columns: 1fr;
+    }
 }
