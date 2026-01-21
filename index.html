@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoCodes - Roblox Code Finder</title>
+    <title>YoCodes PRO - Roblox Codes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-    <nav class="main-nav">
-        <div class="container nav-content">
-            <a href="index.html" class="nav-logo">Yo<span>Codes</span></a>
-            <div class="nav-links">
-                <a href="index.html">Início</a>
-                <a href="#">Últimos Códigos</a>
-                <a href="https://www.roblox.com/communities/33319096" target="_blank">Comunidade</a>
+    <nav class="main-nav" style="height: 70px; background: #111115; border-bottom: 1px solid #222; display: flex; align-items: center;">
+        <div class="container nav-content" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="index.html" class="nav-logo" style="text-decoration: none; color: #fff; font-weight: 800; font-size: 1.5rem;">YoCodes<span class="pro-tag">PRO</span></a>
+            <div class="nav-links" style="display: flex; gap: 20px;">
+                <a href="index.html" style="color: #ccc; text-decoration: none; font-weight: 600;">Início</a>
+                <a href="https://www.roblox.com/communities/33319096" target="_blank" style="color: #ccc; text-decoration: none; font-weight: 600;">Grupo</a>
             </div>
         </div>
     </nav>
@@ -24,7 +23,7 @@
         <div class="container">
             <h1>Roblox <span>Code Finder</span></h1>
             <div class="search-main">
-                <input type="text" id="gameSearch" placeholder="Digite o nome do jogo..." onkeyup="filterGames()">
+                <input type="text" id="gameSearch" placeholder="Qual jogo você procura hoje?" onkeyup="filterGames()">
             </div>
         </div>
     </header>
@@ -32,6 +31,7 @@
     <main class="container">
         <div class="grid-jogos" id="gameGrid">
             <a href="jogos/pet-and-tame.html" class="card">
+                <span class="badge-new">NEW</span>
                 <div class="card-img-container">
                     <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" alt="Pet and Tame">
                 </div>
@@ -40,7 +40,7 @@
                     <p>Ver códigos →</p>
                 </div>
             </a>
-        </div>
+            </div>
     </main>
 
     <script src="script.js"></script>
