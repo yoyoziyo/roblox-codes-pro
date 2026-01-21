@@ -12,7 +12,7 @@ body {
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Container para páginas de códigos (Mais estreito) */
+/* Container estreito para códigos e explicações */
 .content-narrow { max-width: 850px; margin: 0 auto; }
 
 h1 span { color: #00ff88; }
@@ -40,9 +40,7 @@ header { text-align: center; padding: 60px 20px; }
 }
 
 .card:hover { transform: translateY(-5px); border-color: #00ff88; }
-
 .card-img-container img { width: 100%; height: 200px; object-fit: cover; }
-
 .card-info { padding: 20px; }
 
 .badge-new {
@@ -83,10 +81,15 @@ header { text-align: center; padding: 60px 20px; }
 
 .code-val { font-size: 1.6rem; font-weight: 800; color: #fff; }
 
+/* Botão com efeito de crescer (Scale) */
 .btn-copy {
     background: #00ff88; color: #000; border: none; padding: 12px 25px;
     border-radius: 10px; font-weight: 800; cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
+
+.btn-copy:hover { transform: scale(1.1); } /* Efeito de crescer */
+.btn-copy:active { transform: scale(0.95); } /* Efeito de apertar */
 
 .how-to-redeem {
     background: #141418; padding: 40px; border-radius: 16px;
@@ -105,21 +108,29 @@ header { text-align: center; padding: 60px 20px; }
 
 .btn-promo { color: #fff; font-weight: 700; text-decoration: underline; }
 
-/* Mais Jogos */
+/* Mais Jogos - Sistema de Frame Invisível para Centralizar */
 .more-games { text-align: center; margin: 60px 0; }
 .mini-grid { 
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-    gap: 20px; justify-content: center; margin-top: 20px;
+    display: flex;       /* Frame invisível flexível */
+    flex-wrap: wrap;     /* Quebra de linha automática */
+    gap: 15px; 
+    justify-content: center; /* Centralização perfeita */
+    margin-top: 25px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mini-card {
-    background: #141418; padding: 15px; border-radius: 10px;
+    background: #141418; padding: 15px 25px; border-radius: 10px;
     text-decoration: none; color: #888; border: 1px solid #222;
+    transition: 0.3s; min-width: 150px;
 }
+
+.mini-card:hover { border-color: #00ff88; color: #fff; transform: translateY(-3px); }
 
 /* Footer */
 .main-footer { padding: 80px 20px 40px; border-top: 1px solid #222; text-align: center; color: #444; }
-.copyright { margin-top: 20px; font-weight: 700; color: #222; }
 
 /* Responsivo */
 @media (max-width: 900px) {
