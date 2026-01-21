@@ -108,6 +108,9 @@ body {
 }
 .mini-card:hover { border-color: #00ff88; color: #fff; transform: translateY(-3px); }
 
+/* FOOTER */
+.main-footer { padding: 60px 20px 40px; border-top: 1px solid #222; text-align: center; color: #444; font-size: 0.9rem; }
+
 /* RESPONSIVO */
 @media (max-width: 850px) {
     .game-intro { flex-direction: column; text-align: center; }
