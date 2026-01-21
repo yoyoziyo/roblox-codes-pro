@@ -10,196 +10,450 @@
 body {
     background-color: #0a0a0c;
     color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Container Principal do Site */
 .container {
-    max-width: 1100px; /* Largura padrão do RoCodes */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 /* Container Estreito para Conteúdo de Leitura (Códigos/Resgate) */
 .content-narrow {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 /* =========================================
-   HEADER DO JOGO (ESTILO ROCODES - 2 COLUNAS)
+   HEADER DO JOGO (ESTILO ROCODES - CENTRALIZADO)
    ========================================= */
 .game-header {
-    background: #111115;
-    padding: 60px 0;
-    border-bottom: 1px solid #222;
+    background: linear-gradient(180deg, #111115 0%, #0a0a0c 100%);
+    padding: 80px 0 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #888;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    gap: 6px;
+}
+
+.back-link:hover { 
+    color: #00ff88;
+    transform: translateX(-4px);
 }
 
 .game-intro {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 40px; /* Espaço entre imagem e texto */
+    text-align: center;
+    gap: 30px;
 }
 
 .game-logo-large {
-    width: 300px; /* Imagem grande conforme solicitado */
-    height: 300px;
-    border-radius: 24px;
+    width: 400px;
+    height: 225px;
+    border-radius: 20px;
     object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05);
+    transition: transform 0.3s ease;
+}
+
+.game-logo-large:hover {
+    transform: scale(1.02);
 }
 
 .game-text {
-    flex: 1; /* Faz o texto ocupar o resto do espaço */
+    max-width: 700px;
 }
 
 .game-text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
-.game-text h1 span { color: #00ff88; }
+.game-text h1 span { 
+    color: #00ff88;
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 .game-text p {
-    font-size: 1.1rem;
-    color: #999;
-    max-width: 600px;
+    font-size: 1.15rem;
+    color: #aaa;
+    line-height: 1.7;
+    margin: 0 auto;
 }
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 25px;
-    color: #666;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.back-link:hover { color: #00ff88; }
 
 /* =========================================
-   SISTEMA DE CÓDIGOS (CLEAN)
+   SISTEMA DE CÓDIGOS (CLEAN & MODERNO)
    ========================================= */
-.codes-section { margin: 60px 0; }
+.codes-section { 
+    margin: 80px 0 60px;
+}
 
 .codes-section h2 {
     color: #00ff88;
-    font-size: 0.9rem;
-    letter-spacing: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.codes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .code-card { 
-    background: #141418; 
-    padding: 25px 35px; 
+    background: linear-gradient(135deg, #141418 0%, #0f0f12 100%);
+    padding: 28px 40px; 
     border-radius: 16px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    border: 1px solid #222;
-    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,255,136,0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.code-card:hover {
+    border-color: rgba(0,255,136,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,255,136,0.1);
+}
+
+.code-card:hover::before {
+    opacity: 1;
 }
 
 .code-val {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: 'Monaco', 'Courier New', monospace;
 }
 
 .btn-copy {
-    background: #00ff88;
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%);
     color: #000;
     border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
+    padding: 14px 32px;
+    border-radius: 12px;
     font-weight: 800;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0,255,136,0.25);
 }
 
-.btn-copy.copied { background: #fff; }
+.btn-copy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,255,136,0.35);
+}
+
+.btn-copy:active {
+    transform: translateY(0);
+}
+
+.btn-copy.copied { 
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.25);
+}
 
 /* =========================================
-   COMO RESGATAR & PROPAGANDA
+   COMO RESGATAR
    ========================================= */
 .how-to-redeem {
-    background: #141418;
-    padding: 40px;
-    border-radius: 16px;
-    border-top: 4px solid #00ff88;
-    margin-bottom: 40px;
+    background: linear-gradient(135deg, #141418 0%, #0f0f12 100%);
+    padding: 50px 60px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-top: 3px solid #00ff88;
+    margin: 60px 0;
     text-align: center;
 }
 
-.how-to-redeem h3 { margin-bottom: 25px; font-size: 1.5rem; }
+.how-to-redeem h3 { 
+    margin-bottom: 35px; 
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
 
 .how-to-redeem ol {
     display: inline-block;
     text-align: left;
     color: #aaa;
+    line-height: 2;
+    counter-reset: step-counter;
+    list-style: none;
 }
 
-.how-to-redeem li { margin-bottom: 12px; font-size: 1.05rem; }
+.how-to-redeem li {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    padding-left: 40px;
+    position: relative;
+    counter-increment: step-counter;
+}
 
-.promo-banner {
-    background: linear-gradient(135deg, #1e1e24 0%, #0a0a0c 100%);
-    padding: 30px;
-    border-radius: 20px;
+.how-to-redeem li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #00ff88;
+    color: #000;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    border: 1px dashed #444;
-    margin: 60px 0;
+    font-weight: 700;
+    font-size: 0.85rem;
 }
 
-.promo-banner img { width: 90px; height: 90px; border-radius: 15px; }
-
-.promo-info h4 { color: #00ff88; font-size: 1.3rem; margin-bottom: 5px; }
-
-.btn-promo { color: #fff; font-weight: 700; text-decoration: underline; }
+.how-to-redeem strong {
+    color: #00ff88;
+    font-weight: 700;
+}
 
 /* =========================================
-   MAIS JOGOS & FOOTER
+   PROPAGANDA
    ========================================= */
-.more-games { text-align: center; padding: 60px 0; }
+.promo-banner {
+    background: linear-gradient(135deg, #1e1e24 0%, #0f0f12 100%);
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border: 2px dashed rgba(255,255,255,0.1);
+    margin: 60px 0;
+    transition: all 0.3s ease;
+}
+
+.promo-banner:hover {
+    border-color: rgba(0,255,136,0.3);
+}
+
+.promo-banner img { 
+    width: 110px; 
+    height: 110px; 
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.promo-info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.promo-info h4 { 
+    color: #00ff88;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.promo-info p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn-promo { 
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 24px;
+    background: rgba(0,255,136,0.1);
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-promo:hover {
+    background: #00ff88;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MAIS JOGOS
+   ========================================= */
+.more-games { 
+    text-align: center; 
+    padding: 80px 0 60px;
+}
+
+.more-games h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #fff;
+}
 
 .mini-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .mini-card {
-    background: #141418;
-    padding: 20px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #141418 0%, #0f0f12 100%);
+    padding: 28px 20px;
+    border-radius: 14px;
     text-decoration: none;
     color: #ccc;
-    border: 1px solid #222;
-    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
-.mini-card:hover { border-color: #00ff88; color: #fff; }
+.mini-card:hover { 
+    border-color: #00ff88;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,255,136,0.15);
+}
 
+/* =========================================
+   FOOTER
+   ========================================= */
 .main-footer {
     padding: 80px 20px 40px;
-    border-top: 1px solid #222;
+    border-top: 1px solid rgba(255,255,255,0.06);
     text-align: center;
-    color: #555;
-    font-size: 0.9rem;
+    color: #666;
+    font-size: 0.95rem;
 }
 
-/* RESPONSIVIDADE (MOBILE) */
+.main-footer p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+}
+
+.main-footer .copyright {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
 @media (max-width: 900px) {
-    .game-intro { flex-direction: column; text-align: center; }
-    .game-logo-large { width: 200px; height: 200px; }
-    .game-text h1 { font-size: 2.2rem; }
-    .code-card { flex-direction: column; gap: 20px; text-align: center; }
-    .promo-banner { flex-direction: column; }
+    .game-header { padding: 60px 0 40px; }
+    
+    .game-logo-large { 
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    
+    .game-text h1 { 
+        font-size: 2.5rem;
+    }
+    
+    .game-text p {
+        font-size: 1rem;
+    }
+    
+    .code-card { 
+        flex-direction: column; 
+        gap: 20px; 
+        text-align: center;
+        padding: 24px 28px;
+    }
+    
+    .code-val {
+        font-size: 1.4rem;
+    }
+    
+    .btn-copy {
+        width: 100%;
+        padding: 16px;
+    }
+    
+    .promo-banner { 
+        flex-direction: column;
+        padding: 30px 24px;
+        text-align: center;
+    }
+    
+    .how-to-redeem {
+        padding: 40px 24px;
+    }
+    
+    .how-to-redeem li {
+        font-size: 1rem;
+    }
+    
+    .mini-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .game-text h1 {
+        font-size: 2rem;
+    }
+    
+    .codes-section {
+        margin: 60px 0 40px;
+    }
+    
+    .more-games {
+        padding: 60px 0 40px;
+    }
 }
