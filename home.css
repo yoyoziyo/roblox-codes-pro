@@ -14,6 +14,7 @@
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 25px;
+    color: #fff;
 }
 
 .hero-section h1 span {
@@ -38,7 +39,6 @@
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
 }
 
-/* SEÇÃO LAST UPDATES */
 .updates-section {
     padding: 20px 0 60px;
 }
@@ -62,14 +62,12 @@
     font-weight: 600;
 }
 
-/* GRID DE ATUALIZAÇÕES */
 .updates-grid {
     display: flex;
-    flex-direction: column; /* Lista vertical para parecer um feed de notícias */
+    flex-direction: column;
     gap: 12px;
 }
 
-/* CARD DE ATUALIZAÇÃO */
 .update-card {
     background: #141418;
     border: 1px solid #222;
@@ -114,7 +112,7 @@
 }
 
 .update-status {
-    color: #00ff88; /* Verde Neon */
+    color: #00ff88;
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 1px;
@@ -127,7 +125,6 @@
     text-transform: uppercase;
 }
 
-/* FOOTER */
 .main-footer {
     padding: 60px 0;
     border-top: 1px solid #222;
@@ -136,8 +133,7 @@
     font-size: 0.9rem;
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 600px) {
     .update-card { padding: 12px; }
-    .update-date { display: none; } /* Esconde a data no celular para dar espaço */
+    .update-date { display: none; }
 }
