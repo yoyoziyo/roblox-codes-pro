@@ -4,11 +4,8 @@ function filterGames() {
     const grid = document.getElementById('gameGrid');
     const cards = grid.getElementsByClassName('card');
     
-    // Converter para Array para usar forEach (mais moderno)
     Array.from(cards).forEach(card => {
         const title = card.querySelector('h3').innerText.toLowerCase();
-        
-        // Se o input estiver vazio, esconde. Se contiver o termo, mostra.
         if (filter !== "" && title.includes(filter)) {
             card.style.display = "block";
         } else {
@@ -31,3 +28,9 @@ function copyCode(text, button) {
         }, 2000);
     });
 }
+
+// Foca no campo de busca ao carregar a home
+window.onload = function() {
+    const searchInput = document.getElementById('gameSearch');
+    if (searchInput) searchInput.focus();
+};
