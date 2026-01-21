@@ -111,20 +111,30 @@ header {
 .back-link { color: #666; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 .back-link:hover { color: #00ff88; }
 
-/* Seção de Códigos (Estilo Card Único) */
-.codes-section { margin: 40px 0; }
-.codes-section h2 { color: #00ff88; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: 2px; }
-.codes-grid { display: flex; flex-direction: column; gap: 15px; }
+/* Ajuste na Seção de Códigos */
+.codes-section { 
+    margin: 40px auto; 
+    text-align: center; /* Centraliza o título CÓDIGOS */
+}
 
+.codes-section h2 { 
+    color: #00ff88; 
+    margin-bottom: 25px; 
+    font-size: 1.1rem; 
+    letter-spacing: 3px; 
+}
+
+/* Deixando o card de código mais curto e centralizado */
 .code-card { 
     background: #141418; 
-    padding: 15px 25px; 
+    padding: 18px 30px; 
     border-radius: 12px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center;
     border: 1px solid #222;
     transition: 0.2s;
+    margin-bottom: 12px;
 }
 .code-card:hover { border-color: #333; background: #18181d; }
 .code-val { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; letter-spacing: 1px; }
@@ -144,11 +154,21 @@ header {
 .btn-copy:hover { transform: scale(1.05); filter: brightness(1.1); }
 .btn-copy.copied { background: #fff; color: #000; }
 
-/* Como Resgatar */
-.how-to-redeem { background: #141418; padding: 30px; border-radius: 12px; margin: 40px 0; border-left: 4px solid #00ff88; }
-.how-to-redeem h3 { margin-bottom: 15px; color: #fff; }
-.how-to-redeem ol { margin-left: 20px; color: #ccc; }
-.how-to-redeem li { margin-bottom: 10px; }
+/* Ajuste no Como Resgatar para não ser gigante */
+.how-to-redeem { 
+    background: #141418; 
+    padding: 35px; 
+    border-radius: 12px; 
+    margin: 40px auto; 
+    border-left: none; /* Remove a borda lateral para ficar mais clean */
+    border-top: 3px solid #00ff88; /* Borda no topo fica mais moderno */
+    text-align: left; /* Texto alinhado à esquerda dentro do bloco centralizado */
+}
+
+.how-to-redeem h3 { 
+    text-align: center; /* Centraliza apenas o título da explicação */
+    margin-bottom: 20px; 
+}
 
 /* Banner de Propaganda (Seu Jogo/Outfits) */
 .promo-banner { 
