@@ -2,11 +2,11 @@
    HOME LAYOUT - TEMA FOCO VERDE NEON
    ========================================= */
 
-/* Seção de Busca (Hero) - Mantendo seu estilo Dark */
+/* Seção de Busca (Hero) */
 .hero-section {
     padding: 80px 0;
     text-align: center;
-    background: #0d0d10; /* Preto levemente diferente do fundo */
+    background: #0d0d10;
     border-bottom: 1px solid #222;
     margin-bottom: 40px;
 }
@@ -18,7 +18,7 @@
 }
 
 .hero-section h1 span {
-    color: #00ff88; /* Seu Verde Neon */
+    color: #00ff88;
 }
 
 .search-main input {
@@ -39,7 +39,7 @@
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
 }
 
-/* Grid de Jogos Pesquisados */
+/* Grid de Jogos (Resultados da Busca) */
 .grid-jogos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -47,7 +47,7 @@
     margin-bottom: 80px;
 }
 
-/* SEÇÃO TOP GAMES - Cores YoCodes */
+/* SEÇÃO TOP GAMES */
 .top-games-section {
     padding: 40px 0;
     border-top: 1px solid #222;
@@ -68,9 +68,9 @@
     gap: 25px;
 }
 
-/* Card de Ranking - Estilo Dark Profissional */
+/* Card de Ranking */
 .top-game-card {
-    background: #141418; /* Mesma cor dos seus outros elementos */
+    background: #141418;
     border: 1px solid #222;
     border-radius: 16px;
     padding: 18px;
@@ -82,20 +82,14 @@
     transition: 0.3s;
 }
 
-.top-game-card:hover {
-    border-color: #00ff88;
-    transform: translateY(-5px);
-    background: #1a1a20;
-}
-
-/* O número do Ranking (Bolinha Verde) */
+/* Bolinha do Ranking em Verde Neon */
 .game-rank {
     position: absolute;
     top: -12px;
     left: -12px;
     width: 32px;
     height: 32px;
-    background: #00ff88; /* Verde neon para destacar o número */
+    background: #00ff88;
     color: #000;
     font-size: 0.9rem;
     font-weight: 800;
@@ -106,12 +100,16 @@
     border: 3px solid #0a0a0c;
 }
 
-.top-game-card img {
+/* Placeholder da Imagem (API) */
+.game-img-placeholder {
     width: 60px;
     height: 60px;
     border-radius: 12px;
-    object-fit: cover;
-    border: 1px solid #333;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
 }
 
 .top-game-info {
@@ -127,13 +125,13 @@
 }
 
 .top-game-players {
-    color: #888; /* Cinza para não brigar com o verde do ranking */
+    color: #888;
     font-size: 0.85rem;
     font-weight: 600;
 }
 
 .top-game-players strong {
-    color: #00ff88; /* Apenas o número em Verde */
+    color: #00ff88;
     margin-right: 3px;
 }
 
@@ -150,5 +148,4 @@
 /* Responsividade */
 @media (max-width: 600px) {
     .top-games-grid { grid-template-columns: 1fr; }
-    .hero-section h1 { font-size: 2rem; }
 }
