@@ -3,46 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet and Tame RPG Codes - Roblox</title>
+    <title>Pet and Tame RPG Codes - YoCodes</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <a href="../index.html" style="color: #666; text-decoration: none; font-size: 0.9rem;">← Voltar para Home</a>
-        <h1>Pet and Tame <span>RPG</span></h1>
+    <header class="game-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Voltar para Home</a>
+            <div class="game-intro">
+                <img src="https://tr.rbxcdn.com/f9d77e686300155b1853d9e365007324/420/420/Image/Png" alt="Game Logo" class="game-logo-large">
+                <div class="game-text">
+                    <h1>Pet and Tame <span>RPG</span></h1>
+                    <p>Encontre os códigos mais recentes para ganhar moedas, pets exclusivos e bônus de XP no Pet and Tame.</p>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="container">
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Recompensa</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="code-text">RELEASE</td>
-                        <td>250 Moedas</td>
-                        <td>
-                            <button class="btn-copy" onclick="copyCode('RELEASE', this)">Copiar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="code-text">TAME2024</td>
-                        <td>Pet Lendário</td>
-                        <td>
-                            <button class="btn-copy" onclick="copyCode('TAME2024', this)">Copiar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="codes-section">
+            <h2>CÓDIGOS</h2>
+            <div class="codes-grid">
+                <div class="code-card">
+                    <span class="code-val">RELEASE</span>
+                    <button class="btn-copy" onclick="copyCode('RELEASE', this)">COPIAR</button>
+                </div>
+                <div class="code-card">
+                    <span class="code-val">TAME2024</span>
+                    <button class="btn-copy" onclick="copyCode('TAME2024', this)">COPIAR</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-to-redeem">
+            <h3>Como resgatar códigos no Pet and Tame?</h3>
+            <ol>
+                <li>Abra o jogo <strong>Pet and Tame</strong> no Roblox.</li>
+                <li>Clique no ícone de <strong>Twitter/Pássaro</strong> ou no botão <strong>Codes</strong> na lateral da tela.</li>
+                <li>Digite o código exatamente como mostrado acima.</li>
+                <li>Clique em <strong>Redeem</strong> e aproveite sua recompensa!</li>
+            </ol>
+        </section>
+
+        <section class="promo-banner">
+            <img src="https://via.placeholder.com/100x100" alt="Anime Outfits">
+            <div class="promo-info">
+                <h4>Anime Outfits Store</h4>
+                <p>As melhores roupas de anime do Roblox pelo menor preço! Confira nossa coleção exclusiva de jaquetas e acessórios.</p>
+                <a href="#" class="btn-promo">Visitar Loja</a>
+            </div>
+        </section>
+
+        <section class="more-games">
+            <h3>Mais Jogos</h3>
+            <div class="mini-grid">
+                <a href="#" class="mini-card">Blox Fruits</a>
+                <a href="#" class="mini-card">Adopt Me</a>
+                <a href="#" class="mini-card">Brookhaven</a>
+                <a href="#" class="mini-card">Bee Swarm</a>
+            </div>
+        </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>YoCodes is a Roblox code finder that helps players get in-game rewards for the top games. Find working codes and get notified when new codes release for the most popular Roblox games.</p>
+            <p class="copyright">© 2026 YoCodes - All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script src="../script.js"></script>
 </body>
