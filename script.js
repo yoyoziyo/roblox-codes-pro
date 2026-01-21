@@ -8,7 +8,6 @@ function filterGames() {
         for (let i = 0; i < cards.length; i++) {
             let name = cards[i].querySelector('h3').innerText.toLowerCase();
             
-            // Se o campo estiver vazio, esconde tudo. Se tiver texto, filtra.
             if (filter === "") {
                 cards[i].style.display = "none";
             } else if (name.indexOf(filter) > -1) {
@@ -22,8 +21,8 @@ function filterGames() {
 
 function copyCode(text, button) {
     navigator.clipboard.writeText(text).then(() => {
-        const old = button.innerText;
+        const oldText = button.innerText;
         button.innerText = "COPIADO!";
-        setTimeout(() => { button.innerText = old; }, 2000);
+        setTimeout(() => { button.innerText = oldText; }, 2000);
     });
 }
