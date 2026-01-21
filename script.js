@@ -1,14 +1,30 @@
+// Função para filtrar os jogos na página inicial
+function filterGames() {
+    const input = document.getElementById('gameSearch');
+    const filter = input.value.toLowerCase();
+    const grid = document.querySelector('.grid-jogos');
+    
+    // Verifica se a grid existe (só existe na Home)
+    if (grid) {
+        const cards = grid.getElementsByClassName('card');
+        for (let i = 0; i < cards.length; i++) {
+            let name = cards[i].querySelector('h3').innerText;
+            if (name.toLowerCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+}
+
+// Função para copiar os códigos
 function copyCode(text, button) {
-    // Copia o texto para a área de transferência
     navigator.clipboard.writeText(text).then(() => {
-        // Salva o texto original do botão (COPIAR)
         const originalText = button.innerText;
-        
-        // Muda o estilo e o texto do botão
         button.innerText = "COPIADO!";
         button.classList.add("copied");
         
-        // Volta ao normal após 2 segundos
         setTimeout(() => {
             button.innerText = originalText;
             button.classList.remove("copied");
