@@ -15,7 +15,7 @@ body {
 h1 span { color: #00ff88; }
 
 /* =========================================
-   NAVBAR (SEM BUSCA)
+   NAVBAR (APENAS PARA A HOME)
    ========================================= */
 .main-nav {
     width: 100%;
@@ -58,7 +58,6 @@ h1 span { color: #00ff88; }
 
 .search-main input:focus { border-color: #00ff88; box-shadow: 0 0 20px rgba(0, 255, 136, 0.1); }
 
-/* GRID: Inicialmente escondida */
 .grid-jogos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -66,7 +65,6 @@ h1 span { color: #00ff88; }
     padding-bottom: 80px;
 }
 
-/* Esconde os cards por padrão */
 .card {
     display: none; 
     background: #141418; border: 1px solid #222; border-radius: 16px;
@@ -79,12 +77,19 @@ h1 span { color: #00ff88; }
 .card-info { padding: 20px; }
 
 /* =========================================
-   PÁGINA DO JOGO (VERSÃO ANTERIOR FOCO TOTAL)
+   PÁGINA DO JOGO (FOCO TOTAL)
    ========================================= */
-.game-header-v2 { background: #111115; padding: 80px 0; border-bottom: 1px solid #222; margin-bottom: 50px; }
+.game-header-v2 { 
+    background: #111115; 
+    padding: 80px 0; 
+    border-bottom: 1px solid #222; 
+    margin-bottom: 50px; 
+}
+
 .game-intro { display: flex; align-items: center; gap: 50px; }
 .game-logo-large { width: 300px; height: 300px; border-radius: 30px; object-fit: cover; box-shadow: 0 25px 50px rgba(0,0,0,0.6); }
 .game-text h1 { font-size: 3.2rem; font-weight: 800; }
+.game-text p { color: #888; font-size: 1.2rem; margin-top: 10px; }
 
 .code-card {
     background: #141418; padding: 25px 35px; border-radius: 16px;
