@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoCodes - Melhores Códigos Roblox</title>
+    <title>YoCodes - Roblox Code Finder</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Yo<span>Codes</span> <small class="pro-tag">PRO</small></h1>
-            <p>Encontre códigos atualizados para os seus jogos favoritos do Roblox.</p>
+    <nav class="main-nav">
+        <div class="container nav-content">
+            <a href="index.html" class="nav-logo">Yo<span>Codes</span></a>
             
-            <div class="search-container">
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="#">Últimos Códigos</a>
+                <a href="https://www.roblox.com/communities/33319096" target="_blank">Comunidade</a>
+            </div>
+
+            <div class="nav-search">
                 <input type="text" id="gameSearch" placeholder="Pesquisar jogo..." onkeyup="filterGames()">
             </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Roblox <span>Code Finder</span> & Tracker</h1>
+            <p>Os códigos mais recentes, testados e funcionando diariamente.</p>
         </div>
     </header>
 
     <main class="container">
-        <div class="grid-jogos">
+        <div class="grid-jogos" id="gameGrid">
             
             <a href="jogos/pet-and-tame.html" class="card">
-                <span class="badge-new">NEW</span>
                 <div class="card-img-container">
                     <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" alt="Pet and Tame">
                 </div>
                 <div class="card-info">
                     <h3>Pet and Tame</h3>
-                    <p>Pegue moedas e pets grátis agora!</p>
-                    <span class="btn-ver">Ver Códigos →</span>
-                </div>
-            </a>
-
-            <a href="#" class="card">
-                <div class="card-img-container">
-                    <img src="https://via.placeholder.com/400x200" alt="Blox Fruits">
-                </div>
-                <div class="card-info">
-                    <h3>Blox Fruits</h3>
-                    <p>Códigos de XP e Reset de Status.</p>
-                    <span class="btn-ver">Ver Códigos →</span>
+                    <p>Códigos atualizados hoje!</p>
                 </div>
             </a>
 
@@ -51,8 +50,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>YoCodes is a Roblox code finder that helps players get in-game rewards for the top games.</p>
-            <p class="copyright">© 2026 YoCodes - All Rights Reserved</p>
+            <p>© 2026 YoCodes - Todos os direitos reservados.</p>
         </div>
     </footer>
 
