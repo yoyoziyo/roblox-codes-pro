@@ -19,6 +19,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 .content-narrow {
     max-width: 800px;
     margin: 0 auto;
@@ -95,40 +96,23 @@ header {
     100% { background-position: 200%; }
 }
 
-.btn-ver {
-    display: inline-block;
-    margin-top: 15px;
-    color: #00ff88;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
 /* =========================================
-   PÁGINA INTERNA DO JOGO (NOVO LAYOUT)
+   PÁGINA INTERNA DO JOGO
    ========================================= */
 
 /* Header do Jogo */
-.game-header { background: #111115; padding: 40px 0; border-bottom: 1px solid #222; text-align: left; }
+.game-header { background: #111115; padding: 40px 0; border-bottom: 1px solid #222; }
 .game-intro { display: flex; align-items: center; gap: 30px; margin-top: 20px; }
 .game-logo-large { width: 120px; height: 120px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); object-fit: cover; }
 .game-text h1 { font-size: 2.5rem; margin-bottom: 10px; }
 .back-link { color: #666; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 .back-link:hover { color: #00ff88; }
 
-/* Ajuste na Seção de Códigos */
-.codes-section { 
-    margin: 40px auto; 
-    text-align: center; /* Centraliza o título CÓDIGOS */
-}
+/* Seção de Códigos Centralizada */
+.codes-section { margin: 40px auto; text-align: center; }
+.codes-section h2 { color: #00ff88; margin-bottom: 25px; font-size: 1.1rem; letter-spacing: 3px; }
+.codes-grid { display: flex; flex-direction: column; gap: 15px; }
 
-.codes-section h2 { 
-    color: #00ff88; 
-    margin-bottom: 25px; 
-    font-size: 1.1rem; 
-    letter-spacing: 3px; 
-}
-
-/* Deixando o card de código mais curto e centralizado */
 .code-card { 
     background: #141418; 
     padding: 18px 30px; 
@@ -138,10 +122,9 @@ header {
     align-items: center;
     border: 1px solid #222;
     transition: 0.2s;
-    margin-bottom: 12px;
 }
-.code-card:hover { border-color: #333; background: #18181d; }
-.code-val { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; letter-spacing: 1px; }
+.code-card:hover { border-color: #333; }
+.code-val { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff; }
 
 /* Botão Copiar */
 .btn-copy {
@@ -155,55 +138,60 @@ header {
     font-size: 0.8rem;
     transition: 0.3s;
 }
-.btn-copy:hover { transform: scale(1.05); filter: brightness(1.1); }
-.btn-copy.copied { background: #fff; color: #000; }
+.btn-copy.copied { background: #fff; }
 
-/* Ajuste no Como Resgatar para não ser gigante */
+/* Como Resgatar Centralizado */
 .how-to-redeem { 
     background: #141418; 
     padding: 35px; 
     border-radius: 12px; 
     margin: 40px auto; 
-    border-left: none; /* Remove a borda lateral para ficar mais clean */
-    border-top: 3px solid #00ff88; /* Borda no topo fica mais moderno */
-    text-align: left; /* Texto alinhado à esquerda dentro do bloco centralizado */
+    border-top: 3px solid #00ff88; 
+    text-align: center;
 }
-
-.how-to-redeem h3 { 
-    text-align: center; /* Centraliza apenas o título da explicação */
-    margin-bottom: 20px; 
+.how-to-redeem h3 { margin-bottom: 20px; }
+.how-to-redeem ol { 
+    display: inline-block; 
+    text-align: left; 
+    color: #ccc; 
 }
+.how-to-redeem li { margin-bottom: 10px; }
 
-/* Banner de Propaganda (Seu Jogo/Outfits) */
+/* Propaganda Outfits Central */
 .promo-banner { 
     background: linear-gradient(135deg, #1e1e24 0%, #0a0a0c 100%); 
     padding: 25px; 
     border-radius: 15px; 
     display: flex; 
     align-items: center; 
+    justify-content: center;
     gap: 20px;
     border: 1px dashed #444;
-    margin: 40px 0;
+    margin: 40px auto;
+    text-align: center;
 }
 .promo-banner img { width: 80px; height: 80px; border-radius: 10px; object-fit: cover; }
 .promo-info h4 { color: #00ff88; margin-bottom: 5px; }
 .promo-info p { font-size: 0.9rem; color: #ccc; margin-bottom: 10px; }
 .btn-promo { color: #fff; text-decoration: underline; font-weight: bold; font-size: 0.8rem; }
 
-/* Mais Jogos (Mini Cards) */
-.more-games h3 { margin-bottom: 20px; font-size: 1.1rem; color: #fff; }
-.mini-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
-.mini-card { background: #141418; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; color: #ccc; font-size: 0.8rem; border: 1px solid #222; transition: 0.3s; }
-.mini-card:hover { border-color: #00ff88; color: #00ff88; }
+/* Mais Jogos */
+.more-games { text-align: center; margin-top: 60px; }
+.more-games h3 { margin-bottom: 25px; }
+.mini-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 15px; 
+    justify-content: center;
+}
+.mini-card { background: #141418; padding: 15px; border-radius: 8px; text-decoration: none; color: #ccc; border: 1px solid #222; }
 
 /* Footer */
-.main-footer { padding: 60px 20px 40px; border-top: 1px solid #222; text-align: center; color: #666; font-size: 0.85rem; margin-top: 60px; }
-.copyright { margin-top: 20px; font-weight: bold; color: #333; text-transform: uppercase; letter-spacing: 1px; }
+.main-footer { padding: 60px 20px 40px; border-top: 1px solid #222; text-align: center; color: #666; font-size: 0.85rem; }
+.copyright { margin-top: 20px; font-weight: bold; color: #333; letter-spacing: 1px; }
 
-/* Responsividade Mobile */
+/* Mobile */
 @media (max-width: 600px) {
-    .game-intro { flex-direction: column; text-align: center; }
-    .code-card { flex-direction: column; gap: 15px; text-align: center; }
-    .promo-banner { flex-direction: column; text-align: center; }
+    .game-intro, .code-card, .promo-banner { flex-direction: column; text-align: center; }
     .game-text h1 { font-size: 1.8rem; }
 }
