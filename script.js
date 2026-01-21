@@ -1,36 +1,48 @@
+/**
+ * Lógica de Troca de Frames (Pesquisa vs Last Updates)
+ */
 function filterGames() {
     const input = document.getElementById('gameSearch').value.toLowerCase();
-    const cards = document.querySelectorAll('.update-card');
-    const sectionTitle = document.getElementById('sectionTitle');
-    const sectionSub = document.getElementById('sectionSub');
+    const searchSection = document.getElementById('searchSection');
+    const updatesSection = document.getElementById('updatesSection');
+    const searchQueryText = document.getElementById('searchQueryText');
+    const searchResultsGrid = document.getElementById('searchResultsGrid');
     const noResults = document.getElementById('noResults');
-    let hasResults = false;
+    
+    // Pega todos os cards que existem na lista principal (All Games)
+    const allCards = document.querySelectorAll('#allGamesList .update-card');
 
-    // Se o usuário estiver digitando
     if (input.length > 0) {
-        sectionTitle.innerText = "Resultados da Pesquisa";
-        sectionSub.innerText = `Mostrando resultados para: "${input}"`;
-    } else {
-        sectionTitle.innerText = "Last Updates";
-        sectionSub.innerText = "Códigos verificados e atualizados recentemente";
-    }
-
-    cards.forEach(card => {
-        const title = card.querySelector('.update-name').innerText.toLowerCase();
+        // Ativa modo Pesquisa
+        updatesSection.style.display = "none";
+        searchSection.style.display = "block";
+        searchQueryText.innerText = `Mostrando resultados para: "${input}"`;
         
-        if (title.includes(input)) {
-            card.style.display = "flex";
-            hasResults = true;
-        } else {
-            card.style.display = "none";
-        }
-    });
+        // Limpa grid de busca e filtra
+        searchResultsGrid.innerHTML = "";
+        let found = false;
 
-    // Mostra mensagem se não encontrar nada
-    noResults.style.display = hasResults ? "none" : "block";
+        allCards.forEach(card => {
+            const name = card.querySelector('.update-name').innerText.toLowerCase();
+            if (name.includes(input)) {
+                const clone = card.cloneNode(true); 
+                searchResultsGrid.appendChild(clone);
+                found = true;
+            }
+        });
+
+        noResults.style.display = found ? "none" : "block";
+
+    } else {
+        // Volta ao modo Last Updates padrão
+        updatesSection.style.display = "block";
+        searchSection.style.display = "none";
+    }
 }
 
-// Função de cópia mantida
+/**
+ * Função de copiar para as páginas de códigos
+ */
 function copyCode(text, button) {
     navigator.clipboard.writeText(text).then(() => {
         const oldText = button.innerText;
