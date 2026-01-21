@@ -1,5 +1,5 @@
 /* =========================================
-   HOME LAYOUT - LAST UPDATES STYLE
+   HOME LAYOUT - DESIGN DE LISTA PRO
    ========================================= */
 
 .hero-section {
@@ -13,13 +13,11 @@
 .hero-section h1 {
     font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 25px;
     color: #fff;
+    margin-bottom: 25px;
 }
 
-.hero-section h1 span {
-    color: #00ff88;
-}
+.hero-section h1 span { color: #00ff88; }
 
 .search-main input {
     width: 100%;
@@ -39,15 +37,7 @@
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
 }
 
-.updates-section {
-    padding: 20px 0 60px;
-}
-
-.section-header {
-    margin-bottom: 30px;
-    text-align: left;
-}
-
+.section-header { margin-bottom: 30px; }
 .section-header h2 {
     font-size: 1.6rem;
     font-weight: 800;
@@ -55,12 +45,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-.section-header p {
-    color: #555;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
+.section-header p { color: #555; font-size: 0.9rem; font-weight: 600; }
 
 .updates-grid {
     display: flex;
@@ -86,11 +71,7 @@
     transform: translateX(5px);
 }
 
-.update-info-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+.update-info-wrapper { display: flex; align-items: center; gap: 20px; }
 
 .update-img {
     width: 50px;
@@ -100,30 +81,11 @@
     border: 1px solid #333;
 }
 
-.update-texts {
-    display: flex;
-    flex-direction: column;
-}
+.update-texts { display: flex; flex-direction: column; }
+.update-name { color: #fff; font-weight: 700; font-size: 1.1rem; }
+.update-status { color: #00ff88; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; }
 
-.update-name {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.update-status {
-    color: #00ff88;
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.update-date {
-    color: #444;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
+.update-date { color: #444; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; }
 
 .main-footer {
     padding: 60px 0;
@@ -134,6 +96,6 @@
 }
 
 @media (max-width: 600px) {
-    .update-card { padding: 12px; }
     .update-date { display: none; }
+    .update-card { padding: 15px; }
 }
