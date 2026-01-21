@@ -31,11 +31,11 @@
     <main class="container">
         <section class="updates-section">
             <div class="section-header">
-                <h2>Last Updates</h2>
-                <p>Códigos verificados e atualizados recentemente</p>
+                <h2 id="sectionTitle">Last Updates</h2>
+                <p id="sectionSub">Códigos verificados e atualizados recentemente</p>
             </div>
 
-            <div class="updates-grid" id="gameGrid">
+            <div class="updates-grid" id="mainGameGrid">
                 
                 <a href="jogos/catch-and-tame.html" class="update-card">
                     <div class="update-info-wrapper">
@@ -48,6 +48,10 @@
                     <div class="update-date">Hoje</div>
                 </a>
 
+                </div>
+            
+            <div id="noResults" style="display: none; text-align: center; padding: 40px; color: #555; font-weight: 600;">
+                Nenhum jogo encontrado com esse nome.
             </div>
         </section>
     </main>
