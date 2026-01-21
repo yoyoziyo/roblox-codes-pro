@@ -12,46 +12,39 @@
     <nav class="main-nav">
         <div class="container nav-content">
             <a href="index.html" class="nav-logo">Yo<span>Codes</span></a>
-            
             <div class="nav-links">
                 <a href="index.html">Início</a>
                 <a href="#">Últimos Códigos</a>
                 <a href="https://www.roblox.com/communities/33319096" target="_blank">Comunidade</a>
-            </div>
-
-            <div class="nav-search">
-                <input type="text" id="gameSearch" placeholder="Pesquisar jogo..." onkeyup="filterGames()">
             </div>
         </div>
     </nav>
 
     <header class="hero-section">
         <div class="container">
-            <h1>Roblox <span>Code Finder</span> & Tracker</h1>
-            <p>Os códigos mais recentes, testados e funcionando diariamente.</p>
+            <h1>Roblox <span>Code Finder</span></h1>
+            <div class="search-main">
+                <input type="text" id="gameSearch" placeholder="Digite o nome do jogo para ver os códigos..." onkeyup="filterGames()">
+            </div>
         </div>
     </header>
 
     <main class="container">
         <div class="grid-jogos" id="gameGrid">
-            
             <a href="jogos/pet-and-tame.html" class="card">
                 <div class="card-img-container">
                     <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" alt="Pet and Tame">
                 </div>
                 <div class="card-info">
                     <h3>Pet and Tame</h3>
-                    <p>Códigos atualizados hoje!</p>
+                    <p>Ver códigos agora →</p>
                 </div>
             </a>
-
         </div>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <p>© 2026 YoCodes - Todos os direitos reservados.</p>
-        </div>
+        <div class="container"><p>© 2026 YoCodes</p></div>
     </footer>
 
     <script src="script.js"></script>
