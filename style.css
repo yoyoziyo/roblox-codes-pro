@@ -11,26 +11,51 @@ body {
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* Container estreito para códigos e explicações */
 .content-narrow { max-width: 850px; margin: 0 auto; }
-
 h1 span { color: #00ff88; }
 
 /* =========================================
-   HOME - GRID DE JOGOS
+   PESQUISA E HEADER
    ========================================= */
 header { text-align: center; padding: 60px 20px; }
+
+.search-container {
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gameSearch {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid #222;
+    background: #141418;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+#gameSearch:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
 
 .pro-tag {
     background: #00ff88; color: #000; padding: 2px 6px;
     border-radius: 4px; font-size: 0.5em; vertical-align: middle;
 }
 
+/* =========================================
+   HOME - GRID DE JOGOS
+   ========================================= */
 .grid-jogos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
+    margin-bottom: 50px;
 }
 
 .card {
@@ -46,17 +71,14 @@ header { text-align: center; padding: 60px 20px; }
 .badge-new {
     position: absolute; top: 15px; right: 15px; font-weight: 800;
     font-size: 0.7rem; background: #00ff88; color: #000;
-    padding: 3px 8px; border-radius: 4px;
+    padding: 3px 8px; border-radius: 4px; z-index: 10;
 }
 
 /* =========================================
-   PÁGINA DO JOGO (ESTILO ROCODES)
+   PÁGINA DO JOGO (INTERNA)
    ========================================= */
 .game-header { background: #111115; padding: 60px 0; border-bottom: 1px solid #222; }
-
-.game-intro { 
-    display: flex; align-items: center; gap: 40px; 
-}
+.game-intro { display: flex; align-items: center; gap: 40px; }
 
 .game-logo-large {
     width: 300px; height: 300px; border-radius: 24px;
@@ -69,27 +91,23 @@ header { text-align: center; padding: 60px 20px; }
 .back-link { color: #666; text-decoration: none; display: block; margin-bottom: 20px; font-weight: 600; }
 .back-link:hover { color: #00ff88; }
 
-/* Códigos e Resgate */
-.codes-section { margin: 60px 0; text-align: center; }
-.codes-section h2 { color: #00ff88; letter-spacing: 4px; font-size: 0.9rem; margin-bottom: 30px; }
-
-.code-card {
-    background: #141418; padding: 25px 35px; border-radius: 16px;
-    display: flex; justify-content: space-between; align-items: center;
-    border: 1px solid #222; margin-bottom: 15px;
-}
-
-.code-val { font-size: 1.6rem; font-weight: 800; color: #fff; }
-
-/* Botão com efeito de crescer (Scale) */
+/* Botões com efeito de crescer */
 .btn-copy {
     background: #00ff88; color: #000; border: none; padding: 12px 25px;
     border-radius: 10px; font-weight: 800; cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
-.btn-copy:hover { transform: scale(1.1); } /* Efeito de crescer */
-.btn-copy:active { transform: scale(0.95); } /* Efeito de apertar */
+.btn-copy:hover { transform: scale(1.1); }
+.btn-copy:active { transform: scale(0.95); }
+
+/* Layout de códigos e resgate */
+.codes-section { margin: 60px 0; text-align: center; }
+.code-card {
+    background: #141418; padding: 25px 35px; border-radius: 16px;
+    display: flex; justify-content: space-between; align-items: center;
+    border: 1px solid #222; margin-bottom: 15px;
+}
 
 .how-to-redeem {
     background: #141418; padding: 40px; border-radius: 16px;
@@ -98,38 +116,27 @@ header { text-align: center; padding: 60px 20px; }
 
 .how-to-redeem ol { display: inline-block; text-align: left; color: #aaa; margin-top: 20px; }
 
-/* Banner de Propaganda */
+/* Banner Propaganda */
 .promo-banner {
     background: linear-gradient(135deg, #1e1e24 0%, #0a0a0c 100%);
     padding: 30px; border-radius: 20px; display: flex;
     align-items: center; justify-content: center; gap: 20px;
-    border: 1px dashed #444; margin: 60px 0; text-align: center;
+    border: 1px dashed #444; margin: 60px 0;
 }
 
-.btn-promo { color: #fff; font-weight: 700; text-decoration: underline; }
-
-/* Mais Jogos - Sistema de Frame Invisível para Centralizar */
+/* Mais Jogos (Frame Invisível para centralizar) */
 .more-games { text-align: center; margin: 60px 0; }
 .mini-grid { 
-    display: flex;       /* Frame invisível flexível */
-    flex-wrap: wrap;     /* Quebra de linha automática */
-    gap: 15px; 
-    justify-content: center; /* Centralização perfeita */
-    margin-top: 25px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex; flex-wrap: wrap; gap: 15px; 
+    justify-content: center; margin-top: 25px;
+    max-width: 900px; margin-left: auto; margin-right: auto;
 }
 
 .mini-card {
     background: #141418; padding: 15px 25px; border-radius: 10px;
-    text-decoration: none; color: #888; border: 1px solid #222;
-    transition: 0.3s; min-width: 150px;
+    text-decoration: none; color: #888; border: 1px solid #222; transition: 0.3s;
 }
 
-.mini-card:hover { border-color: #00ff88; color: #fff; transform: translateY(-3px); }
-
-/* Footer */
 .main-footer { padding: 80px 20px 40px; border-top: 1px solid #222; text-align: center; color: #444; }
 
 /* Responsivo */
