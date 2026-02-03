@@ -1,31 +1,29 @@
-/* =========================================
-   ESTILOS GLOBAIS - YoCodes PRO
-   ========================================= */
-
-/* Importação da fonte Inter (Opcional, mas melhora o visual) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: #0a0a0c; /* Fundo principal ultra dark */
+    background-color: #0a0a0c;
     color: #fff;
     line-height: 1.6;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente */
+    min-height: 100vh;
 }
 
 .container {
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estilo da Tag PRO no Logo */
 .pro-tag {
     background: #00ff88;
     color: #000;
@@ -33,43 +31,12 @@ body {
     border-radius: 4px;
     font-size: 0.8rem;
     margin-left: 5px;
-    vertical-align: middle;
 }
 
-/* Links globais */
-a {
-    transition: 0.3s;
-    color: inherit;
-    text-decoration: none;
-}
+a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-/* Scrollbar Personalizada */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #0a0a0c;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #222;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #00ff88;
-}
-
-/* Classes de Utilidade */
-.text-neon {
-    color: #00ff88;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-}
-
-/* Ajuste para o Favicon não quebrar o layout se for usado como img */
-.favicon-img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0c; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #00ff88; }
