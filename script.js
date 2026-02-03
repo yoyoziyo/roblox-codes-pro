@@ -36,7 +36,7 @@ function filterGames() {
 }
 
 /**
- * FUNÇÃO PARA BUSCAR A DATA REAL DE ATUALIZAÇÃO
+ * BUSCA DATA REAL DE MODIFICAÇÃO (Funciona em servidores como GitHub Pages)
  */
 async function updateLastModifiedDates() {
     const cards = document.querySelectorAll('.update-card');
@@ -46,7 +46,6 @@ async function updateLastModifiedDates() {
         const dateElement = card.querySelector('.update-date');
 
         try {
-            // Faz uma requisição leve (HEAD) para pegar apenas o cabeçalho do arquivo
             const response = await fetch(gameUrl, { method: 'HEAD' });
             const lastModified = response.headers.get('Last-Modified');
 
@@ -54,12 +53,13 @@ async function updateLastModifiedDates() {
                 const date = new Date(lastModified);
                 dateElement.innerText = date.toLocaleDateString('pt-BR', {
                     day: '2-digit',
-                    month: '2-digit',
-                    year: 'numeric'
+                    month: '2-digit'
                 });
+            } else {
+                dateElement.innerText = "Recente";
             }
         } catch (error) {
-            console.error("Não foi possível obter a data de:", gameUrl);
+            dateElement.innerText = "Ativo";
         }
     }
 }
@@ -81,5 +81,4 @@ function copyCode(text, button) {
     });
 }
 
-// Inicia a verificação de datas ao carregar a página
 window.addEventListener('DOMContentLoaded', updateLastModifiedDates);
