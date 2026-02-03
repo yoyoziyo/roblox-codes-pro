@@ -1,193 +1,156 @@
-/* =========================================
-   ESTILOS GERAIS & PAGINA DO JOGO
-   ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background-color: #0a0a0c;
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+:root {
+    --dark-bg: #0a0a1a;
+    --pink-accent: #ff007f;
+    --pink-light: #ff69b4;
+    --glow-color: #ff33a3;
+    --text-color: #ffffff;
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.content-narrow { max-width: 850px; margin: 0 auto; }
-
-/* Badges e Tags */
-.pro-tag {
-    background: #00ff88; color: #000; padding: 2px 6px;
-    border-radius: 4px; font-size: 0.5em; vertical-align: middle;
-    margin-left: 5px; font-weight: 800;
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* NAVBAR */
-.game-nav-bar {
-    width: 100%; padding: 15px 0;
-    background: rgba(17, 17, 21, 0.95);
-    backdrop-filter: blur(10px);
-    position: sticky; top: 0; z-index: 1000;
-    border-bottom: 1px solid #222;
-}
-
-.nav-search-wrapper { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-
-.btn-back-home {
-    background: #141418; border: 1px solid #222; color: #fff;
-    padding: 10px 20px; border-radius: 12px; text-decoration: none;
-    font-weight: 600; font-size: 0.9rem; transition: 0.3s;
-}
-.btn-back-home:hover { border-color: #00ff88; transform: translateX(-5px); }
-
-.fake-search-trigger {
-    flex-grow: 1; max-width: 500px; background: #0a0a0c;
-    border: 1px solid #222; padding: 12px 20px; border-radius: 12px;
-    color: #666; font-size: 0.9rem; cursor: pointer; transition: 0.3s;
-    text-align: left;
-}
-
-/* HEADER DO JOGO (16:9 LADO A LADO) */
-.game-header-v2 { background: #111115; padding: 80px 0; border-bottom: 1px solid #222; margin-bottom: 50px; }
-
-.game-intro { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 40px; 
-}
-
-.game-logo-large { 
-    width: 400px; 
-    height: 225px; 
-    border-radius: 16px; 
-    object-fit: cover; 
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
-    border: 1px solid #222;
-}
-
-.game-text { max-width: 500px; }
-
-.game-title-link { text-decoration: none; color: #fff; transition: 0.3s; }
-.game-title-link h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; }
-.game-title-link:hover h1 { color: #00ff88; transform: translateY(-2px); }
-.game-text p { color: #888; font-size: 1.1rem; }
-
-/* CÓDIGOS */
-.codes-section h2 { 
-    color: #00ff88; letter-spacing: 4px; font-size: 0.8rem; 
-    text-transform: uppercase; text-align: center; margin-bottom: 30px; 
-}
-
-.code-card {
-    background: #141418; padding: 25px 35px; border-radius: 16px;
-    display: flex; justify-content: space-between; align-items: center;
-    border: 1px solid #222; margin-bottom: 15px; transition: 0.3s;
-}
-
-.code-val { font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: 1px; }
-
-.btn-copy {
-    background: #00ff88; color: #000; border: none; padding: 14px 28px;
-    border-radius: 10px; font-weight: 800; cursor: pointer;
-    transition: 0.2s;
-}
-.btn-copy:hover { transform: scale(1.1); }
-
-/* GUIA DE RESGATE */
-.how-to-redeem {
-    background: #141418; padding: 40px; border-radius: 16px;
-    border-top: 4px solid #00ff88; margin-top: 60px; text-align: center;
-}
-.how-to-redeem h2 { margin-bottom: 25px; font-size: 1.4rem; font-weight: 800; }
-.how-to-redeem ul { list-style: none; display: inline-block; text-align: center; color: #aaa; max-width: 500px; }
-.how-to-redeem li { margin-bottom: 15px; font-size: 1rem; }
-.how-to-redeem li span { color: #ffffff; font-weight: 800; margin-right: 8px; }
-
-/* BANNER DE COMUNIDADE (ESTILO PREMIUM CLARO/GLOW) */
-.promo-banner {
-    position: relative;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    background: #111115;
-    padding: 50px;
-    border-radius: 24px;
-    border: 1px solid #222;
-    margin: 60px 0;
+    background-color: var(--dark-bg);
+    font-family: 'Orbitron', sans-serif;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    transition: background-color 2s ease;
 }
 
-/* Efeito de brilho verde ao fundo */
-.promo-banner::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 300px;
-    height: 300px;
-    background: rgba(0, 255, 136, 0.08);
-    filter: blur(80px);
-    border-radius: 50%;
-    z-index: 0;
+/* Fundo Estelar */
+.background-stars {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #1b1b3a 0%, #050510 100%);
+    z-index: -2;
 }
 
-.promo-text { position: relative; z-index: 1; text-align: left; max-width: 65%; }
-.promo-text h3 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 15px; letter-spacing: -0.5px; }
-.promo-text p { font-size: 1rem; color: #aaa; line-height: 1.6; }
+.vignette {
+    position: fixed;
+    inset: 0;
+    box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
+    pointer-events: none;
+    z-index: -1;
+}
 
-.promo-action {
+/* Container Centralizado */
+.main-container {
     position: relative;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
 }
 
-.group-logo-promo {
-    width: 65px;
-    height: 65px;
+/* Coração Principal */
+.heart-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.heart-icon::before, .heart-icon::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid #00ff88;
-    object-fit: cover;
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+    background-color: inherit;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.btn-promo {
-    background: #00ff88;
-    color: #000;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 800;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
+.heart-icon::before { top: -52px; left: -2px; border-bottom: none; border-right: none; }
+.heart-icon::after { left: 50px; top: -2px; border-bottom: none; border-right: none; }
+
+/* Responsividade Celular */
+@media (max-width: 600px) {
+    .heart-icon { width: 70px; height: 70px; }
+    .heart-icon::before, .heart-icon::after { width: 70px; height: 70px; }
+    .heart-icon::before { top: -37px; }
+    .heart-icon::after { left: 35px; }
+    .timer-display { font-size: 0.55rem !important; }
+}
+
+/* Ativação */
+.heart-icon.active {
+    transform: rotate(-45deg) scale(2.2);
+    background-color: var(--pink-accent);
+    border-color: transparent;
+    box-shadow: 0 0 40px var(--pink-accent);
+}
+
+.heart-icon.active::before, .heart-icon.active::after {
+    background-color: var(--pink-accent);
+    border-color: transparent;
+}
+
+.heart-content {
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.8s ease 0.4s;
+    text-align: center;
+    width: 100%;
+}
+
+.timer-display {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
     white-space: nowrap;
 }
-.btn-promo:hover { transform: translateY(-3px); background: #fff; }
 
-/* MAIS JOGOS */
-.more-games { text-align: center; margin: 80px 0 40px; }
-.mini-grid {
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 12px; margin-top: 25px;
+.love-message {
+    margin-top: 130px;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: 1.5s ease 0.8s;
+    text-shadow: 0 0 10px var(--pink-light);
 }
-.mini-card {
-    background: #141418; padding: 10px 20px; border-radius: 8px;
-    text-decoration: none; color: #666; border: 1px solid #222;
-    transition: 0.3s; min-width: 140px; font-weight: 600; font-size: 0.85rem;
+
+.love-message.show {
+    opacity: 1;
+    transform: translateY(-20px);
 }
-.mini-card:hover { border-color: #00ff88; color: #fff; }
 
-.main-footer { padding: 60px 20px 40px; border-top: 1px solid #222; text-align: center; color: #444; font-size: 0.9rem; }
+.last-update {
+    position: fixed;
+    bottom: 20px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
 
-/* RESPONSIVO */
-@media (max-width: 950px) {
-    .game-intro { flex-direction: column; text-align: center; }
-    .game-logo-large { width: 100%; max-width: 450px; height: auto; aspect-ratio: 16/9; }
-    .promo-banner { flex-direction: column; text-align: center; padding: 40px 25px; }
-    .promo-text { max-width: 100%; text-align: center; }
+/* Mini Corações */
+.small-hearts-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.small-heart {
+    position: absolute;
+    background-color: var(--pink-light);
+    transform: rotate(-45deg);
+    animation: float 2s forwards ease-out;
+}
+
+@keyframes float {
+    0% { transform: rotate(-45deg) scale(0); opacity: 1; }
+    100% { transform: rotate(-45deg) scale(1) translate(var(--x), var(--y)); opacity: 0; }
 }
