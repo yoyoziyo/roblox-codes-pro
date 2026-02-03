@@ -2,72 +2,26 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoCodes PRO - Roblox Codes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nosso Universo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-stars" id="backgroundStars"></div>
+    <div class="vignette"></div>
 
-    <nav class="main-nav" style="height: 70px; background: #111115; border-bottom: 1px solid #222; display: flex; align-items: center;">
-        <div class="container nav-content" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="index.html" class="nav-logo" style="text-decoration: none; color: #fff; font-weight: 800; font-size: 1.5rem;">YoCodes<span class="pro-tag">PRO</span></a>
-            <div class="nav-links" style="display: flex; gap: 20px;">
-                <a href="index.html" style="color: #ccc; text-decoration: none; font-weight: 600;">Início</a>
-                <a href="https://www.roblox.com/communities/33319096" target="_blank" style="color: #ccc; text-decoration: none; font-weight: 600;">Grupo</a>
+    <div class="main-container">
+        <div id="mainHeart" class="heart-icon">
+            <div id="heartContent" class="heart-content">
+                <p id="timer" class="timer-display"></p>
             </div>
         </div>
-    </nav>
+        <p id="loveMessage" class="love-message">Eu te amo</p>
+        <p id="lastUpdate" class="last-update"></p>
+    </div>
 
-    <header class="hero-section">
-        <div class="container">
-            <h1>Roblox <span>Code Finder</span></h1>
-            <div class="search-main">
-                <input type="text" id="gameSearch" placeholder="Qual jogo você procura hoje?" onkeyup="filterGames()">
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        
-        <section id="searchSection" style="display: none; margin-bottom: 60px;">
-            <div class="section-header">
-                <h2 style="color: #00ff88;">Resultados da Pesquisa</h2>
-                <p id="searchQueryText" style="color: #888;"></p>
-            </div>
-            <div class="updates-grid" id="searchResultsGrid">
-                </div>
-            <div id="noResults" style="display: none; text-align: center; padding: 40px; color: #555; font-weight: 600;">
-                Nenhum jogo encontrado com esse nome.
-            </div>
-        </section>
-
-        <section id="updatesSection">
-            <div class="section-header">
-                <h2>Last Updates</h2>
-                <p>Códigos verificados e atualizados recentemente</p>
-            </div>
-
-            <div class="updates-grid" id="allGamesList">
-                
-                <a href="jogos/catch-and-tame.html" class="update-card">
-                    <div class="update-info-wrapper">
-                        <img src="https://tr.rbxcdn.com/180DAY-a43c67ec46a7f8758e7b781a2d2fff74/768/432/Image/Webp/noFilter" class="update-img" alt="Catch and Tame">
-                        <div class="update-texts">
-                            <span class="update-name">Catch and Tame</span>
-                            <span class="update-status">CÓDIGOS ATIVOS</span>
-                        </div>
-                    </div>
-                    <div class="update-date">Hoje</div>
-                </a>
-
-                </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        YoCodes PRO &copy; 2026 - O seu buscador de códigos definitivo.
-    </footer>
+    <div id="smallHeartsContainer" class="small-hearts-container"></div>
 
     <script src="script.js"></script>
 </body>
