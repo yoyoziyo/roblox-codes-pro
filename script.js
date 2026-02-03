@@ -1,6 +1,3 @@
-/**
- * Lógica de Troca de Frames (Pesquisa vs Last Updates)
- */
 function filterGames() {
     const input = document.getElementById('gameSearch').value.toLowerCase();
     const searchSection = document.getElementById('searchSection');
@@ -9,23 +6,24 @@ function filterGames() {
     const searchResultsGrid = document.getElementById('searchResultsGrid');
     const noResults = document.getElementById('noResults');
     
-    // Pega todos os cards que existem na lista principal (All Games)
+    // Todos os cards originais que estão no Last Updates
     const allCards = document.querySelectorAll('#allGamesList .update-card');
 
     if (input.length > 0) {
-        // Ativa modo Pesquisa
+        // 1. Esconde o Last Updates e mostra a Pesquisa
         updatesSection.style.display = "none";
         searchSection.style.display = "block";
-        searchQueryText.innerText = `Mostrando resultados para: "${input}"`;
+        searchQueryText.innerText = `Resultados para: "${input}"`;
         
-        // Limpa grid de busca e filtra
+        // 2. Limpa resultados anteriores
         searchResultsGrid.innerHTML = "";
         let found = false;
 
+        // 3. Filtra e clona os cards para o frame de busca
         allCards.forEach(card => {
             const name = card.querySelector('.update-name').innerText.toLowerCase();
             if (name.includes(input)) {
-                const clone = card.cloneNode(true); 
+                const clone = card.cloneNode(true); // Clona o card para não tirar do lugar original
                 searchResultsGrid.appendChild(clone);
                 found = true;
             }
@@ -34,15 +32,13 @@ function filterGames() {
         noResults.style.display = found ? "none" : "block";
 
     } else {
-        // Volta ao modo Last Updates padrão
+        // Se a busca estiver vazia, volta ao normal
         updatesSection.style.display = "block";
         searchSection.style.display = "none";
     }
 }
 
-/**
- * Função de copiar para as páginas de códigos
- */
+// Função de copiar (Páginas internas)
 function copyCode(text, button) {
     navigator.clipboard.writeText(text).then(() => {
         const oldText = button.innerText;
