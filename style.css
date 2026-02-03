@@ -2,6 +2,9 @@
    ESTILOS GLOBAIS - YoCodes PRO
    ========================================= */
 
+/* Importação da fonte Inter (Opcional, mas melhora o visual) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +39,8 @@ body {
 /* Links globais */
 a {
     transition: 0.3s;
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Scrollbar Personalizada */
@@ -60,4 +65,11 @@ a {
 .text-neon {
     color: #00ff88;
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* Ajuste para o Favicon não quebrar o layout se for usado como img */
+.favicon-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
