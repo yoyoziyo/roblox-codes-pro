@@ -1,5 +1,5 @@
 /**
- * Lógica de Troca de Frames e Busca
+ * Lógica de Troca de Frames (Pesquisa vs Last Updates)
  */
 function filterGames() {
     const input = document.getElementById('gameSearch').value.toLowerCase();
@@ -9,13 +9,16 @@ function filterGames() {
     const searchResultsGrid = document.getElementById('searchResultsGrid');
     const noResults = document.getElementById('noResults');
     
+    // Pega todos os cards que existem na lista principal (All Games)
     const allCards = document.querySelectorAll('#allGamesList .update-card');
 
     if (input.length > 0) {
+        // Ativa modo Pesquisa
         updatesSection.style.display = "none";
         searchSection.style.display = "block";
         searchQueryText.innerText = `Mostrando resultados para: "${input}"`;
         
+        // Limpa grid de busca e filtra
         searchResultsGrid.innerHTML = "";
         let found = false;
 
@@ -29,43 +32,16 @@ function filterGames() {
         });
 
         noResults.style.display = found ? "none" : "block";
+
     } else {
+        // Volta ao modo Last Updates padrão
         updatesSection.style.display = "block";
         searchSection.style.display = "none";
     }
 }
 
 /**
- * BUSCA DATA REAL DE MODIFICAÇÃO (Funciona em servidores como GitHub Pages)
- */
-async function updateLastModifiedDates() {
-    const cards = document.querySelectorAll('.update-card');
-
-    for (let card of cards) {
-        const gameUrl = card.getAttribute('href');
-        const dateElement = card.querySelector('.update-date');
-
-        try {
-            const response = await fetch(gameUrl, { method: 'HEAD' });
-            const lastModified = response.headers.get('Last-Modified');
-
-            if (lastModified) {
-                const date = new Date(lastModified);
-                dateElement.innerText = date.toLocaleDateString('pt-BR', {
-                    day: '2-digit',
-                    month: '2-digit'
-                });
-            } else {
-                dateElement.innerText = "Recente";
-            }
-        } catch (error) {
-            dateElement.innerText = "Ativo";
-        }
-    }
-}
-
-/**
- * Função de copiar
+ * Função de copiar para as páginas de códigos
  */
 function copyCode(text, button) {
     navigator.clipboard.writeText(text).then(() => {
@@ -80,5 +56,3 @@ function copyCode(text, button) {
         }, 2000);
     });
 }
-
-window.addEventListener('DOMContentLoaded', updateLastModifiedDates);
