@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catch and Tame Codes - YoCodes PRO</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="stylesheet" href="../style.css">
     <style>
+        .game-header {
+            text-align: center;
+            padding: 60px 0;
+        }
+        .game-banner {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            border: 2px solid #222;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .code-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
         .code-box {
             background: #141418;
             border: 1px solid #222;
@@ -15,38 +32,50 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
+            transition: 0.3s;
         }
-        .code-text { font-weight: 800; color: #00ff88; font-size: 1.2rem; }
+        .code-box:hover { border-color: #00ff88; }
+        .code-text { font-weight: 800; color: #00ff88; font-size: 1.3rem; }
         .copy-btn {
             background: #00ff88;
             color: #000;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 25px;
             border-radius: 8px;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
+            text-transform: uppercase;
         }
+        .main-nav { width: 100%; height: 70px; background: #111115; border-bottom: 1px solid #222; display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body>
-    <nav class="main-nav" style="height: 70px; background: #111115; border-bottom: 1px solid #222; display: flex; align-items: center;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="../index.html" style="text-decoration: none; color: #fff; font-weight: 800; font-size: 1.5rem;">YoCodes<span class="pro-tag">PRO</span></a>
+
+    <nav class="main-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="../index.html" style="font-weight: 800; font-size: 1.5rem;">YoCodes<span class="pro-tag">PRO</span></a>
+            <a href="../index.html" style="font-weight: 600; color: #888;">Voltar</a>
         </div>
     </nav>
 
-    <main class="container" style="margin-top: 50px;">
-        <h1>Catch and Tame <span>Codes</span></h1>
-        <p style="color: #888; margin-bottom: 30px;">Use os códigos abaixo para ganhar recompensas exclusivas.</p>
-
-        <div class="code-box">
-            <span class="code-text">RELEASE</span>
-            <button class="copy-btn" onclick="copyCode('RELEASE', this)">COPIAR</button>
+    <main class="container">
+        <div class="game-header">
+            <img src="https://tr.rbxcdn.com/180DAY-a43c67ec46a7f8758e7b781a2d2fff74/768/432/Image/Webp/noFilter" class="game-banner" alt="Catch and Tame">
+            
+            <h1>Catch and Tame <span>Codes</span></h1>
+            <p style="color: #666;">Última atualização detectada pelo sistema.</p>
         </div>
+
+        <div class="code-container">
+            <div class="code-box">
+                <span class="code-text">RELEASE</span>
+                <button class="copy-btn" onclick="copyCode('RELEASE', this)">COPIAR</button>
+            </div>
+            </div>
     </main>
 
-    <footer style="margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; color: #444;">
-        YoCodes PRO &copy; 2026 - O seu buscador de códigos definitivo.
+    <footer style="margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; color: #444; width: 100%;">
+        YoCodes PRO &copy; 2026
     </footer>
 
     <script src="../script.js"></script>
