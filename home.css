@@ -1,13 +1,25 @@
+/* =========================================
+   HOME LAYOUT - LAST UPDATES STYLE
+   ========================================= */
+
 .hero-section {
-    width: 100%;
     padding: 80px 0;
     text-align: center;
     background: #0d0d10;
     border-bottom: 1px solid #222;
     margin-bottom: 40px;
 }
-.hero-section h1 { font-size: 3rem; font-weight: 800; margin-bottom: 25px; }
-.hero-section h1 span { color: #00ff88; }
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.hero-section h1 span {
+    color: #00ff88;
+}
 
 .search-main input {
     width: 100%;
@@ -21,29 +33,107 @@
     outline: none;
     transition: 0.3s;
 }
-.search-main input:focus { border-color: #00ff88; box-shadow: 0 0 20px rgba(0,255,136,0.1); }
+
+.search-main input:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
+.updates-section {
+    padding: 20px 0 60px;
+}
+
+.section-header {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.section-header h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
 .updates-grid {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto; /* Centraliza a lista de jogos */
+    gap: 12px;
 }
 
 .update-card {
     background: #141418;
     border: 1px solid #222;
-    border-radius: 16px;
-    padding: 20px;
+    border-radius: 14px;
+    padding: 15px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
-.update-card:hover { border-color: #00ff88; transform: scale(1.02); }
 
-.update-info-wrapper { display: flex; align-items: center; gap: 20px; }
-.update-img { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; }
-.update-name { font-size: 1.2rem; font-weight: 700; color: #fff; }
-.update-status { color: #00ff88; font-size: 0.8rem; font-weight: 800; }
-.update-date { color: #444; font-weight: 700; }
+.update-card:hover {
+    border-color: #00ff88;
+    background: #1a1a20;
+    transform: translateX(5px);
+}
+
+.update-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.update-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #333;
+}
+
+.update-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.update-status {
+    color: #00ff88;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.update-date {
+    color: #444;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main-footer {
+    padding: 60px 0;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .update-card { padding: 12px; }
+    .update-date { display: none; }
+}
