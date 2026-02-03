@@ -5,82 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catch and Tame Codes - YoCodes PRO</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .code-box {
+            background: #141418;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .code-text { font-weight: 800; color: #00ff88; font-size: 1.2rem; }
+        .copy-btn {
+            background: #00ff88;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-
-    <nav class="game-nav-bar">
-        <div class="container nav-search-wrapper">
-            <a href="../index.html" class="btn-back-home">← Início</a>
-            <div class="fake-search-trigger" onclick="location.href='../index.html'">
-                Pesquisar outro jogo...
-            </div>
-            <a href="../index.html" class="nav-logo" style="text-decoration: none; color: #fff; font-weight: 800; font-size: 1.3rem;">
-                YoCodes<span class="pro-tag">PRO</span>
-            </a>
+    <nav class="main-nav" style="height: 70px; background: #111115; border-bottom: 1px solid #222; display: flex; align-items: center;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="../index.html" style="text-decoration: none; color: #fff; font-weight: 800; font-size: 1.5rem;">YoCodes<span class="pro-tag">PRO</span></a>
         </div>
     </nav>
 
-    <header class="game-header-v2">
-        <div class="container">
-            <div class="game-intro">
-                <img src="https://tr.rbxcdn.com/180DAY-a43c67ec46a7f8758e7b781a2d2fff74/768/432/Image/Webp/noFilter" class="game-logo-large" alt="Catch and Tame">
-                <div class="game-text">
-                    <a href="https://www.roblox.com/games/96645548064314" target="_blank" class="game-title-link">
-                        <h1>Catch and Tame</h1>
-                    </a>
-                    <p>Encontre os códigos ativos e expire pets incríveis no Roblox. Clique no título para abrir o jogo.</p>
-                </div>
-            </div>
-        </div>
-    </header>
+    <main class="container" style="margin-top: 50px;">
+        <h1>Catch and Tame <span>Codes</span></h1>
+        <p style="color: #888; margin-bottom: 30px;">Use os códigos abaixo para ganhar recompensas exclusivas.</p>
 
-    <main class="container">
-        <div class="content-narrow">
-            
-            <section class="codes-section">
-                <h2>Códigos Ativos</h2>
-                <div class="code-card">
-                    <span class="code-val">RELEASE</span>
-                    <button class="btn-copy" onclick="copyCode('RELEASE', this)">COPIAR</button>
-                </div>
-                <div class="code-card">
-                    <span class="code-val">TAME2024</span>
-                    <button class="btn-copy" onclick="copyCode('TAME2024', this)">COPIAR</button>
-                </div>
-            </section>
-
-            <section class="how-to-redeem">
-                <h2>Como Resgatar?</h2>
-                <ul>
-                    <li><span>1.</span> Inicie o Catch and Tame no seu Roblox.</li>
-                    <li><span>2.</span> Clique no ícone de Codes localizado no menu.</li>
-                    <li><span>3.</span> Copie um código da nossa lista e insira no campo de texto.</li>
-                    <li><span>4.</span> Resgate sua recompensa e aproveite!</li>
-                </ul>
-            </section>
-
-            <div class="promo-banner">
-                <div class="promo-text">
-                    <h3>Procurando Outfits?</h3>
-                    <p>Quer os melhores visuais pelo melhor preço ou até mesmo itens grátis? Junte-se a milhares de jogadores em nossa comunidade oficial.</p>
-                </div>
-
-                <div class="promo-action">
-                    <img src="https://raw.githubusercontent.com/yoyoziyo/roblox-codes-pro/refs/heads/main/img/icon.png" class="group-logo-promo" alt="Logo Grupo">
-                    <a href="https://www.roblox.com/communities/33319096" target="_blank" class="btn-promo">Entrar no Grupo</a>
-                </div>
-            </div>
-
-            <section class="more-games">
-                <p style="color: #444; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;">Outros jogos com códigos disponíveis</p>
-                <div class="mini-grid">
-                    <a href="catch-and-tame.html" class="mini-card">Catch and Tame</a>
-                </div>
-            </section>
+        <div class="code-box">
+            <span class="code-text">RELEASE</span>
+            <button class="copy-btn" onclick="copyCode('RELEASE', this)">COPIAR</button>
         </div>
     </main>
 
-    <footer class="main-footer">
+    <footer style="margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; color: #444;">
         YoCodes PRO &copy; 2026 - O seu buscador de códigos definitivo.
     </footer>
 
