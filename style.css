@@ -1,44 +1,35 @@
 /* =========================================
-   ESTILOS GERAIS & PAGINA DO JOGO
+   ESTILOS GERAIS & RESPONSIVIDADE
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     background-color: #0a0a0c;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    width: 100%;
-    overflow-x: hidden; /* Impede o scroll lateral */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante centralização global */
 }
 
 .container { 
+    width: 100%; 
     max-width: 1100px; 
     margin: 0 auto; 
     padding: 0 20px; 
-    width: 100%;
-}
-
-.content-narrow { 
-    max-width: 850px; 
-    margin: 0 auto; 
-    width: 100%;
 }
 
 /* NAVBAR CORRIGIDA */
 .game-nav-bar {
-    width: 100%;
+    width: 100%; 
     padding: 10px 0;
-    background: rgba(17, 17, 21, 0.95);
+    background: rgba(17, 17, 21, 0.98);
     backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
+    position: sticky; 
+    top: 0; 
     z-index: 1000;
     border-bottom: 1px solid #222;
 }
@@ -47,43 +38,53 @@ body {
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    gap: 10px; 
+    gap: 15px; 
 }
 
 .btn-back-home {
-    background: #141418;
-    border: 1px solid #222;
+    background: #141418; 
+    border: 1px solid #222; 
     color: #fff;
-    padding: 8px 12px;
-    border-radius: 10px;
+    padding: 10px 15px; 
+    border-radius: 12px; 
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 600; 
+    font-size: 0.85rem; 
     white-space: nowrap;
 }
 
 .fake-search-trigger {
-    flex-grow: 1;
+    flex-grow: 1; 
     background: #0a0a0c;
-    border: 1px solid #222;
-    padding: 10px 15px;
-    border-radius: 10px;
-    color: #666;
-    font-size: 0.85rem;
+    border: 1px solid #222; 
+    padding: 10px 15px; 
+    border-radius: 12px;
+    color: #666; 
+    font-size: 0.85rem; 
     cursor: pointer;
     text-align: left;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-/* HEADER DO JOGO */
+.nav-logo {
+    white-space: nowrap;
+}
+
+.pro-tag {
+    background: #00ff88; color: #000; padding: 2px 6px;
+    border-radius: 4px; font-size: 0.7rem; vertical-align: middle;
+    margin-left: 5px; font-weight: 800;
+}
+
+/* HEADER DO JOGO CORRIGIDO */
 .game-header-v2 { 
+    width: 100%;
     background: #111115; 
     padding: 40px 0; 
     border-bottom: 1px solid #222; 
-    margin-bottom: 30px; 
-    width: 100%;
+    margin-bottom: 40px; 
 }
 
 .game-intro { 
@@ -96,53 +97,43 @@ body {
 .game-logo-large { 
     width: 100%;
     max-width: 450px; 
-    height: auto; 
-    aspect-ratio: 16/9;
     border-radius: 16px; 
     object-fit: cover; 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5); 
     border: 1px solid #222;
 }
 
-/* ... (Mantenha o restante das classes de códigos e promo igual ao seu anterior) ... */
+.game-text { max-width: 500px; text-align: left; }
+.game-title-link h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
 
-/* =========================================
-   RESPONSIVIDADE (CORREÇÃO MOBILE)
-   ========================================= */
+/* CÓDIGOS E CARDS */
+.code-card {
+    background: #141418; 
+    padding: 20px; 
+    border-radius: 16px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border: 1px solid #222; 
+    margin-bottom: 15px;
+}
+
+.code-val { font-size: 1.3rem; font-weight: 800; }
+
+.btn-copy {
+    background: #00ff88; color: #000; border: none; padding: 12px 20px;
+    border-radius: 10px; font-weight: 800; cursor: pointer;
+}
+
+/* AJUSTES MOBILE (AQUI ESTÁ A MÁGICA) */
 @media (max-width: 768px) {
-    .nav-search-wrapper {
-        gap: 8px;
-    }
-
-    .nav-logo {
-        display: none; /* Esconde o logo na barra em telas muito pequenas para dar espaço */
-    }
-
-    .game-intro {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .game-title-link h1 {
-        font-size: 2rem;
-    }
-
-    .code-card {
-        padding: 20px;
-    }
-
-    .code-val {
-        font-size: 1.2rem;
-    }
-
-    .promo-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .promo-text {
-        max-width: 100%;
-    }
+    .nav-search-wrapper { gap: 10px; }
+    .nav-logo { font-size: 1rem !important; }
+    .btn-back-home { padding: 8px 10px; font-size: 0.75rem; }
+    
+    .game-intro { flex-direction: column; text-align: center; gap: 20px; }
+    .game-text { text-align: center; }
+    .game-title-link h1 { font-size: 2rem; }
+    
+    .code-card { padding: 15px; }
+    .code-val { font-size: 1.1rem; }
 }
