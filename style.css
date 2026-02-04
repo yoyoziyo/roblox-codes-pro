@@ -1,25 +1,34 @@
 /* =========================================
-   ESTILOS GERAIS & RESPONSIVIDADE
+   ESTILOS GERAIS & CORREÇÃO MOBILE
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    -webkit-tap-highlight-color: transparent; 
+}
 
 body {
     background-color: #0a0a0c;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Garante centralização global */
+    overflow-x: hidden; /* Evita scroll lateral bugado */
 }
 
 .container { 
-    width: 100%; 
+    width: 100%;
     max-width: 1100px; 
     margin: 0 auto; 
     padding: 0 20px; 
+}
+
+.content-narrow { 
+    width: 100%;
+    max-width: 850px; 
+    margin: 0 auto; 
 }
 
 /* NAVBAR CORRIGIDA */
@@ -41,6 +50,7 @@ body {
     gap: 15px; 
 }
 
+/* Botão voltar compacto no mobile */
 .btn-back-home {
     background: #141418; 
     border: 1px solid #222; 
@@ -53,19 +63,20 @@ body {
     white-space: nowrap;
 }
 
+/* Barra de pesquisa que se ajusta ao espaço */
 .fake-search-trigger {
-    flex-grow: 1; 
+    flex: 1; 
     background: #0a0a0c;
     border: 1px solid #222; 
     padding: 10px 15px; 
     border-radius: 12px;
     color: #666; 
     font-size: 0.85rem; 
-    cursor: pointer;
+    cursor: pointer; 
     text-align: left;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .nav-logo {
@@ -73,67 +84,42 @@ body {
 }
 
 .pro-tag {
-    background: #00ff88; color: #000; padding: 2px 6px;
-    border-radius: 4px; font-size: 0.7rem; vertical-align: middle;
-    margin-left: 5px; font-weight: 800;
+    background: #00ff88; color: #000; padding: 2px 5px;
+    border-radius: 4px; font-size: 0.6rem; vertical-align: middle;
+    margin-left: 4px; font-weight: 800;
 }
 
-/* HEADER DO JOGO CORRIGIDO */
-.game-header-v2 { 
-    width: 100%;
-    background: #111115; 
-    padding: 40px 0; 
-    border-bottom: 1px solid #222; 
-    margin-bottom: 40px; 
-}
+/* HEADER DO JOGO RESPONSIVO */
+.game-header-v2 { background: #111115; padding: 40px 0; border-bottom: 1px solid #222; margin-bottom: 30px; }
 
 .game-intro { 
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    gap: 40px; 
+    gap: 30px; 
 }
 
 .game-logo-large { 
     width: 100%;
-    max-width: 450px; 
+    max-width: 400px; 
+    height: auto; 
+    aspect-ratio: 16/9;
     border-radius: 16px; 
     object-fit: cover; 
     border: 1px solid #222;
 }
 
-.game-text { max-width: 500px; text-align: left; }
-.game-title-link h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
-
-/* CÓDIGOS E CARDS */
-.code-card {
-    background: #141418; 
-    padding: 20px; 
-    border-radius: 16px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    border: 1px solid #222; 
-    margin-bottom: 15px;
-}
-
-.code-val { font-size: 1.3rem; font-weight: 800; }
-
-.btn-copy {
-    background: #00ff88; color: #000; border: none; padding: 12px 20px;
-    border-radius: 10px; font-weight: 800; cursor: pointer;
-}
-
-/* AJUSTES MOBILE (AQUI ESTÁ A MÁGICA) */
+/* Media Query específica para Mobile */
 @media (max-width: 768px) {
-    .nav-search-wrapper { gap: 10px; }
-    .nav-logo { font-size: 1rem !important; }
-    .btn-back-home { padding: 8px 10px; font-size: 0.75rem; }
-    
     .game-intro { flex-direction: column; text-align: center; gap: 20px; }
-    .game-text { text-align: center; }
-    .game-title-link h1 { font-size: 2rem; }
-    
-    .code-card { padding: 15px; }
-    .code-val { font-size: 1.1rem; }
+    .game-title-link h1 { font-size: 2rem !important; }
+    .nav-logo { font-size: 1.1rem !important; }
+    .fake-search-trigger { font-size: 0.75rem; padding: 10px; }
 }
+
+/* Restante dos estilos mantidos (Code Cards, Promo, etc) */
+.codes-section h2 { color: #00ff88; letter-spacing: 2px; font-size: 0.8rem; text-transform: uppercase; text-align: center; margin-bottom: 25px; }
+.code-card { background: #141418; padding: 20px; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #222; margin-bottom: 15px; }
+.code-val { font-size: 1.3rem; font-weight: 800; color: #fff; }
+.btn-copy { background: #00ff88; color: #000; border: none; padding: 12px 20px; border-radius: 10px; font-weight: 800; cursor: pointer; }
+.main-footer { padding: 40px 20px; text-align: center; color: #444; font-size: 0.8rem; border-top: 1px solid #222; }
