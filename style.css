@@ -1,5 +1,5 @@
 /* =========================================
-   ESTILOS GERAIS & PAGINA DO JOGO
+   ESTILOS GERAIS & PAGINA DO JOGO (FIXED)
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
@@ -10,23 +10,16 @@ body {
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    /* Impede que o conteúdo "vaze" para os lados no mobile */
-    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased;
 }
 
-.container { 
-    max-width: 1100px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    width: 100%;
-}
-
-.content-narrow { max-width: 850px; margin: 0 auto; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; width: 100%; }
+.content-narrow { max-width: 850px; margin: 0 auto; width: 100%; }
 
 /* Badges e Tags */
 .pro-tag {
     background: #00ff88; color: #000; padding: 2px 6px;
-    border-radius: 4px; font-size: 0.6em; vertical-align: middle;
+    border-radius: 4px; font-size: 0.5em; vertical-align: middle;
     margin-left: 5px; font-weight: 800;
 }
 
@@ -34,7 +27,7 @@ body {
 .game-nav-bar {
     width: 100%; padding: 12px 0;
     background: rgba(17, 17, 21, 0.98);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     position: sticky; top: 0; z-index: 1000;
     border-bottom: 1px solid #222;
 }
@@ -48,18 +41,18 @@ body {
 
 .btn-back-home {
     background: #141418; border: 1px solid #222; color: #fff;
-    padding: 8px 16px; border-radius: 10px; text-decoration: none;
+    padding: 8px 15px; border-radius: 10px; text-decoration: none;
     font-weight: 600; font-size: 0.85rem; transition: 0.3s;
     white-space: nowrap;
 }
 
 .fake-search-trigger {
-    flex-grow: 1; 
+    flex: 1; 
     background: #0a0a0c;
     border: 1px solid #222; 
     padding: 10px 15px; 
     border-radius: 10px;
-    color: #666; 
+    color: #555; 
     font-size: 0.85rem; 
     cursor: pointer; 
     transition: 0.3s;
@@ -69,8 +62,10 @@ body {
     text-overflow: ellipsis;
 }
 
-/* HEADER DO JOGO (16:9) */
-.game-header-v2 { background: #111115; padding: 60px 0; border-bottom: 1px solid #222; margin-bottom: 40px; }
+.nav-logo { flex-shrink: 0; }
+
+/* HEADER DO JOGO */
+.game-header-v2 { background: #111115; padding: 60px 0; border-bottom: 1px solid #222; margin-bottom: 50px; width: 100%; }
 
 .game-intro { 
     display: flex; 
@@ -91,18 +86,18 @@ body {
 .game-text { max-width: 500px; }
 .game-title-link { text-decoration: none; color: #fff; }
 .game-title-link h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; }
-.game-text p { color: #888; font-size: 1rem; }
+.game-text p { color: #888; font-size: 1.1rem; }
 
 /* CÓDIGOS */
 .codes-section h2 { 
     color: #00ff88; letter-spacing: 4px; font-size: 0.8rem; 
-    text-transform: uppercase; text-align: center; margin-bottom: 25px; 
+    text-transform: uppercase; text-align: center; margin-bottom: 30px; 
 }
 
 .code-card {
-    background: #141418; padding: 20px 25px; border-radius: 16px;
+    background: #141418; padding: 20px 30px; border-radius: 16px;
     display: flex; justify-content: space-between; align-items: center;
-    border: 1px solid #222; margin-bottom: 12px;
+    border: 1px solid #222; margin-bottom: 15px;
 }
 
 .code-val { font-size: 1.4rem; font-weight: 800; color: #fff; }
@@ -114,44 +109,59 @@ body {
 
 /* GUIA DE RESGATE */
 .how-to-redeem {
-    background: #141418; padding: 30px; border-radius: 16px;
-    border-top: 4px solid #00ff88; margin-top: 50px; text-align: center;
+    background: #141418; padding: 40px 20px; border-radius: 16px;
+    border-top: 4px solid #00ff88; margin-top: 60px; text-align: center;
 }
-.how-to-redeem h2 { margin-bottom: 20px; font-size: 1.3rem; font-weight: 800; }
+.how-to-redeem h2 { margin-bottom: 25px; font-size: 1.4rem; font-weight: 800; }
 .how-to-redeem ul { list-style: none; display: inline-block; text-align: left; color: #aaa; }
-.how-to-redeem li { margin-bottom: 12px; font-size: 0.95rem; }
+.how-to-redeem li { margin-bottom: 15px; font-size: 1rem; }
 .how-to-redeem li span { color: #ffffff; font-weight: 800; margin-right: 8px; }
 
 /* BANNER DE COMUNIDADE */
 .promo-banner {
-    background: #111115; padding: 40px; border-radius: 24px;
-    border: 1px solid #222; margin: 50px 0;
-    display: flex; align-items: center; justify-content: space-between; gap: 25px;
+    position: relative; overflow: hidden; background: #111115;
+    padding: 40px; border-radius: 24px; border: 1px solid #222;
+    margin: 60px 0; display: flex; align-items: center;
+    justify-content: space-between; gap: 30px;
 }
-.promo-text h3 { font-size: 1.6rem; color: #fff; margin-bottom: 10px; }
+
+.promo-text { position: relative; z-index: 1; text-align: left; flex: 1; }
+.promo-text h3 { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
 .promo-text p { font-size: 0.95rem; color: #aaa; }
+
+.promo-action {
+    position: relative; z-index: 1; display: flex;
+    flex-direction: column; align-items: center; gap: 15px;
+}
+
+.group-logo-promo { width: 60px; height: 60px; border-radius: 50%; border: 2px solid #00ff88; object-fit: cover; }
 
 .btn-promo {
     background: #00ff88; color: #000; padding: 12px 28px;
-    border-radius: 50px; font-weight: 800; text-decoration: none; display: inline-block;
+    border-radius: 50px; font-weight: 800; text-decoration: none;
+    font-size: 0.9rem; transition: 0.3s; white-space: nowrap;
 }
 
-.main-footer { padding: 40px 20px; border-top: 1px solid #222; text-align: center; color: #444; font-size: 0.85rem; }
+/* FOOTER */
+.main-footer { padding: 40px 20px; border-top: 1px solid #222; text-align: center; color: #444; font-size: 0.8rem; }
 
-/* RESPONSIVO MOBILE (ANDROID/IOS) CORRIGIDO */
+/* RESPONSIVO MOBILE CORRIGIDO */
 @media (max-width: 768px) {
-    /* Ajuste da Nav: Esconde o texto "YoCodesPRO" para dar espaço à barra */
+    .nav-search-wrapper { gap: 10px; }
+    .btn-back-home { padding: 8px 10px; font-size: 0.75rem; }
+    .fake-search-trigger { font-size: 0.75rem; padding: 8px 10px; }
     .nav-logo { font-size: 1.1rem !important; }
-    .nav-logo span { display: none; } /* Esconde o PRO no mobile muito pequeno */
+
+    .game-header-v2 { padding: 40px 0; }
+    .game-intro { flex-direction: column; text-align: center; gap: 20px; }
+    .game-logo-large { width: 100%; max-width: 100%; height: auto; }
+    .game-title-link h1 { font-size: 2rem; }
     
-    .game-intro { flex-direction: column; text-align: center; gap: 25px; }
-    .game-logo-large { width: 100%; height: auto; aspect-ratio: 16/9; }
-    .game-title-link h1 { font-size: 2.2rem; }
-    
-    .code-card { flex-direction: column; gap: 15px; text-align: center; }
-    .code-val { font-size: 1.3rem; }
+    .code-card { padding: 15px 20px; flex-direction: column; gap: 15px; text-align: center; }
+    .code-val { font-size: 1.2rem; }
     .btn-copy { width: 100%; }
 
     .promo-banner { flex-direction: column; text-align: center; padding: 30px 20px; }
-    .promo-text { max-width: 100%; }
+    .promo-text { text-align: center; margin-bottom: 10px; }
+    .btn-promo { width: 100%; }
 }
