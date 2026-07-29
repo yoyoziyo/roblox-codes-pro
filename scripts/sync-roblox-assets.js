@@ -131,7 +131,7 @@ async function main() {
 }
 
 async function syncGame(entry) {
-  const label = entry?.title || entry?.slug || "Jogo desconhecido";
+  const label = entry?.translations?.en?.title || entry?.slug || "Jogo desconhecido";
   console.log("");
   console.log(`[${label}]`);
 

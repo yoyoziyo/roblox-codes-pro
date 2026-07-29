@@ -1,7 +1,5 @@
 {
   "slug": "",
-  "title": "",
-  "description": "",
   "category": "",
   "robloxUrl": "",
   "lastUpdated": "",
@@ -19,15 +17,32 @@
       "code": ""
     }
   ],
-  "about": "",
-  "howToPlay": [],
-  "howToRedeem": [],
-  "tips": [],
-  "faq": [],
-  "gallery": [],
-  "relatedGames": [],
-  "seo": {
-    "title": "",
-    "description": ""
+  "translations": {
+    "en": {
+      "title": "",
+      "description": "",
+      "about": "",
+      "howToPlay": [],
+      "howToRedeem": [],
+      "tips": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "pt-BR": {
+      "title": "",
+      "description": "",
+      "about": "",
+      "howToPlay": [],
+      "howToRedeem": [],
+      "tips": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      }
+    }
   }
 }

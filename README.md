@@ -1,205 +1,163 @@
 # YoCodes
 
-Site brasileiro de códigos para jogos do Roblox. O projeto é totalmente estático e usa apenas HTML, CSS, JavaScript e arquivos JSON.
+Site estático bilíngue de códigos para jogos do Roblox. Não há backend, banco de dados, Functions, middleware, variáveis de ambiente obrigatórias ou dependências de produção.
 
-Não há backend, banco de dados, funções serverless, cron, dependências de produção ou variáveis de ambiente.
+## URLs
+
+```text
+/en/
+/pt-br/
+/en/games/<slug>
+/pt-br/games/<slug>
+```
+
+A raiz `/` é somente um seletor de entrada:
+
+- respeita a escolha manual salva em `localStorage`;
+- envia navegadores configurados em português para `/pt-br/`;
+- usa `/en/` para qualquer outro idioma;
+- mantém links HTML para English e Português quando JavaScript não estiver disponível.
+
+A detecção ocorre exclusivamente na raiz. Acessar diretamente uma URL com idioma nunca causa troca automática.
 
 ## Estrutura
 
 ```text
 data/
+├── site.json
 ├── game-template.json
 ├── index.json
 ├── homepage.json
 ├── categories.json
+├── i18n/
+│   ├── en.json
+│   └── pt-BR.json
 └── games/
     └── catch-and-tame.json
 
-public/assets/games/
-└── catch-and-tame/
-    ├── icon.webp
-    ├── banner.webp
-    └── thumbnail.webp
+en/
+├── index.html
+└── games/
+    └── catch-and-tame.html
+
+pt-br/
+├── index.html
+└── games/
+    └── catch-and-tame.html
 ```
 
-Os arquivos de imagem podem ser adicionados gradualmente. Enquanto um asset local não existir, o JSON pode usar uma URL externa válida.
+`data/i18n/` contém os textos compartilhados da interface e os nomes traduzidos das categorias. `homepage.json` continua controlando os mesmos jogos e a ordem editorial das seções nos dois idiomas.
 
-## Modelo padrão dos jogos
+## Dados compartilhados e traduções
 
-`data/game-template.json` é a fonte de referência para o formato de todos os arquivos em `data/games/`.
-
-Ao criar um jogo:
-
-1. copie `data/game-template.json`;
-2. salve a cópia como `data/games/<slug>.json`;
-3. preencha os valores sem adicionar, remover ou renomear campos;
-4. mantenha arrays vazios quando ainda não houver conteúdo;
-5. mantenha strings vazias quando uma informação ainda não estiver disponível.
-
-Todos os jogos devem possuir exatamente as mesmas chaves de primeiro nível e as mesmas chaves internas em `assets` e `seo`.
-
-`assetSync` controla a origem dos dois assets que podem vir do Roblox:
-
-```json
-{
-  "assetSync": {
-    "icon": true,
-    "thumbnail": true
-  }
-}
-```
-
-- `true`: o sincronizador pode atualizar o arquivo pelo Roblox;
-- `false`: o arquivo e o caminho existentes são preservados;
-- o banner nunca é atualizado automaticamente.
-
-## Índice geral
-
-`data/index.json` alimenta a pesquisa e as listagens. Cada entrada resumida contém:
+Cada jogo possui apenas um arquivo em `data/games/`. Estes campos são compartilhados:
 
 - `slug`;
-- `title`;
-- `icon`;
-- `thumbnail`;
 - `category`;
+- `robloxUrl`;
 - `lastUpdated`;
-- `activeCodes`;
-- `pageUrl`;
-- `status`.
+- `assets`;
+- `assetSync`;
+- `codes`.
 
-O `slug` deve ser idêntico ao nome do arquivo em `data/games/` e ao atributo `data-game-slug` da página HTML.
+O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 
-## Organização da Home
+- `title`;
+- `description`;
+- `about`;
+- `howToPlay`;
+- `howToRedeem`;
+- `tips`;
+- `faq`;
+- `seo.title`;
+- `seo.description`.
 
-`data/homepage.json` contém somente a organização editorial:
+Os códigos precisam somente de `code`. Recompensas não são exibidas e códigos expirados devem ser removidos da lista.
 
-- `heroGame`: jogo destacado abaixo da pesquisa;
-- `trending`: Jogos em Alta;
-- `recentUpdates`: atualizados recentemente;
-- `popular`: jogos populares;
-- `sectionOrder`: ordem visual das seções.
-
-Todas as referências são slugs registrados em `data/index.json`. Alterar listas ou ordem não exige mudanças no HTML.
-
-## Categorias
-
-`data/categories.json` relaciona o slug interno da categoria ao nome exibido no site.
-
-## Criar um novo jogo
+## Criar um jogo
 
 1. Copie `data/game-template.json` para `data/games/<slug>.json`.
-2. Preencha todos os campos mantendo exatamente o mesmo formato.
-3. Registre o resumo do jogo em `data/index.json`.
-4. Crie `jogos/<slug>.html` a partir da página existente.
-5. Defina `data-game-slug="<slug>"` no `<body>`.
-6. Adicione o slug às listas desejadas em `data/homepage.json`.
-7. Cadastre a categoria em `data/categories.json`, se necessário.
-8. Crie `public/assets/games/<slug>/`.
-9. Coloque, quando disponíveis:
-   - `icon.webp`, quadrado;
-   - `banner.webp`, horizontal principal;
-   - `thumbnail.webp`, otimizado para cards.
-10. Atualize `assets` no JSON completo e `icon`/`thumbnail` no índice para apontar aos arquivos locais.
-11. Inclua a página no `sitemap.xml`.
-12. Teste Home, busca, página individual, códigos, imagens e links.
+2. Preencha todos os campos compartilhados.
+3. Escreva conteúdo natural e completo em `translations.en` e `translations.pt-BR`.
+4. Registre o resumo e as duas traduções em `data/index.json`.
+5. Adicione o slug às listas desejadas de `data/homepage.json`.
+6. Crie as páginas estáticas equivalentes:
+   - `en/games/<slug>.html`;
+   - `pt-br/games/<slug>.html`.
+7. Crie `public/assets/games/<slug>/`.
+8. Execute `npm run sync:roblox -- <slug>`.
+9. Execute `npm run generate:seo`.
+10. Rode `npm test` e valide as duas URLs.
 
-## URL do Roblox
+Não adicione tags, recompensas ou códigos expirados.
 
-Cada arquivo completo precisa ter uma URL oficial no formato:
+## Assets do Roblox
 
-```json
-{
-  "robloxUrl": "https://www.roblox.com/games/96645548064314"
-}
+```bash
+npm run sync:roblox
+npm run sync:roblox -- catch-and-tame
 ```
 
-O sincronizador extrai o Place ID dessa URL e resolve o Universe ID automaticamente. Não é necessário cadastrar o Universe ID.
+O sincronizador local:
 
-## Atualizar códigos
+- resolve o Universe ID pela URL oficial;
+- atualiza ícone e thumbnail;
+- nunca altera o banner;
+- não altera `translations`;
+- mantém os mesmos assets compartilhados entre os idiomas;
+- não faz chamadas no navegador dos visitantes.
 
-Edite `data/games/<slug>.json`:
+## SEO internacional
 
-- cada item precisa somente do campo `code`;
-- recompensas não são exibidas e não devem ser cadastradas em jogos novos;
-- o site mantém apenas códigos ativos;
-- quando um código expirar, apague o item da lista `codes`;
-- atualize `lastUpdated`;
-- ajuste `activeCodes` e `lastUpdated` em `data/index.json`.
+Cada página localizada possui:
 
-Exemplo:
+- `lang` correto;
+- title e description traduzidos;
+- canonical autorreferencial;
+- `hreflang` recíproco para `en` e `pt-BR`;
+- `x-default` apontando para inglês;
+- Open Graph traduzido;
+- Twitter Card;
+- conteúdo principal traduzido.
 
-```json
-{
-  "codes": [
-    {
-      "code": "EXEMPLO123"
-    }
-  ]
-}
+O sitemap contém as duas Homes e as duas páginas de cada jogo, com `xhtml:link` para todas as alternativas.
+
+### Trocar o domínio
+
+Edite somente:
+
+```text
+data/site.json
 ```
 
-Arquivos antigos continuam compatíveis: campos como `reward` são ignorados e itens com `status: "expired"` não são exibidos.
+Altere `origin` e execute:
 
-`lastUpdated` continua sendo usado internamente para organização editorial e pode controlar a ordem de “Atualizados recentemente”, mas a data não aparece nas tabelas da Home.
+```bash
+npm run generate:seo
+```
 
-## Rodar localmente
+O comando atualiza canonical, hreflang, sitemap e robots.txt.
 
-Os JSONs são carregados com `fetch`, portanto use o preview estático local:
+## Preview local
 
 ```bash
 npm run preview
 ```
 
-Abra `http://127.0.0.1:4173`. O preview reproduz o mapeamento `/assets/` usado pela Vercel.
-
-Nenhuma variável de ambiente é necessária.
-
-## Sincronizar ícone e thumbnail do Roblox
-
-O comando local lê `data/index.json`, encontra cada `data/games/<slug>.json`, consulta os endpoints oficiais do Roblox e salva:
+Abra:
 
 ```text
-public/assets/games/<slug>/icon.webp
-public/assets/games/<slug>/thumbnail.webp
+http://127.0.0.1:4173/en/
+http://127.0.0.1:4173/pt-br/
 ```
 
-Sincronizar todos os jogos:
+O preview suporta URLs limpas, assets em `/assets/` e os redirects antigos:
 
-```bash
-npm run sync:roblox
+```text
+/games/<slug> → /en/games/<slug>
+/jogos/<slug> → /en/games/<slug>
 ```
-
-Sincronizar apenas um jogo:
-
-```bash
-npm run sync:roblox -- catch-and-tame
-```
-
-O comando:
-
-- valida domínio, Place ID, respostas HTTP e assinatura WebP;
-- resolve o Universe ID automaticamente;
-- usa timeout e poucas tentativas para imagens pendentes;
-- grava primeiro em arquivo temporário;
-- não regrava imagens idênticas;
-- atualiza os caminhos locais em `assets` e no índice;
-- preserva falhas parciais sem apagar arquivos anteriores;
-- nunca altera `lastUpdated`, códigos, textos, dicas, FAQ, SEO ou a organização da Home.
-
-Para impedir a atualização de um asset específico, defina a opção correspondente como `false` em `assetSync`.
-
-### Diferença entre os assets
-
-- `icon`: imagem quadrada oficial, usada em pesquisa e cards compactos;
-- `thumbnail`: imagem horizontal oficial, usada em cards maiores;
-- `banner`: arte editorial personalizada do YoCodes, sempre gerenciada manualmente.
-
-Se não houver banner, a página usa a thumbnail como fallback. Execute o comando novamente sempre que quiser buscar versões mais recentes dos assets oficiais.
-
-Os códigos e todo o conteúdo editorial continuam sendo atualizados manualmente. O sincronizador é apenas uma ferramenta local; visitantes nunca fazem chamadas às APIs do Roblox.
 
 ## Deploy
 
-O projeto pode ser publicado como site estático no plano gratuito da Vercel. O `vercel.json` mantém a raiz do repositório como saída estática e mapeia `/assets/` para `public/assets/`.
-
-O `package.json` existe apenas para comandos locais de manutenção e não adiciona dependências de produção. Não é necessário configurar Storage, Functions, Cron Jobs, Actions Secrets ou variáveis de ambiente.
+O projeto permanece totalmente estático e compatível com o plano gratuito da Vercel. `vercel.json` contém somente configuração de saída, headers, redirects e rewrites estáticos.

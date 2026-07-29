@@ -1,7 +1,5 @@
 {
   "slug": "catch-and-tame",
-  "title": "Catch and Tame",
-  "description": "Códigos ativos e recompensas gratuitas para você evoluir mais rápido no jogo.",
   "category": "simulation",
   "robloxUrl": "https://www.roblox.com/games/96645548064314",
   "lastUpdated": "2026-07-29T12:00:00-03:00",
@@ -22,37 +20,76 @@
       "code": "TAME2024"
     }
   ],
-  "about": "Capture animais selvagens, leve-os para o seu espaço e construa uma coleção cada vez maior.",
-  "howToPlay": [
-    "Equipe seu laço.",
-    "Capture os animais que encontrar pela ilha.",
-    "Leve os animais para o seu espaço.",
-    "Alimente e combine animais para aumentar sua coleção."
-  ],
-  "howToRedeem": [
-    "Abra Catch and Tame no Roblox.",
-    "Procure o botão de códigos no menu do jogo.",
-    "Cole um código da lista no campo indicado.",
-    "Confirme para receber sua recompensa."
-  ],
-  "tips": [
-    "Resgate os códigos assim que possível, pois eles podem expirar sem aviso.",
-    "Confira esta página novamente depois de atualizações do jogo."
-  ],
-  "faq": [
-    {
-      "question": "Por que um código não funcionou?",
-      "answer": "Confira se o código foi copiado sem espaços. Se ainda não funcionar, ele pode ter expirado recentemente."
+  "translations": {
+    "en": {
+      "title": "Catch and Tame",
+      "description": "Active Catch and Tame codes and free rewards to help you grow your collection faster.",
+      "about": "Catch and Tame is a creature-collecting Roblox game where players capture animals, explore new areas, and unlock increasingly rare creatures.",
+      "howToPlay": [
+        "Equip your lasso.",
+        "Explore the island and capture wild animals.",
+        "Bring captured animals back to your space.",
+        "Feed and combine animals to expand your collection."
+      ],
+      "howToRedeem": [
+        "Open Catch and Tame on Roblox.",
+        "Find the codes button in the game menu.",
+        "Paste one of the active codes into the field.",
+        "Confirm to claim your reward."
+      ],
+      "tips": [
+        "Redeem codes as soon as possible because they can expire without notice.",
+        "Check this page again after game updates for newly verified codes."
+      ],
+      "faq": [
+        {
+          "question": "Why is a code not working?",
+          "answer": "Make sure the code was copied without extra spaces. If it still fails, it may have expired recently."
+        },
+        {
+          "question": "When are new codes added?",
+          "answer": "We update this list manually whenever we find and verify new codes."
+        }
+      ],
+      "seo": {
+        "title": "Catch and Tame Codes — YoCodes",
+        "description": "Find active Catch and Tame codes, learn how to redeem them, and get helpful gameplay tips."
+      }
     },
-    {
-      "question": "Quando novos códigos são adicionados?",
-      "answer": "A lista é atualizada manualmente quando encontramos e verificamos novos códigos."
+    "pt-BR": {
+      "title": "Catch and Tame",
+      "description": "Códigos ativos de Catch and Tame e recompensas gratuitas para evoluir sua coleção mais rápido.",
+      "about": "Catch and Tame é um jogo de captura e evolução no Roblox em que os jogadores colecionam animais, exploram novas áreas e desbloqueiam criaturas cada vez mais raras.",
+      "howToPlay": [
+        "Equipe seu laço.",
+        "Explore a ilha e capture animais selvagens.",
+        "Leve os animais capturados para o seu espaço.",
+        "Alimente e combine animais para ampliar sua coleção."
+      ],
+      "howToRedeem": [
+        "Abra Catch and Tame no Roblox.",
+        "Procure o botão de códigos no menu do jogo.",
+        "Cole um dos códigos ativos no campo indicado.",
+        "Confirme para receber sua recompensa."
+      ],
+      "tips": [
+        "Resgate os códigos assim que possível, pois eles podem expirar sem aviso.",
+        "Volte a esta página depois de atualizações do jogo para conferir novos códigos verificados."
+      ],
+      "faq": [
+        {
+          "question": "Por que um código não funcionou?",
+          "answer": "Confira se o código foi copiado sem espaços extras. Se ainda não funcionar, ele pode ter expirado recentemente."
+        },
+        {
+          "question": "Quando novos códigos são adicionados?",
+          "answer": "Atualizamos a lista manualmente sempre que encontramos e verificamos novos códigos."
+        }
+      ],
+      "seo": {
+        "title": "Códigos de Catch and Tame — YoCodes",
+        "description": "Confira códigos ativos de Catch and Tame, veja como resgatá-los e encontre dicas úteis para jogar."
+      }
     }
-  ],
-  "gallery": [],
-  "relatedGames": [],
-  "seo": {
-    "title": "Códigos de Catch and Tame atualizados — YoCodes",
-    "description": "Confira todos os códigos ativos de Catch and Tame no Roblox, recompensas disponíveis e como resgatar."
   }
 }

@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:seo": "node scripts/generate-seo.js",
     "preview": "node scripts/preview.js",
     "sync:roblox": "node scripts/sync-roblox-assets.js",
     "test": "node --test"

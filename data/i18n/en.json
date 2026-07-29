@@ -1,0 +1,60 @@
+{
+  "locale": "en",
+  "path": "en",
+  "languageName": "English",
+  "categories": {
+    "simulation": "Simulation"
+  },
+  "search": {
+    "placeholder": "Search games...",
+    "empty": "No registered game matches your search.",
+    "unavailable": "Content is temporarily unavailable."
+  },
+  "home": {
+    "heroBadge": "Codes verified daily",
+    "heroTitle": "Roblox codes, without the hassle.",
+    "heroDescription": "Find active codes, free rewards, and redemption instructions for your favorite games.",
+    "featured": "Featured:",
+    "trustVerified": "Verified codes",
+    "trustUpdates": "Frequent updates",
+    "trustCopy": "Copy with one click",
+    "recentKicker": "Latest",
+    "recentTitle": "Recently updated",
+    "recentDescription": "Games with codes verified by our team.",
+    "trendingKicker": "Highlights",
+    "trendingTitle": "Trending games",
+    "trendingDescription": "A hand-picked selection of games getting attention.",
+    "popularKicker": "Discover",
+    "popularTitle": "Popular games",
+    "popularDescription": "Quickly find the codes everyone is looking for.",
+    "game": "Game",
+    "category": "Category"
+  },
+  "game": {
+    "verifiedOn": "Verified on",
+    "viewCodes": "View codes",
+    "code": "code",
+    "codes": "codes",
+    "playRoblox": "Open on Roblox",
+    "activeCodes": "Active codes",
+    "copyHint": "Select copy and paste the code inside the game.",
+    "copy": "Copy",
+    "copied": "Copied ✓",
+    "copiedToast": "Code {code} copied",
+    "noCodes": "There are no active codes right now.",
+    "redeem": "How to redeem",
+    "redeemHint": "It takes less than a minute.",
+    "howToPlay": "How to play",
+    "tips": "Tips",
+    "faq": "Frequently asked questions",
+    "about": "About this game",
+    "lastVerified": "Last verified",
+    "status": "Status",
+    "active": "Active",
+    "newCode": "Found a new code?",
+    "communityHint": "Tell our community and help other players.",
+    "joinDiscord": "Join Discord",
+    "loading": "Loading game data...",
+    "unavailable": "Game data is temporarily unavailable."
+  }
+}

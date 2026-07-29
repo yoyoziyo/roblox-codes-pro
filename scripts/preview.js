@@ -17,25 +17,39 @@ const mimeTypes = new Map([
   [".xml", "application/xml; charset=utf-8"],
 ]);
 
-function resolveRequestPath(url) {
-  const pathname = decodeURIComponent(new URL(url, "http://localhost").pathname);
+async function resolveRequestPath(url) {
+  const requestUrl = new URL(url, "http://localhost");
+  const pathname = decodeURIComponent(requestUrl.pathname);
+  const oldGame = pathname.match(/^\/(?:games|jogos)\/([^/]+)\/?$/);
+  if (oldGame) return { redirect: `/en/games/${oldGame[1]}${requestUrl.search}` };
   const mapped = pathname.startsWith("/assets/")
     ? `/public${pathname}`
     : pathname === "/"
       ? "/index.html"
       : pathname;
   const candidate = path.resolve(root, `.${mapped}`);
-  return candidate === root || candidate.startsWith(`${root}${path.sep}`)
-    ? candidate
-    : null;
+  if (!(candidate === root || candidate.startsWith(`${root}${path.sep}`))) return null;
+  const candidates = [candidate];
+  if (!path.extname(candidate)) candidates.push(`${candidate}.html`, path.join(candidate, "index.html"));
+  for (const filePath of candidates) {
+    try {
+      if ((await stat(filePath)).isFile()) return { filePath };
+    } catch {}
+  }
+  return { filePath: candidate };
 }
 
 createServer(async (request, response) => {
-  const filePath = resolveRequestPath(request.url ?? "/");
-  if (!filePath) {
+  const resolved = await resolveRequestPath(request.url ?? "/");
+  if (!resolved) {
     response.writeHead(400).end("Invalid path");
     return;
   }
+  if (resolved.redirect) {
+    response.writeHead(308, { Location: resolved.redirect }).end();
+    return;
+  }
+  const filePath = resolved.filePath;
 
   try {
     const file = await stat(filePath);
