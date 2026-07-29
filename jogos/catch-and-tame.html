@@ -30,22 +30,22 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://yoyoziyo.github.io/roblox-codes-pro/"},{"@type":"ListItem","position":2,"name":"Catch and Tame","item":"https://yoyoziyo.github.io/roblox-codes-pro/jogos/catch-and-tame.html"}]}
   </script>
 </head>
-<body>
+<body data-game-slug="catch-and-tame">
   <a class="skip-link" href="#codigos">Pular para os códigos</a>
   <header class="site-header">
     <nav class="container nav" aria-label="Navegação principal">
       <a class="brand" href="../index.html"><span class="brand-mark">Y</span><span>Yo<span>Codes</span></span></a>
-      <div class="nav-links" id="nav-links"><a href="../index.html">Início</a><a href="../index.html#jogos">Jogos</a><a class="active" href="#codigos">Códigos</a><a href="../index.html#ranking">Atualizados</a><a href="../index.html#comunidade">Discord</a></div>
+      <div class="nav-links" id="nav-links"><a href="../index.html">Início</a><a href="../index.html#jogos">Jogos</a><a class="active" href="#codigos">Códigos</a><a href="../index.html#em-alta">Em alta</a><a href="../index.html#comunidade">Discord</a></div>
       <a class="nav-search" href="../index.html" aria-label="Pesquisar outro jogo"><span>⌕ Pesquisar</span></a>
     </nav>
   </header>
   <main>
     <section class="game-hero">
       <div class="container">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Início</a><span>/</span><a href="../index.html#jogos">Jogos</a><span>/</span><strong>Catch and Tame</strong></nav>
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Início</a><span>/</span><a href="../index.html#jogos">Jogos</a><span>/</span><strong id="breadcrumb-game">Catch and Tame</strong></nav>
         <div class="game-intro">
-          <img class="game-cover" src="https://tr.rbxcdn.com/180DAY-a43c67ec46a7f8758e7b781a2d2fff74/768/432/Image/Webp/noFilter" alt="Ícone oficial de Catch and Tame" width="220" height="220">
-          <div class="game-copy"><span class="verified"><i></i> Verificado em 29 de julho de 2026</span><h1>Catch and Tame</h1><p>Códigos ativos e recompensas gratuitas para você evoluir mais rápido no jogo.</p><div class="game-actions"><a class="button button-primary" href="#codigos">Ver 2 códigos</a><a class="button button-secondary" href="https://www.roblox.com/games/96645548064314" target="_blank" rel="noopener">Jogar no Roblox ↗</a></div></div>
+          <img class="game-cover" id="game-cover" src="../img/favicon.png" alt="" width="220" height="220">
+          <div class="game-copy"><span class="verified" id="verified-at"><i></i> Carregando dados...</span><h1 id="game-name">Catch and Tame</h1><p id="game-summary">Carregando informações do jogo...</p><div class="game-actions"><a class="button button-primary" id="codes-link" href="#codigos">Ver códigos</a><a class="button button-secondary" id="roblox-link" href="#" target="_blank" rel="noopener">Jogar no Roblox ↗</a></div></div>
         </div>
       </div>
     </section>
@@ -53,21 +53,22 @@
       <div>
         <section class="panel" id="codigos">
           <div class="panel-head"><h2>Códigos ativos</h2><p>Toque em copiar e cole o código dentro do jogo.</p></div>
-          <div class="code-list">
-            <div class="code-row"><code class="code-value">RELEASE</code><span class="code-reward">Recompensa de lançamento</span><button class="copy-button" type="button" onclick="copyCode('RELEASE',this)" aria-label="Copiar código RELEASE">Copiar</button></div>
-            <div class="code-row"><code class="code-value">TAME2024</code><span class="code-reward">Recompensa especial</span><button class="copy-button" type="button" onclick="copyCode('TAME2024',this)" aria-label="Copiar código TAME2024">Copiar</button></div>
-          </div>
+          <div class="code-list" id="active-code-list"><div class="code-row"><span class="code-reward">Carregando códigos...</span></div></div>
         </section>
-        <section class="panel"><div class="panel-head"><h2>Como resgatar</h2><p>Leva menos de um minuto.</p></div><ol class="steps"><li>Abra Catch and Tame no Roblox.</li><li>Procure o botão de códigos no menu do jogo.</li><li>Cole um código da lista acima no campo indicado.</li><li>Confirme para receber sua recompensa.</li></ol></section>
-        <section class="panel"><details><summary>Códigos expirados</summary><div>Nenhum código expirado cadastrado até o momento.</div></details></section>
+        <section class="panel"><div class="panel-head"><h2>Como resgatar</h2><p>Leva menos de um minuto.</p></div><ol class="steps" id="redeem-steps"></ol></section>
+        <section class="panel"><div class="panel-head"><h2>Como jogar</h2></div><ol class="steps" id="how-to-play"></ol></section>
+        <section class="panel"><div class="panel-head"><h2>Dicas</h2></div><ul class="steps" id="game-tips"></ul></section>
+        <section class="panel"><div class="panel-head"><h2>Perguntas frequentes</h2></div><div id="game-faq"></div></section>
+        <section class="panel"><details><summary>Códigos expirados</summary><div id="expired-code-list">Nenhum código expirado cadastrado até o momento.</div></details></section>
       </div>
       <aside>
-        <div class="panel side-card"><h2>Sobre este jogo</h2><div class="facts"><div class="fact"><span>Códigos ativos</span><strong>2</strong></div><div class="fact"><span>Última verificação</span><strong>29/07/2026</strong></div><div class="fact"><span>Status</span><strong>Atualizado</strong></div></div><div class="discord-mini"><h3>Encontrou um código novo?</h3><p>Avise nossa comunidade e ajude outros jogadores.</p><a class="button button-primary" href="https://discord.com/" target="_blank" rel="noopener">Entrar no Discord</a></div></div>
+        <div class="panel side-card"><h2>Sobre este jogo</h2><div class="facts"><div class="fact"><span>Códigos ativos</span><strong id="active-code-count">—</strong></div><div class="fact"><span>Última verificação</span><strong id="verified-date">—</strong></div><div class="fact"><span>Status</span><strong>Atualizado</strong></div></div><div class="discord-mini"><h3>Encontrou um código novo?</h3><p>Avise nossa comunidade e ajude outros jogadores.</p><a class="button button-primary" href="https://discord.com/" target="_blank" rel="noopener">Entrar no Discord</a></div></div>
       </aside>
     </div>
   </main>
   <footer class="footer"><div class="container footer-bottom"><span>© 2026 YoCodes.</span><span>Não afiliado à Roblox Corporation.</span></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="../script.js" defer></script>
+  <script src="../game-page.js" defer></script>
 </body>
 </html>
