@@ -4,108 +4,111 @@ Site brasileiro de códigos para jogos do Roblox. O projeto é totalmente estát
 
 Não há backend, banco de dados, funções serverless, cron, dependências de produção ou variáveis de ambiente.
 
-## Estrutura dos dados
+## Estrutura
 
 ```text
 data/
+├── game-template.json
 ├── index.json
 ├── homepage.json
 ├── categories.json
 └── games/
     └── catch-and-tame.json
+
+public/assets/games/
+└── catch-and-tame/
+    ├── icon.webp
+    ├── banner.webp
+    └── thumbnail.webp
 ```
 
-### `data/index.json`
+Os arquivos de imagem podem ser adicionados gradualmente. Enquanto um asset local não existir, o JSON pode usar uma URL externa válida.
 
-Índice pequeno usado pela busca e pelas listagens. Cada item contém apenas:
+## Modelo padrão dos jogos
+
+`data/game-template.json` é a fonte de referência para o formato de todos os arquivos em `data/games/`.
+
+Ao criar um jogo:
+
+1. copie `data/game-template.json`;
+2. salve a cópia como `data/games/<slug>.json`;
+3. preencha os valores sem adicionar, remover ou renomear campos;
+4. mantenha arrays vazios quando ainda não houver conteúdo;
+5. mantenha strings vazias quando uma informação ainda não estiver disponível.
+
+Todos os jogos devem possuir exatamente as mesmas chaves de primeiro nível e as mesmas chaves internas em `assets` e `seo`.
+
+## Índice geral
+
+`data/index.json` alimenta a pesquisa e as listagens. Cada entrada resumida contém:
 
 - `slug`;
-- `name`;
+- `title`;
 - `icon`;
 - `thumbnail`;
 - `category`;
-- `lastUpdatedAt`;
+- `lastUpdated`;
 - `activeCodes`;
 - `pageUrl`;
 - `status`.
 
-### `data/homepage.json`
+O `slug` deve ser idêntico ao nome do arquivo em `data/games/` e ao atributo `data-game-slug` da página HTML.
 
-Controla manualmente a Home:
+## Organização da Home
 
-- `recent`: atualizados recentemente;
+`data/homepage.json` contém somente a organização editorial:
+
+- `heroGame`: jogo destacado abaixo da pesquisa;
 - `trending`: Jogos em Alta;
+- `recentUpdates`: atualizados recentemente;
 - `popular`: jogos populares;
 - `sectionOrder`: ordem visual das seções.
 
-As listas contêm somente slugs existentes em `data/index.json`.
+Todas as referências são slugs registrados em `data/index.json`. Alterar listas ou ordem não exige mudanças no HTML.
 
-### `data/categories.json`
+## Categorias
 
-Relaciona o slug interno da categoria ao nome exibido no site.
+`data/categories.json` relaciona o slug interno da categoria ao nome exibido no site.
 
-### `data/games/<slug>.json`
+## Criar um novo jogo
 
-Arquivo completo de um jogo:
+1. Copie `data/game-template.json` para `data/games/<slug>.json`.
+2. Preencha todos os campos mantendo exatamente o mesmo formato.
+3. Registre o resumo do jogo em `data/index.json`.
+4. Crie `jogos/<slug>.html` a partir da página existente.
+5. Defina `data-game-slug="<slug>"` no `<body>`.
+6. Adicione o slug às listas desejadas em `data/homepage.json`.
+7. Cadastre a categoria em `data/categories.json`, se necessário.
+8. Crie `public/assets/games/<slug>/`.
+9. Coloque, quando disponíveis:
+   - `icon.webp`, quadrado;
+   - `banner.webp`, horizontal principal;
+   - `thumbnail.webp`, otimizado para cards.
+10. Atualize `assets` no JSON completo e `icon`/`thumbnail` no índice para apontar aos arquivos locais.
+11. Inclua a página no `sitemap.xml`.
+12. Teste Home, busca, página individual, códigos, imagens e links.
 
-- descrição curta e completa;
-- URL oficial;
-- imagens;
-- códigos ativos e expirados;
-- instruções de resgate;
-- como jogar;
-- dicas;
-- perguntas frequentes.
+## Atualizar códigos
 
-A página individual carrega somente o JSON do próprio jogo.
+Edite `data/games/<slug>.json`:
+
+- novos códigos usam `status: "active"`;
+- códigos vencidos permanecem com `status: "expired"`;
+- atualize `lastUpdated`;
+- ajuste `activeCodes` e `lastUpdated` em `data/index.json`.
 
 ## Rodar localmente
 
-Os arquivos JSON são carregados com `fetch`, portanto use um servidor HTTP estático:
+Os JSONs são carregados com `fetch`, portanto use um servidor HTTP estático:
 
 ```bash
 python -m http.server 4173
 ```
 
-Depois abra:
-
-`http://localhost:4173`
+Abra `http://localhost:4173`.
 
 Nenhuma variável de ambiente é necessária.
 
-## Adicionar um jogo
-
-1. Crie `data/games/<slug>.json` usando a estrutura de `catch-and-tame.json`.
-2. Adicione uma entrada resumida em `data/index.json`.
-3. Crie `jogos/<slug>.html` a partir da página existente.
-4. Defina `data-game-slug="<slug>"` no `<body>` da página.
-5. Adicione o slug às listas desejadas em `data/homepage.json`.
-6. Se necessário, cadastre a categoria em `data/categories.json`.
-7. Inclua a URL no `sitemap.xml`.
-8. Abra a Home e a página do jogo para conferir busca, imagens, códigos e links.
-
-## Atualizar códigos
-
-Edite somente `data/games/<slug>.json`:
-
-- novos códigos usam `status: "active"`;
-- códigos vencidos permanecem no arquivo com `status: "expired"`;
-- atualize `lastVerifiedAt`;
-- ajuste `activeCodes` e `lastUpdatedAt` em `data/index.json`.
-
-## Editar a Home
-
-Edite `data/homepage.json`. A ordem dos slugs define a ordem dos cards. “Jogos em Alta” é uma seleção editorial manual e não depende de métricas externas.
-
-## Imagens
-
-Use URLs oficiais retornadas pelas APIs do Roblox ou imagens próprias do YoCodes. A página do jogo prioriza:
-
-1. `images.featured`;
-2. `images.thumbnail`;
-3. `images.icon`;
-4. placeholder local.
-
 ## Deploy
 
-O projeto pode ser publicado como site estático no plano gratuito da Vercel, GitHub Pages ou outro serviço semelhante. Não é necessário configurar Storage, Functions, Cron Jobs, Actions Secrets ou variáveis de ambiente.
+O projeto pode ser publicado como site estático no plano gratuito da Vercel, GitHub Pages ou serviço equivalente. Não é necessário configurar Storage, Functions, Cron Jobs, Actions Secrets ou variáveis de ambiente.
