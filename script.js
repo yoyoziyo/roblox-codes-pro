@@ -3,11 +3,6 @@ const fallbackImage="img/favicon.png";
 const byId=id=>document.getElementById(id);
 const safeImage=url=>url||fallbackImage;
 const formatDate=value=>value?new Intl.DateTimeFormat("pt-BR",{day:"2-digit",month:"short"}).format(new Date(value)):"A verificar";
-const timeAgo=value=>{
-  if(!value)return"A verificar";
-  const hours=Math.max(0,Math.round((Date.now()-new Date(value).getTime())/36e5));
-  return hours<1?"Agora":hours<24?`Há ${hours}h`:`Há ${Math.round(hours/24)}d`;
-};
 const getGames=slugs=>slugs.map(slug=>state.games.find(game=>game.slug===slug)).filter(Boolean);
 
 function renderHome(){
@@ -19,20 +14,21 @@ function renderHome(){
   renderHeroGame(state.homepage.heroGame);
 }
 function renderRecent(games){
-  const container=byId("recent-games");if(!container)return;
-  container.innerHTML=games.map(game=>`
-    <a class="featured-card" href="${game.pageUrl}">
-      <img src="${safeImage(game.thumbnail||game.icon)}" alt="Thumbnail de ${game.title}" width="560" height="315" loading="lazy" onerror="this.src='${fallbackImage}'">
-      <div class="featured-content"><span class="badge">Atualizado</span><h3>${game.title}</h3><div class="card-meta"><span><b>${game.activeCodes}</b> códigos ativos</span><span>Verificado ${timeAgo(game.lastUpdated).toLowerCase()}</span></div></div>
-    </a>`).join("");
+  renderGameTable("recent-games",games,"Nenhum jogo atualizado recentemente.");
 }
 function renderPopular(games){
-  const container=byId("popular-games");if(!container)return;
-  container.innerHTML=games.map(game=>`
-    <a class="game-card" href="${game.pageUrl}">
-      <img src="${safeImage(game.icon)}" alt="Ícone de ${game.title}" width="180" height="180" loading="lazy" onerror="this.src='${fallbackImage}'">
-      <h3>${game.title}</h3><span>${game.activeCodes} códigos ativos</span>
-    </a>`).join("");
+  renderGameTable("popular-games",games,"Nenhum jogo popular selecionado.");
+}
+function renderGameTable(id,games,emptyMessage){
+  const container=byId(id);if(!container)return;
+  container.innerHTML=`
+    <div class="game-table-head" aria-hidden="true"><span>#</span><span>Jogo</span><span>Categoria</span></div>
+    ${games.length?games.map((game,index)=>`
+      <a class="game-table-row" href="${game.pageUrl}">
+        <span class="position">${String(index+1).padStart(2,"0")}</span>
+        <span class="game-table-title"><img src="${safeImage(game.icon)}" alt="" width="44" height="44" loading="lazy" onerror="this.src='${fallbackImage}'"><strong>${game.title}</strong></span>
+        <span class="game-table-category">${state.categories.get(game.category)||game.category}</span>
+      </a>`).join(""):`<div class="trending-empty">${emptyMessage}</div>`}`;
 }
 function renderTrending(games){
   const container=byId("trending-games");if(!container)return;

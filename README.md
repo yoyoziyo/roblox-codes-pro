@@ -119,10 +119,28 @@ O sincronizador extrai o Place ID dessa URL e resolve o Universe ID automaticame
 
 Edite `data/games/<slug>.json`:
 
-- novos códigos usam `status: "active"`;
-- códigos vencidos permanecem com `status: "expired"`;
+- cada item precisa somente do campo `code`;
+- recompensas não são exibidas e não devem ser cadastradas em jogos novos;
+- o site mantém apenas códigos ativos;
+- quando um código expirar, apague o item da lista `codes`;
 - atualize `lastUpdated`;
 - ajuste `activeCodes` e `lastUpdated` em `data/index.json`.
+
+Exemplo:
+
+```json
+{
+  "codes": [
+    {
+      "code": "EXEMPLO123"
+    }
+  ]
+}
+```
+
+Arquivos antigos continuam compatíveis: campos como `reward` são ignorados e itens com `status: "expired"` não são exibidos.
+
+`lastUpdated` continua sendo usado internamente para organização editorial e pode controlar a ordem de “Atualizados recentemente”, mas a data não aparece nas tabelas da Home.
 
 ## Rodar localmente
 

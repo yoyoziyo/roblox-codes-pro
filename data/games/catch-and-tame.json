@@ -16,16 +16,10 @@
   },
   "codes": [
     {
-      "code": "RELEASE",
-      "reward": "Recompensa de lançamento",
-      "status": "active",
-      "verifiedAt": "2026-07-29T12:00:00-03:00"
+      "code": "RELEASE"
     },
     {
-      "code": "TAME2024",
-      "reward": "Recompensa especial",
-      "status": "active",
-      "verifiedAt": "2026-07-29T12:00:00-03:00"
+      "code": "TAME2024"
     }
   ],
   "about": "Capture animais selvagens, leve-os para o seu espaço e construa uma coleção cada vez maior.",

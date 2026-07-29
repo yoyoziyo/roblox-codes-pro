@@ -14,7 +14,11 @@
     "icon": true,
     "thumbnail": true
   },
-  "codes": [],
+  "codes": [
+    {
+      "code": ""
+    }
+  ],
   "about": "",
   "howToPlay": [],
   "howToRedeem": [],
