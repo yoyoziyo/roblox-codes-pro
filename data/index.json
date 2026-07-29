@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "catch-and-tame",
-      "name": "Catch and Tame",
+      "title": "Catch and Tame",
       "icon": "https://tr.rbxcdn.com/180DAY-5b6bf03af39c183b90d81a7155f398f7/150/150/Image/Webp/noFilter",
       "thumbnail": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter",
       "category": "simulation",
-      "lastUpdatedAt": "2026-07-29T12:00:00-03:00",
+      "lastUpdated": "2026-07-29T12:00:00-03:00",
       "activeCodes": 2,
       "pageUrl": "jogos/catch-and-tame.html",
       "status": "active"
