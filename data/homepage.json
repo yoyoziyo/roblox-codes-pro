@@ -1,16 +1,17 @@
 {
-  "sectionOrder": [
-    "recent",
-    "trending",
-    "popular"
-  ],
-  "recent": [
+  "heroGame": "catch-and-tame",
+  "trending": [
     "catch-and-tame"
   ],
-  "trending": [
+  "recentUpdates": [
     "catch-and-tame"
   ],
   "popular": [
     "catch-and-tame"
+  ],
+  "sectionOrder": [
+    "recentUpdates",
+    "trending",
+    "popular"
   ]
 }
