@@ -62,11 +62,91 @@ Depois consulte:
 curl http://localhost:3000/api/roblox/ranking
 ```
 
-## Cron
+## Atualização horária com GitHub Actions
 
-`vercel.json` agenda `/api/cron/roblox-ranking` com `0 * * * *`. Os horários da Vercel são UTC. O agendador envia `Authorization: Bearer <CRON_SECRET>`.
+O plano Hobby da Vercel hospeda as Functions e o Blob, mas o agendamento horário é feito pelo workflow:
 
-Importante: no plano Hobby, o Vercel Cron aceita apenas execução diária. Para atualização a cada hora, use um plano que aceite essa frequência ou um agendador externo compatível chamando o mesmo endpoint protegido.
+`.github/workflows/update-roblox-ranking.yml`
+
+O workflow executa uma vez por hora e também aceita execução manual. Ele chama:
+
+`GET /api/cron/roblox-ranking`
+
+com o header:
+
+`Authorization: Bearer <YOCODES_CRON_SECRET>`
+
+O comando HTTP usa timeout de conexão de 10 segundos, limite total de 45 segundos, retry limitado e o User-Agent `YoCodes-GitHub-Cron/1.0`. Qualquer status HTTP fora de 2xx faz o workflow falhar.
+
+### Criar os secrets no GitHub
+
+No repositório:
+
+1. abra **Settings**;
+2. acesse **Secrets and variables** → **Actions**;
+3. selecione **New repository secret**;
+4. crie `YOCODES_CRON_URL` com a URL completa, por exemplo:
+
+   `https://dominio-do-site.com/api/cron/roblox-ranking`
+
+5. crie `YOCODES_CRON_SECRET` com exatamente o mesmo valor de `CRON_SECRET` configurado na Vercel.
+
+Os valores são lidos diretamente pelo runner e não são impressos pelo workflow.
+
+### Executar manualmente
+
+1. abra a aba **Actions** do repositório;
+2. selecione **Update Roblox ranking**;
+3. clique em **Run workflow**;
+4. escolha a branch de produção e confirme.
+
+Para verificar a execução, abra o run correspondente na mesma aba **Actions** e consulte o job **Call protected ranking endpoint**. Uma execução bem-sucedida termina com `YoCodes ranking updated successfully.`. Erros de configuração, timeout ou resposta HTTP aparecem como falha do job, sem revelar o segredo.
+
+O cron do GitHub Actions pode sofrer pequenos atrasos em períodos de alta demanda e não garante execução exatamente no minuto configurado. O horário do workflow é UTC.
+
+### Testar o endpoint
+
+Use a mesma URL e o mesmo segredo configurados no GitHub e na Vercel:
+
+```bash
+curl \
+  --fail-with-body \
+  --connect-timeout 10 \
+  --max-time 45 \
+  --user-agent "YoCodes-Manual-Test/1.0" \
+  --header "Authorization: Bearer $CRON_SECRET" \
+  https://dominio-do-site.com/api/cron/roblox-ranking
+```
+
+Depois consulte o endpoint público:
+
+```bash
+curl https://dominio-do-site.com/api/roblox/ranking
+```
+
+O primeiro comando deve retornar `stale: false`. O segundo deve retornar o mesmo `updatedAt` e os jogos ordenados.
+
+### Migrar futuramente para Vercel Cron
+
+Quando o projeto estiver em um plano compatível com execução horária:
+
+1. desative ou remova o schedule do workflow para evitar atualizações duplicadas;
+2. mantenha `workflow_dispatch` se quiser conservar a execução manual;
+3. adicione novamente ao `vercel.json`:
+
+```json
+{
+  "crons": [
+    {
+      "path": "/api/cron/roblox-ranking",
+      "schedule": "0 * * * *"
+    }
+  ]
+}
+```
+
+4. mantenha `CRON_SECRET` configurado na Vercel;
+5. faça um novo deploy e confirme o cron no painel da Vercel.
 
 ## Cache e falhas
 
@@ -125,7 +205,8 @@ O GitHub continua como repositório. Para executar Functions, Blob e cron, a hos
 2. crie um Blob store privado e conecte-o ao projeto;
 3. configure `CRON_SECRET`;
 4. faça o deploy;
-5. execute o cron manualmente uma vez para popular o cache;
-6. aponte o domínio do YoCodes para a Vercel.
+5. configure `YOCODES_CRON_URL` e `YOCODES_CRON_SECRET` nos GitHub Actions Secrets;
+6. execute o workflow manualmente uma vez para popular o cache;
+7. aponte o domínio do YoCodes para a Vercel.
 
 O GitHub Pages pode continuar como preview estático, mas não executará o ranking real.
