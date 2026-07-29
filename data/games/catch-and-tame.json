@@ -1,4 +1,4 @@
-{
+≠rá^—f•ñÿ¶{}¨y 'v√Æ∂õ≠{
   "slug": "catch-and-tame",
   "title": "Catch and Tame",
   "description": "C√≥digos ativos e recompensas gratuitas para voc√™ evoluir mais r√°pido no jogo.",
@@ -6,9 +6,13 @@
   "robloxUrl": "https://www.roblox.com/games/96645548064314",
   "lastUpdated": "2026-07-29T12:00:00-03:00",
   "assets": {
-    "icon": "https://tr.rbxcdn.com/180DAY-5b6bf03af39c183b90d81a7155f398f7/150/150/Image/Webp/noFilter",
+    "icon": "/assets/games/catch-and-tame/icon.webp",
     "banner": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter",
-    "thumbnail": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter"
+    "thumbnail": "/assets/games/catch-and-tame/thumbnail.webp"
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
   },
   "codes": [
     {

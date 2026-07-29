@@ -1,4 +1,4 @@
-# YoCodes
+�r�^�f��ئ{^ly�'vî���# YoCodes
 
 Site brasileiro de códigos para jogos do Roblox. O projeto é totalmente estático e usa apenas HTML, CSS, JavaScript e arquivos JSON.
 
@@ -37,6 +37,21 @@ Ao criar um jogo:
 5. mantenha strings vazias quando uma informação ainda não estiver disponível.
 
 Todos os jogos devem possuir exatamente as mesmas chaves de primeiro nível e as mesmas chaves internas em `assets` e `seo`.
+
+`assetSync` controla a origem dos dois assets que podem vir do Roblox:
+
+```json
+{
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  }
+}
+```
+
+- `true`: o sincronizador pode atualizar o arquivo pelo Roblox;
+- `false`: o arquivo e o caminho existentes são preservados;
+- o banner nunca é atualizado automaticamente.
 
 ## Índice geral
 
@@ -88,6 +103,18 @@ Todas as referências são slugs registrados em `data/index.json`. Alterar lista
 11. Inclua a página no `sitemap.xml`.
 12. Teste Home, busca, página individual, códigos, imagens e links.
 
+## URL do Roblox
+
+Cada arquivo completo precisa ter uma URL oficial no formato:
+
+```json
+{
+  "robloxUrl": "https://www.roblox.com/games/96645548064314"
+}
+```
+
+O sincronizador extrai o Place ID dessa URL e resolve o Universe ID automaticamente. Não é necessário cadastrar o Universe ID.
+
 ## Atualizar códigos
 
 Edite `data/games/<slug>.json`:
@@ -99,16 +126,62 @@ Edite `data/games/<slug>.json`:
 
 ## Rodar localmente
 
-Os JSONs são carregados com `fetch`, portanto use um servidor HTTP estático:
+Os JSONs são carregados com `fetch`, portanto use o preview estático local:
 
 ```bash
-python -m http.server 4173
+npm run preview
 ```
 
-Abra `http://localhost:4173`.
+Abra `http://127.0.0.1:4173`. O preview reproduz o mapeamento `/assets/` usado pela Vercel.
 
 Nenhuma variável de ambiente é necessária.
 
+## Sincronizar ícone e thumbnail do Roblox
+
+O comando local lê `data/index.json`, encontra cada `data/games/<slug>.json`, consulta os endpoints oficiais do Roblox e salva:
+
+```text
+public/assets/games/<slug>/icon.webp
+public/assets/games/<slug>/thumbnail.webp
+```
+
+Sincronizar todos os jogos:
+
+```bash
+npm run sync:roblox
+```
+
+Sincronizar apenas um jogo:
+
+```bash
+npm run sync:roblox -- catch-and-tame
+```
+
+O comando:
+
+- valida domínio, Place ID, respostas HTTP e assinatura WebP;
+- resolve o Universe ID automaticamente;
+- usa timeout e poucas tentativas para imagens pendentes;
+- grava primeiro em arquivo temporário;
+- não regrava imagens idênticas;
+- atualiza os caminhos locais em `assets` e no índice;
+- preserva falhas parciais sem apagar arquivos anteriores;
+- nunca altera `lastUpdated`, códigos, textos, dicas, FAQ, SEO ou a organização da Home.
+
+Para impedir a atualização de um asset específico, defina a opção correspondente como `false` em `assetSync`.
+
+### Diferença entre os assets
+
+- `icon`: imagem quadrada oficial, usada em pesquisa e cards compactos;
+- `thumbnail`: imagem horizontal oficial, usada em cards maiores;
+- `banner`: arte editorial personalizada do YoCodes, sempre gerenciada manualmente.
+
+Se não houver banner, a página usa a thumbnail como fallback. Execute o comando novamente sempre que quiser buscar versões mais recentes dos assets oficiais.
+
+Os códigos e todo o conteúdo editorial continuam sendo atualizados manualmente. O sincronizador é apenas uma ferramenta local; visitantes nunca fazem chamadas às APIs do Roblox.
+
 ## Deploy
 
-O projeto pode ser publicado como site estático no plano gratuito da Vercel, GitHub Pages ou serviço equivalente. Não é necessário configurar Storage, Functions, Cron Jobs, Actions Secrets ou variáveis de ambiente.
+O projeto pode ser publicado como site estático no plano gratuito da Vercel. O `vercel.json` mantém a raiz do repositório como saída estática e mapeia `/assets/` para `public/assets/`.
+
+O `package.json` existe apenas para comandos locais de manutenção e não adiciona dependências de produção. Não é necessário configurar Storage, Functions, Cron Jobs, Actions Secrets ou variáveis de ambiente.
