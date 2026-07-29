@@ -1,3 +1,27 @@
-­r‡^Ñf¥–Ø¦{[r‰İ°ë­¦ë^Âˆ‰ØÚ[XHˆšÎ‹ËÛÜ[˜\K™\˜Ù[œÚİ™\˜Ù[šœÛÛˆ‹ˆ›İ]]\™XİÜHˆ‹ˆ‹ˆ˜ÛX[•\›ÈˆYKˆ˜Z[[™ÔÛ\Úˆ˜[ÙKˆœ™]Üš]\ÈˆÂˆÂˆœÛİ\˜ÙHˆ‹Ø\ÜÙ]ËÎœ]
-ˆ‹ˆ™\İ[˜][Ûˆˆ‹ÜX›XËØ\ÜÙ]ËÎœ]
-ˆ‚ˆBˆKˆšXY\œÈˆÂˆÂˆœÛİ\˜ÙHˆ‹ÊŠŠH‹ˆšXY\œÈˆÂˆÂˆšÙ^Hˆ–PÛÛ[U\KSÜ[ÛœÈ‹ˆ˜[YHˆ››ÜÛšY™ˆ‚ˆKˆÂˆšÙ^Hˆ”™Y™\œ™\‹TÛXŞH‹ˆ˜[YHˆœİšXİ[ÜšYÚ[‹]Ú[‹XÜ›ÜÜË[ÜšYÚ[ˆ‚ˆBˆBˆBˆBŸB
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/assets/:path*",
+      "destination": "/public/assets/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

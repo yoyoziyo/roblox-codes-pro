@@ -1,4 +1,4 @@
-≠rá^—f•ñÿ¶{Oly 'v√Æ∂õ≠import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { dirname, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 

@@ -1,4 +1,4 @@
-≠rá^—f•ñÿ¶{]ly 'v√Æ∂õ≠import { createReadStream } from "node:fs";
+import { createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
 import { createServer } from "node:http";
 import path from "node:path";

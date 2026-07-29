@@ -1,4 +1,4 @@
-≠rá^—f•ñÿ¶{]ly 'v√Æ∂õ≠import test from "node:test";
+import test from "node:test";
 import assert from "node:assert/strict";
 import {
   extractPlaceId,

@@ -1,4 +1,4 @@
-≠rá^—f•ñÿ¶{^ly 'v√Æ∂õ≠# YoCodes
+# YoCodes
 
 Site brasileiro de c√≥digos para jogos do Roblox. O projeto √© totalmente est√°tico e usa apenas HTML, CSS, JavaScript e arquivos JSON.
 
