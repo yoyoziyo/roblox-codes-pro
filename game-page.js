@@ -18,19 +18,19 @@ document.addEventListener("DOMContentLoaded",async()=>{
 function renderGame(game){
   const activeCodes=game.codes.filter(code=>code.status==="active");
   const expiredCodes=game.codes.filter(code=>code.status==="expired");
-  const image=game.images.featured||game.images.thumbnail||game.images.icon||"../img/favicon.png";
-  gameById("breadcrumb-game").textContent=game.name;
-  gameById("game-name").textContent=game.name;
-  gameById("game-summary").textContent=game.shortDescription;
+  const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"../img/favicon.png";
+  gameById("breadcrumb-game").textContent=game.title;
+  gameById("game-name").textContent=game.title;
+  gameById("game-summary").textContent=game.description;
   gameById("game-cover").src=image;
-  gameById("game-cover").alt=`Imagem de ${game.name}`;
-  gameById("verified-at").lastChild.textContent=` Verificado em ${gameDate(game.lastVerifiedAt)}`;
+  gameById("game-cover").alt=`Imagem de ${game.title}`;
+  gameById("verified-at").lastChild.textContent=` Verificado em ${gameDate(game.lastUpdated)}`;
   gameById("codes-link").textContent=`Ver ${activeCodes.length} ${activeCodes.length===1?"código":"códigos"}`;
   gameById("roblox-link").href=game.robloxUrl;
   gameById("active-code-count").textContent=String(activeCodes.length);
-  gameById("verified-date").textContent=gameDate(game.lastVerifiedAt);
+  gameById("verified-date").textContent=gameDate(game.lastUpdated);
   renderCodes(activeCodes);
-  renderList("redeem-steps",game.redeemSteps);
+  renderList("redeem-steps",game.howToRedeem);
   renderList("how-to-play",game.howToPlay);
   renderList("game-tips",game.tips);
   renderFaq(game.faq);
