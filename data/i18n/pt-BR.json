@@ -1,0 +1,60 @@
+{
+  "locale": "pt-BR",
+  "path": "pt-br",
+  "languageName": "Português",
+  "categories": {
+    "simulation": "Simulação"
+  },
+  "search": {
+    "placeholder": "Pesquisar jogos...",
+    "empty": "Nenhum jogo cadastrado corresponde à sua busca.",
+    "unavailable": "Conteúdo temporariamente indisponível."
+  },
+  "home": {
+    "heroBadge": "Códigos verificados diariamente",
+    "heroTitle": "Códigos de Roblox, sem enrolação.",
+    "heroDescription": "Encontre códigos ativos, recompensas gratuitas e instruções de resgate para seus jogos favoritos.",
+    "featured": "Em destaque:",
+    "trustVerified": "Códigos testados",
+    "trustUpdates": "Atualizações frequentes",
+    "trustCopy": "Copie com um clique",
+    "recentKicker": "Novidades",
+    "recentTitle": "Atualizados recentemente",
+    "recentDescription": "Jogos com códigos verificados pela nossa equipe.",
+    "trendingKicker": "Destaques",
+    "trendingTitle": "Jogos em alta",
+    "trendingDescription": "Uma seleção manual dos jogos que estão chamando atenção.",
+    "popularKicker": "Descubra",
+    "popularTitle": "Jogos populares",
+    "popularDescription": "Encontre rapidamente os códigos que todo mundo procura.",
+    "game": "Jogo",
+    "category": "Categoria"
+  },
+  "game": {
+    "verifiedOn": "Verificado em",
+    "viewCodes": "Ver códigos",
+    "code": "código",
+    "codes": "códigos",
+    "playRoblox": "Abrir no Roblox",
+    "activeCodes": "Códigos ativos",
+    "copyHint": "Toque em copiar e cole o código dentro do jogo.",
+    "copy": "Copiar",
+    "copied": "Copiado ✓",
+    "copiedToast": "Código {code} copiado",
+    "noCodes": "Nenhum código ativo no momento.",
+    "redeem": "Como resgatar",
+    "redeemHint": "Leva menos de um minuto.",
+    "howToPlay": "Como jogar",
+    "tips": "Dicas",
+    "faq": "Perguntas frequentes",
+    "about": "Sobre este jogo",
+    "lastVerified": "Última verificação",
+    "status": "Status",
+    "active": "Ativo",
+    "newCode": "Encontrou um código novo?",
+    "communityHint": "Avise nossa comunidade e ajude outros jogadores.",
+    "joinDiscord": "Entrar no Discord",
+    "loading": "Carregando dados do jogo...",
+    "unavailable": "Dados do jogo temporariamente indisponíveis."
+  }
+}
