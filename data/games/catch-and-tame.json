@@ -1,0 +1,58 @@
+{
+  "slug": "catch-and-tame",
+  "title": "Catch and Tame",
+  "description": "Códigos ativos e recompensas gratuitas para você evoluir mais rápido no jogo.",
+  "category": "simulation",
+  "robloxUrl": "https://www.roblox.com/games/96645548064314",
+  "lastUpdated": "2026-07-29T12:00:00-03:00",
+  "assets": {
+    "icon": "/assets/games/catch-and-tame/icon.webp",
+    "banner": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter",
+    "thumbnail": "/assets/games/catch-and-tame/thumbnail.webp"
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    {
+      "code": "RELEASE"
+    },
+    {
+      "code": "TAME2024"
+    }
+  ],
+  "about": "Capture animais selvagens, leve-os para o seu espaço e construa uma coleção cada vez maior.",
+  "howToPlay": [
+    "Equipe seu laço.",
+    "Capture os animais que encontrar pela ilha.",
+    "Leve os animais para o seu espaço.",
+    "Alimente e combine animais para aumentar sua coleção."
+  ],
+  "howToRedeem": [
+    "Abra Catch and Tame no Roblox.",
+    "Procure o botão de códigos no menu do jogo.",
+    "Cole um código da lista no campo indicado.",
+    "Confirme para receber sua recompensa."
+  ],
+  "tips": [
+    "Resgate os códigos assim que possível, pois eles podem expirar sem aviso.",
+    "Confira esta página novamente depois de atualizações do jogo."
+  ],
+  "faq": [
+    {
+      "question": "Por que um código não funcionou?",
+      "answer": "Confira se o código foi copiado sem espaços. Se ainda não funcionar, ele pode ter expirado recentemente."
+    },
+    {
+      "question": "Quando novos códigos são adicionados?",
+      "answer": "A lista é atualizada manualmente quando encontramos e verificamos novos códigos."
+    }
+  ],
+  "gallery": [],
+  "relatedGames": [],
+  "seo": {
+    "title": "Códigos de Catch and Tame atualizados — YoCodes",
+    "description": "Confira todos os códigos ativos de Catch and Tame no Roblox, recompensas disponíveis e como resgatar."
+  }
+}

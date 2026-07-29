@@ -1,0 +1,33 @@
+{
+  "slug": "",
+  "title": "",
+  "description": "",
+  "category": "",
+  "robloxUrl": "",
+  "lastUpdated": "",
+  "assets": {
+    "icon": "",
+    "banner": "",
+    "thumbnail": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    {
+      "code": ""
+    }
+  ],
+  "about": "",
+  "howToPlay": [],
+  "howToRedeem": [],
+  "tips": [],
+  "faq": [],
+  "gallery": [],
+  "relatedGames": [],
+  "seo": {
+    "title": "",
+    "description": ""
+  }
+}

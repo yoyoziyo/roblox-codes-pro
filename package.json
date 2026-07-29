@@ -1,0 +1,13 @@
+{
+  "name": "yocodes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/preview.js",
+    "sync:roblox": "node scripts/sync-roblox-assets.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
