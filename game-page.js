@@ -29,6 +29,7 @@ function renderGame(game){
   gameById("verified-at").lastChild.textContent=` Verificado em ${gameDate(game.lastUpdated)}`;
   gameById("codes-link").textContent=`Ver ${activeCodes.length} ${activeCodes.length===1?"código":"códigos"}`;
   gameById("roblox-link").href=game.robloxUrl;
+  gameById("game-about").textContent=game.about||game.description;
   gameById("active-code-count").textContent=String(activeCodes.length);
   gameById("verified-date").textContent=gameDate(game.lastUpdated);
   renderCodes(activeCodes);
