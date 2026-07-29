@@ -12,25 +12,26 @@ const getGames=slugs=>slugs.map(slug=>state.games.find(game=>game.slug===slug)).
 
 function renderHome(){
   if(!state.homepage)return;
-  renderRecent(getGames(state.homepage.recent||[]));
+  renderRecent(getGames(state.homepage.recentUpdates||[]));
   renderPopular(getGames(state.homepage.popular||[]));
   renderTrending(getGames(state.homepage.trending||[]));
   applySectionOrder(state.homepage.sectionOrder||[]);
+  renderHeroGame(state.homepage.heroGame);
 }
 function renderRecent(games){
   const container=byId("recent-games");if(!container)return;
   container.innerHTML=games.map(game=>`
     <a class="featured-card" href="${game.pageUrl}">
-      <img src="${safeImage(game.thumbnail||game.icon)}" alt="Thumbnail de ${game.name}" width="560" height="315" loading="lazy" onerror="this.src='${fallbackImage}'">
-      <div class="featured-content"><span class="badge">Atualizado</span><h3>${game.name}</h3><div class="card-meta"><span><b>${game.activeCodes}</b> códigos ativos</span><span>Verificado ${timeAgo(game.lastUpdatedAt).toLowerCase()}</span></div></div>
+      <img src="${safeImage(game.thumbnail||game.icon)}" alt="Thumbnail de ${game.title}" width="560" height="315" loading="lazy" onerror="this.src='${fallbackImage}'">
+      <div class="featured-content"><span class="badge">Atualizado</span><h3>${game.title}</h3><div class="card-meta"><span><b>${game.activeCodes}</b> códigos ativos</span><span>Verificado ${timeAgo(game.lastUpdated).toLowerCase()}</span></div></div>
     </a>`).join("");
 }
 function renderPopular(games){
   const container=byId("popular-games");if(!container)return;
   container.innerHTML=games.map(game=>`
     <a class="game-card" href="${game.pageUrl}">
-      <img src="${safeImage(game.icon)}" alt="Ícone de ${game.name}" width="180" height="180" loading="lazy" onerror="this.src='${fallbackImage}'">
-      <h3>${game.name}</h3><span>${game.activeCodes} códigos ativos</span>
+      <img src="${safeImage(game.icon)}" alt="Ícone de ${game.title}" width="180" height="180" loading="lazy" onerror="this.src='${fallbackImage}'">
+      <h3>${game.title}</h3><span>${game.activeCodes} códigos ativos</span>
     </a>`).join("");
 }
 function renderTrending(games){
@@ -38,22 +39,26 @@ function renderTrending(games){
   container.innerHTML=games.length?games.map((game,index)=>`
     <a class="trending-row" href="${game.pageUrl}">
       <span class="position">${String(index+1).padStart(2,"0")}</span>
-      <span class="trending-game"><img src="${safeImage(game.icon)}" alt=""><strong>${game.name}</strong></span>
+      <span class="trending-game"><img src="${safeImage(game.icon)}" alt=""><strong>${game.title}</strong></span>
       <span class="trending-category">${state.categories.get(game.category)||game.category}</span>
-      <span class="updated">${formatDate(game.lastUpdatedAt)}</span><span>→</span>
+      <span class="updated">${formatDate(game.lastUpdated)}</span><span>→</span>
     </a>`).join(""):'<div class="trending-empty">Nenhum jogo em alta selecionado.</div>';
 }
 function applySectionOrder(order){
   const main=byId("conteudo");if(!main)return;
-  const sections={recent:byId("atualizados"),trending:byId("em-alta"),popular:byId("jogos")};
+  const sections={recentUpdates:byId("atualizados"),trending:byId("em-alta"),popular:byId("jogos")};
   const community=byId("comunidade");
   order.forEach(key=>{if(sections[key])main.insertBefore(sections[key],community)});
 }
 function searchMarkup(query){
   const normalized=query.trim().toLocaleLowerCase("pt-BR");
-  const matches=state.games.filter(game=>game.name.toLocaleLowerCase("pt-BR").includes(normalized));
+  const matches=state.games.filter(game=>game.title.toLocaleLowerCase("pt-BR").includes(normalized));
   if(!matches.length)return`<div class="search-empty">Nenhum jogo cadastrado com “${query}”. <a href="#comunidade">Solicite no Discord</a>.</div>`;
-  return matches.map((game,index)=>`<a class="search-result" role="option" aria-selected="${index===state.activeResult}" href="${game.pageUrl}"><img src="${safeImage(game.icon)}" alt=""><span><strong>${game.name}</strong><small>${game.activeCodes} códigos ativos</small></span></a>`).join("");
+  return matches.map((game,index)=>`<a class="search-result" role="option" aria-selected="${index===state.activeResult}" href="${game.pageUrl}"><img src="${safeImage(game.icon)}" alt=""><span><strong>${game.title}</strong><small>${game.activeCodes} códigos ativos</small></span></a>`).join("");
+}
+function renderHeroGame(slug){
+  const container=byId("hero-game-link"),game=state.games.find(item=>item.slug===slug);if(!container||!game)return;
+  container.innerHTML=`<span>Em destaque:</span><a href="${game.pageUrl}">${game.title}</a>`;
 }
 function setupSearch(){
   const input=byId("game-search"),results=byId("search-results");if(!input||!results)return;
