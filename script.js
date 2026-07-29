@@ -52,7 +52,7 @@ async function renderRanking(){
   const list=byId("ranking-list"),status=byId("ranking-status");
   if(!list)return;
   try{
-    const response=await fetch("api/roblox/ranking.json",{cache:"no-cache"});
+    const response=await fetch("/api/roblox/ranking",{headers:{Accept:"application/json"}});
     if(!response.ok)throw new Error("ranking unavailable");
     const payload=await response.json();
     if(!Array.isArray(payload.games)||!payload.games.length)throw new Error("empty ranking");
@@ -63,8 +63,8 @@ async function renderRanking(){
         <span class="players">${Number(game.playing).toLocaleString("pt-BR")} <small class="trend ${game.trend||""}">${game.trend==="up"?"▲":game.trend==="down"?"▼":"—"}</small></span>
         <span class="updated">${formatDate(payload.updatedAt)}</span><span>→</span>
       </a>`).join("");
-    status.innerHTML="<i></i> Dados atualizados";status.title=new Date(payload.updatedAt).toLocaleString("pt-BR");
-    if(payload.stale){status.classList.add("stale");status.innerHTML="<i></i> Último dado disponível"}
+    status.classList.remove("stale");status.innerHTML="<i></i> Dados atualizados";status.title=`Atualizado em ${new Date(payload.updatedAt).toLocaleString("pt-BR")}`;
+    if(payload.stale){status.classList.add("stale");status.innerHTML="<i></i> Dados podem estar desatualizados";status.title=`Último dado válido: ${new Date(payload.updatedAt).toLocaleString("pt-BR")}`}
   }catch{
     list.innerHTML='<div class="ranking-empty"><strong>Dados temporariamente indisponíveis.</strong><br>O último resultado válido aparecerá aqui assim que o serviço responder.</div>';
     status.classList.add("stale");status.innerHTML="<i></i> Temporariamente indisponível";
