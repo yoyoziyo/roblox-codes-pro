@@ -2,7 +2,6 @@ const state={games:[],homepage:null,categories:new Map(),activeResult:-1};
 const fallbackImage="img/favicon.png";
 const byId=id=>document.getElementById(id);
 const safeImage=url=>url||fallbackImage;
-const formatDate=value=>value?new Intl.DateTimeFormat("pt-BR",{day:"2-digit",month:"short"}).format(new Date(value)):"A verificar";
 const getGames=slugs=>slugs.map(slug=>state.games.find(game=>game.slug===slug)).filter(Boolean);
 
 function renderHome(){
@@ -31,14 +30,7 @@ function renderGameTable(id,games,emptyMessage){
       </a>`).join(""):`<div class="trending-empty">${emptyMessage}</div>`}`;
 }
 function renderTrending(games){
-  const container=byId("trending-games");if(!container)return;
-  container.innerHTML=games.length?games.map((game,index)=>`
-    <a class="trending-row" href="${game.pageUrl}">
-      <span class="position">${String(index+1).padStart(2,"0")}</span>
-      <span class="trending-game"><img src="${safeImage(game.icon)}" alt=""><strong>${game.title}</strong></span>
-      <span class="trending-category">${state.categories.get(game.category)||game.category}</span>
-      <span class="updated">${formatDate(game.lastUpdated)}</span><span>→</span>
-    </a>`).join(""):'<div class="trending-empty">Nenhum jogo em alta selecionado.</div>';
+  renderGameTable("trending-games",games,"Nenhum jogo em alta selecionado.");
 }
 function applySectionOrder(order){
   const main=byId("conteudo");if(!main)return;
