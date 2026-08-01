@@ -68,6 +68,8 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 - `howToPlay`;
 - `howToRedeem`;
 - `tips`;
+- `tutorials.redeem`;
+- `tutorials.play`;
 - `faq`;
 - `seo.title`;
 - `seo.description`.
@@ -84,7 +86,7 @@ Os códigos precisam somente de `code`. Recompensas não são exibidas e código
 6. Crie as páginas estáticas equivalentes:
    - `en/games/<slug>.html`;
    - `pt-br/games/<slug>.html`.
-7. Crie `public/assets/games/<slug>/`.
+7. Crie `public/assets/games/<slug>/` e adicione os assets editoriais do jogo.
 8. Execute `npm run sync:roblox -- <slug>`.
 9. Execute `npm run generate:seo`.
 10. Rode `npm test` e valide as duas URLs.
@@ -106,6 +108,31 @@ O sincronizador local:
 - não altera `translations`;
 - mantém os mesmos assets compartilhados entre os idiomas;
 - não faz chamadas no navegador dos visitantes.
+
+## Assets visuais e tutoriais
+
+Os elementos decorativos compartilhados por todas as páginas ficam em:
+
+```text
+public/assets/ui/
+├── tips.webp
+├── codes.webp
+└── discord.webp
+```
+
+Cada jogo mantém somente as imagens que realmente variam:
+
+```text
+public/assets/games/<slug>/
+├── icon.webp
+├── banner.webp
+├── thumbnail.webp
+└── redeem-tutorial.webp
+```
+
+O caminho da captura de resgate deve ser preenchido em `assets.redeemTutorial`. Enquanto o arquivo ainda não existir, a página mostra um placeholder discreto e continua funcionando normalmente.
+
+O card curto "Como resgatar" leva por scroll suave à seção detalhada. A imagem do tutorial pode ser ampliada em uma lightbox. Os textos completos de resgate e de introdução ao jogo ficam em `translations.<idioma>.tutorials`.
 
 ## SEO internacional
 

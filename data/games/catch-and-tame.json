@@ -6,7 +6,8 @@
   "assets": {
     "icon": "/assets/games/catch-and-tame/icon.webp",
     "banner": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter",
-    "thumbnail": "/assets/games/catch-and-tame/thumbnail.webp"
+    "thumbnail": "/assets/games/catch-and-tame/thumbnail.webp",
+    "redeemTutorial": "/assets/games/catch-and-tame/redeem-tutorial.webp"
   },
   "assetSync": {
     "icon": true,
@@ -41,6 +42,29 @@
         "Redeem codes as soon as possible because they can expire without notice.",
         "Check this page again after game updates for newly verified codes."
       ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Catch and Tame",
+          "description": "Follow this complete walkthrough to open the code menu and claim your rewards without missing a step.",
+          "steps": [
+            "Launch Catch and Tame from its official Roblox page and wait for the experience to load.",
+            "Open the game menu and select the codes option.",
+            "Copy an active code from the list above and paste it into the code field.",
+            "Confirm the redemption. If the code is valid, the reward will be added to your account."
+          ],
+          "imageAlt": "Catch and Tame code redemption tutorial"
+        },
+        "play": {
+          "title": "Complete beginner guide",
+          "description": "Start with the basic loop, then improve your collection as you unlock new areas.",
+          "steps": [
+            "Equip your lasso before leaving your starting area.",
+            "Explore the island and approach animals you want to capture.",
+            "Return captured animals to your space and care for them.",
+            "Feed and combine animals to strengthen your collection and reach new areas."
+          ]
+        }
+      },
       "faq": [
         {
           "question": "Why is a code not working?",
@@ -76,6 +100,29 @@
         "Resgate os códigos assim que possível, pois eles podem expirar sem aviso.",
         "Volte a esta página depois de atualizações do jogo para conferir novos códigos verificados."
       ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Catch and Tame",
+          "description": "Siga este tutorial completo para abrir o menu de códigos e receber suas recompensas sem perder nenhuma etapa.",
+          "steps": [
+            "Abra Catch and Tame pela página oficial no Roblox e aguarde a experiência carregar.",
+            "Abra o menu do jogo e selecione a opção de códigos.",
+            "Copie um código ativo da lista acima e cole no campo indicado.",
+            "Confirme o resgate. Se o código for válido, a recompensa será adicionada à sua conta."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Catch and Tame"
+        },
+        "play": {
+          "title": "Guia completo para iniciantes",
+          "description": "Comece pelo ciclo básico do jogo e melhore sua coleção enquanto desbloqueia novas áreas.",
+          "steps": [
+            "Equipe seu laço antes de sair da área inicial.",
+            "Explore a ilha e aproxime-se dos animais que deseja capturar.",
+            "Leve os animais capturados para seu espaço e cuide deles.",
+            "Alimente e combine animais para fortalecer sua coleção e alcançar novas áreas."
+          ]
+        }
+      },
       "faq": [
         {
           "question": "Por que um código não funcionou?",

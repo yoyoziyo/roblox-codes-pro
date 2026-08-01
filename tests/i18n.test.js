@@ -23,7 +23,11 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
     for(const locale of ["en","pt-BR"]){
       assert.deepEqual(Object.keys(game.translations[locale]).sort(),requiredTranslationKeys);
       assert.deepEqual(Object.keys(game.translations[locale].seo).sort(),["description","title"]);
+      assert.deepEqual(Object.keys(game.translations[locale].tutorials).sort(),["play","redeem"]);
+      assert.deepEqual(Object.keys(game.translations[locale].tutorials.redeem).sort(),["description","imageAlt","steps","title"]);
+      assert.deepEqual(Object.keys(game.translations[locale].tutorials.play).sort(),["description","steps","title"]);
       for(const field of ["title","description","about"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
+      for(const tutorial of ["redeem","play"]){assert.ok(game.translations[locale].tutorials[tutorial].title.trim());assert.ok(game.translations[locale].tutorials[tutorial].steps.length)}
     }
     assert.ok(game.codes.every(code=>Object.keys(code).length===1&&typeof code.code==="string"));
   }

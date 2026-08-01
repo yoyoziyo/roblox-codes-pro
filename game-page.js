@@ -5,6 +5,7 @@ const gameById=id=>document.getElementById(id);
 const gameDate=value=>new Intl.DateTimeFormat(gameLocale,{day:"2-digit",month:"long",year:"numeric"}).format(new Date(value));
 document.addEventListener("DOMContentLoaded",async()=>{
   setupGameLanguage();
+  document.querySelectorAll(".shared-art img").forEach(image=>image.addEventListener("error",()=>image.parentElement.hidden=true,{once:true}));
   if(!gameSlug)return;
   try{
     const localeFile=gameLocale==="pt-BR"?"pt-BR":"en";
@@ -25,7 +26,7 @@ function renderGame(game,translation,messages){
   gameById("verified-at").lastChild.textContent=` ${messages.verifiedOn} ${gameDate(game.lastUpdated)}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
   gameById("game-about").textContent=translation.about;gameById("active-code-count").textContent=String(activeCodes.length);gameById("verified-date").textContent=gameDate(game.lastUpdated);
-  renderCodes(activeCodes,messages);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderFaq(translation.faq);
+  renderCodes(activeCodes,messages);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorials(game,translation);renderFaq(translation.faq);
 }
 function renderCodes(codes,messages){
   const container=gameById("active-code-list");container.replaceChildren();
@@ -33,5 +34,18 @@ function renderCodes(codes,messages){
   codes.forEach(value=>{const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const code=document.createElement("code");code.className="code-value";code.textContent=value;const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));group.append(code,button);row.append(group);container.append(row)});
 }
 function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
+function renderTutorials(game,translation){
+  const tutorials=translation.tutorials||{};const redeem=tutorials.redeem||{};const play=tutorials.play||{};
+  gameById("redeem-tutorial-title").textContent=redeem.title||"";gameById("redeem-tutorial-description").textContent=redeem.description||"";renderList("redeem-tutorial-steps",redeem.steps);
+  gameById("play-guide-title").textContent=play.title||"";gameById("play-guide-description").textContent=play.description||"";renderList("play-guide-steps",play.steps);
+  setupTutorialImage(game.assets?.redeemTutorial,redeem.imageAlt||redeem.title||translation.title);
+}
+function setupTutorialImage(source,alt){
+  const image=gameById("redeem-tutorial-image");const button=gameById("redeem-tutorial-open");const placeholder=gameById("redeem-tutorial-placeholder");const lightbox=gameById("tutorial-lightbox");const largeImage=gameById("tutorial-lightbox-image");const close=gameById("tutorial-lightbox-close");
+  if(!source)return;
+  image.alt=alt;image.addEventListener("load",()=>{button.hidden=false;placeholder.hidden=true},{once:true});image.addEventListener("error",()=>{button.hidden=true;placeholder.hidden=false},{once:true});image.src=source;
+  button.addEventListener("click",()=>{largeImage.src=image.currentSrc||image.src;largeImage.alt=image.alt;if(typeof lightbox.showModal==="function")lightbox.showModal()});
+  close.addEventListener("click",()=>lightbox.close());lightbox.addEventListener("click",event=>{if(event.target===lightbox)lightbox.close()});
+}
 function renderFaq(items=[]){const container=gameById("game-faq");container.replaceChildren();items.forEach(item=>{const details=document.createElement("details");const summary=document.createElement("summary");const answer=document.createElement("div");summary.textContent=item.question;answer.textContent=item.answer;details.append(summary,answer);container.append(details)})}
 function setupGameLanguage(){document.querySelectorAll("[data-language]").forEach(link=>link.addEventListener("click",()=>localStorage.setItem("yocodes-language",link.dataset.language)))}
