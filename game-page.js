@@ -19,19 +19,19 @@ document.addEventListener("DOMContentLoaded",async()=>{
 });
 
 function renderGame(game,translation,messages){
-  const activeCodes=(game.codes||[]).map(item=>typeof item==="string"?item:item?.code).filter(code=>typeof code==="string"&&code.trim());
+  const activeCodes=(game.codes||[]).map(item=>typeof item==="string"?{code:item,reward:""}:item).filter(item=>typeof item?.code==="string"&&item.code.trim());
   const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/img/favicon.png";
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
-  gameById("verified-at").lastChild.textContent=` ${messages.verifiedOn} ${gameDate(game.lastUpdated)}`;
+  gameById("verified-at").lastChild.textContent=` ${messages.verified}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
   gameById("game-about").textContent=translation.about;gameById("active-code-count").textContent=String(activeCodes.length);gameById("verified-date").textContent=gameDate(game.lastUpdated);
-  renderCodes(activeCodes,messages);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorials(game,translation);renderFaq(translation.faq);
+  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorials(game,translation);renderFaq(translation.faq);
 }
-function renderCodes(codes,messages){
+function renderCodes(codes,messages,iconSource){
   const container=gameById("active-code-list");container.replaceChildren();
   if(!codes.length){container.textContent=messages.noCodes;return}
-  codes.forEach(value=>{const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const code=document.createElement("code");code.className="code-value";code.textContent=value;const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));group.append(code,button);row.append(group);container.append(row)});
+  codes.forEach(item=>{const value=item.code;const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src=iconSource;icon.alt="";const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;const reward=document.createElement("span");reward.className="code-reward";reward.textContent=item.reward?`${messages.reward}: ${item.reward}`:"";info.append(code,reward);const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));const status=document.createElement("span");status.className="code-status";status.textContent=messages.active;group.append(icon,info,button,status);row.append(group);container.append(row)});
 }
 function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
 function renderTutorials(game,translation){

@@ -29,7 +29,7 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
       for(const field of ["title","description","about"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
       for(const tutorial of ["redeem","play"]){assert.ok(game.translations[locale].tutorials[tutorial].title.trim());assert.ok(game.translations[locale].tutorials[tutorial].steps.length)}
     }
-    assert.ok(game.codes.every(code=>Object.keys(code).length===1&&typeof code.code==="string"));
+    assert.ok(game.codes.every(code=>Object.keys(code).sort().join(",")==="code,reward"&&typeof code.code==="string"&&typeof code.reward==="string"));
   }
 });
 

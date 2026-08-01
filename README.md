@@ -74,7 +74,7 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 - `seo.title`;
 - `seo.description`.
 
-Os códigos precisam somente de `code`. Recompensas não são exibidas e códigos expirados devem ser removidos da lista.
+Cada código possui `code` e `reward`. A recompensa aparece como apoio visual no card; códigos expirados devem ser removidos da lista.
 
 ## Criar um jogo
 
@@ -91,7 +91,7 @@ Os códigos precisam somente de `code`. Recompensas não são exibidas e código
 9. Execute `npm run generate:seo`.
 10. Rode `npm test` e valide as duas URLs.
 
-Não adicione tags, recompensas ou códigos expirados.
+Não adicione tags ou códigos expirados.
 
 ## Assets do Roblox
 

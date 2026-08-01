@@ -32,6 +32,7 @@
   },
   "game": {
     "verifiedOn": "Verificado em",
+    "verified": "Verificado",
     "viewCodes": "Ver códigos",
     "code": "código",
     "codes": "códigos",
@@ -41,6 +42,8 @@
     "copy": "Copiar",
     "copied": "Copiado ✓",
     "copiedToast": "Código {code} copiado",
+    "reward": "Recompensa",
+    "updatedNow": "Atualizado agora",
     "noCodes": "Nenhum código ativo no momento.",
     "redeem": "Como resgatar",
     "redeemHint": "Leva menos de um minuto.",

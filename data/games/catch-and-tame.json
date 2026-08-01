@@ -15,10 +15,12 @@
   },
   "codes": [
     {
-      "code": "RELEASE"
+      "code": "RELEASE",
+      "reward": "500 Coins"
     },
     {
-      "code": "TAME2024"
+      "code": "TAME2024",
+      "reward": "1x Basic Lasso"
     }
   ],
   "translations": {
@@ -40,7 +42,9 @@
       ],
       "tips": [
         "Redeem codes as soon as possible because they can expire without notice.",
-        "Check this page again after game updates for newly verified codes."
+        "Check this page again after game updates for newly verified codes.",
+        "Join our Discord community to receive code notifications.",
+        "Redeem each code directly inside Catch and Tame on Roblox."
       ],
       "tutorials": {
         "redeem": {
@@ -73,6 +77,14 @@
         {
           "question": "When are new codes added?",
           "answer": "We update this list manually whenever we find and verify new codes."
+        },
+        {
+          "question": "Where do I enter codes in Catch and Tame?",
+          "answer": "Open the codes option in the game menu, paste an active code, and confirm the redemption."
+        },
+        {
+          "question": "Do Catch and Tame codes expire?",
+          "answer": "Yes. Codes may stop working without notice, so redeem active codes as soon as possible."
         }
       ],
       "seo": {
@@ -98,7 +110,9 @@
       ],
       "tips": [
         "Resgate os códigos assim que possível, pois eles podem expirar sem aviso.",
-        "Volte a esta página depois de atualizações do jogo para conferir novos códigos verificados."
+        "Volte a esta página depois de atualizações do jogo para conferir novos códigos verificados.",
+        "Entre na nossa comunidade do Discord para receber avisos de novos códigos.",
+        "Resgate cada código diretamente dentro de Catch and Tame no Roblox."
       ],
       "tutorials": {
         "redeem": {
@@ -131,6 +145,14 @@
         {
           "question": "Quando novos códigos são adicionados?",
           "answer": "Atualizamos a lista manualmente sempre que encontramos e verificamos novos códigos."
+        },
+        {
+          "question": "Onde inserir códigos em Catch and Tame?",
+          "answer": "Abra a opção de códigos no menu do jogo, cole um código ativo e confirme o resgate."
+        },
+        {
+          "question": "Os códigos de Catch and Tame expiram?",
+          "answer": "Sim. Os códigos podem parar de funcionar sem aviso, então resgate os ativos o quanto antes."
         }
       ],
       "seo": {
