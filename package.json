@@ -1,5 +1,5 @@
 {
-  "name": "yocodes",
+  "name": "67codes",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,3 +12,4 @@
     "node": ">=20"
   }
 }
+

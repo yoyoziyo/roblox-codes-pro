@@ -64,5 +64,6 @@ createServer(async (request, response) => {
     response.end("Not found");
   }
 }).listen(port, "127.0.0.1", () => {
-  console.log(`YoCodes disponível em http://127.0.0.1:${port}`);
+  console.log(`67Codes disponível em http://127.0.0.1:${port}`);
 });
+

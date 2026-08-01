@@ -6,7 +6,7 @@ const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const indexPath = resolve(projectRoot, "data/index.json");
 const gamesRoot = resolve(projectRoot, "data/games");
 const assetsRoot = resolve(projectRoot, "public/assets/games");
-const USER_AGENT = "YoCodes-Asset-Sync/1.0";
+const USER_AGENT = "67Codes-Asset-Sync/1.0";
 const REQUEST_TIMEOUT_MS = 10_000;
 const PENDING_ATTEMPTS = 4;
 const PENDING_DELAY_MS = 750;
@@ -358,3 +358,4 @@ if (
     process.exitCode = 1;
   });
 }
+

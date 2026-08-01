@@ -1,4 +1,4 @@
-# YoCodes
+# 67Codes
 
 Site estático bilíngue de códigos para jogos do Roblox. Não há backend, banco de dados, Functions, middleware, variáveis de ambiente obrigatórias ou dependências de produção.
 
@@ -74,7 +74,7 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 - `seo.title`;
 - `seo.description`.
 
-Cada código possui `code` e `reward`. A recompensa aparece como apoio visual no card; códigos expirados devem ser removidos da lista.
+Cada código possui `code` e pode manter `reward` nos dados para uso editorial futuro. A interface exibe somente o código; códigos expirados devem ser removidos da lista.
 
 ## Criar um jogo
 
@@ -115,10 +115,14 @@ Os elementos decorativos compartilhados por todas as páginas ficam em:
 
 ```text
 public/assets/ui/
+├── logo.webp
+├── language.webp
 ├── tips.webp
 ├── codes.webp
 └── discord.webp
 ```
+
+`logo.webp` é a assinatura horizontal do 67Codes exibida no cabeçalho e no rodapé. `language.webp` é o ícone quadrado usado no seletor de idioma. Ambos possuem fallback visual e podem ser adicionados posteriormente sem quebrar o site.
 
 Cada jogo mantém somente as imagens que realmente variam:
 
@@ -188,3 +192,4 @@ O preview suporta URLs limpas, assets em `/assets/` e os redirects antigos:
 ## Deploy
 
 O projeto permanece totalmente estático e compatível com o plano gratuito da Vercel. `vercel.json` contém somente configuração de saída, headers, redirects e rewrites estáticos.
+
