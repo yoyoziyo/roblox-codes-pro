@@ -117,12 +117,13 @@ Os elementos decorativos compartilhados por todas as páginas ficam em:
 public/assets/ui/
 ├── logo.webp
 ├── language.webp
+├── favicon.png
 ├── tips.webp
 ├── codes.webp
 └── discord.webp
 ```
 
-`logo.webp` é a assinatura horizontal do 67Codes exibida no cabeçalho e no rodapé. `language.webp` é o ícone quadrado usado no seletor de idioma. Ambos possuem fallback visual e podem ser adicionados posteriormente sem quebrar o site.
+`logo.webp` é a assinatura horizontal do 67Codes exibida no cabeçalho e no rodapé. `language.webp` é o ícone quadrado usado no seletor de idioma. `favicon.png` é o ícone exibido na aba do navegador e também o fallback final de imagens. Logo e idioma possuem fallback visual e podem ser adicionados posteriormente sem quebrar o layout.
 
 Cada jogo mantém somente as imagens que realmente variam:
 

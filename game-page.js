@@ -2,7 +2,6 @@ const gameBody=document.body;
 const gameSlug=gameBody.dataset.gameSlug;
 const gameLocale=document.documentElement.lang==="pt-BR"?"pt-BR":"en";
 const gameById=id=>document.getElementById(id);
-const gameDate=value=>new Intl.DateTimeFormat(gameLocale,{day:"2-digit",month:"long",year:"numeric"}).format(new Date(value));
 document.addEventListener("DOMContentLoaded",async()=>{
   setupGameLanguage();
   document.querySelectorAll(".shared-art img").forEach(image=>image.addEventListener("error",()=>image.parentElement.hidden=true,{once:true}));
@@ -19,13 +18,12 @@ document.addEventListener("DOMContentLoaded",async()=>{
 });
 
 function renderGame(game,translation,messages){
-  const activeCodes=(game.codes||[]).map(item=>typeof item==="string"?{code:item,reward:""}:item).filter(item=>typeof item?.code==="string"&&item.code.trim());
-  const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/img/favicon.png";
+  const activeCodes=(game.codes||[]).map(item=>typeof item==="string"?{code:item}:item).filter(item=>typeof item?.code==="string"&&item.code.trim());
+  const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/assets/ui/favicon.png";
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
   gameById("verified-at").lastChild.textContent=` ${messages.verified}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
-  gameById("game-about").textContent=translation.about;gameById("active-code-count").textContent=String(activeCodes.length);gameById("verified-date").textContent=gameDate(game.lastUpdated);
   renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorials(game,translation);renderFaq(translation.faq);
 }
 function renderCodes(codes,messages,iconSource){

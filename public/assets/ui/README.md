@@ -4,6 +4,7 @@ Coloque aqui as ilustrações reutilizadas em todas as páginas de jogos:
 
 - `logo.webp`: logo horizontal completa do 67Codes, recomendada em aproximadamente 300 × 80 px;
 - `language.webp`: ícone quadrado do seletor de idioma, recomendado em 48 × 48 px;
+- `favicon.png`: ícone quadrado da aba do navegador e fallback de imagens, recomendado em 64 × 64 px;
 - `tips.webp`: ilustração decorativa do card de dicas;
 - `codes.webp`: ilustração opcional para códigos;
 - `discord.webp`: ilustração opcional para a comunidade.

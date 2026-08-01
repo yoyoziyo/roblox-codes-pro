@@ -1,5 +1,5 @@
 const state={games:[],homepage:null,i18n:null,locale:document.documentElement.lang==="pt-BR"?"pt-BR":"en",activeResult:-1};
-const fallbackImage="/img/favicon.png";
+const fallbackImage="/assets/ui/favicon.png";
 const byId=id=>document.getElementById(id);
 const safeImage=url=>url||fallbackImage;
 const translatedGame=game=>({...game,...(game.translations?.[state.locale]||game.translations?.en||{})});
@@ -81,3 +81,4 @@ document.addEventListener("DOMContentLoaded",async()=>{
     ["recent-games","popular-games","trending-games"].forEach(id=>{const container=byId(id);if(container)container.innerHTML='<div class="trending-empty">Content is temporarily unavailable.</div>'});
   }
 });
+
