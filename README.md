@@ -113,12 +113,19 @@ public/assets/ui/
 ├── logo.webp
 ├── language.webp
 ├── favicon.png
+├── verified.webp
+├── roblox.webp
+├── redeem.webp
+├── play.webp
+├── tips-icon.webp
+├── faq.webp
+├── copy.webp
 ├── tips.webp
 ├── codes.webp
 └── discord.webp
 ```
 
-`logo.webp` é a assinatura horizontal do 67Codes exibida no cabeçalho e no rodapé. `language.webp` é o ícone quadrado usado no seletor de idioma. `favicon.png` é o ícone exibido na aba do navegador e também o fallback final de imagens. Logo e idioma possuem fallback visual e podem ser adicionados posteriormente sem quebrar o layout.
+`logo.webp` é a assinatura horizontal do 67Codes exibida no cabeçalho e no rodapé. Os demais arquivos substituem automaticamente os símbolos de interface quando são adicionados. Todos mantêm fallback visual e podem ser enviados posteriormente sem quebrar o layout. Consulte `public/assets/ui/README.md` para os tamanhos recomendados.
 
 Cada jogo mantém somente as imagens que realmente variam:
 

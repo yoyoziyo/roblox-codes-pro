@@ -1,13 +1,19 @@
 # Assets compartilhados
 
-Coloque aqui as ilustrações reutilizadas em todas as páginas de jogos:
+Coloque aqui os elementos reutilizados em todas as páginas:
 
-- `logo.webp`: logo horizontal completa do 67Codes, recomendada em aproximadamente 300 × 80 px;
-- `language.webp`: ícone quadrado do seletor de idioma, recomendado em 48 × 48 px;
-- `favicon.png`: ícone quadrado da aba do navegador e fallback de imagens, recomendado em 64 × 64 px;
-- `tips.webp`: ilustração decorativa do card de dicas;
-- `codes.webp`: ilustração opcional para códigos;
-- `discord.webp`: ilustração opcional para a comunidade.
+- `logo.webp`: logo horizontal completa, aproximadamente 300 × 80 px;
+- `language.webp`: seletor de idioma, 48 × 48 px;
+- `verified.webp`: selo de verificação, 32 × 32 px;
+- `roblox.webp`: símbolo do botão “Abrir no Roblox”, 48 × 48 px;
+- `codes.webp`: ícone de códigos ativos, 64 × 64 px;
+- `redeem.webp`: ícone de resgate, 64 × 64 px;
+- `play.webp`: ícone de como jogar, 64 × 64 px;
+- `tips-icon.webp`: ícone pequeno de dicas, 64 × 64 px;
+- `tips.webp`: ilustração grande do card de dicas, aproximadamente 600 × 500 px;
+- `faq.webp`: ícone de perguntas frequentes, 64 × 64 px;
+- `copy.webp`: ícone do botão copiar, 32 × 32 px;
+- `discord.webp`: símbolo ou ilustração da comunidade, aproximadamente 160 × 120 px;
+- `favicon.png`: ícone da aba e fallback final, 64 × 64 px.
 
-Use WebP otimizado e preserve transparência quando necessário. Se `logo.webp` ou `language.webp` ainda não existir, a interface mantém um fallback; outras ilustrações ausentes são ocultadas sem quebrar o layout.
-
+Use WebP com transparência para todos os elementos visuais, exceto o favicon, que permanece PNG. Todos possuem fallback: se o arquivo ainda não existir, o símbolo atual continua visível e a página não quebra.
