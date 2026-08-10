@@ -19,21 +19,29 @@ document.addEventListener("DOMContentLoaded",async()=>{
 function renderGame(game,translation,messages){
   const activeCodes=(game.codes||[]).filter(item=>typeof item?.code==="string"&&item.code.trim());
   const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/assets/ui/favicon.png";
-  gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.t…13802 tokens truncated…c/a><span>/</span><a href="/en/#games">Games</a><span>/</span><strong id="breadcrumb-game">Catch and Tame</strong></nav><div class="game-intro">
-      <img class="game-cover" id="game-cover" src="/assets/games/catch-and-tame/thumbnail.webp" alt="Catch and Tame" width="768" height="432">
-      <div class="game-copy"><div class="title-line"><h1 id="game-name">Catch and Tame</h1><span class="verified" id="verified-at"><i>✓</i> Loading game data...</span></div><p id="game-summary">Active Catch and Tame codes and free rewards to help you grow your collection faster.</p><div class="game-actions"><a class="button button-primary" id="codes-link" href="#codes">View codes</a><a class="button button-secondary" id="roblox-link" href="https://www.roblox.com/games/96645548064314" target="_blank" rel="noopener">Open on Roblox ◇</a></div></div>
-    </div></div></section>
-    <div class="container game-layout"><div class="game-main">
-      <section class="panel codes-panel" id="codes"><div class="panel-head panel-head-row"><h2><span class="heading-glyph" aria-hidden="true">#</span>Active Codes</h2><span class="updated-label"><i></i>Updated just now</span></div><div class="code-list" id="active-code-list"><div class="code-row">Loading codes...</div></div><p class="codes-community">Don't see a code? Join our <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a> for exclusive codes!</p></section>
-      <section class="panel redeem-summary"><div class="panel-head"><h2><span class="panel-icon" aria-hidden="true">↗</span>How to redeem</h2><p>It takes less than a minute.</p></div><ol class="steps" id="redeem-steps"><li>Open Catch and Tame on Roblox.</li></ol><a class="tutorial-jump" href="#redeem-tutorial">View full tutorial ↓</a></section>
-      <section class="panel play-summary"><div class="panel-head"><h2><span class="panel-icon" aria-hidden="true">◇</span>How to play</h2></div><ol class="steps" id="how-to-play"><li>Equip your lasso.</li></ol><a class="tutorial-jump" href="#play-guide">View full guide ↓</a></section>
-      <section class="panel tips-summary"><div class="panel-head"><h2><span class="panel-icon" aria-hidden="true">✦</span>Tips</h2></div><ul class="steps" id="game-tips"><li>Redeem codes as soon as possible.</li></ul><div class="shared-art" aria-hidden="true"><img src="/assets/ui/tips.webp" alt="" loading="lazy"></div></section>
-      <section class="panel tutorial-panel" id="redeem-tutorial"><div class="tutorial-copy"><span class="section-kicker">Complete tutorial</span><h2 id="redeem-tutorial-title">How to redeem codes in Catch and Tame</h2><p id="redeem-tutorial-description">See the complete code redemption process.</p><ol class="guide-steps" id="redeem-tutorial-steps"></ol></div><button class="tutorial-image-button" id="redeem-tutorial-open" type="button" aria-label="Enlarge tutorial image" hidden><img id="redeem-tutorial-image" alt="" loading="lazy"></button><div class="asset-placeholder" id="redeem-tutorial-placeholder"><strong>Tutorial image coming soon</strong><span>Upload <code>redeem-tutorial.webp</code> to this game's asset folder.</span></div></section>
-      <section class="panel tutorial-panel play-guide" id="play-guide"><div class="tutorial-copy"><span class="section-kicker">Beginner guide</span><h2 id="play-guide-title">Complete beginner guide</h2><p id="play-guide-description">Learn the main gameplay loop.</p><ol class="guide-steps" id="play-guide-steps"></ol></div></section>
-      <section class="panel faq-panel"><div class="panel-head"><h2><span class="panel-icon round" aria-hidden="true">?</span>Frequently Asked Questions</h2></div><div id="game-faq"></div></section>
-    </div><aside><div class="panel side-card"><div class="discord-mini"><span class="discord-mark" aria-hidden="true">●●</span><div><h3>Join our Discord community</h3><p>Get exclusive codes, announcements, and connect with other players!</p></div><a class="button button-primary" href="https://discord.com/" target="_blank" rel="noopener">Join Discord ↗</a></div></div></aside></div>
-  </main>
-  <footer class="footer"><div class="container footer-bottom"><span>© 2026 67Codes.</span><span>Not affiliated with Roblox Corporation.</span></div></footer><div class="toast" id="toast" role="status" aria-live="polite"></div><dialog class="image-lightbox" id="tutorial-lightbox" aria-label="Enlarged tutorial image"><button class="lightbox-close" id="tutorial-lightbox-close" type="button" aria-label="Close image">×</button><img id="tutorial-lightbox-image" alt=""></dialog>
-  <script src="/script.js" defer></script><script src="/game-page.js" defer></script>
-</body>
-</html>
+  gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
+  gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
+  gameById("verified-at").lastChild.textContent=` ${messages.verified}`;
+  gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
+  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorials(game,translation);renderFaq(translation.faq);
+}
+function renderCodes(codes,messages,iconSource){
+  const container=gameById("active-code-list");container.replaceChildren();
+  if(!codes.length){container.textContent=messages.noCodes;return}
+  codes.forEach(item=>{const value=item.code;const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src=iconSource;icon.alt="";const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));const status=document.createElement("span");status.className="code-status";status.textContent=messages.active;group.append(icon,info,button,status);row.append(group);container.append(row)});
+}
+function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
+function renderTutorials(game,translation){
+  const tutorials=translation.tutorials||{};const redeem=tutorials.redeem||{};const play=tutorials.play||{};
+  gameById("redeem-tutorial-title").textContent=redeem.title||"";gameById("redeem-tutorial-description").textContent=redeem.description||"";renderList("redeem-tutorial-steps",redeem.steps);
+  gameById("play-guide-title").textContent=play.title||"";gameById("play-guide-description").textContent=play.description||"";renderList("play-guide-steps",play.steps);
+  setupTutorialImage(game.assets?.redeemTutorial,redeem.imageAlt||redeem.title||translation.title);
+}
+function setupTutorialImage(source,alt){
+  const image=gameById("redeem-tutorial-image");const button=gameById("redeem-tutorial-open");const placeholder=gameById("redeem-tutorial-placeholder");const lightbox=gameById("tutorial-lightbox");const largeImage=gameById("tutorial-lightbox-image");const close=gameById("tutorial-lightbox-close");
+  if(!source)return;
+  image.alt=alt;image.addEventListener("load",()=>{button.hidden=false;placeholder.hidden=true},{once:true});image.addEventListener("error",()=>{button.hidden=true;placeholder.hidden=false},{once:true});image.src=source;
+  button.addEventListener("click",()=>{largeImage.src=image.currentSrc||image.src;largeImage.alt=image.alt;if(typeof lightbox.showModal==="function")lightbox.showModal()});
+  close.addEventListener("click",()=>lightbox.close());lightbox.addEventListener("click",event=>{if(event.target===lightbox)lightbox.close()});
+}
+function renderFaq(items=[]){const container=gameById("game-faq");container.replaceChildren();items.forEach(item=>{const details=document.createElement("details");const summary=document.createElement("summary");const answer=document.createElement("div");summary.textContent=item.question;answer.textContent=item.answer;details.append(summary,answer);container.append(details)})}

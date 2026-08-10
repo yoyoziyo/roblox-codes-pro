@@ -188,4 +188,3 @@ O preview suporta URLs limpas, assets em `/assets/` e os redirects antigos:
 ## Deploy
 
 O projeto permanece totalmente estático e compatível com o plano gratuito da Vercel. `vercel.json` contém somente configuração de saída, headers, redirects e rewrites estáticos.
-
