@@ -12,6 +12,7 @@ const index=readJson("data/index.json");
 const site=readJson("data/site.json");
 const requiredTranslationKeys=Object.keys(template.translations.en).sort();
 const adsenseSource="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4069856205850989";
+const adsenseMeta='<meta name="google-adsense-account" content="ca-pub-4069856205850989">';
 
 test("todos os jogos seguem o template e têm as duas traduções",()=>{
   const files=fs.readdirSync(path.join(root,"data/games")).filter(file=>file.endsWith(".json"));
@@ -76,6 +77,13 @@ test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz"
     assert.ok(html.includes('crossorigin="anonymous"'));
   }
   assert.equal(read("index.html").includes(adsenseSource),false);
+});
+
+test("verificação do AdSense e ads.txt usam o publisher correto",()=>{
+  for(const file of ["index.html","en/index.html","pt-br/index.html","en/games/catch-and-tame.html","pt-br/games/catch-and-tame.html"]){
+    assert.equal(read(file).split(adsenseMeta).length-1,1,`${file}: metatag duplicada ou ausente`);
+  }
+  assert.equal(read("ads.txt").trim(),"google.com, pub-4069856205850989, DIRECT, f08c47fec0942fa0");
 });
 
 test("raiz detecta apenas português e mantém fallback acessível",()=>{
