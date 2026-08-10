@@ -2,7 +2,6 @@
   "slug": "catch-and-tame",
   "category": "simulation",
   "robloxUrl": "https://www.roblox.com/games/96645548064314",
-  "lastUpdated": "2026-07-29T12:00:00-03:00",
   "assets": {
     "icon": "/assets/games/catch-and-tame/icon.webp",
     "banner": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter",
@@ -15,19 +14,16 @@
   },
   "codes": [
     {
-      "code": "RELEASE",
-      "reward": "500 Coins"
+      "code": "RELEASE"
     },
     {
-      "code": "TAME2024",
-      "reward": "1x Basic Lasso"
+      "code": "TAME2024"
     }
   ],
   "translations": {
     "en": {
       "title": "Catch and Tame",
       "description": "Active Catch and Tame codes and free rewards to help you grow your collection faster.",
-      "about": "Catch and Tame is a creature-collecting Roblox game where players capture animals, explore new areas, and unlock increasingly rare creatures.",
       "howToPlay": [
         "Equip your lasso.",
         "Explore the island and capture wild animals.",
@@ -86,16 +82,11 @@
           "question": "Do Catch and Tame codes expire?",
           "answer": "Yes. Codes may stop working without notice, so redeem active codes as soon as possible."
         }
-      ],
-      "seo": {
-        "title": "Catch and Tame Codes — 67Codes",
-        "description": "Find active Catch and Tame codes, learn how to redeem them, and get helpful gameplay tips."
-      }
+      ]
     },
     "pt-BR": {
       "title": "Catch and Tame",
       "description": "Códigos ativos de Catch and Tame e recompensas gratuitas para evoluir sua coleção mais rápido.",
-      "about": "Catch and Tame é um jogo de captura e evolução no Roblox em que os jogadores colecionam animais, exploram novas áreas e desbloqueiam criaturas cada vez mais raras.",
       "howToPlay": [
         "Equipe seu laço.",
         "Explore a ilha e capture animais selvagens.",
@@ -154,12 +145,7 @@
           "question": "Os códigos de Catch and Tame expiram?",
           "answer": "Sim. Os códigos podem parar de funcionar sem aviso, então resgate os ativos o quanto antes."
         }
-      ],
-      "seo": {
-        "title": "Códigos de Catch and Tame — 67Codes",
-        "description": "Confira códigos ativos de Catch and Tame, veja como resgatá-los e encontre dicas úteis para jogar."
-      }
+      ]
     }
   }
 }
-

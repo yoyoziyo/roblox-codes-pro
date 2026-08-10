@@ -2,7 +2,6 @@
   "slug": "",
   "category": "",
   "robloxUrl": "",
-  "lastUpdated": "",
   "assets": {
     "icon": "",
     "banner": "",
@@ -15,15 +14,13 @@
   },
   "codes": [
     {
-      "code": "",
-      "reward": ""
+      "code": ""
     }
   ],
   "translations": {
     "en": {
       "title": "",
       "description": "",
-      "about": "",
       "howToPlay": [],
       "howToRedeem": [],
       "tips": [],
@@ -40,16 +37,11 @@
           "steps": []
         }
       },
-      "faq": [],
-      "seo": {
-        "title": "",
-        "description": ""
-      }
+      "faq": []
     },
     "pt-BR": {
       "title": "",
       "description": "",
-      "about": "",
       "howToPlay": [],
       "howToRedeem": [],
       "tips": [],
@@ -66,11 +58,7 @@
           "steps": []
         }
       },
-      "faq": [],
-      "seo": {
-        "title": "",
-        "description": ""
-      }
+      "faq": []
     }
   }
 }

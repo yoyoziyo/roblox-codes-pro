@@ -109,13 +109,6 @@ async function main() {
         entry.icon = result.indexAssets.icon;
         indexChanged = true;
       }
-      if (
-        result.indexAssets.thumbnail &&
-        entry.thumbnail !== result.indexAssets.thumbnail
-      ) {
-        entry.thumbnail = result.indexAssets.thumbnail;
-        indexChanged = true;
-      }
     }
   }
 
@@ -358,4 +351,3 @@ if (
     process.exitCode = 1;
   });
 }
-

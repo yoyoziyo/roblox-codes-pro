@@ -4,7 +4,7 @@ const byId=id=>document.getElementById(id);
 const safeImage=url=>url||fallbackImage;
 const translatedGame=game=>({...game,...(game.translations?.[state.locale]||game.translations?.en||{})});
 const getGames=slugs=>slugs.map(slug=>state.games.find(game=>game.slug===slug)).filter(Boolean).map(translatedGame);
-const gameUrl=slug=>window.YoCodesConfig.gameUrl(state.locale,slug);
+const gameUrl=slug=>`/${state.locale==="pt-BR"?"pt-br":"en"}/games/${encodeURIComponent(slug)}`;
 
 function renderHome(){
   if(!state.homepage||!state.i18n)return;
@@ -81,4 +81,3 @@ document.addEventListener("DOMContentLoaded",async()=>{
     ["recent-games","popular-games","trending-games"].forEach(id=>{const container=byId(id);if(container)container.innerHTML='<div class="trending-empty">Content is temporarily unavailable.</div>'});
   }
 });
-

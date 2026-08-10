@@ -28,7 +28,6 @@ data/
 ├── game-template.json
 ├── index.json
 ├── homepage.json
-├── categories.json
 ├── i18n/
 │   ├── en.json
 │   └── pt-BR.json
@@ -55,7 +54,6 @@ Cada jogo possui apenas um arquivo em `data/games/`. Estes campos são compartil
 - `slug`;
 - `category`;
 - `robloxUrl`;
-- `lastUpdated`;
 - `assets`;
 - `assetSync`;
 - `codes`.
@@ -64,17 +62,14 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 
 - `title`;
 - `description`;
-- `about`;
 - `howToPlay`;
 - `howToRedeem`;
 - `tips`;
 - `tutorials.redeem`;
 - `tutorials.play`;
-- `faq`;
-- `seo.title`;
-- `seo.description`.
+- `faq`.
 
-Cada código possui `code` e pode manter `reward` nos dados para uso editorial futuro. A interface exibe somente o código; códigos expirados devem ser removidos da lista.
+Cada código possui somente `code`; códigos expirados devem ser removidos da lista.
 
 ## Criar um jogo
 

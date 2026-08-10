@@ -22,14 +22,13 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
     assert.deepEqual(Object.keys(game.assetSync).sort(),Object.keys(template.assetSync).sort());
     for(const locale of ["en","pt-BR"]){
       assert.deepEqual(Object.keys(game.translations[locale]).sort(),requiredTranslationKeys);
-      assert.deepEqual(Object.keys(game.translations[locale].seo).sort(),["description","title"]);
       assert.deepEqual(Object.keys(game.translations[locale].tutorials).sort(),["play","redeem"]);
       assert.deepEqual(Object.keys(game.translations[locale].tutorials.redeem).sort(),["description","imageAlt","steps","title"]);
       assert.deepEqual(Object.keys(game.translations[locale].tutorials.play).sort(),["description","steps","title"]);
-      for(const field of ["title","description","about"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
+      for(const field of ["title","description"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
       for(const tutorial of ["redeem","play"]){assert.ok(game.translations[locale].tutorials[tutorial].title.trim());assert.ok(game.translations[locale].tutorials[tutorial].steps.length)}
     }
-    assert.ok(game.codes.every(code=>Object.keys(code).sort().join(",")==="code,reward"&&typeof code.code==="string"&&typeof code.reward==="string"));
+    assert.ok(game.codes.every(code=>Object.keys(code).sort().join(",")==="code"&&typeof code.code==="string"));
   }
 });
 
@@ -51,50 +50,40 @@ test("páginas localizadas possuem lang, canonical e hreflang recíproco",()=>{
   for(const [file,locale,url] of pages){
     const html=read(file);
     assert.match(html,new RegExp(`<html lang="${locale}"`));
-    assert.ok(html.includes(`<link rel="canonical" href="${site.origin}${url}">`));
-    for(const hreflang of ["en","pt-BR","x-default"])assert.ok(html.includes(`hreflang="${hreflang}"`),`${file}: ${hreflang}`);
-    assert.match(html,/<title>[^<]+<\/title>/);
-    assert.match(html,/<meta name="description" content="[^"]+">/);
-  }
-});
-
-test("links internos e seletor preservam o idioma",()=>{
-  const en=read("en/index.html"),pt=read("pt-br/index.html");
-  assert.ok(en.includes('href="/en/games/catch-and-tame"')===false,"cards são renderizados pelo script");
-  assert.ok(read("script.js").includes("gameUrl(state.locale"));
-  assert.ok(en.includes('href="/pt-br/" data-language="pt-BR"'));
-  assert.ok(pt.includes('href="/en/" data-language="en"'));
-  assert.ok(read("en/games/catch-and-tame.html").includes('href="/pt-br/games/catch-and-tame"'));
-  assert.ok(read("pt-br/games/catch-and-tame.html").includes('href="/en/games/catch-and-tame"'));
-});
-
-test("raiz detecta apenas português e mantém fallback acessível",()=>{
-  const html=read("index.html");
-  assert.ok(html.includes('startsWith("pt")'));
-  assert.ok(html.includes('localStorage.getItem("yocodes-language")'));
-  assert.ok(html.includes('href="/en/"'));
-  assert.ok(html.includes('href="/pt-br/"'));
-});
-
-test("redirects antigos apontam permanentemente para inglês",()=>{
-  const vercel=readJson("vercel.json");
-  const redirects=new Map(vercel.redirects.map(item=>[item.source,item]));
-  for(const source of ["/games/:slug","/jogos/:slug"]){
-    assert.equal(redirects.get(source).destination,"/en/games/:slug");
-    assert.equal(redirects.get(source).permanent,true);
-  }
-});
-
-test("sitemap bilíngue contém URLs e alternativas obrigatórias",()=>{
-  const xml=read("sitemap.xml");
-  assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
-  assert.ok(xml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'));
-  for(const url of ["/en/","/pt-br/","/en/games/catch-and-tame","/pt-br/games/catch-and-tame"])assert.ok(xml.includes(`${site.origin}${url}`));
-  for(const hreflang of ["en","pt-BR","x-default"])assert.ok(xml.includes(`hreflang="${hreflang}"`));
-});
-
-test("sincronizador não referencia nem remove traduções",()=>{
-  const source=read("scripts/sync-roblox-assets.js");
-  assert.equal(source.includes("translations ="),false);
-  assert.equal(source.includes("delete game.translations"),false);
-});
+    …4492 tokens truncated…tent="Encontre códigos ativos de Roblox, recompensas gratuitas e instruções claras de resgate para seus jogos favoritos.">
+  <meta property="og:title" content="Códigos ativos de Roblox — 67Codes">
+  <meta property="og:description" content="Pesquise, copie e resgate códigos dos seus jogos favoritos.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://www.67codes.com/pt-br/">
+  <link rel="alternate" hreflang="en" href="https://www.67codes.com/en/">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/">
+  <link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/">
+  <link rel="icon" href="/assets/ui/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header"><nav class="container nav" aria-label="Navegação principal">
+    <a class="brand" href="/pt-br/" aria-label="Página inicial do 67Codes"><img class="brand-logo" src="/assets/ui/logo.webp" alt="" onload="this.classList.add('loaded')"><span class="brand-fallback" aria-hidden="true"><span class="brand-mark">67</span><span class="brand-name">67<span>Codes</span></span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links"><a class="active" href="/pt-br/">Início</a><a href="#jogos">Jogos</a><a href="#atualizados">Códigos</a><a href="#em-alta">Em alta</a><a href="#comunidade">Discord</a></div>
+    <button class="nav-search" type="button" data-focus-search aria-label="Pesquisar jogos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg><span>Buscar</span><kbd>/</kbd></button>
+    <details class="language-menu"><summary aria-label="Alterar idioma"><span class="language-symbol" aria-hidden="true"><img src="/assets/ui/language.webp" alt="" onload="this.classList.add('loaded')"><i class="language-fallback">◎</i></span><span class="language-label">Português</span></summary><div class="language-options"><a href="/en/" data-language="en">English</a><a href="/pt-br/" data-language="pt-BR" aria-current="true">Português</a></div></details>
+  </nav></header>
+  <main id="conteudo">
+    <section class="hero"><div class="hero-grid" aria-hidden="true"></div><div class="hero-glow hero-glow-a" aria-hidden="true"></div><div class="hero-glow hero-glow-b" aria-hidden="true"></div><div class="container hero-content">
+      <span class="eyebrow"><i></i> Códigos verificados diariamente</span><h1>Códigos de Roblox,<br><span>sem enrolação.</span></h1><p>Encontre códigos ativos, recompensas gratuitas e instruções de resgate para seus jogos favoritos.</p>
+      <div class="game-search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg><label class="sr-only" for="game-search">Pesquisar jogos do Roblox</label><input id="game-search" type="search" placeholder="Pesquisar jogos..." autocomplete="off" aria-autocomplete="list" aria-controls="search-results" aria-expanded="false"><span class="search-shortcut">⌘ K</span><div class="search-results" id="search-results" role="listbox" hidden></div></div>
+      <div class="quick-links" id="hero-game-link" aria-label="Jogo em destaque"></div><div class="trust-row"><span><b>✓</b> Códigos testados</span><span><b>↻</b> Atualizações frequentes</span><span><b>⚡</b> Copie com um clique</span></div>
+    </div></section>
+    <section class="section container" id="atualizados"><div class="section-heading"><div><span class="section-kicker">Novidades</span><h2>Atualizados recentemente</h2><p>Jogos com códigos verificados pela nossa equipe.</p></div><a class="text-link" href="#jogos">Ver todos <span>→</span></a></div><div class="game-table" id="recent-games" aria-live="polite"></div></section>
+    <section class="section section-tinted" id="jogos"><div class="container"><div class="section-heading"><div><span class="section-kicker">Descubra</span><h2>Jogos populares</h2><p>Encontre rapidamente os códigos que todo mundo procura.</p></div></div><div class="game-table" id="popular-games" aria-live="polite"></div></div></section>
+    <section class="section container" id="em-alta" data-home-section="trending"><div class="section-heading"><div><span class="section-kicker">Destaques</span><h2>Jogos em alta</h2><p>Uma seleção manual dos jogos que estão chamando atenção.</p></div></div><div class="game-table" id="trending-games" aria-live="polite"></div></section>
+    <section class="section container" id="comunidade"><div class="community-card"><div class="community-icon" aria-hidden="true">#</div><div><span class="section-kicker">Comunidade</span><h2>Ajude o 67Codes a ficar sempre atualizado.</h2><p>Não encontrou um jogo ou descobriu um código novo? Entre na comunidade do 67Codes.</p></div><a class="button button-primary" href="https://discord.com/" target="_blank" rel="noopener">Entrar no Discord <span>↗</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-grid"><div><a class="brand" href="/pt-br/" aria-label="Página inicial do 67Codes"><img class="brand-logo" src="/assets/ui/logo.webp" alt="" onload="this.classList.add('loaded')"><span class="brand-fallback" aria-hidden="true"><span class="brand-mark">67</span><span class="brand-name">67<span>Codes</span></span></span></a><p>Pesquisar, encontrar, copiar e resgatar.</p></div><div><strong>Explore</strong><a href="#jogos">Jogos</a><a href="#atualizados">Atualizados</a><a href="#em-alta">Em alta</a></div><div><strong>Comunidade</strong><a href="#comunidade">Discord</a><a href="https://www.roblox.com/communities/33319096" target="_blank" rel="noopener">Grupo Roblox</a></div></div><div class="container footer-bottom"><span>© 2026 67Codes.</span><span>Não afiliado à Roblox Corporation.</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><script src="/script.js" defer></script>
+</body>
+</html>

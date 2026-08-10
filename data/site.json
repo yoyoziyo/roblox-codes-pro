@@ -1,14 +1,3 @@
 {
-  "origin": "https://yocodes.vercel.app",
-  "defaultLocale": "en",
-  "locales": {
-    "en": {
-      "path": "en",
-      "label": "English"
-    },
-    "pt-BR": {
-      "path": "pt-br",
-      "label": "Português"
-    }
-  }
+  "origin": "https://www.67codes.com"
 }

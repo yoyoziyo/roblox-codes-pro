@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yocodes.vercel.app/sitemap.xml
+Sitemap: https://www.67codes.com/sitemap.xml

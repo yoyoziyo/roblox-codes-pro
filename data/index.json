@@ -3,10 +3,7 @@
     {
       "slug": "catch-and-tame",
       "icon": "/assets/games/catch-and-tame/icon.webp",
-      "thumbnail": "/assets/games/catch-and-tame/thumbnail.webp",
       "category": "simulation",
-      "lastUpdated": "2026-07-29T12:00:00-03:00",
-      "activeCodes": 2,
       "status": "active",
       "translations": {
         "en": {

@@ -1,7 +1,4 @@
 {
-  "locale": "en",
-  "path": "en",
-  "languageName": "English",
   "categories": {
     "simulation": "Simulation"
   },
@@ -24,4 +21,3 @@
     "active": "Active"
   }
 }
-
