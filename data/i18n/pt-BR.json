@@ -4,13 +4,7 @@
     "fighting-action": "Luta e Ação"
   },
   "search": {
-    "empty": "Nenhum jogo cadastrado corresponde à sua busca.",
-    "unavailable": "Conteúdo temporariamente indisponível."
-  },
-  "home": {
-    "featured": "Em destaque:",
-    "game": "Jogo",
-    "category": "Categoria"
+    "empty": "Nenhum jogo cadastrado corresponde à sua busca."
   },
   "game": {
     "verified": "Verificado",

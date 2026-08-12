@@ -1,45 +1,14 @@
-const state={games:[],homepage:null,i18n:null,locale:document.documentElement.lang==="pt-BR"?"pt-BR":"en",activeResult:-1};
+const state={games:[],i18n:null,locale:document.documentElement.lang==="pt-BR"?"pt-BR":"en",activeResult:-1};
 const fallbackImage="/assets/ui/favicon.png";
 const byId=id=>document.getElementById(id);
 const safeImage=url=>url||fallbackImage;
 const translatedGame=game=>({...game,...(game.translations?.[state.locale]||game.translations?.en||{})});
-const getGames=slugs=>slugs.map(slug=>state.games.find(game=>game.slug===slug)).filter(Boolean).map(translatedGame);
 const gameUrl=slug=>`/${state.locale==="pt-BR"?"pt-br":"en"}/games/${encodeURIComponent(slug)}`;
-
-function renderHome(){
-  if(!state.homepage||!state.i18n)return;
-  renderGameTable("recent-games",getGames(state.homepage.recentUpdates||[]),state.i18n.search.unavailable);
-  renderGameTable("popular-games",getGames(state.homepage.popular||[]),state.i18n.search.unavailable);
-  renderGameTable("trending-games",getGames(state.homepage.trending||[]),state.i18n.search.unavailable);
-  applySectionOrder(state.homepage.sectionOrder||[]);
-  renderHeroGame(state.homepage.heroGame);
-}
-function renderGameTable(id,games,emptyMessage){
-  const container=byId(id);if(!container)return;
-  container.innerHTML=`
-    <div class="game-table-head" aria-hidden="true"><span>#</span><span>${state.i18n.home.game}</span><span>${state.i18n.home.category}</span></div>
-    ${games.length?games.map((game,index)=>`
-      <a class="game-table-row" href="${gameUrl(game.slug)}">
-        <span class="position">${String(index+1).padStart(2,"0")}</span>
-        <span class="game-table-title"><img src="${safeImage(game.icon)}" alt="" width="44" height="44" loading="lazy" onerror="this.src='${fallbackImage}'"><strong>${game.title}</strong></span>
-        <span class="game-table-category">${state.i18n.categories[game.category]||game.category}</span>
-      </a>`).join(""):`<div class="trending-empty">${emptyMessage}</div>`}`;
-}
-function applySectionOrder(order){
-  const main=byId("conteudo");if(!main)return;
-  const sections={recentUpdates:byId("atualizados"),trending:byId("em-alta"),popular:byId("jogos")};
-  const community=byId("comunidade");
-  order.forEach(key=>{if(sections[key])main.insertBefore(sections[key],community)});
-}
 function searchMarkup(query){
   const normalized=query.trim().toLocaleLowerCase(state.locale);
   const matches=state.games.map(translatedGame).filter(game=>game.title.toLocaleLowerCase(state.locale).includes(normalized)||game.slug.includes(normalized));
   if(!matches.length)return`<div class="search-empty">${state.i18n.search.empty}</div>`;
   return matches.map((game,index)=>`<a class="search-result" role="option" aria-selected="${index===state.activeResult}" href="${gameUrl(game.slug)}"><img src="${safeImage(game.icon)}" alt=""><span><strong>${game.title}</strong><small>${game.description}</small></span></a>`).join("");
-}
-function renderHeroGame(slug){
-  const container=byId("hero-game-link"),game=translatedGame(state.games.find(item=>item.slug===slug)||{});if(!container||!game.slug)return;
-  container.innerHTML=`<span>${state.i18n.home.featured}</span><a href="${gameUrl(game.slug)}">${game.title}</a>`;
 }
 function setupSearch(){
   const input=byId("game-search"),results=byId("search-results");if(!input||!results)return;
@@ -69,15 +38,16 @@ async function copyCode(text,button){
 window.copyCode=copyCode;
 document.addEventListener("DOMContentLoaded",async()=>{
   setupNavigation();setupLanguage();
-  if(!byId("recent-games"))return;
+  if(!byId("game-search"))return;
   try{
     const localeFile=state.locale==="pt-BR"?"pt-BR":"en";
-    const [indexResponse,homepageResponse,i18nResponse]=await Promise.all([fetch("/data/index.json"),fetch("/data/homepage.json"),fetch(`/data/i18n/${localeFile}.json`)]);
-    if(!indexResponse.ok||!homepageResponse.ok||!i18nResponse.ok)throw new Error();
-    const [indexData,homepageData,i18nData]=await Promise.all([indexResponse.json(),homepageResponse.json(),i18nResponse.json()]);
-    state.games=indexData.games.filter(game=>game.status==="active");state.homepage=homepageData;state.i18n=i18nData;
-    setupSearch();renderHome();
+    const [indexResponse,i18nResponse]=await Promise.all([fetch("/data/index.json"),fetch(`/data/i18n/${localeFile}.json`)]);
+    if(!indexResponse.ok||!i18nResponse.ok)throw new Error();
+    const [indexData,i18nData]=await Promise.all([indexResponse.json(),i18nResponse.json()]);
+    state.games=indexData.games.filter(game=>game.status==="active");state.i18n=i18nData;
+    setupSearch();
   }catch{
-    ["recent-games","popular-games","trending-games"].forEach(id=>{const container=byId(id);if(container)container.innerHTML='<div class="trending-empty">Content is temporarily unavailable.</div>'});
+    const input=byId("game-search");
+    if(input){input.disabled=true;input.placeholder=state.locale==="pt-BR"?"Pesquisa temporariamente indisponível":"Search temporarily unavailable"}
   }
 });

@@ -27,7 +27,6 @@ data/
 ├── site.json
 ├── game-template.json
 ├── index.json
-├── homepage.json
 ├── i18n/
 │   ├── en.json
 │   └── pt-BR.json
@@ -48,7 +47,7 @@ pt-br/
     └── gakuran.html
 ```
 
-`data/i18n/` contém os textos compartilhados da interface e os nomes traduzidos das categorias. `homepage.json` continua controlando os mesmos jogos e a ordem editorial das seções nos dois idiomas.
+`data/i18n/` contém os textos compartilhados da interface. A Home consulta diretamente `data/index.json` e usa a lista geral somente para a pesquisa de jogos.
 
 ## Dados compartilhados e traduções
 
@@ -80,14 +79,13 @@ Cada código possui somente `code`; códigos expirados devem ser removidos da li
 2. Preencha todos os campos compartilhados.
 3. Escreva conteúdo natural e completo em `translations.en` e `translations.pt-BR`.
 4. Registre o resumo e as duas traduções em `data/index.json`.
-5. Adicione o slug às listas desejadas de `data/homepage.json`.
-6. Crie as páginas estáticas equivalentes:
+5. Crie as páginas estáticas equivalentes:
    - `en/games/<slug>.html`;
    - `pt-br/games/<slug>.html`.
-7. Crie `public/assets/games/<slug>/` e adicione os assets editoriais do jogo.
-8. Execute `npm run sync:roblox -- <slug>`.
-9. Execute `npm run generate:seo`.
-10. Rode `npm test` e valide as duas URLs.
+6. Crie `public/assets/games/<slug>/` e adicione os assets editoriais do jogo.
+7. Execute `npm run sync:roblox -- <slug>`.
+8. Execute `npm run generate:seo`.
+9. Rode `npm test` e valide as duas URLs e a pesquisa da Home.
 
 Não adicione tags ou códigos expirados.
 

@@ -4,13 +4,7 @@
     "fighting-action": "Fighting & Action"
   },
   "search": {
-    "empty": "No registered game matches your search.",
-    "unavailable": "Content is temporarily unavailable."
-  },
-  "home": {
-    "featured": "Featured:",
-    "game": "Game",
-    "category": "Category"
+    "empty": "No registered game matches your search."
   },
   "game": {
     "verified": "Verified",

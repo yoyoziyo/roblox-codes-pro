@@ -63,12 +63,24 @@ test("páginas localizadas possuem lang, canonical e hreflang recíproco",()=>{
 
 test("links internos e seletor preservam o idioma",()=>{
   const en=read("en/index.html"),pt=read("pt-br/index.html");
-  assert.ok(en.includes('href="/en/games/catch-and-tame"')===false,"cards são renderizados pelo script");
+  assert.ok(en.includes('href="/en/games/catch-and-tame"')===false,"resultados são renderizados pela pesquisa");
   assert.ok(read("script.js").includes('state.locale==="pt-BR"?"pt-br":"en"'));
   assert.ok(en.includes('href="/pt-br/" data-language="pt-BR"'));
   assert.ok(pt.includes('href="/en/" data-language="en"'));
   assert.ok(read("en/games/catch-and-tame.html").includes('href="/pt-br/games/catch-and-tame"'));
   assert.ok(read("pt-br/games/catch-and-tame.html").includes('href="/en/games/catch-and-tame"'));
+});
+
+test("Home é dedicada à pesquisa e não possui listas editoriais",()=>{
+  const pages=[read("en/index.html"),read("pt-br/index.html")];
+  for(const html of pages){
+    assert.ok(html.includes('id="game-search"'));
+    for(const id of ["recent-games","popular-games","trending-games"])assert.equal(html.includes(`id="${id}"`),false);
+  }
+  assert.equal(fs.existsSync(path.join(root,"data/homepage.json")),false);
+  const source=read("script.js");
+  assert.equal(source.includes("homepage.json"),false);
+  assert.equal(source.includes("renderGameTable"),false);
 });
 
 test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz",()=>{
