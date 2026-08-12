@@ -15,6 +15,22 @@
           "description": "Códigos ativos de Catch and Tame e recompensas gratuitas."
         }
       }
+    },
+    {
+      "slug": "gakuran",
+      "icon": "/assets/games/gakuran/icon.webp",
+      "category": "fighting-action",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Gakuran",
+          "description": "Active Gakuran codes, combat tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Gakuran",
+          "description": "Códigos ativos de Gakuran, dicas de combate e instruções de resgate."
+        }
+      }
     }
   ]
 }

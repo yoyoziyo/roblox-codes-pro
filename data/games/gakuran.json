@@ -1,0 +1,148 @@
+{
+  "slug": "gakuran",
+  "category": "fighting-action",
+  "robloxUrl": "https://www.roblox.com/games/128736949265057",
+  "assets": {
+    "icon": "/assets/games/gakuran/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/gakuran/thumbnail.webp",
+    "redeemTutorial": "/assets/games/gakuran/redeem-tutorial.webp"
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    {
+      "code": "WINGCHAN"
+    }
+  ],
+  "translations": {
+    "en": {
+      "title": "Gakuran",
+      "description": "Active Gakuran codes for a Japanese school fighting and roleplay experience with combat styles, classes, outfits, and character customization.",
+      "howToPlay": [
+        "Create and customize your student.",
+        "Explore the school and attend classes.",
+        "Roll the gacha for fighting styles, clothes, and accessories.",
+        "Train, roleplay, and challenge other players in combat."
+      ],
+      "howToRedeem": [
+        "Open Gakuran on Roblox.",
+        "Open the menu and select Codes.",
+        "Paste an active code into the field.",
+        "Confirm to claim the reward."
+      ],
+      "tips": [
+        "Redeem new codes quickly because they may expire without notice.",
+        "Explore the map and attend classes before challenging experienced players.",
+        "Use the gacha to discover fighting styles and customization items.",
+        "Return after game updates to check for newly verified codes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Gakuran",
+          "description": "Follow these steps to open the code menu and claim an active Gakuran code.",
+          "steps": [
+            "Launch Gakuran from its official Roblox page and wait for your character to load.",
+            "Open the main menu and choose the Codes option.",
+            "Copy an active code from the list above and paste it into the code field.",
+            "Confirm the redemption and check that the reward was added to your account."
+          ],
+          "imageAlt": "Gakuran code redemption tutorial"
+        },
+        "play": {
+          "title": "Gakuran beginner guide",
+          "description": "Learn the main school, roleplay, customization, and combat systems before taking on other players.",
+          "steps": [
+            "Customize your student and learn the controls in a safe area.",
+            "Explore the school map and attend classes to understand the main activities.",
+            "Use the gacha system to roll fighting styles, clothes, and accessories.",
+            "Practice your fighting style before challenging other players and building your reputation."
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": "Why is a Gakuran code not working?",
+          "answer": "Check that the code was copied exactly without extra spaces. If it still fails, it may have expired."
+        },
+        {
+          "question": "Where do I enter codes in Gakuran?",
+          "answer": "Open the main menu, select Codes, paste an active code, and confirm the redemption."
+        },
+        {
+          "question": "What can I get from the gacha system?",
+          "answer": "Gakuran uses gacha rolls for fighting styles, clothing, and accessories used to customize your character."
+        },
+        {
+          "question": "Do Gakuran codes expire?",
+          "answer": "Yes. Codes can stop working without notice, so redeem them as soon as possible."
+        }
+      ]
+    },
+    "pt-BR": {
+      "title": "Gakuran",
+      "description": "Códigos ativos de Gakuran para um jogo de luta e RP escolar japonês com estilos de combate, aulas, roupas e personalização de personagem.",
+      "howToPlay": [
+        "Crie e personalize seu estudante.",
+        "Explore a escola e frequente as aulas.",
+        "Use o gacha para roletar estilos de luta, roupas e acessórios.",
+        "Treine, participe do RP e enfrente outros jogadores."
+      ],
+      "howToRedeem": [
+        "Abra Gakuran no Roblox.",
+        "Abra o menu e selecione Codes.",
+        "Cole um código ativo no campo indicado.",
+        "Confirme para receber a recompensa."
+      ],
+      "tips": [
+        "Resgate códigos novos rapidamente, pois eles podem expirar sem aviso.",
+        "Explore o mapa e frequente as aulas antes de desafiar jogadores experientes.",
+        "Use o gacha para descobrir estilos de luta e itens de personalização.",
+        "Volte depois das atualizações do jogo para conferir novos códigos verificados."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Gakuran",
+          "description": "Siga estas etapas para abrir o menu de códigos e resgatar um código ativo de Gakuran.",
+          "steps": [
+            "Abra Gakuran pela página oficial do Roblox e aguarde seu personagem carregar.",
+            "Abra o menu principal e selecione a opção Codes.",
+            "Copie um código ativo da lista acima e cole no campo indicado.",
+            "Confirme o resgate e verifique se a recompensa foi adicionada à sua conta."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Gakuran"
+        },
+        "play": {
+          "title": "Guia de Gakuran para iniciantes",
+          "description": "Conheça os principais sistemas de escola, RP, personalização e combate antes de enfrentar outros jogadores.",
+          "steps": [
+            "Personalize seu estudante e aprenda os controles em uma área segura.",
+            "Explore o mapa da escola e frequente as aulas para conhecer as atividades principais.",
+            "Use o sistema de gacha para roletar estilos de luta, roupas e acessórios.",
+            "Pratique seu estilo de luta antes de desafiar outros jogadores e construir sua reputação."
+          ]
+        }
+      },
+      "faq": [
+        {
+          "question": "Por que um código de Gakuran não funcionou?",
+          "answer": "Confira se o código foi copiado exatamente e sem espaços extras. Se ainda falhar, ele pode ter expirado."
+        },
+        {
+          "question": "Onde inserir códigos em Gakuran?",
+          "answer": "Abra o menu principal, selecione Codes, cole um código ativo e confirme o resgate."
+        },
+        {
+          "question": "O que posso conseguir no sistema de gacha?",
+          "answer": "Gakuran usa rolagens de gacha para estilos de luta, roupas e acessórios usados na personalização do personagem."
+        },
+        {
+          "question": "Os códigos de Gakuran expiram?",
+          "answer": "Sim. Os códigos podem parar de funcionar sem aviso, então resgate-os assim que possível."
+        }
+      ]
+    }
+  }
+}

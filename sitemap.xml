@@ -24,4 +24,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/catch-and-tame"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/catch-and-tame"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/gakuran</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/gakuran"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/gakuran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/gakuran"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/gakuran</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/gakuran"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/gakuran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/gakuran"/>
+  </url>
 </urlset>

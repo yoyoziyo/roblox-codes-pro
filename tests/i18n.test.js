@@ -46,8 +46,10 @@ test("páginas localizadas possuem lang, canonical e hreflang recíproco",()=>{
   const pages=[
     ["en/index.html","en","/en/"],
     ["pt-br/index.html","pt-BR","/pt-br/"],
-    ["en/games/catch-and-tame.html","en","/en/games/catch-and-tame"],
-    ["pt-br/games/catch-and-tame.html","pt-BR","/pt-br/games/catch-and-tame"]
+    ...index.games.filter(game=>game.status==="active").flatMap(game=>[
+      [`en/games/${game.slug}.html`,"en",`/en/games/${game.slug}`],
+      [`pt-br/games/${game.slug}.html`,"pt-BR",`/pt-br/games/${game.slug}`]
+    ])
   ];
   for(const [file,locale,url] of pages){
     const html=read(file);
@@ -70,7 +72,7 @@ test("links internos e seletor preservam o idioma",()=>{
 });
 
 test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz",()=>{
-  const pages=["en/index.html","pt-br/index.html","en/games/catch-and-tame.html","pt-br/games/catch-and-tame.html"];
+  const pages=["en/index.html","pt-br/index.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
   for(const file of pages){
     const html=read(file);
     assert.equal(html.split(adsenseSource).length-1,1,`${file}: snippet duplicado ou ausente`);
@@ -80,7 +82,8 @@ test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz"
 });
 
 test("verificação do AdSense e ads.txt usam o publisher correto",()=>{
-  for(const file of ["index.html","en/index.html","pt-br/index.html","en/games/catch-and-tame.html","pt-br/games/catch-and-tame.html"]){
+  const pages=["index.html","en/index.html","pt-br/index.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
+  for(const file of pages){
     assert.equal(read(file).split(adsenseMeta).length-1,1,`${file}: metatag duplicada ou ausente`);
   }
   assert.equal(read("ads.txt").trim(),"google.com, pub-4069856205850989, DIRECT, f08c47fec0942fa0");

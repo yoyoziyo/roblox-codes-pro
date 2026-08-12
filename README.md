@@ -32,17 +32,20 @@ data/
 │   ├── en.json
 │   └── pt-BR.json
 └── games/
-    └── catch-and-tame.json
+    ├── catch-and-tame.json
+    └── gakuran.json
 
 en/
 ├── index.html
 └── games/
-    └── catch-and-tame.html
+    ├── catch-and-tame.html
+    └── gakuran.html
 
 pt-br/
 ├── index.html
 └── games/
-    └── catch-and-tame.html
+    ├── catch-and-tame.html
+    └── gakuran.html
 ```
 
 `data/i18n/` contém os textos compartilhados da interface e os nomes traduzidos das categorias. `homepage.json` continua controlando os mesmos jogos e a ordem editorial das seções nos dois idiomas.

@@ -1,6 +1,7 @@
 {
   "categories": {
-    "simulation": "Simulação"
+    "simulation": "Simulação",
+    "fighting-action": "Luta e Ação"
   },
   "search": {
     "empty": "Nenhum jogo cadastrado corresponde à sua busca.",

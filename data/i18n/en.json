@@ -1,6 +1,7 @@
 {
   "categories": {
-    "simulation": "Simulation"
+    "simulation": "Simulation",
+    "fighting-action": "Fighting & Action"
   },
   "search": {
     "empty": "No registered game matches your search.",
