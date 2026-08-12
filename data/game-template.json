@@ -30,14 +30,8 @@
           "description": "",
           "steps": [],
           "imageAlt": ""
-        },
-        "play": {
-          "title": "",
-          "description": "",
-          "steps": []
         }
-      },
-      "faq": []
+      }
     },
     "pt-BR": {
       "title": "",
@@ -51,14 +45,8 @@
           "description": "",
           "steps": [],
           "imageAlt": ""
-        },
-        "play": {
-          "title": "",
-          "description": "",
-          "steps": []
         }
-      },
-      "faq": []
+      }
     }
   }
 }

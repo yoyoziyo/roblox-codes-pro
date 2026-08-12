@@ -53,36 +53,8 @@
             "Confirm the redemption. If the code is valid, the reward will be added to your account."
           ],
           "imageAlt": "Catch and Tame code redemption tutorial"
-        },
-        "play": {
-          "title": "Complete beginner guide",
-          "description": "Start with the basic loop, then improve your collection as you unlock new areas.",
-          "steps": [
-            "Equip your lasso before leaving your starting area.",
-            "Explore the island and approach animals you want to capture.",
-            "Return captured animals to your space and care for them.",
-            "Feed and combine animals to strengthen your collection and reach new areas."
-          ]
         }
-      },
-      "faq": [
-        {
-          "question": "Why is a code not working?",
-          "answer": "Make sure the code was copied without extra spaces. If it still fails, it may have expired recently."
-        },
-        {
-          "question": "When are new codes added?",
-          "answer": "We update this list manually whenever we find and verify new codes."
-        },
-        {
-          "question": "Where do I enter codes in Catch and Tame?",
-          "answer": "Open the codes option in the game menu, paste an active code, and confirm the redemption."
-        },
-        {
-          "question": "Do Catch and Tame codes expire?",
-          "answer": "Yes. Codes may stop working without notice, so redeem active codes as soon as possible."
-        }
-      ]
+      }
     },
     "pt-BR": {
       "title": "Catch and Tame",
@@ -116,36 +88,8 @@
             "Confirme o resgate. Se o código for válido, a recompensa será adicionada à sua conta."
           ],
           "imageAlt": "Tutorial de resgate de códigos em Catch and Tame"
-        },
-        "play": {
-          "title": "Guia completo para iniciantes",
-          "description": "Comece pelo ciclo básico do jogo e melhore sua coleção enquanto desbloqueia novas áreas.",
-          "steps": [
-            "Equipe seu laço antes de sair da área inicial.",
-            "Explore a ilha e aproxime-se dos animais que deseja capturar.",
-            "Leve os animais capturados para seu espaço e cuide deles.",
-            "Alimente e combine animais para fortalecer sua coleção e alcançar novas áreas."
-          ]
         }
-      },
-      "faq": [
-        {
-          "question": "Por que um código não funcionou?",
-          "answer": "Confira se o código foi copiado sem espaços extras. Se ainda não funcionar, ele pode ter expirado recentemente."
-        },
-        {
-          "question": "Quando novos códigos são adicionados?",
-          "answer": "Atualizamos a lista manualmente sempre que encontramos e verificamos novos códigos."
-        },
-        {
-          "question": "Onde inserir códigos em Catch and Tame?",
-          "answer": "Abra a opção de códigos no menu do jogo, cole um código ativo e confirme o resgate."
-        },
-        {
-          "question": "Os códigos de Catch and Tame expiram?",
-          "answer": "Sim. Os códigos podem parar de funcionar sem aviso, então resgate os ativos o quanto antes."
-        }
-      ]
+      }
     }
   }
 }

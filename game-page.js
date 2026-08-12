@@ -23,7 +23,7 @@ function renderGame(game,translation,messages){
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
   gameById("verified-at").lastChild.textContent=` ${messages.verified}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
-  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorials(game,translation);renderFaq(translation.faq);
+  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorial(game,translation);
 }
 function renderCodes(codes,messages,iconSource){
   const container=gameById("active-code-list");container.replaceChildren();
@@ -31,10 +31,9 @@ function renderCodes(codes,messages,iconSource){
   codes.forEach(item=>{const value=item.code;const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src=iconSource;icon.alt="";const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";const copyIcon=document.createElement("img");copyIcon.src="/assets/ui/copy.webp";copyIcon.alt="";copyIcon.addEventListener("load",()=>copyIcon.classList.add("loaded"),{once:true});const copyLabel=document.createElement("span");copyLabel.textContent=messages.copy;button.append(copyIcon,copyLabel);button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));const status=document.createElement("span");status.className="code-status";status.textContent=messages.active;group.append(icon,info,button,status);row.append(group);container.append(row)});
 }
 function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
-function renderTutorials(game,translation){
-  const tutorials=translation.tutorials||{};const redeem=tutorials.redeem||{};const play=tutorials.play||{};
+function renderTutorial(game,translation){
+  const redeem=translation.tutorials?.redeem||{};
   gameById("redeem-tutorial-title").textContent=redeem.title||"";gameById("redeem-tutorial-description").textContent=redeem.description||"";renderList("redeem-tutorial-steps",redeem.steps);
-  gameById("play-guide-title").textContent=play.title||"";gameById("play-guide-description").textContent=play.description||"";renderList("play-guide-steps",play.steps);
   setupTutorialImage(game.assets?.redeemTutorial,redeem.imageAlt||redeem.title||translation.title);
 }
 function setupTutorialImage(source,alt){
@@ -44,4 +43,3 @@ function setupTutorialImage(source,alt){
   button.addEventListener("click",()=>{largeImage.src=image.currentSrc||image.src;largeImage.alt=image.alt;if(typeof lightbox.showModal==="function")lightbox.showModal()});
   close.addEventListener("click",()=>lightbox.close());lightbox.addEventListener("click",event=>{if(event.target===lightbox)lightbox.close()});
 }
-function renderFaq(items=[]){const container=gameById("game-faq");container.replaceChildren();items.forEach(item=>{const details=document.createElement("details");const summary=document.createElement("summary");const answer=document.createElement("div");summary.textContent=item.question;answer.textContent=item.answer;details.append(summary,answer);container.append(details)})}

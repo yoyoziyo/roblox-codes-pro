@@ -68,8 +68,6 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 - `howToRedeem`;
 - `tips`;
 - `tutorials.redeem`;
-- `tutorials.play`;
-- `faq`.
 
 Cada código possui somente `code`; códigos expirados devem ser removidos da lista.
 

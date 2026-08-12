@@ -24,11 +24,11 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
     assert.deepEqual(Object.keys(game.assetSync).sort(),Object.keys(template.assetSync).sort());
     for(const locale of ["en","pt-BR"]){
       assert.deepEqual(Object.keys(game.translations[locale]).sort(),requiredTranslationKeys);
-      assert.deepEqual(Object.keys(game.translations[locale].tutorials).sort(),["play","redeem"]);
+      assert.deepEqual(Object.keys(game.translations[locale].tutorials).sort(),["redeem"]);
       assert.deepEqual(Object.keys(game.translations[locale].tutorials.redeem).sort(),["description","imageAlt","steps","title"]);
-      assert.deepEqual(Object.keys(game.translations[locale].tutorials.play).sort(),["description","steps","title"]);
       for(const field of ["title","description"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
-      for(const tutorial of ["redeem","play"]){assert.ok(game.translations[locale].tutorials[tutorial].title.trim());assert.ok(game.translations[locale].tutorials[tutorial].steps.length)}
+      assert.ok(game.translations[locale].tutorials.redeem.title.trim());
+      assert.ok(game.translations[locale].tutorials.redeem.steps.length);
     }
     assert.ok(game.codes.every(code=>Object.keys(code).sort().join(",")==="code"&&typeof code.code==="string"));
   }
@@ -81,6 +81,15 @@ test("Home é dedicada à pesquisa e não possui listas editoriais",()=>{
   const source=read("script.js");
   assert.equal(source.includes("homepage.json"),false);
   assert.equal(source.includes("renderGameTable"),false);
+});
+
+test("páginas de jogos não possuem guia para iniciantes nem FAQ",()=>{
+  const pages=index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]);
+  for(const file of pages){
+    const html=read(file);
+    for(const id of ["play-guide","play-guide-title","game-faq"])assert.equal(html.includes(id),false,`${file}: ${id}`);
+  }
+  assert.equal(read("game-page.js").includes("renderFaq"),false);
 });
 
 test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz",()=>{
