@@ -92,6 +92,19 @@ test("páginas de jogos não possuem guia para iniciantes nem FAQ",()=>{
   assert.equal(read("game-page.js").includes("renderFaq"),false);
 });
 
+test("páginas de jogos usam apenas códigos, dicas e tutorial com coluna para anúncios",()=>{
+  const pages=index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]);
+  for(const file of pages){
+    const html=read(file);
+    for(const removed of ["redeem-summary","play-summary","redeem-steps","how-to-play"])assert.equal(html.includes(removed),false,`${file}: ${removed}`);
+    assert.equal((html.match(/data-ad-slot=/g)||[]).length,3,`${file}: ad slots`);
+    assert.ok(html.indexOf('id="redeem-tutorial-steps"')<html.indexOf('id="redeem-tutorial-image"'),`${file}: tutorial image order`);
+  }
+  const source=read("game-page.js");
+  assert.equal(source.includes("howToRedeem"),false);
+  assert.equal(source.includes("howToPlay"),false);
+});
+
 test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz",()=>{
   const pages=["en/index.html","pt-br/index.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
   for(const file of pages){

@@ -23,7 +23,7 @@ function renderGame(game,translation,messages){
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
   gameById("verified-at").lastChild.textContent=` ${messages.verified}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
-  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("redeem-steps",translation.howToRedeem);renderList("how-to-play",translation.howToPlay);renderList("game-tips",translation.tips);renderTutorial(game,translation);
+  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("game-tips",translation.tips);renderTutorial(game,translation);
 }
 function renderCodes(codes,messages,iconSource){
   const container=gameById("active-code-list");container.replaceChildren();

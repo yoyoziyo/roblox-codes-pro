@@ -64,8 +64,6 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 
 - `title`;
 - `description`;
-- `howToPlay`;
-- `howToRedeem`;
 - `tips`;
 - `tutorials.redeem`;
 
