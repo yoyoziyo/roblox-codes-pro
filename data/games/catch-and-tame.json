@@ -14,10 +14,25 @@
   },
   "codes": [
     {
-      "code": "RELEASE"
+      "code": "FISHINGCLAW"
     },
     {
-      "code": "TAME2024"
+      "code": "SUBMARINES"
+    },
+    {
+      "code": "SUNKEN"
+    },
+    {
+      "code": "FARMING"
+    },
+    {
+      "code": "FOOTBALLCUP"
+    },
+     {
+      "code": "LABORATORY"
+    },
+    {
+      "code": "BACKROOMS"
     }
   ],
   "translations": {
