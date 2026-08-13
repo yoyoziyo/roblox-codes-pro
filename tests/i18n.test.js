@@ -105,6 +105,18 @@ test("páginas de jogos usam apenas códigos, dicas e tutorial com coluna para a
   assert.equal(source.includes("howToPlay"),false);
 });
 
+test("verificação do jogo é exibida apenas como ícone acessível",()=>{
+  const pages=index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]);
+  for(const file of pages){
+    const html=read(file);
+    assert.equal(html.includes('id="verified-at"'),false,`${file}: selo antigo`);
+    assert.match(html,/<span class="verified icon-swap" aria-label="(?:Verified|Verificado)">/);
+    assert.equal(html.includes("Loading game data..."),false,`${file}: texto de carregamento`);
+    assert.equal(html.includes("Carregando dados do jogo..."),false,`${file}: texto de carregamento`);
+  }
+  assert.equal(read("game-page.js").includes("verified-at"),false);
+});
+
 test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz",()=>{
   const pages=["en/index.html","pt-br/index.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
   for(const file of pages){

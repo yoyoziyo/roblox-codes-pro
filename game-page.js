@@ -11,9 +11,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
     if(!gameResponse.ok||!i18nResponse.ok)throw new Error();
     const [game,i18n]=await Promise.all([gameResponse.json(),i18nResponse.json()]);
     window.gameCopyMessages=i18n.game;renderGame(game,game.translations?.[gameLocale]||game.translations?.en,i18n.game);
-  }catch{
-    gameById("verified-at").lastChild.textContent=gameLocale==="pt-BR"?" Dados temporariamente indisponíveis":" Game data is temporarily unavailable";
-  }
+  }catch{}
 });
 
 function renderGame(game,translation,messages){
@@ -21,7 +19,6 @@ function renderGame(game,translation,messages){
   const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/assets/ui/favicon.png";
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
-  gameById("verified-at").lastChild.textContent=` ${messages.verified}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
   renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("game-tips",translation.tips);renderTutorial(game,translation);
 }
