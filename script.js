@@ -29,6 +29,17 @@ function setupSearch(){
 }
 function setupNavigation(){const toggle=document.querySelector(".menu-toggle"),links=byId("nav-links");if(!toggle||!links)return;toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});links.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false")})}
 function setupLanguage(){document.querySelectorAll("[data-language]").forEach(link=>link.addEventListener("click",()=>localStorage.setItem("yocodes-language",link.dataset.language)))}
+function setupDigitRain(){
+  const hero=document.querySelector(".hero");if(!hero||hero.querySelector(".digit-rain")||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  const rain=document.createElement("div");rain.className="digit-rain";rain.setAttribute("aria-hidden","true");
+  const fragment=document.createDocumentFragment();
+  for(let index=0;index<24;index++){
+    const digit=document.createElement("span"),seed=(index*47+19)%101;
+    digit.className="rain-digit";digit.textContent=index%2?"7":"6";
+    digit.style.setProperty("--x",`${(index*37+11)%98}%`);digit.style.setProperty("--size",`${18+seed%31}px`);digit.style.setProperty("--opacity",String(.12+(seed%18)/100));digit.style.setProperty("--duration",`${8+seed%7}s`);digit.style.setProperty("--delay",`${-(seed%13)}s`);digit.style.setProperty("--drift",`${(seed%2?-1:1)*(18+seed%42)}px`);digit.style.setProperty("--rotate",`${seed%28-14}deg`);digit.style.setProperty("--blur",`${seed%4===0?1:0}px`);fragment.append(digit);
+  }
+  rain.append(fragment);hero.prepend(rain);
+}
 function showToast(message){const toast=byId("toast");if(!toast)return;toast.textContent=message;toast.classList.add("show");clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>toast.classList.remove("show"),2200)}
 async function copyCode(text,button){
   try{await navigator.clipboard.writeText(text)}catch{const area=document.createElement("textarea");area.value=text;document.body.append(area);area.select();document.execCommand("copy");area.remove()}
@@ -37,7 +48,7 @@ async function copyCode(text,button){
 }
 window.copyCode=copyCode;
 document.addEventListener("DOMContentLoaded",async()=>{
-  setupNavigation();setupLanguage();
+  setupNavigation();setupLanguage();setupDigitRain();
   if(!byId("game-search"))return;
   try{
     const localeFile=state.locale==="pt-BR"?"pt-BR":"en";

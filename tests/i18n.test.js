@@ -93,6 +93,16 @@ test("Home é dedicada à pesquisa e não possui listas editoriais",()=>{
   assert.equal(source.includes("renderGameTable"),false);
 });
 
+test("chuva 67 da Home e decorativa, limitada e respeita movimento reduzido",()=>{
+  const script=read("script.js"),styles=read("home.css");
+  assert.ok(script.includes("setupDigitRain()"));
+  assert.ok(script.includes("index<24"));
+  assert.ok(script.includes('rain.setAttribute("aria-hidden","true")'));
+  assert.ok(styles.includes("@keyframes silver-rain"));
+  assert.ok(styles.includes("@media(prefers-reduced-motion:reduce)"));
+  assert.ok(styles.includes("pointer-events:none"));
+});
+
 test("páginas de jogos não possuem guia para iniciantes nem FAQ",()=>{
   const pages=index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]);
   for(const file of pages){
