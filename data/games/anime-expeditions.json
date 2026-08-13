@@ -1,0 +1,70 @@
+{
+  "slug": "anime-expeditions",
+  "category": "tower-defense-strategy",
+  "robloxUrl": "https://www.roblox.com/games/84515722934860/",
+  "assets": {
+    "icon": "/assets/games/anime-expeditions/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/anime-expeditions/thumbnail.webp",
+    "redeemTutorial": "/assets/games/anime-expeditions/redeem-tutorial.webp"
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    { "code": "sorry4longmaintenance" },
+    { "code": "warriorsaga" },
+    { "code": "update1" },
+    { "code": "ballin!" },
+    { "code": "2.5mgroup!" }
+  ],
+  "translations": {
+    "en": {
+      "title": "Anime Expeditions",
+      "description": "Active Anime Expeditions codes for an anime tower defense strategy game with summons, story stages, challenges, infinite towers, and expeditions.",
+      "tips": [
+        "Summon characters and build a balanced team for different enemy types.",
+        "Position units carefully to make the best use of their range and abilities.",
+        "Complete Story, Challenges, Infinite Towers, and Expeditions to earn resources.",
+        "Upgrade your units, reroll traits, and equip special items as you progress."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Anime Expeditions",
+          "description": "Follow these steps to open the code menu and claim an active Anime Expeditions code.",
+          "steps": [
+            "Launch Anime Expeditions from its official Roblox page and wait for the game to load.",
+            "Open the menu by clicking the three dots at the top of the screen.",
+            "Select Redeem Codes and paste an active code from the list above.",
+            "Confirm the redemption and check that the reward was added to your account."
+          ],
+          "imageAlt": "Anime Expeditions code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Anime Expeditions",
+      "description": "Códigos ativos de Anime Expeditions para um jogo de Tower Defense e estratégia com invocações, História, Desafios, Torres Infinitas e Expedições.",
+      "tips": [
+        "Invoque personagens e monte uma equipe equilibrada para diferentes tipos de inimigos.",
+        "Posicione suas unidades com cuidado para aproveitar melhor o alcance e as habilidades.",
+        "Complete História, Desafios, Torres Infinitas e Expedições para conseguir recursos.",
+        "Evolua suas unidades, role novos atributos e equipe itens especiais conforme avança."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Anime Expeditions",
+          "description": "Siga estas etapas para abrir o menu de códigos e resgatar um código ativo de Anime Expeditions.",
+          "steps": [
+            "Abra Anime Expeditions pela página oficial do Roblox e aguarde o jogo carregar.",
+            "Abra o menu clicando nos três pontinhos no topo da tela.",
+            "Selecione Redeem Codes e cole um código ativo da lista acima.",
+            "Confirme o resgate e verifique se a recompensa foi adicionada à sua conta."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Anime Expeditions"
+        }
+      }
+    }
+  }
+}

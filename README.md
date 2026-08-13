@@ -31,20 +31,23 @@ data/
 │   ├── en.json
 │   └── pt-BR.json
 └── games/
-    ├── catch-and-tame.json
-    └── gakuran.json
+    ├── anime-expeditions.json
+    ├── catch-and-tame.json
+    └── gakuran.json
 
 en/
 ├── index.html
 └── games/
-    ├── catch-and-tame.html
-    └── gakuran.html
+    ├── anime-expeditions.html
+    ├── catch-and-tame.html
+    └── gakuran.html
 
 pt-br/
 ├── index.html
 └── games/
-    ├── catch-and-tame.html
-    └── gakuran.html
+    ├── anime-expeditions.html
+    ├── catch-and-tame.html
+    └── gakuran.html
 ```
 
 `data/i18n/` contém os textos compartilhados da interface. A Home consulta diretamente `data/index.json` e usa a lista geral somente para a pesquisa de jogos.

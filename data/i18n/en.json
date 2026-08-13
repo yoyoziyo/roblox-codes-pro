@@ -1,7 +1,8 @@
 {
   "categories": {
     "simulation": "Simulation",
-    "fighting-action": "Fighting & Action"
+    "fighting-action": "Fighting & Action",
+    "tower-defense-strategy": "Tower Defense & Strategy"
   },
   "search": {
     "empty": "No registered game matches your search."

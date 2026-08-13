@@ -31,6 +31,22 @@
           "description": "Códigos ativos de Gakuran, dicas de combate e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "anime-expeditions",
+      "icon": "/assets/games/anime-expeditions/icon.webp",
+      "category": "tower-defense-strategy",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Anime Expeditions",
+          "description": "Active Anime Expeditions codes, strategy tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Anime Expeditions",
+          "description": "Códigos ativos de Anime Expeditions, dicas de estratégia e instruções de resgate."
+        }
+      }
     }
   ]
 }

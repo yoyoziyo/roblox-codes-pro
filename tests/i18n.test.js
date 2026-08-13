@@ -42,6 +42,16 @@ test("índice possui traduções e não duplica jogos",()=>{
   }
 });
 
+test("jogos ativos possuem ícone e thumbnail locais",()=>{
+  for(const game of index.games.filter(game=>game.status==="active")){
+    const data=readJson(`data/games/${game.slug}.json`);
+    for(const asset of ["icon","thumbnail"]){
+      const localPath=data.assets[asset].split("?")[0].replace(/^\//,"");
+      assert.ok(fs.existsSync(path.join(root,"public",localPath.replace(/^assets\//,"assets/"))),`${game.slug}: ${asset}`);
+    }
+  }
+});
+
 test("páginas localizadas possuem lang, canonical e hreflang recíproco",()=>{
   const pages=[
     ["en/index.html","en","/en/"],
