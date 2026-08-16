@@ -58,6 +58,10 @@ test("páginas localizadas possuem lang, canonical e hreflang recíproco",()=>{
   const pages=[
     ["en/index.html","en","/en/"],
     ["pt-br/index.html","pt-BR","/pt-br/"],
+    ["en/privacy.html","en","/en/privacy"],
+    ["pt-br/privacidade.html","pt-BR","/pt-br/privacidade"],
+    ["en/terms.html","en","/en/terms"],
+    ["pt-br/termos.html","pt-BR","/pt-br/termos"],
     ...index.games.filter(game=>game.status==="active").flatMap(game=>[
       [`en/games/${game.slug}.html`,"en",`/en/games/${game.slug}`],
       [`pt-br/games/${game.slug}.html`,"pt-BR",`/pt-br/games/${game.slug}`]
@@ -161,10 +165,13 @@ test("AdSense está presente uma vez nas páginas monetizadas e ausente na raiz"
     assert.ok(html.includes('crossorigin="anonymous"'));
   }
   assert.equal(read("index.html").includes(adsenseSource),false);
+  for(const file of ["en/privacy.html","pt-br/privacidade.html","en/terms.html","pt-br/termos.html"]){
+    assert.equal(read(file).includes(adsenseSource),false,`${file}: página legal não deve carregar anúncios`);
+  }
 });
 
 test("verificação do AdSense e ads.txt usam o publisher correto",()=>{
-  const pages=["index.html","en/index.html","pt-br/index.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
+  const pages=["index.html","en/index.html","pt-br/index.html","en/privacy.html","pt-br/privacidade.html","en/terms.html","pt-br/termos.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
   for(const file of pages){
     assert.equal(read(file).split(adsenseMeta).length-1,1,`${file}: metatag duplicada ou ausente`);
   }
@@ -192,8 +199,28 @@ test("sitemap bilíngue contém URLs e alternativas obrigatórias",()=>{
   const xml=read("sitemap.xml");
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'));
-  for(const url of ["/en/","/pt-br/","/en/games/catch-and-tame","/pt-br/games/catch-and-tame"])assert.ok(xml.includes(`${site.origin}${url}`));
+  for(const url of ["/en/","/pt-br/","/en/privacy","/pt-br/privacidade","/en/terms","/pt-br/termos","/en/games/catch-and-tame","/pt-br/games/catch-and-tame"])assert.ok(xml.includes(`${site.origin}${url}`));
   for(const hreflang of ["en","pt-BR","x-default"])assert.ok(xml.includes(`hreflang="${hreflang}"`));
+});
+
+test("páginas legais estão conectadas, localizadas e sem links genéricos",()=>{
+  const localizedPages=[
+    ["en/privacy.html","/pt-br/privacidade"],
+    ["pt-br/privacidade.html","/en/privacy"],
+    ["en/terms.html","/pt-br/termos"],
+    ["pt-br/termos.html","/en/terms"]
+  ];
+  for(const [file,alternate] of localizedPages){
+    const html=read(file);
+    assert.ok(html.includes(`href="${alternate}" data-language=`),`${file}: alternativa de idioma`);
+    assert.ok(html.includes("https://discord.gg/ZaASHgy6qW"),`${file}: convite do Discord`);
+  }
+  const allLocalizedHtml=["en/index.html","pt-br/index.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]),...localizedPages.map(([file])=>file)];
+  for(const file of allLocalizedHtml){
+    const html=read(file);
+    assert.equal(html.includes("https://discord.com/"),false,`${file}: link genérico do Discord`);
+    assert.match(html,/href="\/(?:en\/(?:privacy|terms)|pt-br\/(?:privacidade|termos))"/);
+  }
 });
 
 test("sincronizador não referencia nem remove traduções",()=>{

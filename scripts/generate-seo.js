@@ -8,7 +8,11 @@ const index=JSON.parse(await fs.readFile(path.join(root,"data/index.json"),"utf8
 const origin=site.origin.replace(/\/$/,"");
 const pages=[
   {path:"/en/",file:"en/index.html",en:"/en/",pt:"/pt-br/"},
-  {path:"/pt-br/",file:"pt-br/index.html",en:"/en/",pt:"/pt-br/"}
+  {path:"/pt-br/",file:"pt-br/index.html",en:"/en/",pt:"/pt-br/"},
+  {path:"/en/privacy",file:"en/privacy.html",en:"/en/privacy",pt:"/pt-br/privacidade"},
+  {path:"/pt-br/privacidade",file:"pt-br/privacidade.html",en:"/en/privacy",pt:"/pt-br/privacidade"},
+  {path:"/en/terms",file:"en/terms.html",en:"/en/terms",pt:"/pt-br/termos"},
+  {path:"/pt-br/termos",file:"pt-br/termos.html",en:"/en/terms",pt:"/pt-br/termos"}
 ];
 for(const game of index.games.filter(item=>item.status==="active")){
   pages.push({path:`/en/games/${game.slug}`,file:`en/games/${game.slug}.html`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`});
@@ -26,6 +30,10 @@ for(const page of pages){
 const groups=[
   {loc:"/en/",en:"/en/",pt:"/pt-br/"},
   {loc:"/pt-br/",en:"/en/",pt:"/pt-br/"},
+  {loc:"/en/privacy",en:"/en/privacy",pt:"/pt-br/privacidade"},
+  {loc:"/pt-br/privacidade",en:"/en/privacy",pt:"/pt-br/privacidade"},
+  {loc:"/en/terms",en:"/en/terms",pt:"/pt-br/termos"},
+  {loc:"/pt-br/termos",en:"/en/terms",pt:"/pt-br/termos"},
   ...index.games.filter(item=>item.status==="active").flatMap(game=>[
     {loc:`/en/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`},
     {loc:`/pt-br/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`}

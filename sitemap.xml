@@ -13,6 +13,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/"/>
   </url>
   <url>
+    <loc>https://www.67codes.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/privacidade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/privacy"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/privacidade</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/privacidade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/privacy"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/termos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/terms"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/termos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/termos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/terms"/>
+  </url>
+  <url>
     <loc>https://www.67codes.com/en/games/catch-and-tame</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/catch-and-tame"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/catch-and-tame"/>

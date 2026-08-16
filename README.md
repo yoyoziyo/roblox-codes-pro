@@ -154,7 +154,32 @@ Cada página localizada possui:
 - Twitter Card;
 - conteúdo principal traduzido.
 
-O sitemap contém as duas Homes e as duas páginas de cada jogo, com `xhtml:link` para todas as alternativas.
+O sitemap contém as duas Homes, as duas páginas de cada jogo e as páginas legais, com `xhtml:link` para todas as alternativas.
+
+## Privacidade, termos e publicidade
+
+As páginas legais são estáticas, bilíngues e estão disponíveis em:
+
+```text
+/en/privacy
+/en/terms
+/pt-br/privacidade
+/pt-br/termos
+```
+
+Todas as páginas do site possuem links para a política e os termos no rodapé. A política de privacidade não carrega o script do AdSense, seguindo a orientação do Google para a URL usada na mensagem de consentimento. Ao configurar a CMP em **AdSense > Privacidade e mensagens**, use:
+
+```text
+https://www.67codes.com/en/privacy
+```
+
+ou a versão em português, conforme o idioma da mensagem:
+
+```text
+https://www.67codes.com/pt-br/privacidade
+```
+
+O convite oficial da comunidade é `https://discord.gg/ZaASHgy6qW`.
 
 ### Trocar o domínio
 
