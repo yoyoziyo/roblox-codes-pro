@@ -167,17 +167,13 @@ As páginas legais são estáticas, bilíngues e estão disponíveis em:
 /pt-br/termos
 ```
 
-Todas as páginas do site possuem links para a política e os termos no rodapé. A política de privacidade não carrega o script do AdSense, seguindo a orientação do Google para a URL usada na mensagem de consentimento. Ao configurar a CMP em **AdSense > Privacidade e mensagens**, use:
+Todas as páginas do site possuem links para a política e os termos no rodapé. A política de privacidade não carrega o script do AdSense, seguindo a orientação do Google para a URL usada na mensagem de consentimento. Ao configurar a CMP em **AdSense > Privacidade e mensagens**, use a versão internacional como URL principal:
 
 ```text
 https://www.67codes.com/en/privacy
 ```
 
-ou a versão em português, conforme o idioma da mensagem:
-
-```text
-https://www.67codes.com/pt-br/privacidade
-```
+O seletor de idioma dessa página leva à versão em português em `/pt-br/privacidade`.
 
 O convite oficial da comunidade é `https://discord.gg/ZaASHgy6qW`.
 
