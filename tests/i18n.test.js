@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
+import { parseCodes, parseSteps, validSlug } from "../scripts/create-game.js";
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),"utf8"));
@@ -227,4 +228,64 @@ test("sincronizador não referencia nem remove traduções",()=>{
   const source=read("scripts/sync-roblox-assets.js");
   assert.equal(source.includes("translations ="),false);
   assert.equal(source.includes("delete game.translations"),false);
+});
+
+test("gerador mantém páginas bilíngues sem tokens e com dados estruturados válidos",()=>{
+  const pages=index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]);
+  for(const file of pages){
+    const html=read(file);
+    assert.equal(html.includes("{{"),false,`${file}: token não resolvido`);
+    const match=html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/);
+    assert.ok(match,`${file}: JSON-LD`);
+    const data=JSON.parse(match[1]);
+    assert.equal(data["@context"],"https://schema.org");
+    assert.ok(data["@graph"].some(item=>item["@type"]==="WebPage"));
+    assert.ok(data["@graph"].some(item=>item["@type"]==="BreadcrumbList"));
+  }
+  for(const file of ["en/index.html","pt-br/index.html"]){
+    const match=read(file).match(/<script type="application\/ld\+json">([^<]+)<\/script>/);
+    assert.equal(JSON.parse(match[1])["@type"],"WebSite");
+  }
+});
+
+test("assistente de jogos aceita códigos por vírgula e preserva vírgulas em textos",()=>{
+  assert.equal(validSlug("anime-expeditions"),true);
+  assert.equal(validSlug("Anime Expeditions"),false);
+  assert.deepEqual(parseCodes("CODE1, CODE2, CODE1"),["CODE1","CODE2"]);
+  assert.deepEqual(parseSteps("Abra o menu, no topo | Cole o código | Confirme"),["Abra o menu, no topo","Cole o código","Confirme"]);
+  const pkg=readJson("package.json");
+  assert.ok(pkg.scripts["create:game"]);
+  assert.ok(pkg.scripts["generate:pages"]);
+  assert.ok(fs.existsSync(path.join(root,"templates/game.html")));
+});
+
+test("páginas legais usam o e-mail oficial e mantêm Discord secundário",()=>{
+  for(const file of ["en/privacy.html","pt-br/privacidade.html","en/terms.html","pt-br/termos.html"]){
+    const html=read(file);
+    assert.ok(html.includes('href="mailto:privacy@67codes.com"'),file);
+    assert.ok(html.includes("https://discord.gg/ZaASHgy6qW"),file);
+  }
+});
+
+test("404 é bilíngue, não indexável e sem anúncios",()=>{
+  const html=read("404.html");
+  assert.ok(html.includes('content="noindex,follow"'));
+  assert.ok(html.includes("Page not found"));
+  assert.ok(html.includes("Página não encontrada"));
+  assert.ok(html.includes('data-404-language="en"'));
+  assert.ok(html.includes('data-404-language="pt-BR"'));
+  assert.equal(html.includes(adsenseSource),false);
+  assert.ok(read("scripts/preview.js").includes('path.join(root,"404.html")'));
+});
+
+test("assets compartilhados estão otimizados e não há arquivos antigos",()=>{
+  const limits={"logo.webp":100000,"language.webp":50000,"verified.webp":50000,"roblox.webp":50000,"tips-icon.webp":50000,"tips.webp":100000,"codes.webp":50000,"discord.webp":50000,"favicon.png":100000};
+  for(const [file,limit] of Object.entries(limits)){
+    const asset=path.join(root,"public/assets/ui",file);
+    assert.ok(fs.existsSync(asset),file);
+    assert.ok(fs.statSync(asset).size<limit,`${file}: ${fs.statSync(asset).size} bytes`);
+  }
+  assert.equal(fs.existsSync(path.join(root,"public/assets/ui/icon.webp")),false);
+  assert.equal(fs.existsSync(path.join(root,"img")),false);
+  assert.equal(read("game-page.js").includes("/assets/ui/copy.webp"),false);
 });

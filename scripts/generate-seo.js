@@ -25,6 +25,8 @@ for(const page of pages){
   html=html.replace(/(<link rel="alternate" hreflang="en" href=")https?:\/\/[^/]+[^"]*(")/,`$1${origin}${page.en}$2`);
   html=html.replace(/(<link rel="alternate" hreflang="pt-BR" href=")https?:\/\/[^/]+[^"]*(")/,`$1${origin}${page.pt}$2`);
   html=html.replace(/(<link rel="alternate" hreflang="x-default" href=")https?:\/\/[^/]+[^"]*(")/,`$1${origin}${page.en}$2`);
+  html=html.replace(/("@id":")https?:\/\/[^"/]+\/#website"/,`$1${origin}/#website"`);
+  html=html.replace(/("url":")https?:\/\/[^"/]+\/("[^}]*"name":"67Codes")/,`$1${origin}/$2`);
   await fs.writeFile(filePath,html);
 }
 const groups=[

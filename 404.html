@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111216">
+  <meta name="robots" content="noindex,follow">
+  <title>Page not found — 67Codes</title>
+  <link rel="icon" href="/assets/ui/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/legal.css">
+</head>
+<body>
+  <header class="site-header"><nav class="container nav" aria-label="Main navigation"><a class="brand" id="brand-link" href="/en/" aria-label="67Codes home"><img class="brand-logo" src="/assets/ui/logo.webp" alt="" onload="this.classList.add('loaded')"><span class="brand-fallback" aria-hidden="true"><span class="brand-mark">67</span><span class="brand-name">67<span>Codes</span></span></span></a></nav></header>
+  <main class="not-found-main"><section class="not-found-card" aria-labelledby="not-found-title">
+    <span class="not-found-code">ERROR 404</span>
+    <h1 id="not-found-title">Page not found</h1>
+    <p id="not-found-description">The page may have moved or the address may be incorrect. Return home and search for your game.</p>
+    <div class="not-found-actions"><a class="button button-primary" id="not-found-home" href="/en/">Go to homepage</a><a class="button" id="not-found-search" href="/en/#search">Search games</a></div>
+    <div class="not-found-language" aria-label="Language"><button type="button" data-404-language="en" aria-pressed="true">English</button><button type="button" data-404-language="pt-BR" aria-pressed="false">Português</button></div>
+  </section></main>
+  <script>
+    (()=>{const copy={en:{title:"Page not found",description:"The page may have moved or the address may be incorrect. Return home and search for your game.",home:"Go to homepage",search:"Search games",homeUrl:"/en/",searchUrl:"/en/#search"},"pt-BR":{title:"Página não encontrada",description:"A página pode ter mudado ou o endereço pode estar incorreto. Volte ao início e pesquise pelo seu jogo.",home:"Ir para o início",search:"Pesquisar jogos",homeUrl:"/pt-br/",searchUrl:"/pt-br/#pesquisa"}};function setLanguage(locale){const value=copy[locale]||copy.en;document.documentElement.lang=locale;document.title=`${value.title} — 67Codes`;document.getElementById("not-found-title").textContent=value.title;document.getElementById("not-found-description").textContent=value.description;const home=document.getElementById("not-found-home"),search=document.getElementById("not-found-search"),brand=document.getElementById("brand-link");home.textContent=value.home;home.href=value.homeUrl;search.textContent=value.search;search.href=value.searchUrl;brand.href=value.homeUrl;document.querySelectorAll("[data-404-language]").forEach(button=>button.setAttribute("aria-pressed",String(button.getAttribute("data-404-language")===locale)));localStorage.setItem("yocodes-language",locale)}document.querySelectorAll("[data-404-language]").forEach(button=>button.addEventListener("click",()=>setLanguage(button.getAttribute("data-404-language"))));const saved=localStorage.getItem("yocodes-language"),preferred=saved||(navigator.language.toLowerCase().startsWith("pt")?"pt-BR":"en");setLanguage(preferred)})();
+  </script>
+</body>
+</html>

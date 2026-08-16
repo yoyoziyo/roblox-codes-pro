@@ -60,10 +60,16 @@ createServer(async (request, response) => {
     });
     createReadStream(filePath).pipe(response);
   } catch {
-    response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-    response.end("Not found");
+    const notFoundPath=path.join(root,"404.html");
+    try{
+      await stat(notFoundPath);
+      response.writeHead(404,{"Content-Type":"text/html; charset=utf-8","X-Content-Type-Options":"nosniff"});
+      createReadStream(notFoundPath).pipe(response);
+    }catch{
+      response.writeHead(404,{"Content-Type":"text/plain; charset=utf-8"});
+      response.end("Not found");
+    }
   }
 }).listen(port, "127.0.0.1", () => {
   console.log(`67Codes disponível em http://127.0.0.1:${port}`);
 });
-

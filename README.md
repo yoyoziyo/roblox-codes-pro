@@ -77,17 +77,29 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 
 ## Criar um jogo
 
-1. Copie `data/game-template.json` para `data/games/<slug>.json`.
-2. Preencha todos os campos compartilhados e informe os códigos como uma lista simples.
-3. Escreva conteúdo natural e completo em `translations.en` e `translations.pt-BR`.
-4. Registre o resumo e as duas traduções em `data/index.json`.
-5. Crie as páginas estáticas equivalentes:
-   - `en/games/<slug>.html`;
-   - `pt-br/games/<slug>.html`.
-6. Crie `public/assets/games/<slug>/` e adicione os assets editoriais do jogo.
-7. Execute `npm run sync:roblox -- <slug>`.
-8. Execute `npm run generate:seo`.
-9. Rode `npm test` e valide as duas URLs e a pesquisa da Home.
+Use o assistente:
+
+```bash
+npm run create:game -- nome-do-jogo
+```
+
+Ele solicita os textos dos dois idiomas, recebe os códigos separados por vírgula e usa `|` para separar dicas e etapas. Ao final, ele:
+
+- cria `data/games/<slug>.json` seguindo `data/game-template.json`;
+- registra o jogo em `data/index.json`;
+- prepara `public/assets/games/<slug>/`;
+- gera `en/games/<slug>.html` e `pt-br/games/<slug>.html`;
+- atualiza canonical, hreflang e sitemap.
+
+Depois, adicione `icon.webp` e `thumbnail.webp`, execute `npm run sync:roblox -- <slug>` quando necessário e rode `npm test`.
+
+Para regenerar todas as páginas depois de editar qualquer JSON:
+
+```bash
+npm run generate
+```
+
+`generate:pages` cria os HTMLs bilíngues a partir do template compartilhado em `templates/game.html`. `generate:seo` atualiza os metadados de domínio, sitemap e robots.txt.
 
 Não adicione tags ou códigos expirados.
 
@@ -119,13 +131,12 @@ public/assets/ui/
 ├── verified.webp
 ├── roblox.webp
 ├── tips-icon.webp
-├── copy.webp
 ├── tips.webp
 ├── codes.webp
 └── discord.webp
 ```
 
-`logo.webp` é a assinatura horizontal do 67Codes exibida no cabeçalho e no rodapé. Os demais arquivos substituem automaticamente os símbolos de interface quando são adicionados. Todos mantêm fallback visual e podem ser enviados posteriormente sem quebrar o layout. Consulte `public/assets/ui/README.md` para os tamanhos recomendados.
+`logo.webp` é o mascote do 67Codes exibido no cabeçalho e no rodapé. Os demais arquivos substituem automaticamente os símbolos de interface quando são adicionados. Todos mantêm fallback visual. Consulte `public/assets/ui/README.md` para os tamanhos recomendados.
 
 Cada jogo mantém somente as imagens que realmente variam:
 
@@ -152,6 +163,7 @@ Cada página localizada possui:
 - `x-default` apontando para inglês;
 - Open Graph traduzido;
 - Twitter Card;
+- dados estruturados `WebSite`, `WebPage` e `BreadcrumbList`;
 - conteúdo principal traduzido.
 
 O sitemap contém as duas Homes, as duas páginas de cada jogo e as páginas legais, com `xhtml:link` para todas as alternativas.
@@ -175,6 +187,8 @@ https://www.67codes.com/en/privacy
 
 O seletor de idioma dessa página leva à versão em português em `/pt-br/privacidade`.
 
+O contato de privacidade é `privacy@67codes.com`.
+
 O convite oficial da comunidade é `https://discord.gg/ZaASHgy6qW`.
 
 ### Trocar o domínio
@@ -188,7 +202,7 @@ data/site.json
 Altere `origin` e execute:
 
 ```bash
-npm run generate:seo
+npm run generate
 ```
 
 O comando atualiza canonical, hreflang, sitemap e robots.txt.
@@ -212,6 +226,8 @@ O preview suporta URLs limpas, assets em `/assets/` e os redirects antigos:
 /games/<slug> → /en/games/<slug>
 /jogos/<slug> → /en/games/<slug>
 ```
+
+URLs inexistentes usam a página `404.html`, que permite alternar entre português e inglês sem backend.
 
 ## Deploy
 

@@ -3,6 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "create:game": "node scripts/create-game.js",
+    "generate:pages": "node scripts/generate-pages.js",
+    "generate": "node scripts/generate-pages.js && node scripts/generate-seo.js",
     "generate:seo": "node scripts/generate-seo.js",
     "preview": "node scripts/preview.js",
     "sync:roblox": "node scripts/sync-roblox-assets.js",
@@ -12,4 +15,3 @@
     "node": ">=20"
   }
 }
-
