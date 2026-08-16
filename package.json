@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "create:game": "node scripts/create-game.js",
+    "update:codes": "node scripts/update-codes.js",
     "generate:pages": "node scripts/generate-pages.js",
     "generate": "node scripts/generate-pages.js && node scripts/generate-seo.js",
     "generate:seo": "node scripts/generate-seo.js",

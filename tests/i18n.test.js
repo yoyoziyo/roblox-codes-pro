@@ -255,6 +255,7 @@ test("assistente de jogos aceita códigos por vírgula e preserva vírgulas em t
   assert.deepEqual(parseSteps("Abra o menu, no topo | Cole o código | Confirme"),["Abra o menu, no topo","Cole o código","Confirme"]);
   const pkg=readJson("package.json");
   assert.ok(pkg.scripts["create:game"]);
+  assert.ok(pkg.scripts["update:codes"]);
   assert.ok(pkg.scripts["generate:pages"]);
   assert.ok(fs.existsSync(path.join(root,"templates/game.html")));
 });

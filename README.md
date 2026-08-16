@@ -103,6 +103,29 @@ npm run generate
 
 Não adicione tags ou códigos expirados.
 
+## Atualizar códigos de um jogo
+
+Use o atualizador seguro para substituir somente a lista de códigos ativos:
+
+```bash
+npm run update:codes -- anime-expeditions
+```
+
+Cole a lista **final** de códigos separados por vírgula. O comando mostra quais
+serão adicionados, removidos e mantidos antes de pedir confirmação. Depois ele
+regenera as páginas em português e inglês e executa os testes automaticamente.
+
+Para uma atualização rápida e não interativa:
+
+```bash
+npm run update:codes -- anime-expeditions --codes "CODE1,CODE2,CODE3" --yes
+```
+
+Para remover todos os códigos, use `--clear`; uma lista vazia comum cancela a
+operação para evitar exclusões acidentais. O comando não altera descrições,
+traduções, dicas, links ou imagens. Se a geração ou os testes falharem, o JSON e
+as páginas são restaurados para o estado anterior.
+
 ## Assets do Roblox
 
 ```bash
