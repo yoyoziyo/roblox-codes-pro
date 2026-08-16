@@ -259,11 +259,13 @@ test("assistente de jogos aceita códigos por vírgula e preserva vírgulas em t
   assert.ok(fs.existsSync(path.join(root,"templates/game.html")));
 });
 
-test("páginas legais usam o e-mail oficial e mantêm Discord secundário",()=>{
+test("seções de contato legal usam somente o e-mail oficial",()=>{
   for(const file of ["en/privacy.html","pt-br/privacidade.html","en/terms.html","pt-br/termos.html"]){
     const html=read(file);
-    assert.ok(html.includes('href="mailto:privacy@67codes.com"'),file);
-    assert.ok(html.includes("https://discord.gg/ZaASHgy6qW"),file);
+    const sections=[...html.matchAll(/<section><h2>[^<]+<\/h2><p>[\s\S]*?<\/p><\/section>/g)];
+    const contactSection=sections.at(-1)?.[0]||"";
+    assert.ok(contactSection.includes('href="mailto:privacy@67codes.com"'),file);
+    assert.equal(contactSection.includes("discord.gg"),false,file);
   }
 });
 
