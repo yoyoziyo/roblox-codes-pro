@@ -57,7 +57,6 @@ pt-br/
 Cada jogo possui apenas um arquivo em `data/games/`. Estes campos são compartilhados:
 
 - `slug`;
-- `category`;
 - `robloxUrl`;
 - `assets`;
 - `assetSync`;
@@ -70,12 +69,16 @@ O objeto `translations` contém `en` e `pt-BR`. Cada idioma precisa preencher:
 - `tips`;
 - `tutorials.redeem`;
 
-Cada código possui somente `code`; códigos expirados devem ser removidos da lista.
+`codes` é uma lista simples de textos. Separe os códigos com vírgulas e remova os expirados:
+
+```json
+"codes": ["CODE1", "CODE2", "CODE3"]
+```
 
 ## Criar um jogo
 
 1. Copie `data/game-template.json` para `data/games/<slug>.json`.
-2. Preencha todos os campos compartilhados.
+2. Preencha todos os campos compartilhados e informe os códigos como uma lista simples.
 3. Escreva conteúdo natural e completo em `translations.en` e `translations.pt-BR`.
 4. Registre o resumo e as duas traduções em `data/index.json`.
 5. Crie as páginas estáticas equivalentes:
@@ -115,10 +118,7 @@ public/assets/ui/
 ├── favicon.png
 ├── verified.webp
 ├── roblox.webp
-├── redeem.webp
-├── play.webp
 ├── tips-icon.webp
-├── faq.webp
 ├── copy.webp
 ├── tips.webp
 ├── codes.webp
@@ -137,9 +137,9 @@ public/assets/games/<slug>/
 └── redeem-tutorial.webp
 ```
 
-O caminho da captura de resgate deve ser preenchido em `assets.redeemTutorial`. Enquanto o arquivo ainda não existir, a página mostra um placeholder discreto e continua funcionando normalmente.
+Preencha `assets.redeemTutorial` somente quando a captura existir. Sem imagem, use uma string vazia (`""`); a seção exibirá apenas o texto, sem frame ou placeholder.
 
-O card curto "Como resgatar" leva por scroll suave à seção detalhada. A imagem do tutorial pode ser ampliada em uma lightbox. Os textos completos de resgate e de introdução ao jogo ficam em `translations.<idioma>.tutorials`.
+A imagem do tutorial pode ser ampliada em uma lightbox. As etapas ficam em `translations.<idioma>.tutorials.redeem.steps` e aceitam qualquer quantidade de itens.
 
 ## SEO internacional
 

@@ -1,19 +1,12 @@
 {
-  "categories": {
-    "simulation": "Simulação",
-    "fighting-action": "Luta e Ação",
-    "tower-defense-strategy": "Tower Defense e Estratégia"
-  },
   "search": {
     "empty": "Nenhum jogo cadastrado corresponde à sua busca."
   },
   "game": {
-    "verified": "Verificado",
     "viewCodes": "Ver códigos",
     "copy": "Copiar",
     "copied": "Copiado ✓",
     "copiedToast": "Código {code} copiado",
-    "noCodes": "Nenhum código ativo no momento.",
-    "active": "Ativo"
+    "noCodes": "Nenhum código ativo no momento."
   }
 }

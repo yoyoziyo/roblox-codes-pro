@@ -1,39 +1,24 @@
 {
   "slug": "catch-and-tame",
-  "category": "simulation",
   "robloxUrl": "https://www.roblox.com/games/96645548064314",
   "assets": {
     "icon": "/assets/games/catch-and-tame/icon.webp",
     "banner": "https://tr.rbxcdn.com/180DAY-a65c7ec46f2818f4c3b70c90bbddc519/768/432/Image/Webp/noFilter",
     "thumbnail": "/assets/games/catch-and-tame/thumbnail.webp",
-    "redeemTutorial": "/assets/games/catch-and-tame/redeem-tutorial.webp"
+    "redeemTutorial": ""
   },
   "assetSync": {
     "icon": true,
     "thumbnail": true
   },
   "codes": [
-    {
-      "code": "FISHINGCLAW"
-    },
-    {
-      "code": "SUBMARINES"
-    },
-    {
-      "code": "SUNKEN"
-    },
-    {
-      "code": "FARMING"
-    },
-    {
-      "code": "FOOTBALLCUP"
-    },
-     {
-      "code": "LABORATORY"
-    },
-    {
-      "code": "BACKROOMS"
-    }
+    "FISHINGCLAW",
+    "SUBMARINES",
+    "SUNKEN",
+    "FARMING",
+    "FOOTBALLCUP",
+    "LABORATORY",
+    "BACKROOMS"
   ],
   "translations": {
     "en": {

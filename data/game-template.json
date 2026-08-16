@@ -1,6 +1,5 @@
 {
   "slug": "",
-  "category": "",
   "robloxUrl": "",
   "assets": {
     "icon": "",
@@ -13,9 +12,7 @@
     "thumbnail": true
   },
   "codes": [
-    {
-      "code": ""
-    }
+    ""
   ],
   "translations": {
     "en": {

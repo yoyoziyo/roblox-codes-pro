@@ -30,7 +30,8 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
       assert.ok(game.translations[locale].tutorials.redeem.title.trim());
       assert.ok(game.translations[locale].tutorials.redeem.steps.length);
     }
-    assert.ok(game.codes.every(code=>Object.keys(code).sort().join(",")==="code"&&typeof code.code==="string"));
+    assert.ok(game.codes.every(code=>typeof code==="string"&&code.trim()),`${file}: codes deve ser string[]`);
+    assert.equal(new Set(game.codes).size,game.codes.length,`${file}: código duplicado`);
   }
 });
 
@@ -39,6 +40,7 @@ test("índice possui traduções e não duplica jogos",()=>{
   for(const game of index.games){
     for(const locale of ["en","pt-BR"])assert.ok(game.translations[locale].title);
     assert.equal("codes" in game,false);
+    assert.equal("category" in game,false);
   }
 });
 
@@ -119,10 +121,24 @@ test("páginas de jogos usam apenas códigos, dicas e tutorial com coluna para a
     for(const removed of ["redeem-summary","play-summary","redeem-steps","how-to-play"])assert.equal(html.includes(removed),false,`${file}: ${removed}`);
     assert.equal((html.match(/data-ad-slot=/g)||[]).length,3,`${file}: ad slots`);
     assert.ok(html.indexOf('id="redeem-tutorial-steps"')<html.indexOf('id="redeem-tutorial-image"'),`${file}: tutorial image order`);
+    assert.equal(html.includes("asset-placeholder"),false,`${file}: placeholder antigo`);
   }
   const source=read("game-page.js");
   assert.equal(source.includes("howToRedeem"),false);
   assert.equal(source.includes("howToPlay"),false);
+  assert.equal(source.includes("code-status"),false);
+  assert.equal(source.includes("redeem-tutorial-placeholder"),false);
+  assert.equal(read("game.css").includes("asset-placeholder"),false);
+});
+
+test("dados compartilhados não mantêm categorias sem uso",()=>{
+  assert.equal("category" in template,false);
+  for(const locale of ["en","pt-BR"]){
+    const i18n=readJson(`data/i18n/${locale}.json`);
+    assert.equal("categories" in i18n,false);
+    assert.equal("active" in i18n.game,false);
+    assert.equal("verified" in i18n.game,false);
+  }
 });
 
 test("verificação do jogo é exibida apenas como ícone acessível",()=>{

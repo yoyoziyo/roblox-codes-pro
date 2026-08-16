@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
 });
 
 function renderGame(game,translation,messages){
-  const activeCodes=(game.codes||[]).filter(item=>typeof item?.code==="string"&&item.code.trim());
+  const activeCodes=(game.codes||[]).filter(code=>typeof code==="string"&&code.trim());
   const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/assets/ui/favicon.png";
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
@@ -25,7 +25,7 @@ function renderGame(game,translation,messages){
 function renderCodes(codes,messages,iconSource){
   const container=gameById("active-code-list");container.replaceChildren();
   if(!codes.length){container.textContent=messages.noCodes;return}
-  codes.forEach(item=>{const value=item.code;const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src=iconSource;icon.alt="";const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";const copyIcon=document.createElement("img");copyIcon.src="/assets/ui/copy.webp";copyIcon.alt="";copyIcon.addEventListener("load",()=>copyIcon.classList.add("loaded"),{once:true});const copyLabel=document.createElement("span");copyLabel.textContent=messages.copy;button.append(copyIcon,copyLabel);button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));const status=document.createElement("span");status.className="code-status";status.textContent=messages.active;group.append(icon,info,button,status);row.append(group);container.append(row)});
+  codes.forEach(value=>{const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src=iconSource;icon.alt="";const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";const copyIcon=document.createElement("img");copyIcon.src="/assets/ui/copy.webp";copyIcon.alt="";copyIcon.addEventListener("load",()=>copyIcon.classList.add("loaded"),{once:true});const copyLabel=document.createElement("span");copyLabel.textContent=messages.copy;button.append(copyIcon,copyLabel);button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));group.append(icon,info,button);row.append(group);container.append(row)});
 }
 function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
 function renderTutorial(game,translation){
@@ -34,9 +34,9 @@ function renderTutorial(game,translation){
   setupTutorialImage(game.assets?.redeemTutorial,redeem.imageAlt||redeem.title||translation.title);
 }
 function setupTutorialImage(source,alt){
-  const image=gameById("redeem-tutorial-image");const button=gameById("redeem-tutorial-open");const placeholder=gameById("redeem-tutorial-placeholder");const lightbox=gameById("tutorial-lightbox");const largeImage=gameById("tutorial-lightbox-image");const close=gameById("tutorial-lightbox-close");
+  const image=gameById("redeem-tutorial-image");const button=gameById("redeem-tutorial-open");const lightbox=gameById("tutorial-lightbox");const largeImage=gameById("tutorial-lightbox-image");const close=gameById("tutorial-lightbox-close");
   if(!source)return;
-  image.alt=alt;image.addEventListener("load",()=>{button.hidden=false;placeholder.hidden=true},{once:true});image.addEventListener("error",()=>{button.hidden=true;placeholder.hidden=false},{once:true});image.src=source;
+  image.alt=alt;image.addEventListener("load",()=>{button.hidden=false},{once:true});image.addEventListener("error",()=>{button.hidden=true},{once:true});image.src=source;
   button.addEventListener("click",()=>{largeImage.src=image.currentSrc||image.src;largeImage.alt=image.alt;if(typeof lightbox.showModal==="function")lightbox.showModal()});
   close.addEventListener("click",()=>lightbox.close());lightbox.addEventListener("click",event=>{if(event.target===lightbox)lightbox.close()});
 }

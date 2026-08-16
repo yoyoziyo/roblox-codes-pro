@@ -1,23 +1,22 @@
 {
   "slug": "anime-expeditions",
-  "category": "tower-defense-strategy",
   "robloxUrl": "https://www.roblox.com/games/84515722934860/",
   "assets": {
     "icon": "/assets/games/anime-expeditions/icon.webp",
     "banner": "",
     "thumbnail": "/assets/games/anime-expeditions/thumbnail.webp",
-    "redeemTutorial": "/assets/games/anime-expeditions/redeem-tutorial.webp"
+    "redeemTutorial": ""
   },
   "assetSync": {
     "icon": true,
     "thumbnail": true
   },
   "codes": [
-    { "code": "sorry4longmaintenance" },
-    { "code": "warriorsaga" },
-    { "code": "update1" },
-    { "code": "ballin!" },
-    { "code": "2.5mgroup!" }
+    "sorry4longmaintenance",
+    "warriorsaga",
+    "update1",
+    "ballin!",
+    "2.5mgroup!"
   ],
   "translations": {
     "en": {
