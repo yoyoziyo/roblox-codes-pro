@@ -57,8 +57,8 @@ test("jogos ativos possuem ícone e thumbnail locais",()=>{
 
 test("páginas localizadas possuem lang, canonical e hreflang recíproco",()=>{
   const pages=[
-    ["en/index.html","en","/en/"],
-    ["pt-br/index.html","pt-BR","/pt-br/"],
+    ["en/index.html","en","/en"],
+    ["pt-br/index.html","pt-BR","/pt-br"],
     ["en/privacy.html","en","/en/privacy"],
     ["pt-br/privacidade.html","pt-BR","/pt-br/privacidade"],
     ["en/terms.html","en","/en/terms"],
@@ -82,8 +82,8 @@ test("links internos e seletor preservam o idioma",()=>{
   const en=read("en/index.html"),pt=read("pt-br/index.html");
   assert.ok(en.includes('href="/en/games/catch-and-tame"')===false,"resultados são renderizados pela pesquisa");
   assert.ok(read("script.js").includes('state.locale==="pt-BR"?"pt-br":"en"'));
-  assert.ok(en.includes('href="/pt-br/" data-language="pt-BR"'));
-  assert.ok(pt.includes('href="/en/" data-language="en"'));
+  assert.ok(en.includes('href="/pt-br" data-language="pt-BR"'));
+  assert.ok(pt.includes('href="/en" data-language="en"'));
   assert.ok(read("en/games/catch-and-tame.html").includes('href="/pt-br/games/catch-and-tame"'));
   assert.ok(read("pt-br/games/catch-and-tame.html").includes('href="/en/games/catch-and-tame"'));
 });
@@ -183,8 +183,8 @@ test("raiz detecta apenas português e mantém fallback acessível",()=>{
   const html=read("index.html");
   assert.ok(html.includes('startsWith("pt")'));
   assert.ok(html.includes('localStorage.getItem("yocodes-language")'));
-  assert.ok(html.includes('href="/en/"'));
-  assert.ok(html.includes('href="/pt-br/"'));
+  assert.ok(html.includes('href="/en"'));
+  assert.ok(html.includes('href="/pt-br"'));
 });
 
 test("redirects antigos apontam permanentemente para inglês",()=>{
@@ -200,8 +200,23 @@ test("sitemap bilíngue contém URLs e alternativas obrigatórias",()=>{
   const xml=read("sitemap.xml");
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'));
-  for(const url of ["/en/","/pt-br/","/en/privacy","/pt-br/privacidade","/en/terms","/pt-br/termos","/en/games/catch-and-tame","/pt-br/games/catch-and-tame"])assert.ok(xml.includes(`${site.origin}${url}`));
+  for(const url of ["/en","/pt-br","/en/privacy","/pt-br/privacidade","/en/terms","/pt-br/termos","/en/games/catch-and-tame","/pt-br/games/catch-and-tame"])assert.ok(xml.includes(`${site.origin}${url}`));
   for(const hreflang of ["en","pt-BR","x-default"])assert.ok(xml.includes(`hreflang="${hreflang}"`));
+});
+
+test("URLs das Homes seguem cleanUrls sem redirecionamento",()=>{
+  const htmlFiles=["index.html","404.html","en/index.html","pt-br/index.html","en/privacy.html","pt-br/privacidade.html","en/terms.html","pt-br/termos.html",...index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`])];
+  for(const file of htmlFiles){
+    const html=read(file);
+    assert.equal(html.includes('href="/en/"'),false,`${file}: link /en/ redirecionaria`);
+    assert.equal(html.includes('href="/pt-br/"'),false,`${file}: link /pt-br/ redirecionaria`);
+    assert.equal(html.includes('href="/en/#'),false,`${file}: âncora /en/ redirecionaria`);
+    assert.equal(html.includes('href="/pt-br/#'),false,`${file}: âncora /pt-br/ redirecionaria`);
+  }
+  const xml=read("sitemap.xml");
+  assert.equal(xml.includes(`${site.origin}/en/</loc>`),false);
+  assert.equal(xml.includes(`${site.origin}/pt-br/</loc>`),false);
+  assert.equal(readJson("vercel.json").trailingSlash,false);
 });
 
 test("páginas legais estão conectadas, localizadas e sem links genéricos",()=>{

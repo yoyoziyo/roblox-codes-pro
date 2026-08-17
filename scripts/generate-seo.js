@@ -7,8 +7,8 @@ const site=JSON.parse(await fs.readFile(path.join(root,"data/site.json"),"utf8")
 const index=JSON.parse(await fs.readFile(path.join(root,"data/index.json"),"utf8"));
 const origin=site.origin.replace(/\/$/,"");
 const pages=[
-  {path:"/en/",file:"en/index.html",en:"/en/",pt:"/pt-br/"},
-  {path:"/pt-br/",file:"pt-br/index.html",en:"/en/",pt:"/pt-br/"},
+  {path:"/en",file:"en/index.html",en:"/en",pt:"/pt-br"},
+  {path:"/pt-br",file:"pt-br/index.html",en:"/en",pt:"/pt-br"},
   {path:"/en/privacy",file:"en/privacy.html",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {path:"/pt-br/privacidade",file:"pt-br/privacidade.html",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {path:"/en/terms",file:"en/terms.html",en:"/en/terms",pt:"/pt-br/termos"},
@@ -30,8 +30,8 @@ for(const page of pages){
   await fs.writeFile(filePath,html);
 }
 const groups=[
-  {loc:"/en/",en:"/en/",pt:"/pt-br/"},
-  {loc:"/pt-br/",en:"/en/",pt:"/pt-br/"},
+  {loc:"/en",en:"/en",pt:"/pt-br"},
+  {loc:"/pt-br",en:"/en",pt:"/pt-br"},
   {loc:"/en/privacy",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {loc:"/pt-br/privacidade",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {loc:"/en/terms",en:"/en/terms",pt:"/pt-br/termos"},

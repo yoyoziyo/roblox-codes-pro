@@ -18,19 +18,19 @@
         const saved=localStorage.getItem("yocodes-language");
         const languages=navigator.languages?.length?navigator.languages:[navigator.language||"en"];
         const locale=saved==="pt-BR"||(!saved&&languages.some(value=>String(value).toLowerCase().startsWith("pt")))?"pt-br":"en";
-        location.replace(`/${locale}/${location.search}${location.hash}`);
+        location.replace(`/${locale}${location.search}${location.hash}`);
       }catch{}
     })();
   </script>
 </head>
 <body>
   <main class="language-entry">
-    <a class="brand" href="/en/" aria-label="67Codes home"><img class="brand-logo" src="/assets/ui/logo.webp" alt="" onload="this.classList.add('loaded')"><span class="brand-fallback" aria-hidden="true"><span class="brand-mark">67</span><span class="brand-name">67<span>Codes</span></span></span></a>
+    <a class="brand" href="/en" aria-label="67Codes home"><img class="brand-logo" src="/assets/ui/logo.webp" alt="" onload="this.classList.add('loaded')"><span class="brand-fallback" aria-hidden="true"><span class="brand-mark">67</span><span class="brand-name">67<span>Codes</span></span></span></a>
     <h1>Choose your language</h1>
     <p>Escolha seu idioma</p>
     <nav aria-label="Language selection">
-      <a class="button" href="/en/" data-language="en">English</a>
-      <a class="button" href="/pt-br/" data-language="pt-BR">Português</a>
+      <a class="button" href="/en" data-language="en">English</a>
+      <a class="button" href="/pt-br" data-language="pt-BR">Português</a>
     </nav>
   </main>
   <script>document.querySelectorAll("[data-language]").forEach(link=>link.addEventListener("click",()=>localStorage.setItem("yocodes-language",link.dataset.language)))</script>

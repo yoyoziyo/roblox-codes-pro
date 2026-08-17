@@ -5,8 +5,8 @@ Site estático bilíngue de códigos para jogos do Roblox. Não há backend, ban
 ## URLs
 
 ```text
-/en/
-/pt-br/
+/en
+/pt-br
 /en/games/<slug>
 /pt-br/games/<slug>
 ```
@@ -14,8 +14,8 @@ Site estático bilíngue de códigos para jogos do Roblox. Não há backend, ban
 A raiz `/` é somente um seletor de entrada:
 
 - respeita a escolha manual salva em `localStorage`;
-- envia navegadores configurados em português para `/pt-br/`;
-- usa `/en/` para qualquer outro idioma;
+- envia navegadores configurados em português para `/pt-br`;
+- usa `/en` para qualquer outro idioma;
 - mantém links HTML para English e Português quando JavaScript não estiver disponível.
 
 A detecção ocorre exclusivamente na raiz. Acessar diretamente uma URL com idioma nunca causa troca automática.
@@ -239,8 +239,8 @@ npm run preview
 Abra:
 
 ```text
-http://127.0.0.1:4173/en/
-http://127.0.0.1:4173/pt-br/
+http://127.0.0.1:4173/en
+http://127.0.0.1:4173/pt-br
 ```
 
 O preview suporta URLs limpas, assets em `/assets/` e os redirects antigos:
