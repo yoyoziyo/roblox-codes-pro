@@ -44,6 +44,21 @@
           "description": "Códigos ativos de Anime Expeditions, dicas de estratégia e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "basketball-zero",
+      "icon": "/assets/games/basketball-zero/icon.webp",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Basketball Zero",
+          "description": "Active Basketball Zero codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Basketball Zero",
+          "description": "Códigos ativos de Basketball Zero, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "slug": "basketball-zero",
+  "robloxUrl": "https://www.roblox.com/games/130739873848552/Basketball-Zero",
+  "assets": {
+    "icon": "/assets/games/basketball-zero/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/basketball-zero/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    "EMPERORREWORK"
+  ],
+  "translations": {
+    "en": {
+      "title": "Basketball Zero",
+      "description": "Active Basketball Zero codes for a fast-paced, anime-inspired 5v5 basketball game with character classes, special abilities, and unique auras.",
+      "tips": [
+        "Join the developer's official Roblox group before redeeming codes so your rewards can be granted.",
+        "Use your spins to unlock new playstyles, zones, and auras for your character.",
+        "Hold the left mouse button to shoot, or tap it briefly to perform a pump fake.",
+        "Press Q for quick dribbles and use the Spacebar for layups or dunks."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Basketball Zero",
+          "description": "Follow these steps to redeem active Basketball Zero codes.",
+          "steps": [
+            "Open the official Basketball Zero page on Roblox and join the developer group, Current.",
+            "Like the experience on Roblox, then launch Basketball Zero.",
+            "Click the purple CODES button at the bottom of the screen.",
+            "Enter or paste an active code exactly as shown in the list above.",
+            "Press REDEEM to confirm the code."
+          ],
+          "imageAlt": "Basketball Zero code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Basketball Zero",
+      "description": "Códigos ativos de Basketball Zero para um jogo de basquete 5v5 acelerado e inspirado em animes, com classes, habilidades especiais e auras únicas.",
+      "tips": [
+        "Entre no grupo oficial do desenvolvedor no Roblox antes de resgatar códigos para que as recompensas possam ser liberadas.",
+        "Use seus giros para desbloquear novos estilos de jogo, zonas e auras para o personagem.",
+        "Segure o botão esquerdo do mouse para arremessar ou dê um toque rápido para aplicar uma finta.",
+        "Pressione Q para realizar dribles rápidos e use a barra de espaço para fazer bandejas ou enterradas."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Basketball Zero",
+          "description": "Siga estas etapas para resgatar códigos ativos de Basketball Zero.",
+          "steps": [
+            "Abra a página oficial de Basketball Zero no Roblox e entre no grupo do desenvolvedor, Current.",
+            "Curta a experiência no Roblox e depois inicie Basketball Zero.",
+            "Clique no botão roxo CODES localizado na parte inferior da tela.",
+            "Digite ou cole um código ativo exatamente como aparece na lista acima.",
+            "Pressione REDEEM para confirmar o resgate."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Basketball Zero"
+        }
+      }
+    }
+  }
+}

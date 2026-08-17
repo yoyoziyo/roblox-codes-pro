@@ -72,4 +72,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/anime-expeditions"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/anime-expeditions"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/basketball-zero</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/basketball-zero"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/basketball-zero"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/basketball-zero"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/basketball-zero</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/basketball-zero"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/basketball-zero"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/basketball-zero"/>
+  </url>
 </urlset>
