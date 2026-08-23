@@ -1,0 +1,65 @@
+{
+  "slug": "dig-and-clean",
+  "robloxUrl": "https://www.roblox.com/games/83038462357724/Dig-Clean",
+  "assets": {
+    "icon": "/assets/games/dig-and-clean/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/dig-and-clean/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    "update1",
+    "update2",
+    "update3"
+  ],
+  "translations": {
+    "en": {
+      "title": "Dig & Clean",
+      "description": "Active Dig & Clean codes for a Roblox treasure-hunting simulator where players uncover buried items, clean them, and display their rarest finds in a museum.",
+      "tips": [
+        "Dig up buried items and use the spray bottle to clean them before placing them on display.",
+        "Upgrade your shovels and spray bottles in the shop to dig and clean faster.",
+        "Polish items at the polishing station to improve their condition and selling value.",
+        "Explore new islands and digging areas to discover rarer treasures."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Dig & Clean",
+          "description": "Follow these steps to redeem active Dig & Clean codes.",
+          "steps": [
+            "Launch Dig & Clean from its official Roblox page.",
+            "Open the Shop and scroll to the bottom of the tab.",
+            "Paste an active code into the codes field and confirm the redemption."
+          ],
+          "imageAlt": "Dig & Clean code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Dig & Clean",
+      "description": "Códigos ativos de Dig & Clean para um simulador de caça ao tesouro no Roblox em que os jogadores escavam, limpam e exibem suas descobertas mais raras em um museu.",
+      "tips": [
+        "Escave itens enterrados e use o borrifador para limpá-los antes de colocá-los em exposição.",
+        "Melhore suas pás e borrifadores na loja para aumentar a velocidade de escavação e limpeza.",
+        "Faça o polimento dos itens na estação apropriada para melhorar sua condição e aumentar o valor de venda.",
+        "Explore novas ilhas e locais de escavação para encontrar tesouros de raridades mais elevadas."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Dig & Clean",
+          "description": "Siga estas etapas para resgatar códigos ativos de Dig & Clean.",
+          "steps": [
+            "Abra Dig & Clean pela página oficial do Roblox.",
+            "Acesse a Loja e role até o final da aba.",
+            "Cole um código ativo no campo de códigos e confirme o resgate."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Dig & Clean"
+        }
+      }
+    }
+  }
+}

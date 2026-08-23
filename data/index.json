@@ -59,6 +59,21 @@
           "description": "Códigos ativos de Basketball Zero, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "dig-and-clean",
+      "icon": "/assets/games/dig-and-clean/icon.webp",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Dig & Clean",
+          "description": "Active Dig & Clean codes, treasure-hunting tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Dig & Clean",
+          "description": "Códigos ativos de Dig & Clean, dicas de caça ao tesouro e instruções de resgate."
+        }
+      }
     }
   ]
 }
