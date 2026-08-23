@@ -20,12 +20,12 @@ function renderGame(game,translation,messages){
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
   gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
-  renderCodes(activeCodes,messages,game.assets.icon||game.assets.thumbnail);renderList("game-tips",translation.tips);renderTutorial(game,translation);
+  renderCodes(activeCodes,messages);renderList("game-tips",translation.tips);renderTutorial(game,translation);
 }
-function renderCodes(codes,messages,iconSource){
+function renderCodes(codes,messages){
   const container=gameById("active-code-list");container.replaceChildren();
   if(!codes.length){container.textContent=messages.noCodes;return}
-  codes.forEach(value=>{const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src=iconSource;icon.alt="";const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));group.append(icon,info,button);row.append(group);container.append(row)});
+  codes.forEach(value=>{const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src="/assets/ui/code-item.webp";icon.alt="";icon.addEventListener("error",()=>{icon.src="/assets/ui/logo.webp"},{once:true});const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));group.append(icon,info,button);row.append(group);container.append(row)});
 }
 function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
 function renderTutorial(game,translation){

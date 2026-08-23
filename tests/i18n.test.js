@@ -297,7 +297,7 @@ test("404 é bilíngue, não indexável e sem anúncios",()=>{
 });
 
 test("assets compartilhados estão otimizados e não há arquivos antigos",()=>{
-  const limits={"logo.webp":100000,"language.webp":50000,"verified.webp":50000,"roblox.webp":50000,"tips-icon.webp":50000,"tips.webp":100000,"codes.webp":50000,"discord.webp":50000,"favicon.png":100000};
+  const limits={"logo.webp":100000,"code-item.webp":100000,"language.webp":50000,"verified.webp":50000,"roblox.webp":50000,"tips-icon.webp":50000,"tips.webp":100000,"codes.webp":50000,"discord.webp":50000,"favicon.png":100000};
   for(const [file,limit] of Object.entries(limits)){
     const asset=path.join(root,"public/assets/ui",file);
     assert.ok(fs.existsSync(asset),file);
@@ -306,4 +306,5 @@ test("assets compartilhados estão otimizados e não há arquivos antigos",()=>{
   assert.equal(fs.existsSync(path.join(root,"public/assets/ui/icon.webp")),false);
   assert.equal(fs.existsSync(path.join(root,"img")),false);
   assert.equal(read("game-page.js").includes("/assets/ui/copy.webp"),false);
+  assert.ok(read("game-page.js").includes('icon.src="/assets/ui/code-item.webp"'));
 });
