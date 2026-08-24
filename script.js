@@ -28,6 +28,7 @@ function setupSearch(){
   document.addEventListener("click",event=>{if(!event.target.closest(".game-search")){results.hidden=true;input.setAttribute("aria-expanded","false")}});
 }
 function setupNavigation(){const toggle=document.querySelector(".menu-toggle"),links=byId("nav-links");if(!toggle||!links)return;toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});links.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false")})}
+function setupSharing(){document.querySelectorAll("[data-share]").forEach(button=>button.addEventListener("click",async()=>{try{if(navigator.share){await navigator.share({title:document.title,url:location.href});return}await navigator.clipboard.writeText(location.href);const original=button.getAttribute("aria-label");button.setAttribute("aria-label",button.dataset.sharedLabel||"Link copied");setTimeout(()=>button.setAttribute("aria-label",original),1800)}catch(error){if(error?.name!=="AbortError")console.warn("Share unavailable")}}))}
 function setupLanguage(){document.querySelectorAll("[data-language]").forEach(link=>link.addEventListener("click",()=>localStorage.setItem("yocodes-language",link.dataset.language)))}
 function setupDigitRain(){
   const hero=document.querySelector(".hero");if(!hero||hero.querySelector(".digit-rain")||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
@@ -48,7 +49,7 @@ async function copyCode(text,button){
 }
 window.copyCode=copyCode;
 document.addEventListener("DOMContentLoaded",async()=>{
-  setupNavigation();setupLanguage();setupDigitRain();
+  setupNavigation();setupLanguage();setupDigitRain();setupSharing();
   if(!byId("game-search"))return;
   try{
     const localeFile=state.locale==="pt-BR"?"pt-BR":"en";

@@ -14,10 +14,12 @@
 <body data-game-slug="{{SLUG}}">
   <a class="skip-link" href="#{{CODES_ID}}">{{SKIP_CODES}}</a>
   <header class="site-header"><nav class="container nav" aria-label="{{NAV_ARIA}}">
+    <a class="mobile-back" href="{{HOME_URL}}" aria-label="{{HOME_LABEL}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
     <a class="brand" href="{{HOME_URL}}" aria-label="{{BRAND_ARIA}}"><img class="brand-logo" src="/assets/ui/logo.webp" alt="" onload="this.classList.add('loaded')"><span class="brand-fallback" aria-hidden="true"><span class="brand-mark">67</span><span class="brand-name">67<span>Codes</span></span></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="{{MENU_LABEL}}"><span></span><span></span><span></span></button>
     <div class="nav-links" id="nav-links"><a href="{{HOME_URL}}">{{HOME_LABEL}}</a><a href="{{SEARCH_URL}}">{{SEARCH_LABEL}}</a><a class="active" href="#{{CODES_ID}}">{{CODES_LABEL}}</a><a href="{{COMMUNITY_URL}}">Discord</a></div>
     <a class="nav-search game-page-search" href="{{HOME_URL}}" aria-label="{{SEARCH_LABEL}}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg><span>{{SEARCH_PLACEHOLDER}}</span></a>
+    <button class="mobile-share" type="button" data-share aria-label="{{SHARE_LABEL}}" data-shared-label="{{SHARED_LABEL}}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="19" r="2.5"></circle><path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"></path></svg></button>
     <details class="language-menu"><summary aria-label="{{LANGUAGE_ARIA}}"><span class="language-symbol" aria-hidden="true"><img src="/assets/ui/language.webp" alt="" onload="this.classList.add('loaded')"><i class="language-fallback">◎</i></span><span class="language-label">{{LANGUAGE_LABEL}}</span></summary><div class="language-options"><a href="{{EN_URL_PATH}}" data-language="en"{{EN_CURRENT}}>English</a><a href="{{PT_URL_PATH}}" data-language="pt-BR"{{PT_CURRENT}}>Português</a></div></details>
   </nav></header>
   <main>
