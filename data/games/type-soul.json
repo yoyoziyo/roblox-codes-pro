@@ -1,0 +1,81 @@
+{
+  "slug": "type-soul",
+  "robloxUrl": "https://www.roblox.com/games/14067600077/",
+  "assets": {
+    "icon": "/assets/games/type-soul/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/type-soul/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": true
+  },
+  "codes": [
+    "TypeBugIsMYFavouriteGame",
+    "PALACEUPDATE2060",
+    "BalanceStage",
+    "TheSecretIsInUpdateLogs",
+    "TypeSoulBurden",
+    "SpainWorldCupWinners26",
+    "ItNearlyCameHome",
+    "HotfixesThxForPlayingTypeSoul",
+    "TypeSoulWorldCup2030",
+    "SmallPatchYay",
+    "OasisGraduation",
+    "ErikkiMonth",
+    "palacecountdown",
+    "Smallinconvenience",
+    "Kurtisatung",
+    "TrueWorldbearer",
+    "EidMubarak2026",
+    "me",
+    "joshhasbeendevelopingfor12yearsandcantmakeaquestwork"
+  ],
+  "translations": {
+    "en": {
+      "title": "TYPE SOUL",
+      "description": "Inspired by anime, TYPE SOUL is an action combat game on Roblox where players choose factions such as Soul Reaper and Hollow. Fight intense battles, advance your class, and unlock abilities through the skill tree to overcome your enemies.",
+      "tips": [
+        "Reach at least Semi-Rank 2 to unlock code redemption.",
+        "Follow the update logs and official Discord for news and announcements.",
+        "Check the official Trello to learn about game mechanics, skill trees, items, and raids."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in TYPE SOUL",
+          "description": "Follow these steps to redeem active TYPE SOUL codes.",
+          "steps": [
+            "Open TYPE SOUL on Roblox and make sure you have reached at least Semi-Rank 2.",
+            "Click the gift box icon in the upper-left corner of the screen.",
+            "Enter or paste the desired code in the provided field.",
+            "Press Enter to confirm and receive the rewards."
+          ],
+          "imageAlt": "TYPE SOUL code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "TYPE SOUL",
+      "description": "Inspirado em animes, TYPE SOUL é um jogo de ação e combate no Roblox que permite escolher facções como Soul Reaper e Hollow. Participe de batalhas, evolua sua classe e desbloqueie habilidades na árvore de talentos para superar seus inimigos.",
+      "tips": [
+        "Alcance pelo menos a patente Semi-Rank 2 para desbloquear o resgate de códigos.",
+        "Acompanhe os registros de atualização e o Discord oficial para não perder novidades e anúncios.",
+        "Consulte o Trello oficial para entender mecânicas, árvores de habilidades, itens e raids."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em TYPE SOUL",
+          "description": "Siga estas etapas para resgatar códigos ativos de TYPE SOUL.",
+          "steps": [
+            "Abra o TYPE SOUL no Roblox e certifique-se de ter alcançado pelo menos o Semi-Rank 2.",
+            "Clique no ícone de caixa de presente no canto superior esquerdo da tela.",
+            "Digite ou cole o código desejado no campo indicado.",
+            "Pressione Enter para confirmar e receber as recompensas."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em TYPE SOUL"
+        }
+      }
+    }
+  }
+}

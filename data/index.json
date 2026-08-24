@@ -74,6 +74,21 @@
           "description": "Códigos ativos de Dig & Clean, dicas de caça ao tesouro e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "type-soul",
+      "icon": "/assets/games/type-soul/icon.webp",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "TYPE SOUL",
+          "description": "Inspired by anime, TYPE SOUL is an action combat game on Roblox where players choose factions such as Soul Reaper and Hollow. Fight intense battles, advance your class, and unlock abilities through the skill tree to overcome your enemies."
+        },
+        "pt-BR": {
+          "title": "TYPE SOUL",
+          "description": "Inspirado em animes, TYPE SOUL é um jogo de ação e combate no Roblox que permite escolher facções como Soul Reaper e Hollow. Participe de batalhas, evolua sua classe e desbloqueie habilidades na árvore de talentos para superar seus inimigos."
+        }
+      }
     }
   ]
 }

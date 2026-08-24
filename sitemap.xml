@@ -96,4 +96,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/dig-and-clean"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/dig-and-clean"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/type-soul</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/type-soul"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/type-soul"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/type-soul"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/type-soul</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/type-soul"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/type-soul"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/type-soul"/>
+  </url>
 </urlset>
