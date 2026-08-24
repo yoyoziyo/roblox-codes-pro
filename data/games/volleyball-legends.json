@@ -1,0 +1,65 @@
+{
+  "slug": "volleyball-legends",
+  "robloxUrl": "https://www.roblox.com/games/73956553001240/",
+  "assets": {
+    "icon": "/assets/games/volleyball-legends/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/volleyball-legends/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codes": [
+    "UPDATE_84",
+    "SEASON_18",
+    "PIRATE_SZN"
+  ],
+  "translations": {
+    "en": {
+      "title": "Volleyball Legends",
+      "description": "Volleyball Legends is a competitive Roblox sports game inspired by the anime series Haikyuu. Players compete in fast-paced matches, climb the leaderboards, and use spins to unlock new playstyles and ball appearances.",
+      "tips": [
+        "Use Lucky Spins for a better chance of unlocking rare abilities.",
+        "Collect exclusive skins to customize your volleyball.",
+        "Play matches regularly to level up and climb the leaderboards."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Volleyball Legends",
+          "description": "Follow these steps to redeem active Volleyball Legends codes.",
+          "steps": [
+            "Open Volleyball Legends on Roblox.",
+            "Select the shop icon in the menu at the bottom of the screen.",
+            "Open the codes tab on the left side of the menu.",
+            "Enter the desired code in the provided field and select Redeem."
+          ],
+          "imageAlt": "Volleyball Legends code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Volleyball Legends",
+      "description": "Volleyball Legends é uma experiência esportiva competitiva no Roblox inspirada no anime Haikyuu. Os jogadores disputam partidas rápidas, sobem nos placares e usam giros para desbloquear novos estilos de jogo e aparências para a bola.",
+      "tips": [
+        "Utilize giros de sorte para aumentar as chances de obter habilidades raras.",
+        "Colete skins exclusivas para personalizar sua bola de vôlei.",
+        "Participe das partidas com frequência para evoluir seu nível e subir nos placares."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Volleyball Legends",
+          "description": "Siga estas etapas para resgatar códigos ativos de Volleyball Legends.",
+          "steps": [
+            "Abra o Volleyball Legends no Roblox.",
+            "Pressione o ícone da loja no menu inferior da tela.",
+            "Acesse a aba de códigos no lado esquerdo do menu.",
+            "Digite o código desejado no campo indicado e selecione Resgatar."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Volleyball Legends"
+        }
+      }
+    }
+  }
+}

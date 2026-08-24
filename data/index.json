@@ -89,6 +89,21 @@
           "description": "Inspirado em animes, TYPE SOUL é um jogo de ação e combate no Roblox que permite escolher facções como Soul Reaper e Hollow. Participe de batalhas, evolua sua classe e desbloqueie habilidades na árvore de talentos para superar seus inimigos."
         }
       }
+    },
+    {
+      "slug": "volleyball-legends",
+      "icon": "/assets/games/volleyball-legends/icon.webp",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Volleyball Legends",
+          "description": "Active Volleyball Legends codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Volleyball Legends",
+          "description": "Códigos ativos de Volleyball Legends, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }
