@@ -16,3 +16,8 @@
 .tips-summary .steps li::before{border-color:#747986;color:#d8d9dd}.shared-art img{filter:drop-shadow(0 14px 22px rgba(0,0,0,.28))}.section-kicker{color:#aab4ff}.guide-steps li{border-color:#34363e;border-radius:9px;background:#15161a;color:#bfc0c6}.guide-steps li::before{background:#34363e}.tutorial-image-button{border-color:#444750;border-radius:12px;background:#15161a}.image-lightbox{border-color:#484b55;background:#111216}.side-card{border-color:#3b3d46;background:linear-gradient(135deg,#222329,#191a1e)}.discord-mark{border:0;border-radius:0;background:transparent;color:#fff}.discord-mark img{width:82px;height:68px}
 .button-icon{width:18px;height:18px}.button-icon img{width:18px;height:18px}
 @media(max-width:720px){.game-hero::before{background:linear-gradient(0deg,#111216 0%,rgba(17,18,22,.95) 30%,rgba(17,18,22,.5) 68%,rgba(17,18,22,.28) 100%)}}
+
+/* Future manual AdSense units: empty slots stay invisible. */
+.ad-slot:empty{display:none}
+@media(min-width:721px){.game-main{grid-template-columns:1fr;max-width:900px}.game-main>.panel,.game-main>.ad-slot{grid-column:1;grid-row:auto}.game-layout>aside{max-width:900px}.ad-slot:not(:empty){display:grid;place-items:center;width:100%;min-height:120px;padding:18px 0}}
+@media(max-width:720px){.ad-slot:not(:empty){display:grid;place-items:center;width:100%;min-height:100px;padding:14px 0}.ad-slot-tips{display:none!important}}
