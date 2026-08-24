@@ -55,7 +55,21 @@ export async function createGame(slug,{rl}={}){
     const indexPath=path.join(root,"data/index.json");
     const index=JSON.parse(await fs.readFile(indexPath,"utf8"));
     if(index.games.some(item=>item.slug===slug))throw new Error(`O slug ${slug} já está registrado no índice.`);
-    index.games.push({slug,icon:game.assets.icon,status:"active",translations:{en:{title:titleEn,description:descriptionEn},"pt-BR":{title:titlePt,description:descriptionPt}}});
+    index.games.push({
+      slug,
+      icon:game.assets.icon,
+      status:"active",
+      translations:{
+        en:{
+          title:titleEn,
+          description:`Active ${titleEn} codes, gameplay tips, and redemption instructions.`
+        },
+        "pt-BR":{
+          title:titlePt,
+          description:`Códigos ativos de ${titlePt}, dicas de jogo e instruções de resgate.`
+        }
+      }
+    });
     await fs.mkdir(path.dirname(gamePath),{recursive:true});
     await fs.writeFile(gamePath,`${JSON.stringify(game,null,2)}\n`);
     await fs.writeFile(indexPath,`${JSON.stringify(index,null,2)}\n`);
