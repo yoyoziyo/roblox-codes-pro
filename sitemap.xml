@@ -120,4 +120,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/volleyball-legends"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/volleyball-legends"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/sailor-piece</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/sailor-piece"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/sailor-piece"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/sailor-piece"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/sailor-piece</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/sailor-piece"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/sailor-piece"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/sailor-piece"/>
+  </url>
 </urlset>

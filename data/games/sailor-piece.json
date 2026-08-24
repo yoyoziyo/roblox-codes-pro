@@ -1,0 +1,65 @@
+{
+  "slug": "sailor-piece",
+  "robloxUrl": "https://www.roblox.com/games/77747658251236/",
+  "assets": {
+    "icon": "/assets/games/sailor-piece/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/sailor-piece/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codes": [
+    "RecodeUpdate",
+    "Sorryforthedealy",
+    "Fixbugs"
+  ],
+  "translations": {
+    "en": {
+      "title": "Sailor Piece",
+      "description": "Sailor Piece is a Roblox RPG inspired by the world of One Piece. Players explore islands, complete tasks for residents, collect weapons, fight opponents, and search for special fruits to strengthen their character.",
+      "tips": [
+        "Search the map for rare fruits to increase your character's power.",
+        "Complete missions offered by town residents to progress more easily.",
+        "Travel to new islands to find stronger equipment and more advanced challenges."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Sailor Piece",
+          "description": "Follow these steps to redeem active Sailor Piece codes.",
+          "steps": [
+            "Open Sailor Piece on Roblox.",
+            "Select SETTINGS on the left side of the screen.",
+            "Scroll to the bottom of the menu.",
+            "Enter the code in the provided field and select the redeem button."
+          ],
+          "imageAlt": "Sailor Piece code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Sailor Piece",
+      "description": "Sailor Piece é um RPG no Roblox inspirado no universo de One Piece. Os jogadores exploram ilhas, realizam tarefas para moradores, coletam armamentos, enfrentam oponentes e procuram frutas especiais para fortalecer o personagem.",
+      "tips": [
+        "Procure frutas raras espalhadas pelo mapa para aumentar o poder do personagem.",
+        "Complete as missões oferecidas pelos habitantes das cidades para evoluir com mais facilidade.",
+        "Viaje para novas ilhas para encontrar equipamentos e desafios mais avançados."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Sailor Piece",
+          "description": "Siga estas etapas para resgatar códigos ativos de Sailor Piece.",
+          "steps": [
+            "Abra o Sailor Piece no Roblox.",
+            "Selecione DEFINIÇÕES no canto esquerdo da tela.",
+            "Desça até a parte inferior do menu.",
+            "Digite o código no campo correspondente e selecione o botão de resgate."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Sailor Piece"
+        }
+      }
+    }
+  }
+}

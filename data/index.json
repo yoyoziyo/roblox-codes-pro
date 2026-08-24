@@ -104,6 +104,21 @@
           "description": "Códigos ativos de Volleyball Legends, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "sailor-piece",
+      "icon": "/assets/games/sailor-piece/icon.webp",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Sailor Piece",
+          "description": "Active Sailor Piece codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Sailor Piece",
+          "description": "Códigos ativos de Sailor Piece, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }
