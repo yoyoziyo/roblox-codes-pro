@@ -1,0 +1,64 @@
+{
+  "slug": "runaways",
+  "robloxUrl": "https://www.roblox.com/games/118418618261207",
+  "assets": {
+    "icon": "/assets/games/runaways/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/runaways/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "SUPERCAT",
+    "RUN"
+  ],
+  "translations": {
+    "en": {
+      "title": "Runaways",
+      "description": "Runaways is a Roblox crime experience where players explore cities, rob people, and earn money while avoiding the police. The money collected can be used to purchase weapons and improve your chances of escaping.",
+      "tips": [
+        "Restart the game a few times if a code returns an error or you encounter a bug.",
+        "Choose your class carefully because each one provides different stat and equipment bonuses.",
+        "Earn Credz by completing missions and playing daily to unlock new classes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Runaways",
+          "description": "Follow these steps to redeem active Runaways codes.",
+          "steps": [
+            "Select Shop on the left side of the screen.",
+            "Scroll down the shop window until you find the codes section.",
+            "Enter an active code in the Insert Code Here… field and confirm it."
+          ],
+          "imageAlt": "Runaways code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Runaways",
+      "description": "Runaways é uma experiência de crime no Roblox em que os jogadores exploram cidades, roubam pessoas e acumulam dinheiro enquanto evitam a polícia. A quantia obtida pode ser usada para comprar armas e facilitar suas fugas.",
+      "tips": [
+        "Reinicie o jogo algumas vezes caso um código apresente erro ou você encontre algum bug.",
+        "Escolha sua classe com atenção, pois cada uma oferece bônus diferentes de status e equipamentos.",
+        "Acumule Credz completando missões e jogando diariamente para desbloquear novas classes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Runaways",
+          "description": "Siga estas etapas para resgatar códigos ativos de Runaways.",
+          "steps": [
+            "Selecione Shop no lado esquerdo da tela.",
+            "Role a janela da loja para baixo até encontrar a seção de códigos.",
+            "Digite um código ativo no campo Insert Code Here… e confirme o resgate."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Runaways"
+        }
+      }
+    }
+  }
+}
+

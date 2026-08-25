@@ -156,5 +156,17 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/steal-an-egg"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/steal-an-egg"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/runaways</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/runaways"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/runaways"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/runaways"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/runaways</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/runaways"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/runaways"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/runaways"/>
+  </url>
 </urlset>
 

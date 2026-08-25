@@ -160,6 +160,23 @@
           "description": "Steal An Egg ainda não possui sistema de códigos. Confira dicas e informações do jogo."
         }
       }
+    },
+    {
+      "slug": "runaways",
+      "icon": "/assets/games/runaways/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-08-25T18:00:00Z",
+      "translations": {
+        "en": {
+          "title": "Runaways",
+          "description": "Active Runaways codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Runaways",
+          "description": "Códigos ativos de Runaways, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }
