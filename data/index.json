@@ -119,6 +119,21 @@
           "description": "Códigos ativos de Sailor Piece, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "ghost-driver",
+      "icon": "/assets/games/ghost-driver/icon.webp",
+      "status": "active",
+      "translations": {
+        "en": {
+          "title": "Ghost Driver",
+          "description": "Active Ghost Driver codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Ghost Driver",
+          "description": "Códigos ativos de Ghost Driver, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

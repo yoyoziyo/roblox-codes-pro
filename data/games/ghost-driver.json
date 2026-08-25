@@ -1,0 +1,66 @@
+{
+  "slug": "ghost-driver",
+  "robloxUrl": "https://www.roblox.com/games/137228775845999",
+  "assets": {
+    "icon": "/assets/games/ghost-driver/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/ghost-driver/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codes": [
+    "THANKSFOR250K",
+    "SINCEROWASHERE"
+  ],
+  "translations": {
+    "en": {
+      "title": "Ghost Driver",
+      "description": "Ghost Driver is an urban racing experience focused on speeding through traffic and avoiding other vehicles. Players complete challenges, earn money, customize their current cars, and purchase faster models.",
+      "tips": [
+        "Invest the money you earn in newer and faster vehicles.",
+        "Improve your cars by adjusting engine and fuel tuning.",
+        "Redeem available rewards to upgrade from the starter vehicle sooner."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Ghost Driver",
+          "description": "Follow these steps to redeem active Ghost Driver codes.",
+          "steps": [
+            "Open Ghost Driver on Roblox and select Play.",
+            "Select the Shop button on the left side of the screen.",
+            "Open the Rewards or Codes tab.",
+            "Scroll sideways until the code input field appears.",
+            "Enter the desired code and select Redeem."
+          ],
+          "imageAlt": "Ghost Driver code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Ghost Driver",
+      "description": "Ghost Driver é uma experiência de corrida urbana focada em acelerar pelo tráfego e desviar de outros veículos. Os jogadores completam desafios, acumulam dinheiro, personalizam os carros atuais e compram modelos mais velozes.",
+      "tips": [
+        "Invista o dinheiro obtido na compra de veículos novos e mais velozes.",
+        "Melhore o desempenho dos carros ajustando a afinação do motor e do combustível.",
+        "Resgate as recompensas disponíveis para trocar o veículo inicial mais rapidamente."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Ghost Driver",
+          "description": "Siga estas etapas para resgatar códigos ativos de Ghost Driver.",
+          "steps": [
+            "Abra o Ghost Driver no Roblox e selecione Play.",
+            "Acesse o botão Shop no canto esquerdo da tela.",
+            "Abra a guia Rewards ou Codes.",
+            "Role a janela para o lado até encontrar o campo de códigos.",
+            "Insira o código desejado e selecione Redeem."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Ghost Driver"
+        }
+      }
+    }
+  }
+}

@@ -132,4 +132,16 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/sailor-piece"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/sailor-piece"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/ghost-driver</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/ghost-driver"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/ghost-driver"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/ghost-driver"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/ghost-driver</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/ghost-driver"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/ghost-driver"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/ghost-driver"/>
+  </url>
 </urlset>
