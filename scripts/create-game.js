@@ -63,6 +63,7 @@ export async function createGame(slug,{rl,codeStatus="active"}={}){
       icon:game.assets.icon,
       status:"active",
       codeStatus,
+      lastUpdated:new Date().toISOString(),
       translations:{
         en:{
           title:titleEn,

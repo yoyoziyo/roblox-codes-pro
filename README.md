@@ -113,6 +113,8 @@ Não adicione tags ou códigos expirados.
 
 ## Atualizar códigos de um jogo
 
+Sempre que este comando altera a lista, ele também registra a data em `data/index.json`. A Home ordena esse campo automaticamente e mostra somente os três jogos atualizados mais recentemente.
+
 Use o atualizador seguro para substituir somente a lista de códigos ativos:
 
 ```bash

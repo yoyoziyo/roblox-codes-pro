@@ -69,6 +69,9 @@ export async function updateCodes(slug,options={}){
     throw error;
   }
   const game=JSON.parse(originalText);
+  const indexPath=path.join(rootDir,"data/index.json");
+  const originalIndexText=await fs.readFile(indexPath,"utf8");
+  const indexData=JSON.parse(originalIndexText);
   if(game.slug!==slug)throw new Error(`O slug interno de ${slug}.json não corresponde ao arquivo.`);
   if(!Array.isArray(game.codes)||!game.codes.every(code=>typeof code==="string"))throw new Error(`A lista de códigos de ${slug} é inválida.`);
 
@@ -105,13 +108,16 @@ export async function updateCodes(slug,options={}){
     }
 
     game.codes=nextCodes;game.codeStatus=nextCodes.length?"active":"no-active-codes";
+    const indexGame=indexData.games.find(item=>item.slug===slug);if(!indexGame)throw new Error(`O jogo ${slug} não está registrado no índice.`);indexGame.codeStatus=game.codeStatus;indexGame.lastUpdated=new Date().toISOString();
     const updatedText=`${JSON.stringify(game,null,2)}\n`;
     try{
       await fs.writeFile(gamePath,updatedText);
+      await fs.writeFile(indexPath,`${JSON.stringify(indexData,null,2)}\n`);
       await generatePages();
       await testRunner();
     }catch(error){
       await fs.writeFile(gamePath,originalText);
+      await fs.writeFile(indexPath,originalIndexText);
       try{await generatePages()}catch(regenerationError){logger.error(`Falha ao restaurar as páginas: ${regenerationError.message}`)}
       throw new Error(`A atualização foi revertida: ${error.message}`);
     }

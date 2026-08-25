@@ -27,6 +27,12 @@ function setupSearch(){
   document.addEventListener("keydown",event=>{if((event.key==="/"||((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="k"))&&!/input|textarea/i.test(document.activeElement.tagName)){event.preventDefault();input.focus()}});
   document.addEventListener("click",event=>{if(!event.target.closest(".game-search")){results.hidden=true;input.setAttribute("aria-expanded","false")}});
 }
+function renderRecentGames(){
+  const container=byId("recent-games");if(!container)return;
+  const recent=state.games.filter(game=>game.lastUpdated).sort((a,b)=>String(b.lastUpdated).localeCompare(String(a.lastUpdated))).slice(0,3).map(translatedGame);
+  container.replaceChildren();
+  recent.forEach(game=>{const link=document.createElement("a");link.className="recent-card";link.href=gameUrl(game.slug);const thumbnail=document.createElement("img");thumbnail.src=game.thumbnail||`/assets/games/${game.slug}/thumbnail.webp`;thumbnail.alt="";thumbnail.loading="lazy";thumbnail.addEventListener("error",()=>{const fallback=safeImage(game.icon);thumbnail.src=thumbnail.dataset.fallbackTried?fallbackImage:fallback;thumbnail.dataset.fallbackTried="true"});const copy=document.createElement("span");copy.className="recent-card-copy";const title=document.createElement("strong");title.textContent=game.title;const verified=document.createElement("img");verified.className="recent-verified";verified.src="/assets/ui/verified.webp";verified.alt="";copy.append(title,verified);const label=document.createElement("small");label.textContent=state.i18n.search.recentlyUpdated;link.append(thumbnail,copy,label);container.append(link)});
+}
 function setupNavigation(){const toggle=document.querySelector(".menu-toggle"),links=byId("nav-links");if(!toggle||!links)return;toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});links.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false")})}
 function setupSharing(){document.querySelectorAll("[data-share]").forEach(button=>button.addEventListener("click",async()=>{try{if(navigator.share){await navigator.share({title:document.title,url:location.href});return}await navigator.clipboard.writeText(location.href);const original=button.getAttribute("aria-label");button.setAttribute("aria-label",button.dataset.sharedLabel||"Link copied");setTimeout(()=>button.setAttribute("aria-label",original),1800)}catch(error){if(error?.name!=="AbortError")console.warn("Share unavailable")}}))}
 function setupLanguage(){document.querySelectorAll("[data-language]").forEach(link=>link.addEventListener("click",()=>localStorage.setItem("yocodes-language",link.dataset.language)))}
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
     if(!indexResponse.ok||!i18nResponse.ok)throw new Error();
     const [indexData,i18nData]=await Promise.all([indexResponse.json(),i18nResponse.json()]);
     state.games=indexData.games.filter(game=>game.status==="active");state.i18n=i18nData;
-    setupSearch();
+    setupSearch();renderRecentGames();
   }catch{
     const input=byId("game-search");
     if(input){input.disabled=true;input.placeholder=state.locale==="pt-BR"?"Pesquisa temporariamente indisponível":"Search temporarily unavailable"}

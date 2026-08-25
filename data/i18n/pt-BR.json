@@ -2,7 +2,8 @@
   "search": {
     "empty": "Nenhum jogo cadastrado corresponde à sua busca.",
     "noActiveCodes": "Sem códigos ativos",
-    "noCodeSystem": "Sem sistema de códigos"
+    "noCodeSystem": "Sem sistema de códigos",
+    "recentlyUpdated": "Atualizado recentemente"
   },
   "game": {
     "viewCodes": "Ver códigos",

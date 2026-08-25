@@ -2,7 +2,8 @@
   "search": {
     "empty": "No registered game matches your search.",
     "noActiveCodes": "No active codes",
-    "noCodeSystem": "No code system"
+    "noCodeSystem": "No code system",
+    "recentlyUpdated": "Recently updated"
   },
   "game": {
     "viewCodes": "View codes",

@@ -90,16 +90,18 @@ test("links internos e seletor preservam o idioma",()=>{
   assert.ok(read("pt-br/games/catch-and-tame.html").includes('href="/en/games/catch-and-tame"'));
 });
 
-test("Home é dedicada à pesquisa e não possui listas editoriais",()=>{
+test("Home é dedicada à pesquisa e mostra apenas os três jogos recentes",()=>{
   const pages=[read("en/index.html"),read("pt-br/index.html")];
   for(const html of pages){
     assert.ok(html.includes('id="game-search"'));
-    for(const id of ["recent-games","popular-games","trending-games"])assert.equal(html.includes(`id="${id}"`),false);
+    assert.ok(html.includes('id="recent-games"'));
+    for(const id of ["popular-games","trending-games"])assert.equal(html.includes(`id="${id}"`),false);
   }
   assert.equal(fs.existsSync(path.join(root,"data/homepage.json")),false);
   const source=read("script.js");
   assert.equal(source.includes("homepage.json"),false);
   assert.equal(source.includes("renderGameTable"),false);
+  assert.ok(source.includes("slice(0,3)"));
 });
 
 test("chuva 67 da Home e decorativa, limitada e respeita movimento reduzido",()=>{
