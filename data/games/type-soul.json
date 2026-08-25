@@ -11,6 +11,7 @@
     "icon": true,
     "thumbnail": true
   },
+  "codeStatus": "active",
   "codes": [
     "TypeBugIsMYFavouriteGame",
     "PALACEUPDATE2060",
@@ -79,3 +80,4 @@
     }
   }
 }
+

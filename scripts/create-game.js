@@ -11,8 +11,10 @@ const uniqueList=items=>[...new Set(items.map(item=>item.trim()).filter(Boolean)
 export const parseCodes=value=>uniqueList(String(value||"").split(/[,\n]/));
 export const parseSteps=value=>uniqueList(String(value||"").split(/[|\n]/));
 
+const validCodeStatuses=new Set(["active","no-active-codes","no-code-system"]);
+
 function help(){
-  console.log(`Uso: npm run create:game -- nome-do-jogo
+  console.log(`Uso: npm run create:game -- nome-do-jogo [--status active|no-active-codes|no-code-system]
 
 O assistente solicita títulos, descrições, códigos separados por vírgula,
 dicas e etapas do tutorial. Depois cria o JSON, registra o jogo no índice,
@@ -23,8 +25,9 @@ async function required(rl,label){
   while(true){const answer=(await rl.question(`${label}: `)).trim();if(answer)return answer;console.log("Este campo é obrigatório.")}
 }
 
-export async function createGame(slug,{rl}={}){
+export async function createGame(slug,{rl,codeStatus="active"}={}){
   if(!validSlug(slug))throw new Error("Use um slug em letras minúsculas, números e hífens, como anime-expeditions.");
+  if(!validCodeStatuses.has(codeStatus))throw new Error("Status de códigos inválido.");
   const gamePath=path.join(root,"data/games",`${slug}.json`);
   try{await fs.access(gamePath);throw new Error(`O jogo ${slug} já existe.`)}catch(error){if(error.code!=="ENOENT")throw error}
   const prompt=rl||readline.createInterface({input,output});
@@ -35,7 +38,7 @@ export async function createGame(slug,{rl}={}){
     const titleEn=(await prompt.question(`Nome em inglês [${titlePt}]: `)).trim()||titlePt;
     const robloxUrl=await required(prompt,"Link oficial do Roblox");
     if(!/^https:\/\/(?:www\.)?roblox\.com\/games\/\d+/i.test(robloxUrl))throw new Error("Informe um link oficial no formato https://www.roblox.com/games/123...");
-    const codes=parseCodes(await required(prompt,"Códigos separados por vírgula"));
+    const codes=codeStatus==="active"?parseCodes(await required(prompt,"Códigos separados por vírgula")):[];
     const descriptionPt=await required(prompt,"Descrição curta em português");
     const descriptionEn=await required(prompt,"Descrição curta em inglês");
     const tipsPt=parseSteps(await required(prompt,"Dicas em português separadas por |"));
@@ -45,7 +48,7 @@ export async function createGame(slug,{rl}={}){
     const game={
       slug,robloxUrl,
       assets:{icon:`/assets/games/${slug}/icon.webp`,banner:"",thumbnail:`/assets/games/${slug}/thumbnail.webp`,redeemTutorial:""},
-      assetSync:{icon:true,thumbnail:true},
+      assetSync:{icon:true,thumbnail:true},codeStatus,
       codes,
       translations:{
         en:{title:titleEn,description:descriptionEn,tips:tipsEn,tutorials:{redeem:{title:`How to redeem codes in ${titleEn}`,description:`Follow these steps to redeem active ${titleEn} codes.`,steps:stepsEn,imageAlt:`${titleEn} code redemption tutorial`}}},
@@ -59,6 +62,7 @@ export async function createGame(slug,{rl}={}){
       slug,
       icon:game.assets.icon,
       status:"active",
+      codeStatus,
       translations:{
         en:{
           title:titleEn,
@@ -86,6 +90,7 @@ export async function createGame(slug,{rl}={}){
 const invoked=process.argv[1]&&pathToFileURL(path.resolve(process.argv[1])).href===import.meta.url;
 if(invoked){
   if(process.argv.includes("--help")||process.argv.includes("-h")){help();process.exit(0)}
-  const slug=process.argv.slice(2).find(arg=>!arg.startsWith("-"));
-  if(!slug){help();process.exitCode=1}else try{await createGame(slug)}catch(error){console.error(`\nErro: ${error.message}`);process.exitCode=1}
+  const args=process.argv.slice(2);const slug=args.find(arg=>!arg.startsWith("-")&&!validCodeStatuses.has(arg));const statusArg=args.find(arg=>arg.startsWith("--status="));const statusIndex=args.indexOf("--status");const codeStatus=statusArg?.slice(9)||(statusIndex>=0?args[statusIndex+1]:"active");
+  if(!slug){help();process.exitCode=1}else try{await createGame(slug,{codeStatus})}catch(error){console.error(`\nErro: ${error.message}`);process.exitCode=1}
 }
+

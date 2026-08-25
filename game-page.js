@@ -19,18 +19,23 @@ function renderGame(game,translation,messages){
   const image=game.assets.banner||game.assets.thumbnail||game.assets.icon||"/assets/ui/favicon.png";
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
-  gameById("codes-link").textContent=`${messages.viewCodes} (${activeCodes.length})`;gameById("roblox-link").href=game.robloxUrl;
-  renderCodes(activeCodes,messages);renderList("game-tips",translation.tips);renderTutorial(game,translation);
+  const codeStatus=game.codeStatus||"active";
+  gameById("codes-link").textContent=codeStatus==="active"?`${messages.viewCodes} (${activeCodes.length})`:messages.codeAvailability;gameById("roblox-link").href=game.robloxUrl;
+  renderCodes(activeCodes,messages,codeStatus,translation.title);renderList("game-tips",translation.tips);renderTutorial(game,translation);
 }
-function renderCodes(codes,messages){
+function renderCodes(codes,messages,status,title){
   const container=gameById("active-code-list");container.replaceChildren();
-  if(!codes.length){container.textContent=messages.noCodes;return}
+  const heading=gameById("codes-section-title"),community=gameById("codes-community");
+  if(status!=="active"||!codes.length){
+    const noSystem=status==="no-code-system";heading.textContent=noSystem?messages.noCodeSystemTitle:messages.noActiveCodesTitle;community.hidden=true;
+    const empty=document.createElement("div");empty.className="codes-empty";const strong=document.createElement("strong");strong.textContent=noSystem?messages.noCodeSystemTitle:messages.noActiveCodesTitle;const text=document.createElement("p");text.textContent=(noSystem?messages.noCodeSystemDescription:messages.noActiveCodesDescription).replace("{game}",title);empty.append(strong,text);container.append(empty);return
+  }
   codes.forEach(value=>{const row=document.createElement("div");row.className="code-row";const group=document.createElement("div");group.className="code-copy-group";const icon=document.createElement("img");icon.className="code-icon";icon.src="/assets/ui/code-item.webp";icon.alt="";icon.addEventListener("error",()=>{icon.src="/assets/ui/logo.webp"},{once:true});const info=document.createElement("div");info.className="code-info";const code=document.createElement("code");code.className="code-value";code.textContent=value;info.append(code);const button=document.createElement("button");button.className="copy-button";button.type="button";button.textContent=messages.copy;button.setAttribute("aria-label",`${messages.copy} ${value}`);button.addEventListener("click",()=>window.copyCode(value,button));group.append(icon,info,button);row.append(group);container.append(row)});
 }
 function renderList(id,items=[]){const container=gameById(id);container.replaceChildren();items.forEach(text=>{const item=document.createElement("li");item.textContent=text;container.append(item)})}
 function renderTutorial(game,translation){
   const redeem=translation.tutorials?.redeem||{};
-  gameById("redeem-tutorial-title").textContent=redeem.title||"";gameById("redeem-tutorial-description").textContent=redeem.description||"";renderList("redeem-tutorial-steps",redeem.steps);
+  gameById("redeem-tutorial-title").textContent=redeem.title||"";gameById("redeem-tutorial-description").textContent=redeem.description||"";renderList("redeem-tutorial-steps",redeem.steps);gameById("redeem-tutorial-steps").hidden=!redeem.steps?.length;
   setupTutorialImage(game.assets?.redeemTutorial,redeem.imageAlt||redeem.title||translation.title);
 }
 function setupTutorialImage(source,alt){
@@ -40,3 +45,4 @@ function setupTutorialImage(source,alt){
   button.addEventListener("click",()=>{largeImage.src=image.currentSrc||image.src;largeImage.alt=image.alt;if(typeof lightbox.showModal==="function")lightbox.showModal()});
   close.addEventListener("click",()=>lightbox.close());lightbox.addEventListener("click",event=>{if(event.target===lightbox)lightbox.close()});
 }
+

@@ -11,6 +11,7 @@
     "icon": true,
     "thumbnail": true
   },
+  "codeStatus": "active",
   "codes": [
     "WINGCHAN"
   ],
@@ -63,3 +64,4 @@
     }
   }
 }
+

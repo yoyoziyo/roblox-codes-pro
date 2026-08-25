@@ -1,12 +1,20 @@
 {
   "search": {
-    "empty": "No registered game matches your search."
+    "empty": "No registered game matches your search.",
+    "noActiveCodes": "No active codes",
+    "noCodeSystem": "No code system"
   },
   "game": {
     "viewCodes": "View codes",
     "copy": "Copy",
     "copied": "Copied ✓",
     "copiedToast": "Code {code} copied",
-    "noCodes": "There are no active codes right now."
+    "noCodes": "There are no active codes right now.",
+    "codeAvailability": "About codes",
+    "noActiveCodesTitle": "No active codes",
+    "noActiveCodesDescription": "This game has a code system, but there are no active codes right now. We will update this page when new codes become available.",
+    "noCodeSystemTitle": "Code system unavailable",
+    "noCodeSystemDescription": "{game} does not have a code redemption system yet. If one is added in a future update, we will update this page."
   }
 }
+

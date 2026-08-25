@@ -11,8 +11,9 @@
     "icon": true,
     "thumbnail": true
   },
+  "codeStatus": "active",
   "codes": [
-    "TATLISV2", "15TATLISV2"
+    "EMPERORREWORK"
   ],
   "translations": {
     "en": {
@@ -59,3 +60,4 @@
     }
   }
 }
+

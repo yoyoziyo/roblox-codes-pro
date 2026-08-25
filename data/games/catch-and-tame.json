@@ -11,6 +11,7 @@
     "icon": true,
     "thumbnail": true
   },
+  "codeStatus": "active",
   "codes": [
     "FISHINGCLAW",
     "SUBMARINES",
@@ -69,3 +70,4 @@
     }
   }
 }
+

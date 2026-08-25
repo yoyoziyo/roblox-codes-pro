@@ -8,7 +8,7 @@ function searchMarkup(query){
   const normalized=query.trim().toLocaleLowerCase(state.locale);
   const matches=state.games.map(translatedGame).filter(game=>game.title.toLocaleLowerCase(state.locale).includes(normalized)||game.slug.includes(normalized));
   if(!matches.length)return`<div class="search-empty">${state.i18n.search.empty}</div>`;
-  return matches.map((game,index)=>`<a class="search-result" role="option" aria-selected="${index===state.activeResult}" href="${gameUrl(game.slug)}"><img src="${safeImage(game.icon)}" alt=""><span><strong>${game.title}</strong><small>${game.description}</small></span></a>`).join("");
+  return matches.map((game,index)=>{const status=game.codeStatus&&game.codeStatus!=="active"?`<em class="search-status">${game.codeStatus==="no-code-system"?state.i18n.search.noCodeSystem:state.i18n.search.noActiveCodes}</em>`:"";return`<a class="search-result" role="option" aria-selected="${index===state.activeResult}" href="${gameUrl(game.slug)}"><img src="${safeImage(game.icon)}" alt=""><span><span class="search-result-title"><strong>${game.title}</strong>${status}</span><small>${game.description}</small></span></a>`}).join("");
 }
 function setupSearch(){
   const input=byId("game-search"),results=byId("search-results");if(!input||!results)return;
@@ -63,3 +63,4 @@ document.addEventListener("DOMContentLoaded",async()=>{
     if(input){input.disabled=true;input.placeholder=state.locale==="pt-BR"?"Pesquisa temporariamente indisponível":"Search temporarily unavailable"}
   }
 });
+

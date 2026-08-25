@@ -1,12 +1,20 @@
 {
   "search": {
-    "empty": "Nenhum jogo cadastrado corresponde à sua busca."
+    "empty": "Nenhum jogo cadastrado corresponde à sua busca.",
+    "noActiveCodes": "Sem códigos ativos",
+    "noCodeSystem": "Sem sistema de códigos"
   },
   "game": {
     "viewCodes": "Ver códigos",
     "copy": "Copiar",
     "copied": "Copiado ✓",
     "copiedToast": "Código {code} copiado",
-    "noCodes": "Nenhum código ativo no momento."
+    "noCodes": "Nenhum código ativo no momento.",
+    "codeAvailability": "Sobre os códigos",
+    "noActiveCodesTitle": "Nenhum código ativo",
+    "noActiveCodesDescription": "Este jogo possui um sistema de códigos, mas não há códigos ativos no momento. Atualizaremos esta página quando novos códigos forem disponibilizados.",
+    "noCodeSystemTitle": "Sistema de códigos indisponível",
+    "noCodeSystemDescription": "{game} ainda não possui um sistema para resgatar códigos. Se essa função for adicionada futuramente, atualizaremos esta página."
   }
 }
+

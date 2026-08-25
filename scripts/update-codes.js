@@ -104,7 +104,7 @@ export async function updateCodes(slug,options={}){
       return {changed:false,cancelled:true,...changes};
     }
 
-    game.codes=nextCodes;
+    game.codes=nextCodes;game.codeStatus=nextCodes.length?"active":"no-active-codes";
     const updatedText=`${JSON.stringify(game,null,2)}\n`;
     try{
       await fs.writeFile(gamePath,updatedText);
@@ -139,3 +139,4 @@ if(invoked){
     else await updateCodes(options.slug,options);
   }catch(error){console.error(`\nErro: ${error.message}`);process.exitCode=1}
 }
+

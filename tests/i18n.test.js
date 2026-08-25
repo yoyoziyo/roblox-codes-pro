@@ -29,8 +29,10 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
       assert.deepEqual(Object.keys(game.translations[locale].tutorials.redeem).sort(),["description","imageAlt","steps","title"]);
       for(const field of ["title","description"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
       assert.ok(game.translations[locale].tutorials.redeem.title.trim());
-      assert.ok(game.translations[locale].tutorials.redeem.steps.length);
+      if(game.codeStatus!=="no-code-system")assert.ok(game.translations[locale].tutorials.redeem.steps.length);
     }
+    assert.ok(["active","no-active-codes","no-code-system"].includes(game.codeStatus),`${file}: codeStatus inválido`);
+    if(game.codeStatus==="active")assert.ok(game.codes.length,`${file}: jogo ativo deve ter códigos`);
     assert.ok(game.codes.every(code=>typeof code==="string"&&code.trim()),`${file}: codes deve ser string[]`);
     assert.equal(new Set(game.codes).size,game.codes.length,`${file}: código duplicado`);
   }
@@ -308,3 +310,4 @@ test("assets compartilhados estão otimizados e não há arquivos antigos",()=>{
   assert.equal(read("game-page.js").includes("/assets/ui/copy.webp"),false);
   assert.ok(read("game-page.js").includes('icon.src="/assets/ui/code-item.webp"'));
 });
+

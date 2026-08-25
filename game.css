@@ -17,7 +17,10 @@
 .button-icon{width:18px;height:18px}.button-icon img{width:18px;height:18px}
 @media(max-width:720px){.game-hero::before{background:linear-gradient(0deg,#111216 0%,rgba(17,18,22,.95) 30%,rgba(17,18,22,.5) 68%,rgba(17,18,22,.28) 100%)}}
 
+.codes-empty{grid-column:1/-1;padding:22px;border:1px solid #34363e;border-radius:10px;background:#15161a;text-align:center}.codes-empty strong{display:block;margin-bottom:7px;font-size:15px}.codes-empty p{max-width:620px;margin:0 auto;color:var(--muted);font-size:13px;line-height:1.6}
+
 /* Future manual AdSense units: empty slots stay invisible. */
 .ad-slot:empty{display:none}
 @media(min-width:721px){.ad-slot:not(:empty){display:grid;place-items:center;width:100%;min-height:120px;padding:18px 0}}
 @media(max-width:720px){.ad-slot:not(:empty){display:grid;place-items:center;width:100%;min-height:100px;padding:14px 0}.ad-slot-tips{display:none!important}}
+

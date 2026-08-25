@@ -83,6 +83,14 @@ Use o assistente:
 npm run create:game -- nome-do-jogo
 ```
 
+Para cadastrar um jogo que ainda não possui sistema de códigos:
+
+```bash
+npm run create:game -- nome-do-jogo --status no-code-system
+```
+
+Use `--status no-active-codes` quando o jogo possuir a função de resgate, mas estiver temporariamente sem códigos ativos. O estado aparece corretamente na busca e na página do jogo, sem exibir números ou códigos inexistentes.
+
 Ele solicita os textos dos dois idiomas, recebe os códigos separados por vírgula e usa `|` para separar dicas e etapas. Ao final, ele:
 
 - cria `data/games/<slug>.json` seguindo `data/game-template.json`;
@@ -255,3 +263,4 @@ URLs inexistentes usam a página `404.html`, que permite alternar entre portugu�
 ## Deploy
 
 O projeto permanece totalmente estático e compatível com o plano gratuito da Vercel. `vercel.json` contém somente configuração de saída, headers, redirects e rewrites estáticos.
+

@@ -11,6 +11,7 @@
     "icon": true,
     "thumbnail": true
   },
+  "codeStatus": "active",
   "codes": [
     "sorry4longmaintenance",
     "warriorsaga",
@@ -67,3 +68,4 @@
     }
   }
 }
+

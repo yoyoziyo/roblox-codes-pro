@@ -134,6 +134,23 @@
           "description": "Códigos ativos de Ghost Driver, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "steal-an-egg",
+      "icon": "/assets/games/steal-an-egg/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "translations": {
+        "en": {
+          "title": "Steal An Egg",
+          "description": "Steal An Egg has no code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Steal An Egg",
+          "description": "Steal An Egg ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
     }
   ]
 }
+
