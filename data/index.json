@@ -177,6 +177,23 @@
           "description": "Códigos ativos de Runaways, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "protect-the-house-from-monsters",
+      "icon": "/assets/games/protect-the-house-from-monsters/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-08-27T12:00:00Z",
+      "translations": {
+        "en": {
+          "title": "Protect The House From Monsters",
+          "description": "Active Protect The House From Monsters codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Protect The House From Monsters",
+          "description": "Códigos ativos de Protect The House From Monsters, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,64 @@
+{
+  "slug": "protect-the-house-from-monsters",
+  "robloxUrl": "https://www.roblox.com/games/115286378269814/",
+  "assets": {
+    "icon": "/assets/games/protect-the-house-from-monsters/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/protect-the-house-from-monsters/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "MORECOINS",
+    "FREECOINS"
+  ],
+  "translations": {
+    "en": {
+      "title": "Protect The House From Monsters",
+      "description": "Protect The House From Monsters is a Roblox survival game where players defend their home against waves of creatures hiding in the darkness. Place traps, find weapons, and work as a team to keep the base safe.",
+      "tips": [
+        "Place traps around the house to make it harder for enemies to approach.",
+        "Explore the map to find hidden weapons that can strengthen your defense.",
+        "Work with other players to protect the house more effectively."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Protect The House From Monsters",
+          "description": "Follow these steps to redeem active Protect The House From Monsters codes.",
+          "steps": [
+            "Select Shop on the left side of the screen.",
+            "Scroll to the bottom until you find the ENTER CODE field.",
+            "Enter an active code and confirm the redemption."
+          ],
+          "imageAlt": "Protect The House From Monsters code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Protect The House From Monsters",
+      "description": "Protect The House From Monsters é um jogo de sobrevivência no Roblox em que os jogadores defendem sua casa contra ondas de criaturas escondidas na escuridão. Espalhe armadilhas, encontre armas e trabalhe em equipe para manter a base segura.",
+      "tips": [
+        "Espalhe armadilhas ao redor da casa para dificultar a aproximação dos inimigos.",
+        "Explore o mapa para encontrar armas escondidas que facilitarão sua defesa.",
+        "Jogue em equipe para proteger o local com mais eficiência."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Protect The House From Monsters",
+          "description": "Siga estas etapas para resgatar códigos ativos de Protect The House From Monsters.",
+          "steps": [
+            "Selecione Shop no lado esquerdo da tela.",
+            "Role até o final da loja para encontrar o campo ENTER CODE.",
+            "Digite um código ativo e confirme o resgate."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Protect The House From Monsters"
+        }
+      }
+    }
+  }
+}
+
