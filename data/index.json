@@ -194,6 +194,23 @@
           "description": "Códigos ativos de Protect The House From Monsters, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "99-nights-in-the-forest",
+      "icon": "/assets/games/99-nights-in-the-forest/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-08-27T13:00:00Z",
+      "translations": {
+        "en": {
+          "title": "99 Nights in the Forest",
+          "description": "Active 99 Nights in the Forest codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "99 Nights in the Forest",
+          "description": "Códigos ativos de 99 Nights in the Forest, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

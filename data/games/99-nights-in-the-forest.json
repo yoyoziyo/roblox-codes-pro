@@ -1,0 +1,64 @@
+{
+  "slug": "99-nights-in-the-forest",
+  "robloxUrl": "https://www.roblox.com/games/79546208627805/",
+  "assets": {
+    "icon": "/assets/games/99-nights-in-the-forest/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/99-nights-in-the-forest/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "99NIGHTS",
+    "RELEASE"
+  ],
+  "translations": {
+    "en": {
+      "title": "99 Nights in the Forest",
+      "description": "99 Nights in the Forest is a Roblox survival game where players face mysterious creatures and try to survive 99 nights in a dark forest. Gather vital resources, build defenses, improve equipment, and carefully manage supplies to protect the camp.",
+      "tips": [
+        "Prioritize essential resources early in the day so the base is ready before nightfall.",
+        "Keep the camp illuminated and fortified to slow down creatures during the night.",
+        "Manage healing supplies and ammunition carefully to avoid being defenseless during dangerous moments."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in 99 Nights in the Forest",
+          "description": "Follow these steps to redeem active 99 Nights in the Forest codes.",
+          "steps": [
+            "Select the gear icon in the upper-left corner to open Settings.",
+            "Find the code input field in the menu.",
+            "Enter an active code and confirm the redemption."
+          ],
+          "imageAlt": "99 Nights in the Forest code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "99 Nights in the Forest",
+      "description": "99 Nights in the Forest é um jogo de sobrevivência no Roblox em que os jogadores enfrentam criaturas misteriosas e tentam sobreviver por 99 noites em uma floresta sombria. Reúna recursos, construa defesas, melhore equipamentos e gerencie suprimentos para proteger o acampamento.",
+      "tips": [
+        "Priorize a coleta de recursos essenciais no início do dia para preparar a base antes do anoitecer.",
+        "Mantenha o acampamento iluminado e fortificado para dificultar o avanço das criaturas durante a noite.",
+        "Gerencie os suprimentos de cura e munição para não ficar indefeso nos momentos de maior perigo."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em 99 Nights in the Forest",
+          "description": "Siga estas etapas para resgatar códigos ativos de 99 Nights in the Forest.",
+          "steps": [
+            "Selecione o ícone de engrenagem no canto superior esquerdo para abrir as configurações.",
+            "Localize o campo de inserção de códigos no menu.",
+            "Digite um código ativo e confirme o resgate."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em 99 Nights in the Forest"
+        }
+      }
+    }
+  }
+}
+
