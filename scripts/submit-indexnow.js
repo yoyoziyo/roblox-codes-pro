@@ -57,6 +57,20 @@ function selectUrls({ origin, games, files, requestedSlug, manualRun }) {
 
   if (affectsEveryGame) activeSlugs.forEach(addGame);
 
+  const integrationChanged = files.some((file) => [
+    "public/indexnow-key.txt",
+    "scripts/submit-indexnow.js",
+    ".github/workflows/notify-indexnow.yml"
+  ].includes(file));
+  if (integrationChanged) {
+    [...games]
+      .filter((game) => game.status === "active")
+      .sort((a, b) => Date.parse(b.lastUpdated || 0) - Date.parse(a.lastUpdated || 0))
+      .slice(0, 3)
+      .forEach((game) => addGame(game.slug));
+    addHomes();
+  }
+
   for (const file of files) {
     const dataMatch = file.match(/^data\/games\/([^/]+)\.json$/);
     const assetMatch = file.match(/^public\/assets\/games\/([^/]+)\//);
