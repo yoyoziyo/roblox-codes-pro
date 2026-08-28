@@ -8,6 +8,7 @@
     "generate:pages": "node scripts/generate-pages.js",
     "generate": "node scripts/generate-pages.js && node scripts/generate-seo.js",
     "generate:seo": "node scripts/generate-seo.js",
+    "notify:indexnow": "node scripts/submit-indexnow.js",
     "preview": "node scripts/preview.js",
     "sync:roblox": "node scripts/sync-roblox-assets.js",
     "test": "node --test"
@@ -16,3 +17,4 @@
     "node": ">=20"
   }
 }
+

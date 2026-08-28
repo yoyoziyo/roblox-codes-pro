@@ -1,0 +1,57 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/games/**"
+      - "data/index.json"
+      - "data/i18n/**"
+      - "public/assets/games/**"
+      - "en/**"
+      - "pt-br/**"
+      - "templates/game.html"
+      - "game-page.js"
+      - "game.css"
+      - "home.css"
+      - "script.js"
+      - "sitemap.xml"
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Slug opcional do jogo (ex.: basketball-zero)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-main
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Read repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Wait for the Vercel deployment
+        run: sleep 75
+
+      - name: Notify IndexNow
+        env:
+          INDEXNOW_BEFORE: ${{ github.event.before }}
+          INDEXNOW_AFTER: ${{ github.sha }}
+          INDEXNOW_SLUG: ${{ inputs.slug }}
+        run: npm run notify:indexnow
+

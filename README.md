@@ -266,3 +266,18 @@ URLs inexistentes usam a página `404.html`, que permite alternar entre portugu�
 
 O projeto permanece totalmente estático e compatível com o plano gratuito da Vercel. `vercel.json` contém somente configuração de saída, headers, redirects e rewrites estáticos.
 
+## IndexNow
+
+Cada publicação na branch `main` que altera páginas ou dados públicos aciona o workflow `Notify IndexNow`. Ele aguarda o deploy da Vercel e avisa Bing e outros mecanismos participantes sobre as URLs alteradas. O envio acelera a descoberta, mas não garante indexação nem posicionamento.
+
+A integração é totalmente estática: a chave pública fica em `/indexnow-key.txt` e não há segredo, variável de ambiente ou backend. O Google continua sendo atendido pelo sitemap e pelo Search Console; ele não participa do IndexNow.
+
+Para testar localmente sem enviar nada:
+
+```bash
+$env:INDEXNOW_DRY_RUN="1"
+npm run notify:indexnow -- --slug basketball-zero
+```
+
+Também é possível abrir **Actions > Notify IndexNow > Run workflow** no GitHub. Informe um slug para enviar aquele jogo e as duas Homes; sem slug, a execução manual envia as duas Homes e os três jogos atualizados mais recentemente.
+
