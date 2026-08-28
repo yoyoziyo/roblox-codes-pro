@@ -16,6 +16,9 @@ on:
       - "home.css"
       - "script.js"
       - "sitemap.xml"
+      - "public/indexnow-key.txt"
+      - "scripts/submit-indexnow.js"
+      - ".github/workflows/notify-indexnow.yml"
   workflow_dispatch:
     inputs:
       slug:
