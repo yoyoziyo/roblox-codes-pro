@@ -13,13 +13,8 @@
   },
   "codeStatus": "active",
   "codes": [
-    "FISHINGCLAW",
-    "SUBMARINES",
-    "SUNKEN",
-    "FARMING",
-    "FOOTBALLCUP",
-    "LABORATORY",
-    "BACKROOMS"
+    "PLUSHIECODE",
+    "FISHINGCLAW"
   ],
   "translations": {
     "en": {

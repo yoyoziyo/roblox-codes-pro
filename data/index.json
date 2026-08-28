@@ -4,7 +4,7 @@
       "slug": "catch-and-tame",
       "icon": "/assets/games/catch-and-tame/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-08T12:00:00Z",
+      "lastUpdated": "2026-08-28T12:00:00Z",
       "translations": {
         "en": {
           "title": "Catch and Tame",
@@ -20,7 +20,7 @@
       "slug": "gakuran",
       "icon": "/assets/games/gakuran/icon.webp?v=20260812",
       "status": "active",
-      "lastUpdated": "2026-08-12T12:00:00Z",
+      "lastUpdated": "2026-08-28T12:00:00Z",
       "translations": {
         "en": {
           "title": "Gakuran",
@@ -36,7 +36,7 @@
       "slug": "anime-expeditions",
       "icon": "/assets/games/anime-expeditions/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-17T12:00:00Z",
+      "lastUpdated": "2026-08-28T12:00:00Z",
       "translations": {
         "en": {
           "title": "Anime Expeditions",
@@ -52,7 +52,7 @@
       "slug": "basketball-zero",
       "icon": "/assets/games/basketball-zero/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-24T10:00:00Z",
+      "lastUpdated": "2026-08-28T12:00:00Z",
       "translations": {
         "en": {
           "title": "Basketball Zero",
@@ -116,7 +116,7 @@
       "slug": "sailor-piece",
       "icon": "/assets/games/sailor-piece/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-25T10:00:00Z",
+      "lastUpdated": "2026-08-28T12:00:00Z",
       "translations": {
         "en": {
           "title": "Sailor Piece",
