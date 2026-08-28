@@ -202,6 +202,8 @@ test("redirects antigos apontam permanentemente para inglês",()=>{
 
 test("sitemap bilíngue contém URLs e alternativas obrigatórias",()=>{
   const xml=read("sitemap.xml");
+  assert.ok(xml.includes("<lastmod>"));
+  assert.ok(xml.includes("<lastmod>2026-08-28</lastmod>"));
   assert.ok(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>'));
   assert.ok(xml.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'));
   for(const url of ["/en","/pt-br","/en/privacy","/pt-br/privacidade","/en/terms","/pt-br/termos","/en/games/catch-and-tame","/pt-br/games/catch-and-tame"])assert.ok(xml.includes(`${site.origin}${url}`));

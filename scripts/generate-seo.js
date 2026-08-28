@@ -6,6 +6,12 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const site=JSON.parse(await fs.readFile(path.join(root,"data/site.json"),"utf8"));
 const index=JSON.parse(await fs.readFile(path.join(root,"data/index.json"),"utf8"));
 const origin=site.origin.replace(/\/$/,"");
+const toLastmod=value=>{
+  const date=new Date(value);
+  return Number.isNaN(date.getTime())?"":date.toISOString().slice(0,10);
+};
+const activeGames=index.games.filter(item=>item.status==="active");
+const latestGameUpdate=activeGames.map(game=>toLastmod(game.lastUpdated)).filter(Boolean).sort().at(-1)||"";
 const pages=[
   {path:"/en",file:"en/index.html",en:"/en",pt:"/pt-br"},
   {path:"/pt-br",file:"pt-br/index.html",en:"/en",pt:"/pt-br"},
@@ -14,7 +20,7 @@ const pages=[
   {path:"/en/terms",file:"en/terms.html",en:"/en/terms",pt:"/pt-br/termos"},
   {path:"/pt-br/termos",file:"pt-br/termos.html",en:"/en/terms",pt:"/pt-br/termos"}
 ];
-for(const game of index.games.filter(item=>item.status==="active")){
+for(const game of activeGames){
   pages.push({path:`/en/games/${game.slug}`,file:`en/games/${game.slug}.html`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`});
   pages.push({path:`/pt-br/games/${game.slug}`,file:`pt-br/games/${game.slug}.html`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`});
 }
@@ -30,18 +36,19 @@ for(const page of pages){
   await fs.writeFile(filePath,html);
 }
 const groups=[
-  {loc:"/en",en:"/en",pt:"/pt-br"},
-  {loc:"/pt-br",en:"/en",pt:"/pt-br"},
+  {loc:"/en",en:"/en",pt:"/pt-br",lastmod:latestGameUpdate},
+  {loc:"/pt-br",en:"/en",pt:"/pt-br",lastmod:latestGameUpdate},
   {loc:"/en/privacy",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {loc:"/pt-br/privacidade",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {loc:"/en/terms",en:"/en/terms",pt:"/pt-br/termos"},
   {loc:"/pt-br/termos",en:"/en/terms",pt:"/pt-br/termos"},
-  ...index.games.filter(item=>item.status==="active").flatMap(game=>[
-    {loc:`/en/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`},
-    {loc:`/pt-br/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`}
+  ...activeGames.flatMap(game=>[
+    {loc:`/en/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`,lastmod:toLastmod(game.lastUpdated)},
+    {loc:`/pt-br/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`,lastmod:toLastmod(game.lastUpdated)}
   ])
 ];
-const entries=groups.map(page=>`  <url>\n    <loc>${origin}${page.loc}</loc>\n    <xhtml:link rel="alternate" hreflang="en" href="${origin}${page.en}"/>\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${origin}${page.pt}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${origin}${page.en}"/>\n  </url>`).join("\n");
+const entries=groups.map(page=>`  <url>\n    <loc>${origin}${page.loc}</loc>${page.lastmod?`\n    <lastmod>${page.lastmod}</lastmod>`:""}\n    <xhtml:link rel="alternate" hreflang="en" href="${origin}${page.en}"/>\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${origin}${page.pt}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${origin}${page.en}"/>\n  </url>`).join("\n");
 await fs.writeFile(path.join(root,"sitemap.xml"),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries}\n</urlset>\n`);
 await fs.writeFile(path.join(root,"robots.txt"),`User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
 console.log(`SEO generated for ${pages.length} localized pages using ${origin}`);
+

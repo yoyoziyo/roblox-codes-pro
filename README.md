@@ -199,7 +199,7 @@ Cada página localizada possui:
 - dados estruturados `WebSite`, `WebPage` e `BreadcrumbList`;
 - conteúdo principal traduzido.
 
-O sitemap contém as duas Homes, as duas páginas de cada jogo e as páginas legais, com `xhtml:link` para todas as alternativas.
+O sitemap contém as duas Homes, as duas páginas de cada jogo e as páginas legais, com `xhtml:link` para todas as alternativas. As páginas dos jogos recebem automaticamente um `<lastmod>` baseado em `lastUpdated`; as Homes usam a atualização mais recente entre os jogos.
 
 ## Privacidade, termos e publicidade
 
