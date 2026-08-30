@@ -1,0 +1,64 @@
+{
+  "slug": "grand-blue",
+  "robloxUrl": "https://www.roblox.com/games/18335956021/",
+  "assets": {
+    "icon": "/assets/games/grand-blue/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/grand-blue/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "10KCCU",
+    "WorldBossBroke",
+    "SorryForBreakingGame",
+    "TwitterGoalReached",
+    "Release!"
+  ],
+  "translations": {
+    "en": {
+      "title": "Grand Blue",
+      "description": "Embark on an action RPG adventure at sea. Choose to become a pirate or a marine, explore islands, and obtain powerful fruits to unleash devastating abilities.",
+      "tips": [
+        "Use codes to reroll your traits and races.",
+        "Focus on completing quests and fighting to strengthen your abilities early in the game."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Grand Blue",
+          "description": "Follow these steps to redeem active Grand Blue codes.",
+          "steps": [
+            "Open character customization from the main menu.",
+            "Enter a valid code in the text field.",
+            "Confirm to redeem the items."
+          ],
+          "imageAlt": "Grand Blue code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Grand Blue",
+      "description": "Embarque em uma jornada de RPG de ação no mar. Escolha se deseja atuar como pirata ou marinheiro, explore ilhas e obtenha frutas poderosas para liberar habilidades devastadoras.",
+      "tips": [
+        "Aproveite os códigos para rolar novamente seus atributos (traits) e raças.",
+        "Foque em realizar missões e combater para fortalecer suas habilidades no início do jogo."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Grand Blue",
+          "description": "Siga estas etapas para resgatar códigos ativos de Grand Blue.",
+          "steps": [
+            "Acesse a opção de personalização de personagem no menu inicial.",
+            "Insira o código válido no campo de texto.",
+            "Confirme para resgatar os itens."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Grand Blue"
+        }
+      }
+    }
+  }
+}

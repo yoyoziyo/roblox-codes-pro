@@ -211,7 +211,23 @@
           "description": "Códigos ativos de 99 Nights in the Forest, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "grand-blue",
+      "icon": "/assets/games/grand-blue/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-08-30T22:50:40.144Z",
+      "translations": {
+        "en": {
+          "title": "Grand Blue",
+          "description": "Active Grand Blue codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Grand Blue",
+          "description": "Códigos ativos de Grand Blue, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }
-
