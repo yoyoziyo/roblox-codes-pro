@@ -13,9 +13,9 @@
   },
   "codeStatus": "active",
   "codes": [
-    "update1",
-    "update2",
-    "update3"
+    "UPDATE3",
+    "UPDATE2",
+    "SECRET10"
   ],
   "translations": {
     "en": {
@@ -64,4 +64,3 @@
     }
   }
 }
-

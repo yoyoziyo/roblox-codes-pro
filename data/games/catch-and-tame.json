@@ -13,8 +13,21 @@
   },
   "codeStatus": "active",
   "codes": [
+    "CLOUDUPDATE",
     "PLUSHIECODE",
-    "FISHINGCLAW"
+    "SUBMARINES",
+    "FOOTBALLCUP",
+    "BACKROOMS",
+    "DIGGINGEVENT",
+    "FISHINGKIT",
+    "1MLIKES",
+    "ABYSSAREA",
+    "MAGMA",
+    "FISHINGEVENT",
+    "CAVEUPDATE",
+    "SAFARIUPDATE",
+    "CANDYBLOSSOM",
+    "ABDUCTED"
   ],
   "translations": {
     "en": {
@@ -65,4 +78,3 @@
     }
   }
 }
-

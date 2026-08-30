@@ -13,8 +13,9 @@
   },
   "codeStatus": "active",
   "codes": [
-    "99NIGHTS",
-    "RELEASE"
+    "forestwakesup26",
+    "afterparty",
+    "yay fishing"
   ],
   "translations": {
     "en": {
@@ -28,11 +29,11 @@
       "tutorials": {
         "redeem": {
           "title": "How to redeem codes in 99 Nights in the Forest",
-          "description": "Follow these steps to redeem active 99 Nights in the Forest codes.",
+          "description": "Use the steps below for forestwakesup26 and afterparty. For yay fishing, start a round, upgrade the campfire to level 2, pick up the Old Rod at the Fishing Shack, and type yay fishing in the chat while fishing.",
           "steps": [
-            "Select the gear icon in the upper-left corner to open Settings.",
-            "Find the code input field in the menu.",
-            "Enter an active code and confirm the redemption."
+            "In the lobby, select the diamond icon in the lower-left corner to open the diamond shop.",
+            "Select the Codes button in the bottom-right corner of the shop.",
+            "Enter forestwakesup26 or afterparty and press Submit."
           ],
           "imageAlt": "99 Nights in the Forest code redemption tutorial"
         }
@@ -49,11 +50,11 @@
       "tutorials": {
         "redeem": {
           "title": "Como resgatar códigos em 99 Nights in the Forest",
-          "description": "Siga estas etapas para resgatar códigos ativos de 99 Nights in the Forest.",
+          "description": "Use as etapas abaixo para forestwakesup26 e afterparty. Para yay fishing, inicie uma partida, melhore a fogueira até o nível 2, pegue a Old Rod na cabana de pesca e digite yay fishing no chat enquanto estiver pescando.",
           "steps": [
-            "Selecione o ícone de engrenagem no canto superior esquerdo para abrir as configurações.",
-            "Localize o campo de inserção de códigos no menu.",
-            "Digite um código ativo e confirme o resgate."
+            "No lobby, selecione o ícone de diamante no canto inferior esquerdo para abrir a loja de diamantes.",
+            "Selecione o botão Codes no canto inferior direito da loja.",
+            "Digite forestwakesup26 ou afterparty e pressione Submit."
           ],
           "imageAlt": "Tutorial de resgate de códigos em 99 Nights in the Forest"
         }
@@ -61,4 +62,3 @@
     }
   }
 }
-

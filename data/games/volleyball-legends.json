@@ -13,9 +13,9 @@
   },
   "codeStatus": "active",
   "codes": [
-    "UPDATE_84",
-    "SEASON_18",
-    "PIRATE_SZN"
+    "UPDATE_85",
+    "SHIRO",
+    "BLOCKED"
   ],
   "translations": {
     "en": {
@@ -64,4 +64,3 @@
     }
   }
 }
-

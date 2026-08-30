@@ -4,7 +4,7 @@
       "slug": "catch-and-tame",
       "icon": "/assets/games/catch-and-tame/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-28T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.930Z",
       "translations": {
         "en": {
           "title": "Catch and Tame",
@@ -14,13 +14,14 @@
           "title": "Catch and Tame",
           "description": "Códigos ativos de Catch and Tame e recompensas gratuitas."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "gakuran",
       "icon": "/assets/games/gakuran/icon.webp?v=20260812",
       "status": "active",
-      "lastUpdated": "2026-08-28T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.942Z",
       "translations": {
         "en": {
           "title": "Gakuran",
@@ -30,13 +31,14 @@
           "title": "Gakuran",
           "description": "Códigos ativos de Gakuran, dicas de combate e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "anime-expeditions",
       "icon": "/assets/games/anime-expeditions/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-28T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.948Z",
       "translations": {
         "en": {
           "title": "Anime Expeditions",
@@ -46,13 +48,14 @@
           "title": "Anime Expeditions",
           "description": "Códigos ativos de Anime Expeditions, dicas de estratégia e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "no-active-codes"
     },
     {
       "slug": "basketball-zero",
       "icon": "/assets/games/basketball-zero/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-28T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.952Z",
       "translations": {
         "en": {
           "title": "Basketball Zero",
@@ -62,13 +65,14 @@
           "title": "Basketball Zero",
           "description": "Códigos ativos de Basketball Zero, dicas de jogo e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "dig-and-clean",
       "icon": "/assets/games/dig-and-clean/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-20T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.955Z",
       "translations": {
         "en": {
           "title": "Dig & Clean",
@@ -78,13 +82,14 @@
           "title": "Dig & Clean",
           "description": "Códigos ativos de Dig & Clean, dicas de caça ao tesouro e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "type-soul",
       "icon": "/assets/games/type-soul/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-24T11:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.958Z",
       "translations": {
         "en": {
           "title": "TYPE SOUL",
@@ -94,13 +99,14 @@
           "title": "TYPE SOUL",
           "description": "Códigos ativos de TYPE SOUL, dicas de jogo e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "volleyball-legends",
       "icon": "/assets/games/volleyball-legends/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-24T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.961Z",
       "translations": {
         "en": {
           "title": "Volleyball Legends",
@@ -110,7 +116,8 @@
           "title": "Volleyball Legends",
           "description": "Códigos ativos de Volleyball Legends, dicas de jogo e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "sailor-piece",
@@ -132,7 +139,7 @@
       "slug": "ghost-driver",
       "icon": "/assets/games/ghost-driver/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-25T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.965Z",
       "translations": {
         "en": {
           "title": "Ghost Driver",
@@ -142,7 +149,8 @@
           "title": "Ghost Driver",
           "description": "Códigos ativos de Ghost Driver, dicas de jogo e instruções de resgate."
         }
-      }
+      },
+      "codeStatus": "active"
     },
     {
       "slug": "steal-an-egg",
@@ -183,7 +191,7 @@
       "icon": "/assets/games/protect-the-house-from-monsters/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-27T12:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.969Z",
       "translations": {
         "en": {
           "title": "Protect The House From Monsters",
@@ -200,7 +208,7 @@
       "icon": "/assets/games/99-nights-in-the-forest/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-27T13:00:00Z",
+      "lastUpdated": "2026-08-30T22:59:49.971Z",
       "translations": {
         "en": {
           "title": "99 Nights in the Forest",
