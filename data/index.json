@@ -253,6 +253,23 @@
           "description": "Códigos ativos de Fish an Anime RNG, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "doors",
+      "icon": "/assets/games/doors/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-08-31T17:36:23.944Z",
+      "translations": {
+        "en": {
+          "title": "Doors",
+          "description": "Active Doors codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Doors",
+          "description": "Códigos ativos de Doors, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

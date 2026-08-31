@@ -1,0 +1,90 @@
+{
+  "slug": "doors",
+  "robloxUrl": "https://www.roblox.com/games/6516141723/DOORS",
+  "assets": {
+    "icon": "/assets/games/doors/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/doors/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "FE4R_RBX",
+    "NO_DATA",
+    "LAZYDEVS",
+    "3rd",
+    "RAGDOLL COMBAT",
+    "PATHSWAP",
+    "JUMP OVER THE BRICK",
+    "VOCAB HAVOC",
+    "SCREECHSUCKS",
+    "8BITRYAN",
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "BIJUU MIKE",
+    "DANTDM",
+    "FIND THE TROLLFACES",
+    "ISHOWSPEED",
+    "KREEKCRAFT",
+    "KUBZ SCOUTS",
+    "LORE",
+    "PENGUINZ0",
+    "RAGDOLL MAYHEM",
+    "RAGDOLL UNIVERSE",
+    "THINKNOODLES",
+    "W",
+    "XQC",
+    "41",
+    "54",
+    "67",
+    "CHEDDAR BALLS",
+    "CRUSADERS",
+    "Gullible",
+    "L"
+  ],
+  "translations": {
+    "en": {
+      "title": "Doors",
+      "description": "Make your way through a maze of frightening rooms while trying to survive attacks from mysterious entities. Explore your surroundings, solve challenges, and use essential items to reach the final door.",
+      "tips": [
+        "Watch for sound and visual cues so you know when to hide before a monster arrives.",
+        "Use lighting items wisely to explore dark areas without exhausting your resources too quickly."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Doors",
+          "description": "Follow these steps to redeem active Doors codes.",
+          "steps": [
+            "Click the Store button at the bottom of the screen.",
+            "Enter an active code in the text field at the top of the store menu.",
+            "Click the checkmark button beside it to redeem the reward."
+          ],
+          "imageAlt": "Doors code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Doors",
+      "description": "Avance por um labirinto de salas assustadoras enquanto tenta sobreviver aos ataques de entidades misteriosas. Explore os cenários, resolva desafios e utilize itens essenciais para alcançar a última porta.",
+      "tips": [
+        "Fique atento aos sinais sonoros e visuais para saber quando se esconder antes da chegada de um monstro.",
+        "Use itens de iluminação com sabedoria para explorar áreas escuras sem esgotar seus recursos rapidamente."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Doors",
+          "description": "Siga estas etapas para resgatar códigos ativos de Doors.",
+          "steps": [
+            "Clique no botão de Loja (Store) localizado na parte inferior da tela.",
+            "Insira o código ativo no campo de texto situado na parte superior do menu da loja.",
+            "Clique no botão de verificação ao lado para resgatar a recompensa."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Doors"
+        }
+      }
+    }
+  }
+}
