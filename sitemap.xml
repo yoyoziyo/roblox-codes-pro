@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.67codes.com/en</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en"/>
   </url>
   <url>
     <loc>https://www.67codes.com/pt-br</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en"/>
@@ -233,5 +233,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/grand-blue"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/grand-blue"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/grand-blue"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/fish-an-anime-rng</loc>
+    <lastmod>2026-08-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/fish-an-anime-rng"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/fish-an-anime-rng"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/fish-an-anime-rng"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/fish-an-anime-rng</loc>
+    <lastmod>2026-08-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/fish-an-anime-rng"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/fish-an-anime-rng"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/fish-an-anime-rng"/>
   </url>
 </urlset>

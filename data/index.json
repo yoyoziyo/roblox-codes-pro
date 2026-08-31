@@ -236,6 +236,23 @@
           "description": "Códigos ativos de Grand Blue, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "fish-an-anime-rng",
+      "icon": "/assets/games/fish-an-anime-rng/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-08-31T17:16:05.037Z",
+      "translations": {
+        "en": {
+          "title": "Fish an Anime RNG",
+          "description": "Active Fish an Anime RNG codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Fish an Anime RNG",
+          "description": "Códigos ativos de Fish an Anime RNG, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

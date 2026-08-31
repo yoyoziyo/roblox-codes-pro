@@ -1,0 +1,65 @@
+{
+  "slug": "fish-an-anime-rng",
+  "robloxUrl": "https://www.roblox.com/games/74729868188364/",
+  "assets": {
+    "icon": "/assets/games/fish-an-anime-rng/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/fish-an-anime-rng/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "Forgotten",
+    "10KMEMBERS",
+    "10KCCU",
+    "20KLIKES",
+    "THANKYOUEVERYONE",
+    "Yangs Home"
+  ],
+  "translations": {
+    "en": {
+      "title": "Fish an Anime RNG",
+      "description": "Combine fishing mechanics with RNG systems in an anime-inspired world. Catch different characters and place them in your base to generate money continuously. Use the resources you earn to purchase upgrades and boost your progress.",
+      "tips": [
+        "Complete the introductory tutorial to unlock the store and reward redemption.",
+        "Invest the money earned at your base in stat upgrades to speed up your progress."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Fish an Anime RNG",
+          "description": "Follow these steps to redeem active Fish an Anime RNG codes.",
+          "steps": [
+            "Complete the short introductory tutorial.",
+            "Click the Store icon on the left side of the screen.",
+            "Enter a valid code in the text box at the bottom of the menu."
+          ],
+          "imageAlt": "Fish an Anime RNG code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Fish an Anime RNG",
+      "description": "Combine mecânicas de pesca com sistemas de RNG em um universo inspirado em animes. Capture diferentes personagens e posicione-os em sua base para gerar dinheiro continuamente. Utilize os recursos acumulados para adquirir melhorias e impulsionar o seu progresso no jogo.",
+      "tips": [
+        "Conclua o tutorial inicial do jogo para liberar o acesso à loja e ao resgate de recompensas.",
+        "Invista os ganhos obtidos na base em melhorias de atributos para acelerar o progresso."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Fish an Anime RNG",
+          "description": "Siga estas etapas para resgatar códigos ativos de Fish an Anime RNG.",
+          "steps": [
+            "Complete o breve tutorial inicial do jogo.",
+            "Clique no ícone de loja (Store) localizado no canto esquerdo da tela.",
+            "Digite um código válido na caixa de texto localizada na parte inferior do menu."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Fish an Anime RNG"
+        }
+      }
+    }
+  }
+}
