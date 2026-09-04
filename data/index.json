@@ -21,7 +21,7 @@
       "slug": "gakuran",
       "icon": "/assets/games/gakuran/icon.webp?v=20260812",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.942Z",
+      "lastUpdated": "2026-09-04T16:03:40.461Z",
       "translations": {
         "en": {
           "title": "Gakuran",
@@ -38,7 +38,7 @@
       "slug": "anime-expeditions",
       "icon": "/assets/games/anime-expeditions/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.948Z",
+      "lastUpdated": "2026-09-04T16:03:40.527Z",
       "translations": {
         "en": {
           "title": "Anime Expeditions",
@@ -49,13 +49,13 @@
           "description": "Códigos ativos de Anime Expeditions, dicas de estratégia e instruções de resgate."
         }
       },
-      "codeStatus": "no-active-codes"
+      "codeStatus": "active"
     },
     {
       "slug": "basketball-zero",
       "icon": "/assets/games/basketball-zero/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.952Z",
+      "lastUpdated": "2026-09-04T16:03:40.578Z",
       "translations": {
         "en": {
           "title": "Basketball Zero",
@@ -72,7 +72,7 @@
       "slug": "dig-and-clean",
       "icon": "/assets/games/dig-and-clean/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.955Z",
+      "lastUpdated": "2026-09-04T16:03:40.626Z",
       "translations": {
         "en": {
           "title": "Dig & Clean",
@@ -139,7 +139,7 @@
       "slug": "ghost-driver",
       "icon": "/assets/games/ghost-driver/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.965Z",
+      "lastUpdated": "2026-09-04T16:03:40.669Z",
       "translations": {
         "en": {
           "title": "Ghost Driver",
@@ -191,7 +191,7 @@
       "icon": "/assets/games/protect-the-house-from-monsters/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-30T22:59:49.969Z",
+      "lastUpdated": "2026-09-04T16:03:40.715Z",
       "translations": {
         "en": {
           "title": "Protect The House From Monsters",
@@ -225,7 +225,7 @@
       "icon": "/assets/games/grand-blue/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-30T22:50:40.144Z",
+      "lastUpdated": "2026-09-04T16:03:40.762Z",
       "translations": {
         "en": {
           "title": "Grand Blue",
@@ -242,7 +242,7 @@
       "icon": "/assets/games/fish-an-anime-rng/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-31T17:16:05.037Z",
+      "lastUpdated": "2026-09-04T16:03:40.809Z",
       "translations": {
         "en": {
           "title": "Fish an Anime RNG",
@@ -259,7 +259,7 @@
       "icon": "/assets/games/doors/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-31T17:36:23.944Z",
+      "lastUpdated": "2026-09-04T16:03:40.854Z",
       "translations": {
         "en": {
           "title": "Doors",
