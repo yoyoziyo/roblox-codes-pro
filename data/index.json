@@ -4,7 +4,7 @@
       "slug": "catch-and-tame",
       "icon": "/assets/games/catch-and-tame/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.930Z",
+      "lastUpdated": "2026-09-06T21:11:29.021Z",
       "translations": {
         "en": {
           "title": "Catch and Tame",
@@ -21,7 +21,7 @@
       "slug": "gakuran",
       "icon": "/assets/games/gakuran/icon.webp?v=20260812",
       "status": "active",
-      "lastUpdated": "2026-09-04T16:03:40.461Z",
+      "lastUpdated": "2026-09-06T21:11:29.089Z",
       "translations": {
         "en": {
           "title": "Gakuran",
@@ -38,7 +38,7 @@
       "slug": "anime-expeditions",
       "icon": "/assets/games/anime-expeditions/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-04T16:03:40.527Z",
+      "lastUpdated": "2026-09-06T21:11:29.126Z",
       "translations": {
         "en": {
           "title": "Anime Expeditions",
@@ -49,7 +49,7 @@
           "description": "Códigos ativos de Anime Expeditions, dicas de estratégia e instruções de resgate."
         }
       },
-      "codeStatus": "active"
+      "codeStatus": "no-active-codes"
     },
     {
       "slug": "basketball-zero",
@@ -89,7 +89,7 @@
       "slug": "type-soul",
       "icon": "/assets/games/type-soul/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.958Z",
+      "lastUpdated": "2026-09-06T21:11:29.164Z",
       "translations": {
         "en": {
           "title": "TYPE SOUL",
@@ -106,7 +106,7 @@
       "slug": "volleyball-legends",
       "icon": "/assets/games/volleyball-legends/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-30T22:59:49.961Z",
+      "lastUpdated": "2026-09-06T21:11:29.203Z",
       "translations": {
         "en": {
           "title": "Volleyball Legends",
@@ -174,7 +174,7 @@
       "icon": "/assets/games/runaways/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-25T18:00:00Z",
+      "lastUpdated": "2026-09-06T21:11:29.242Z",
       "translations": {
         "en": {
           "title": "Runaways",
@@ -225,7 +225,7 @@
       "icon": "/assets/games/grand-blue/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-04T16:03:40.762Z",
+      "lastUpdated": "2026-09-06T21:11:29.279Z",
       "translations": {
         "en": {
           "title": "Grand Blue",
@@ -259,7 +259,7 @@
       "icon": "/assets/games/doors/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-04T16:03:40.854Z",
+      "lastUpdated": "2026-09-06T21:11:29.317Z",
       "translations": {
         "en": {
           "title": "Doors",
@@ -273,3 +273,4 @@
     }
   ]
 }
+

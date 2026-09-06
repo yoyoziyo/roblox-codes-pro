@@ -11,11 +11,8 @@
     "icon": true,
     "thumbnail": true
   },
-  "codeStatus": "active",
-  "codes": [
-    "Update2",
-    "EclipseSoon"
-  ],
+  "codeStatus": "no-active-codes",
+  "codes": [],
   "translations": {
     "en": {
       "title": "Anime Expeditions",
@@ -65,3 +62,4 @@
     }
   }
 }
+

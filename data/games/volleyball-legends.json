@@ -13,9 +13,9 @@
   },
   "codeStatus": "active",
   "codes": [
-    "UPDATE_85",
-    "SHIRO",
-    "BLOCKED"
+    "UPDATE_86",
+    "HAKKA_RETURN",
+    "SPIKER"
   ],
   "translations": {
     "en": {
@@ -64,3 +64,4 @@
     }
   }
 }
+
