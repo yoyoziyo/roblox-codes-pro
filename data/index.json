@@ -287,6 +287,23 @@
           "description": "Códigos ativos de Dress To Impress, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "anime-vanguards",
+      "icon": "/assets/games/anime-vanguards/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-08T17:02:27.269Z",
+      "translations": {
+        "en": {
+          "title": "Anime Vanguards",
+          "description": "Active Anime Vanguards codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Anime Vanguards",
+          "description": "Códigos ativos de Anime Vanguards, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "slug": "anime-vanguards",
+  "robloxUrl": "https://www.roblox.com/games/16146832113/",
+  "assets": {
+    "icon": "/assets/games/anime-vanguards/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/anime-vanguards/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "UPDATE1",
+    "10MVISITS",
+    "ROBLOXDOWN",
+    "SHUTDOWN",
+    "DELAYGUARDS",
+    "RELEASE"
+  ],
+  "translations": {
+    "en": {
+      "title": "Anime Vanguards",
+      "description": "Anime Vanguards is a Roblox tower defense game where players defend their bases by summoning units inspired by popular anime characters. Warriors must be upgraded and positioned strategically to stop increasingly powerful waves of enemies. Teamwork and choosing the right heroes are essential to win each stage.",
+      "tips": [
+        "Save your redeemed gems to summon high-rarity units during special events.",
+        "Prioritize upgrading your main units early in each match to build a solid defense.",
+        "Try different character combinations to cover type disadvantages against bosses."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Anime Vanguards",
+          "description": "Follow these steps to redeem active Anime Vanguards codes.",
+          "steps": [
+            "Find and click the codes icon in the interface's side menu.",
+            "Enter the code exactly as shown in the available text field.",
+            "Press the redeem button to add the rewards to your account."
+          ],
+          "imageAlt": "Anime Vanguards code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Anime Vanguards",
+      "description": "Anime Vanguards é um jogo de tower defense no Roblox onde os jogadores defendem suas bases convocando unidades inspiradas em personagens populares de animes. É necessário evoluir os guerreiros e posicioná-los estrategicamente para conter ondas de inimigos cada vez mais fortes. A cooperação em equipe e a escolha correta dos heróis são fundamentais para alcançar a vitória nos cenários.",
+      "tips": [
+        "Economize suas joias resgatadas para realizar invocações de unidades de alta raridade durante eventos especiais.",
+        "Priorize o fortalecimento das suas unidades principais no início das partidas para garantir uma defesa sólida.",
+        "Experimente diferentes combinações de personagens no time para cobrir desvantagens de tipo contra os chefes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Anime Vanguards",
+          "description": "Siga estas etapas para resgatar códigos ativos de Anime Vanguards.",
+          "steps": [
+            "Localize e clique no ícone de código posicionado no menu lateral da interface.",
+            "Insira o código exatamente como escrito no campo de texto disponibilizado.",
+            "Confirme no botão de resgate para adicionar as recompensas à sua conta."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Anime Vanguards"
+        }
+      }
+    }
+  }
+}
