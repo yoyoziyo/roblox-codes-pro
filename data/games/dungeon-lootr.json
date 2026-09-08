@@ -1,0 +1,66 @@
+{
+  "slug": "dungeon-lootr",
+  "robloxUrl": "https://www.roblox.com/games/106484206883664/",
+  "assets": {
+    "icon": "/assets/games/dungeon-lootr/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/dungeon-lootr/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "RELEASE",
+    "LOOTR",
+    "UPDATE1",
+    "100KLIKES",
+    "BUGSFIXED"
+  ],
+  "translations": {
+    "en": {
+      "title": "Dungeon Lootr",
+      "description": "Dungeon Lootr is a Roblox dungeon-crawling experience focused on fighting waves of monsters and powerful bosses. Players progress through each area while collecting equipment and treasure to strengthen their characters. The main goal is to level up your hero and conquer the dungeon's most dangerous depths.",
+      "tips": [
+        "Use strengthening potions before facing bosses to improve your chances of winning.",
+        "Keep your equipment upgraded using the gold earned during dungeon runs.",
+        "Redeem active codes to obtain free luck potions and chest keys."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Dungeon Lootr",
+          "description": "Follow these steps to redeem active Dungeon Lootr codes.",
+          "steps": [
+            "Click the codes icon in the game's main interface.",
+            "Enter the desired code in the text box.",
+            "Click the confirmation button to redeem the items."
+          ],
+          "imageAlt": "Dungeon Lootr code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Dungeon Lootr",
+      "description": "Dungeon Lootr é uma experiência de exploração de masmorras no Roblox focada no combate contra ondas de monstros e chefes poderosos. Os jogadores avançam pelos cenários coletando equipamentos e tesouros para fortalecer seus personagens. O objetivo principal é evoluir o nível do herói e conquistar as profundezas mais perigosas da masmorra.",
+      "tips": [
+        "Utilize poções de fortalecimento antes de enfrentar chefes para aumentar suas chances de vitória.",
+        "Mantenha seus equipamentos sempre atualizados utilizando o ouro obtido nas explorações.",
+        "Resgate os códigos ativos para conseguir poções de sorte e chaves de baú sem custo."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Dungeon Lootr",
+          "description": "Siga estas etapas para resgatar códigos ativos de Dungeon Lootr.",
+          "steps": [
+            "Clique no ícone de códigos presente na interface principal do jogo.",
+            "Insira o código desejado na caixa de texto.",
+            "Clique no botão de confirmação para resgatar os itens."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Dungeon Lootr"
+        }
+      }
+    }
+  }
+}

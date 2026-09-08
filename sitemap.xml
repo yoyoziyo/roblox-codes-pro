@@ -290,4 +290,18 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/anime-vanguards"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/anime-vanguards"/>
   </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/dungeon-lootr</loc>
+    <lastmod>2026-09-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/dungeon-lootr"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/dungeon-lootr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/dungeon-lootr"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/dungeon-lootr</loc>
+    <lastmod>2026-09-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/dungeon-lootr"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/dungeon-lootr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/dungeon-lootr"/>
+  </url>
 </urlset>

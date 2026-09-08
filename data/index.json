@@ -304,6 +304,23 @@
           "description": "Códigos ativos de Anime Vanguards, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "dungeon-lootr",
+      "icon": "/assets/games/dungeon-lootr/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-08T17:05:08.152Z",
+      "translations": {
+        "en": {
+          "title": "Dungeon Lootr",
+          "description": "Active Dungeon Lootr codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Dungeon Lootr",
+          "description": "Códigos ativos de Dungeon Lootr, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }
