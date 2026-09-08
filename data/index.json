@@ -270,7 +270,23 @@
           "description": "Códigos ativos de Doors, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "dress-to-impress",
+      "icon": "/assets/games/dress-to-impress/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-08T16:58:07.529Z",
+      "translations": {
+        "en": {
+          "title": "Dress To Impress",
+          "description": "Active Dress To Impress codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Dress To Impress",
+          "description": "Códigos ativos de Dress To Impress, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }
-
