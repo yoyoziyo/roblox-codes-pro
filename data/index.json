@@ -321,6 +321,23 @@
           "description": "Códigos ativos de Dungeon Lootr, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "last-stop",
+      "icon": "/assets/games/last-stop/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-08T17:08:39.820Z",
+      "translations": {
+        "en": {
+          "title": "Last Stop",
+          "description": "Active Last Stop codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Last Stop",
+          "description": "Códigos ativos de Last Stop, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

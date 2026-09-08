@@ -1,0 +1,66 @@
+{
+  "slug": "last-stop",
+  "robloxUrl": "https://www.roblox.com/games/85967844112283/",
+  "assets": {
+    "icon": "/assets/games/last-stop/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/last-stop/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": false,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "RELEASE",
+    "1KLIKES",
+    "ZOMBIES",
+    "SURVIVAL",
+    "UPDATE1"
+  ],
+  "translations": {
+    "en": {
+      "title": "Last Stop",
+      "description": "Last Stop is a Roblox action-survival game where players face relentless waves of zombies and dangerous creatures. To survive, players must explore the maps, manage their resources, and acquire increasingly powerful weapons. Cooperating with other survivors is essential to withstand the attacks and progress through each stage.",
+      "tips": [
+        "Save coins early in the match to purchase weapons with greater firepower.",
+        "Keep moving to avoid being surrounded by hordes of enemies.",
+        "Redeem active codes to obtain extra coins and resources when you enter the game."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Last Stop",
+          "description": "Follow these steps to redeem active Last Stop codes.",
+          "steps": [
+            "Find and click the codes button on the main screen.",
+            "Enter the code exactly as shown in the text box.",
+            "Click the redeem button to receive your rewards."
+          ],
+          "imageAlt": "Last Stop code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Last Stop",
+      "description": "Last Stop é um jogo de sobrevivência e ação no Roblox onde os jogadores enfrentam ondas incessantes de zumbis e criaturas perigosas. Para sobreviver, é necessário explorar os mapas, gerenciar seus recursos e adquirir armas cada vez mais potentes. A cooperação com outros sobreviventes é essencial para resistir aos ataques e avançar nas fases.",
+      "tips": [
+        "Economize moedas no início da partida para comprar armas com maior poder de fogo.",
+        "Mantenha-se em constante movimento para evitar ser cercado por hordas de inimigos.",
+        "Resgate os códigos ativos para garantir moedas e recursos extras logo ao entrar no jogo."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Last Stop",
+          "description": "Siga estas etapas para resgatar códigos ativos de Last Stop.",
+          "steps": [
+            "Procure e clique no botão de códigos localizado na tela principal.",
+            "Digite o código exatamente como mostrado na caixa de texto.",
+            "Clique no botão de resgate para receber suas recompensas."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Last Stop"
+        }
+      }
+    }
+  }
+}
