@@ -19,7 +19,7 @@
     },
     {
       "slug": "gakuran",
-      "icon": "/assets/games/gakuran/icon.webp?v=20260812",
+      "icon": "/assets/games/gakuran/icon.webp",
       "status": "active",
       "lastUpdated": "2026-09-06T21:11:29.089Z",
       "translations": {
