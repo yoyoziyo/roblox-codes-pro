@@ -1,0 +1,49 @@
+name: Sync Roblox Icons
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-roblox-icons.yml"
+  schedule:
+    - cron: "23 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-roblox-icons
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Read repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Download current Roblox icons
+        run: npm run sync:roblox -- --icons-only
+
+      - name: Validate project
+        run: node --test tests/sync-roblox-assets.test.js
+
+      - name: Commit changed icons
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No Roblox icon changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/assets/games data/games data/index.json
+          git commit -m "Update Roblox game icons"
+          git push

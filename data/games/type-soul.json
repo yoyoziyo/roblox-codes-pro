@@ -9,7 +9,7 @@
   },
   "assetSync": {
     "icon": true,
-    "thumbnail": true
+    "thumbnail": false
   },
   "codeStatus": "active",
   "codes": [
@@ -75,4 +75,3 @@
     }
   }
 }
-

@@ -68,7 +68,9 @@ export function isAllowedImageUrl(value) {
 }
 
 async function main() {
-  const requestedSlug = process.argv[2];
+  const args = process.argv.slice(2);
+  const iconsOnly = args.includes("--icons-only");
+  const requestedSlug = args.find((argument) => !argument.startsWith("--"));
   if (requestedSlug && !isSafeSlug(requestedSlug)) {
     throw new Error(`Slug inválido: ${requestedSlug}`);
   }
@@ -95,7 +97,7 @@ async function main() {
   let indexChanged = false;
 
   for (const entry of entries) {
-    const result = await syncGame(entry);
+    const result = await syncGame(entry, { iconsOnly });
     summary.processed += 1;
     if (result.failed) summary.failed += 1;
     else if (result.updated) summary.updated += 1;
@@ -123,7 +125,7 @@ async function main() {
   if (summary.failed) process.exitCode = 1;
 }
 
-async function syncGame(entry) {
+async function syncGame(entry, { iconsOnly = false } = {}) {
   const label = entry?.translations?.en?.title || entry?.slug || "Jogo desconhecido";
   console.log("");
   console.log(`[${label}]`);
@@ -161,7 +163,8 @@ async function syncGame(entry) {
   let updated = false;
   let failed = false;
 
-  for (const kind of ["icon", "thumbnail"]) {
+  const assetKinds = iconsOnly ? ["icon"] : ["icon", "thumbnail"];
+  for (const kind of assetKinds) {
     if (game.assetSync?.[kind] !== true) {
       console.log(`– ${assetLabel(kind)} ignorado por assetSync`);
       continue;

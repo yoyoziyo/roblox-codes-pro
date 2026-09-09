@@ -48,7 +48,7 @@ export async function createGame(slug,{rl,codeStatus="active"}={}){
     const game={
       slug,robloxUrl,
       assets:{icon:`/assets/games/${slug}/icon.webp`,banner:"",thumbnail:`/assets/games/${slug}/thumbnail.webp`,redeemTutorial:""},
-      assetSync:{icon:true,thumbnail:true},codeStatus,
+      assetSync:{icon:true,thumbnail:false},codeStatus,
       codes,
       translations:{
         en:{title:titleEn,description:descriptionEn,tips:tipsEn,tutorials:{redeem:{title:`How to redeem codes in ${titleEn}`,description:`Follow these steps to redeem active ${titleEn} codes.`,steps:stepsEn,imageAlt:`${titleEn} code redemption tutorial`}}},
@@ -94,4 +94,3 @@ if(invoked){
   const args=process.argv.slice(2);const slug=args.find(arg=>!arg.startsWith("-")&&!validCodeStatuses.has(arg));const statusArg=args.find(arg=>arg.startsWith("--status="));const statusIndex=args.indexOf("--status");const codeStatus=statusArg?.slice(9)||(statusIndex>=0?args[statusIndex+1]:"active");
   if(!slug){help();process.exitCode=1}else try{await createGame(slug,{codeStatus})}catch(error){console.error(`\nErro: ${error.message}`);process.exitCode=1}
 }
-

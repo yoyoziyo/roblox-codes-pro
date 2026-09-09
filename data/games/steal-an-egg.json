@@ -8,7 +8,7 @@
     "redeemTutorial": ""
   },
   "assetSync": {
-    "icon": false,
+    "icon": true,
     "thumbnail": false
   },
   "codeStatus": "no-code-system",
@@ -50,4 +50,3 @@
     }
   }
 }
-

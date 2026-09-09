@@ -152,6 +152,12 @@ O sincronizador local:
 - mantém os mesmos assets compartilhados entre os idiomas;
 - não faz chamadas no navegador dos visitantes.
 
+Os ícones oficiais também são verificados automaticamente toda segunda-feira pelo
+workflow `.github/workflows/sync-roblox-icons.yml`. Ele executa o sincronizador no
+modo `--icons-only`, preserva thumbnails e banners enviados manualmente e só cria
+um commit quando algum ícone realmente muda. O workflow também pode ser iniciado
+manualmente pela aba **Actions** do GitHub.
+
 ## Assets visuais e tutoriais
 
 Os elementos decorativos compartilhados por todas as páginas ficam em:
@@ -280,4 +286,3 @@ npm run notify:indexnow -- --slug basketball-zero
 ```
 
 Também é possível abrir **Actions > Notify IndexNow > Run workflow** no GitHub. Informe um slug para enviar aquele jogo e as duas Homes; sem slug, a execução manual envia as duas Homes e os três jogos atualizados mais recentemente.
-

@@ -338,6 +338,23 @@
           "description": "Códigos ativos de Last Stop, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "search-for-the-needle",
+      "icon": "/assets/games/search-for-the-needle/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-09T21:01:07.109Z",
+      "translations": {
+        "en": {
+          "title": "Search For The Needle",
+          "description": "Active Search For The Needle codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Search For The Needle",
+          "description": "Códigos ativos de Search For The Needle, dicas de jogo e instruções de resgate."
+        }
+      }
     }
   ]
 }

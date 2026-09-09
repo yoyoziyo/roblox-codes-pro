@@ -1,0 +1,66 @@
+{
+  "slug": "search-for-the-needle",
+  "robloxUrl": "https://www.roblox.com/games/77108422251420/",
+  "assets": {
+    "icon": "/assets/games/search-for-the-needle/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/search-for-the-needle/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "RELEASE",
+    "NEEDLE",
+    "SEARCH",
+    "100LIKES",
+    "FINDFREESPINS"
+  ],
+  "translations": {
+    "en": {
+      "title": "Search For The Needle",
+      "description": "Search For The Needle is a Roblox game where players search through different environments for a needle hidden in a gigantic haystack. Each level increases the difficulty and expands the map, requiring attention to detail and persistence. Players can also use upgrades and tools to speed up their searches and compete for the fastest completion time.",
+      "tips": [
+        "Search the area in organized patterns to avoid checking the same places repeatedly.",
+        "Save your resources to purchase detectors and speed upgrades from the in-game shop.",
+        "Redeem active codes to obtain coins and boosts that help you locate the needle faster."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Search For The Needle",
+          "description": "Follow these steps to redeem active Search For The Needle codes.",
+          "steps": [
+            "Click the codes icon in the main menu interface.",
+            "Enter the code exactly as shown in the text box.",
+            "Press the redeem button to receive your rewards."
+          ],
+          "imageAlt": "Search For The Needle code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Search For The Needle",
+      "description": "Search For The Needle ou 'Procure a agulha' é um jogo no Roblox onde os jogadores vasculham cenários em busca de uma agulha escondida em um palheiro gigantesco. A cada nível, a dificuldade aumenta e o mapa se expande, exigindo atenção aos detalhes e persistência para encontrar o item. Os jogadores também podem usar melhorias e ferramentas para agilizar suas buscas e competir pelo menor tempo de conclusão.",
+      "tips": [
+        "Varra o cenário em padrões organizados para evitar procurar repetidamente nos mesmos locais.",
+        "Economize seus recursos para adquirir detectores e melhorias de velocidade na loja do jogo.",
+        "Resgate os códigos ativos para obter moedas e impulsos que ajudam a localizar a agulha mais rapidamente."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Search For The Needle",
+          "description": "Siga estas etapas para resgatar códigos ativos de Search For The Needle.",
+          "steps": [
+            "Clique no ícone de códigos presente na interface do menu principal.",
+            "Digite o código exatamente como mostrado na caixa de texto.",
+            "Pressione o botão de resgate para receber suas recompensas."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Search For The Needle"
+        }
+      }
+    }
+  }
+}
