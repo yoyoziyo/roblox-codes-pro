@@ -5,7 +5,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4069856205850989" crossorigin="anonymous"></script>
   <title>{{SEO_TITLE}}</title>
   <meta name="description" content="{{SEO_DESCRIPTION}}">
-  <meta property="og:title" content="{{SEO_TITLE}}"><meta property="og:description" content="{{OG_DESCRIPTION}}"><meta property="og:type" content="article"><meta property="og:image" content="{{ABSOLUTE_IMAGE}}"><meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="{{SEO_TITLE}}"><meta property="og:description" content="{{OG_DESCRIPTION}}"><meta property="og:type" content="article"><meta property="og:image" content="{{ABSOLUTE_IMAGE}}"><meta property="article:modified_time" content="{{LAST_UPDATED_ISO}}"><meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="{{CANONICAL}}">
   <link rel="alternate" hreflang="en" href="{{EN_URL}}"><link rel="alternate" hreflang="pt-BR" href="{{PT_URL}}"><link rel="alternate" hreflang="x-default" href="{{EN_URL}}">
   <link rel="icon" href="/assets/ui/favicon.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/game.css">
@@ -25,7 +25,7 @@
   <main>
     <section class="game-hero"><div class="container"><nav class="breadcrumbs" aria-label="{{BREADCRUMB_ARIA}}"><a href="{{HOME_URL}}">{{HOME_LABEL}}</a><span>/</span><a href="{{SEARCH_URL}}">{{GAMES_LABEL}}</a><span>/</span><strong id="breadcrumb-game">{{TITLE}}</strong></nav><div class="game-intro">
       <img class="game-cover" id="game-cover" src="{{THUMBNAIL}}" alt="{{TITLE}}" width="768" height="432">
-      <div class="game-copy"><div class="title-line"><h1 id="game-name">{{TITLE}}</h1><span class="verified icon-swap" aria-label="{{VERIFIED_LABEL}}"><img src="/assets/ui/verified.webp" alt="" onload="this.classList.add('loaded')"><span class="icon-fallback" aria-hidden="true">✓</span></span></div><p id="game-summary">{{DESCRIPTION}}</p><div class="game-actions"><a class="button button-primary" id="codes-link" href="#{{CODES_ID}}">{{VIEW_CODES}}</a><a class="button button-secondary" id="roblox-link" href="{{ROBLOX_URL}}" target="_blank" rel="noopener">{{OPEN_ROBLOX}} <span class="button-icon icon-swap" aria-hidden="true"><img src="/assets/ui/roblox.webp" alt="" onload="this.classList.add('loaded')"><i class="icon-fallback">◇</i></span></a></div></div>
+      <div class="game-copy"><div class="title-line"><h1 id="game-name">{{TITLE}}</h1><span class="verified icon-swap" aria-label="{{VERIFIED_LABEL}}"><img src="/assets/ui/verified.webp" alt="" onload="this.classList.add('loaded')"><span class="icon-fallback" aria-hidden="true">✓</span></span></div><p id="game-summary">{{DESCRIPTION}}</p><div class="game-actions"><a class="button button-primary" id="codes-link" href="#{{CODES_ID}}">{{VIEW_CODES}}</a><a class="button button-secondary" id="roblox-link" href="{{ROBLOX_URL}}" target="_blank" rel="noopener">{{OPEN_ROBLOX}} <span class="button-icon icon-swap" aria-hidden="true"><img src="/assets/ui/roblox.webp" alt="" onload="this.classList.add('loaded')"><i class="icon-fallback">◇</i></span></a></div><p class="game-updated">{{LAST_UPDATED_LABEL}}: <time datetime="{{LAST_UPDATED_ISO}}">{{LAST_UPDATED_DATE}}</time></p></div>
     </div></div></section>
     <div class="container game-layout"><div class="game-main">
       <section class="panel codes-panel" id="{{CODES_ID}}"><div class="panel-head panel-head-row"><h2><span class="heading-glyph icon-swap" aria-hidden="true"><img src="/assets/ui/codes.webp" alt="" onload="this.classList.add('loaded')"><i class="icon-fallback">#</i></span><span id="codes-section-title">{{ACTIVE_CODES}}</span></h2></div><div class="code-list" id="active-code-list"><div class="code-row">{{LOADING_CODES}}</div></div><p class="codes-community" id="codes-community">{{MISSING_CODE}} <a href="https://discord.gg/ZaASHgy6qW" target="_blank" rel="noopener">Discord</a>{{MISSING_CODE_END}}</p></section>
@@ -40,4 +40,3 @@
   <script src="/script.js" defer></script><script src="/game-page.js" defer></script>
 </body>
 </html>
-
