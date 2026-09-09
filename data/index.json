@@ -19,7 +19,7 @@
     },
     {
       "slug": "gakuran",
-      "icon": "/assets/games/gakuran/icon.webp",
+      "icon": "/assets/games/gakuran/icon.webp?v=20260812",
       "status": "active",
       "lastUpdated": "2026-09-06T21:11:29.089Z",
       "translations": {
@@ -344,7 +344,7 @@
       "icon": "/assets/games/search-for-the-needle/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-09T21:01:07.109Z",
+      "lastUpdated": "2026-09-09T21:13:27.524Z",
       "translations": {
         "en": {
           "title": "Search For The Needle",
