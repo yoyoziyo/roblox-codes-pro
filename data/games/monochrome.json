@@ -1,0 +1,52 @@
+{
+  "slug": "monochrome",
+  "robloxUrl": "https://www.roblox.com/games/134208374070897/",
+  "assets": {
+    "icon": "/assets/games/monochrome/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/monochrome/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "MONOCHROME",
+      "description": "MONOCHROME is a Roblox mystery and horror experience where players explore dark, colorless environments to uncover hidden secrets. You must solve puzzles and escape mysterious threats while progressing through the game's levels.",
+      "tips": [
+        "Use headphones to identify the direction of footsteps and threatening sounds around the map.",
+        "Watch for small glowing or interactive objects hidden throughout dark areas.",
+        "Move carefully and avoid running across open areas so you do not attract monsters."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in MONOCHROME",
+          "description": "MONOCHROME does not have a code redemption system yet. If this feature is added in a future update, this page will be updated with the instructions.",
+          "steps": [],
+          "imageAlt": "MONOCHROME code redemption information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "MONOCHROME",
+      "description": "MONOCHROME ou 'MONOCROMÁTICO' é uma experiência de mistério e terror no Roblox onde os jogadores exploram cenários sombrios sem cores para desvendar segredos ocultos. É necessário resolver enigmas e escapar de ameaças misteriosas enquanto avança pelos níveis do jogo.",
+      "tips": [
+        "Jogue com fones de ouvido para identificar a direção dos passos e ruídos das ameaças no mapa.",
+        "Preste atenção aos pequenos objetos brilhantes ou interativos espalhados pelas áreas escuras.",
+        "Avance com cuidado e evite correr em zonas abertas para não atrair a atenção de monstros."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em MONOCHROME",
+          "description": "MONOCHROME ainda não possui um sistema de códigos. Caso essa função seja adicionada em uma atualização futura, esta página será atualizada com as instruções.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de MONOCHROME"
+        }
+      }
+    }
+  }
+}

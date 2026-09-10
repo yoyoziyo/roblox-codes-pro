@@ -355,6 +355,23 @@
           "description": "Códigos ativos de Search For The Needle, dicas de jogo e instruções de resgate."
         }
       }
+    },
+    {
+      "slug": "monochrome",
+      "icon": "/assets/games/monochrome/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-10T16:10:21.900Z",
+      "translations": {
+        "en": {
+          "title": "MONOCHROME",
+          "description": "MONOCHROME does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "MONOCHROME",
+          "description": "MONOCHROME ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
     }
   ]
 }

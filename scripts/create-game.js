@@ -43,16 +43,17 @@ export async function createGame(slug,{rl,codeStatus="active"}={}){
     const descriptionEn=await required(prompt,"Descrição curta em inglês");
     const tipsPt=parseSteps(await required(prompt,"Dicas em português separadas por |"));
     const tipsEn=parseSteps(await required(prompt,"Dicas em inglês separadas por |"));
-    const stepsPt=parseSteps(await required(prompt,"Etapas de resgate em português separadas por |"));
-    const stepsEn=parseSteps(await required(prompt,"Etapas de resgate em inglês separadas por |"));
+    const noCodeSystem=codeStatus==="no-code-system";
+    const stepsPt=noCodeSystem?[]:parseSteps(await required(prompt,"Etapas de resgate em português separadas por |"));
+    const stepsEn=noCodeSystem?[]:parseSteps(await required(prompt,"Etapas de resgate em inglês separadas por |"));
     const game={
       slug,robloxUrl,
       assets:{icon:`/assets/games/${slug}/icon.webp`,banner:"",thumbnail:`/assets/games/${slug}/thumbnail.webp`,redeemTutorial:""},
       assetSync:{icon:true,thumbnail:false},codeStatus,
       codes,
       translations:{
-        en:{title:titleEn,description:descriptionEn,tips:tipsEn,tutorials:{redeem:{title:`How to redeem codes in ${titleEn}`,description:`Follow these steps to redeem active ${titleEn} codes.`,steps:stepsEn,imageAlt:`${titleEn} code redemption tutorial`}}},
-        "pt-BR":{title:titlePt,description:descriptionPt,tips:tipsPt,tutorials:{redeem:{title:`Como resgatar códigos em ${titlePt}`,description:`Siga estas etapas para resgatar códigos ativos de ${titlePt}.`,steps:stepsPt,imageAlt:`Tutorial de resgate de códigos em ${titlePt}`}}}
+        en:{title:titleEn,description:descriptionEn,tips:tipsEn,tutorials:{redeem:{title:`How to redeem codes in ${titleEn}`,description:noCodeSystem?`${titleEn} does not have a code redemption system yet. If this feature is added in a future update, this page will be updated with the instructions.`:`Follow these steps to redeem active ${titleEn} codes.`,steps:stepsEn,imageAlt:noCodeSystem?`${titleEn} code redemption information`:`${titleEn} code redemption tutorial`}}},
+        "pt-BR":{title:titlePt,description:descriptionPt,tips:tipsPt,tutorials:{redeem:{title:`Como resgatar códigos em ${titlePt}`,description:noCodeSystem?`${titlePt} ainda não possui um sistema de códigos. Caso essa função seja adicionada em uma atualização futura, esta página será atualizada com as instruções.`:`Siga estas etapas para resgatar códigos ativos de ${titlePt}.`,steps:stepsPt,imageAlt:noCodeSystem?`Informações sobre códigos de ${titlePt}`:`Tutorial de resgate de códigos em ${titlePt}`}}}
       }
     };
     const indexPath=path.join(root,"data/index.json");
@@ -67,11 +68,11 @@ export async function createGame(slug,{rl,codeStatus="active"}={}){
       translations:{
         en:{
           title:titleEn,
-          description:`Active ${titleEn} codes, gameplay tips, and redemption instructions.`
+          description:noCodeSystem?`${titleEn} does not have a code system yet. Find gameplay tips and information.`:`Active ${titleEn} codes, gameplay tips, and redemption instructions.`
         },
         "pt-BR":{
           title:titlePt,
-          description:`Códigos ativos de ${titlePt}, dicas de jogo e instruções de resgate.`
+          description:noCodeSystem?`${titlePt} ainda não possui sistema de códigos. Confira dicas e informações do jogo.`:`Códigos ativos de ${titlePt}, dicas de jogo e instruções de resgate.`
         }
       }
     });
