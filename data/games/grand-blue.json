@@ -13,16 +13,11 @@
   },
   "codeStatus": "active",
   "codes": [
+    "StarShower",
+    "OmegaCode",
+    "RollWithIt",
     "PocketOfStars",
-    "GrandBlueCode",
-    "CelestialBlessing",
-    "FruitBasket",
-    "NewYouNewCrew",
-    "HappySunday",
-    "10KCCU",
-    "SorryForBreakingGame",
-    "TwitterGoalReached",
-    "Release!"
+    "GrandBlueCode"
   ],
   "translations": {
     "en": {
