@@ -1,0 +1,67 @@
+{
+  "slug": "rivals",
+  "robloxUrl": "https://www.roblox.com/games/17625359962/",
+  "assets": {
+    "icon": "/assets/games/rivals/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/rivals/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": { "icon": true, "thumbnail": false },
+  "codeStatus": "active",
+  "codes": ["FREE197", "COMMUNITY25", "BONUS", "BOOST", "roblox_rtc"],
+  "translations": {
+    "en": {
+      "title": "RIVALS",
+      "description": "RIVALS is a competitive first-person shooter on Roblox where players enter duels and team matches, unlock weapons, complete tasks, and customize their equipment with wraps and other items.",
+      "tips": [
+        "Test different weapons in the shooting range before entering competitive matches.",
+        "Complete the introductory tasks to unlock the shop and code features.",
+        "Adjust your aim sensitivity to improve accuracy during duels.",
+        "Use keys earned from codes to unlock weapons and wrap boxes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in RIVALS",
+          "description": "Follow these steps to redeem an active RIVALS code after unlocking the required features.",
+          "steps": [
+            "Open RIVALS and complete the introductory tasks required by the game.",
+            "Select Shop at the bottom of the screen.",
+            "Open the Rewards section.",
+            "Scroll down to the code area.",
+            "If requested, verify that you follow the indicated developers or groups.",
+            "Enter an active code and press Redeem."
+          ],
+          "imageAlt": "RIVALS code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "RIVALS",
+      "description": "RIVALS é uma experiência competitiva de tiro em primeira pessoa no Roblox. Os jogadores disputam duelos e partidas em equipes, desbloqueiam armas, completam tarefas e personalizam seus equipamentos com wraps e outros itens.",
+      "tips": [
+        "Teste diferentes armas no campo de tiro antes de entrar em partidas competitivas.",
+        "Complete as tarefas iniciais para liberar a loja e o sistema de códigos.",
+        "Ajuste sua mira e sensibilidade para manter maior precisão durante os duelos.",
+        "Use as chaves recebidas por códigos para desbloquear armas e caixas de wraps."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em RIVALS",
+          "description": "Siga estas etapas para resgatar um código ativo de RIVALS após liberar os recursos necessários.",
+          "steps": [
+            "Abra RIVALS e complete as tarefas iniciais exigidas pelo jogo.",
+            "Selecione Shop na parte inferior da tela.",
+            "Abra a seção Rewards.",
+            "Role a página até encontrar a área de códigos.",
+            "Caso solicitado, confirme que você segue os desenvolvedores ou grupos indicados.",
+            "Digite um código ativo e pressione Redeem."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em RIVALS"
+        }
+      }
+    }
+  }
+}
+
+

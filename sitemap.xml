@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.67codes.com/en</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en"/>
   </url>
   <url>
     <loc>https://www.67codes.com/pt-br</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en"/>
@@ -345,5 +345,75 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/monochrome"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/monochrome"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/monochrome"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/brookhaven</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/brookhaven"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/brookhaven"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/brookhaven"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/brookhaven</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/brookhaven"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/brookhaven"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/brookhaven"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/blox-fruits</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/blox-fruits"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/blox-fruits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/blox-fruits"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/blox-fruits</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/blox-fruits"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/blox-fruits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/blox-fruits"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/murder-mystery-2</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/murder-mystery-2"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/murder-mystery-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/murder-mystery-2"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/murder-mystery-2</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/murder-mystery-2"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/murder-mystery-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/murder-mystery-2"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/rivals</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/rivals"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/rivals"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/rivals"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/rivals</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/rivals"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/rivals"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/rivals"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/adopt-me</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/adopt-me"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/adopt-me"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/adopt-me"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/adopt-me</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/adopt-me"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/adopt-me"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/adopt-me"/>
   </url>
 </urlset>

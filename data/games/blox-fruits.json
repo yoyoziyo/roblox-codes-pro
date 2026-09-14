@@ -1,0 +1,69 @@
+{
+  "slug": "blox-fruits",
+  "robloxUrl": "https://www.roblox.com/games/2753915549/",
+  "assets": {
+    "icon": "/assets/games/blox-fruits/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/blox-fruits/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": { "icon": true, "thumbnail": false },
+  "codeStatus": "active",
+  "codes": [
+    "EASTEREXP", "KITT_RESET", "CHANDLER", "SUB2CAPTAINMAUI", "Enyu_is_Pro", "Starcodeheo", "Sub2Fer999", "Magicbus", "JCWK", "kittgaming", "Bluxxy", "fudd10_v2", "SUB2GAMERROBOT_EXP1", "SUB2GAMERROBOT_RESET1", "Sub2UncleKizaru", "Axiore", "Sub2Daigrock", "Bignews", "Sub2NoobMaster123", "StrawHatMaine", "TantaiGaming", "TheGreatAce", "Fudd10", "Sub2OfficialNoobie"
+  ],
+  "translations": {
+    "en": {
+      "title": "Blox Fruits",
+      "description": "Blox Fruits is a Roblox adventure and combat experience where players explore different seas, face enemies and bosses, develop fighting styles, and use special fruits to unlock powerful abilities.",
+      "tips": [
+        "Use double-experience codes when you have time to complete several quests in a row.",
+        "Distribute your stat points according to your main combat style.",
+        "Explore new islands as you level up to find more rewarding quests and enemies.",
+        "Save stat-reset codes for when you want to change your character build."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Blox Fruits",
+          "description": "Follow these steps to redeem an active Blox Fruits code.",
+          "steps": [
+            "Open Blox Fruits and choose Pirates or Marines.",
+            "Wait for your character to enter the game.",
+            "Select the settings icon on the left side of the screen.",
+            "Choose Redeem DLC Code.",
+            "Enter or paste a code in the Reward Codes field.",
+            "Press Redeem to receive the reward."
+          ],
+          "imageAlt": "Blox Fruits code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Blox Fruits",
+      "description": "Blox Fruits é uma experiência de aventura e combate no Roblox em que os jogadores exploram diferentes mares, enfrentam inimigos e chefes, desenvolvem estilos de luta e utilizam frutas especiais para desbloquear habilidades poderosas.",
+      "tips": [
+        "Use códigos de experiência dobrada quando tiver tempo para completar várias missões seguidas.",
+        "Distribua seus pontos de atributos de acordo com seu estilo principal de combate.",
+        "Explore novas ilhas conforme aumenta de nível para encontrar missões e inimigos mais lucrativos.",
+        "Guarde códigos de redefinição de atributos para quando quiser trocar sua estratégia de personagem."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Blox Fruits",
+          "description": "Siga estas etapas para resgatar um código ativo de Blox Fruits.",
+          "steps": [
+            "Abra Blox Fruits e escolha Pirata ou Fuzileiro.",
+            "Aguarde seu personagem entrar no jogo.",
+            "Selecione o ícone de configurações no lado esquerdo da tela.",
+            "Escolha a opção Redeem DLC Code.",
+            "Digite ou cole um código no campo Reward Codes.",
+            "Pressione Redeem para receber a recompensa."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Blox Fruits"
+        }
+      }
+    }
+  }
+}
+
+

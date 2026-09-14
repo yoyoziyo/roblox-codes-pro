@@ -1,0 +1,65 @@
+{
+  "slug": "murder-mystery-2",
+  "robloxUrl": "https://www.roblox.com/games/142823291/",
+  "assets": {
+    "icon": "/assets/games/murder-mystery-2/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/murder-mystery-2/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": { "icon": true, "thumbnail": false },
+  "codeStatus": "no-active-codes",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Murder Mystery 2",
+      "description": "Murder Mystery 2 is a Roblox mystery and survival experience where each round assigns players the roles of innocent, sheriff, or murderer. Innocents must survive, the sheriff protects the group, and the murderer tries to eliminate everyone without being discovered.",
+      "tips": [
+        "As an innocent, observe how other players behave before trusting them.",
+        "Avoid narrow corridors and areas without an escape route.",
+        "As the sheriff, keep your distance from suspects so the weapon is not easily lost.",
+        "Collect coins during rounds to unlock crates and cosmetic items."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Murder Mystery 2",
+          "description": "Murder Mystery 2 currently has no active codes, but new codes can be redeemed through the inventory when available.",
+          "steps": [
+            "Open Murder Mystery 2 and enter the lobby.",
+            "Select Inventory on the left side of the screen.",
+            "Find the code field in the lower-right corner of the inventory.",
+            "Enter an active code exactly as published.",
+            "Press Redeem to confirm."
+          ],
+          "imageAlt": "Murder Mystery 2 code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Murder Mystery 2",
+      "description": "Murder Mystery 2 é uma experiência de mistério e sobrevivência no Roblox em que cada rodada distribui os jogadores entre inocentes, xerife e assassino. Os inocentes precisam sobreviver, o xerife deve proteger o grupo e o assassino tenta eliminar todos sem ser descoberto.",
+      "tips": [
+        "Como inocente, observe o comportamento dos outros jogadores antes de confiar neles.",
+        "Evite permanecer em corredores estreitos ou locais sem saída.",
+        "Como xerife, mantenha distância dos suspeitos para não perder a arma facilmente.",
+        "Colete moedas durante as partidas para desbloquear caixas e itens cosméticos."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Murder Mystery 2",
+          "description": "Murder Mystery 2 não possui códigos ativos atualmente, mas novos códigos poderão ser resgatados pelo inventário quando estiverem disponíveis.",
+          "steps": [
+            "Abra Murder Mystery 2 e entre no lobby.",
+            "Selecione Inventory no lado esquerdo da tela.",
+            "Localize o campo de códigos no canto inferior direito do inventário.",
+            "Digite um código ativo exatamente como publicado.",
+            "Pressione Redeem para confirmar."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Murder Mystery 2"
+        }
+      }
+    }
+  }
+}
+
+

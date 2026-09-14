@@ -1,0 +1,67 @@
+{
+  "slug": "adopt-me",
+  "robloxUrl": "https://www.roblox.com/games/920587237/",
+  "assets": {
+    "icon": "/assets/games/adopt-me/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/adopt-me/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": { "icon": true, "thumbnail": false },
+  "codeStatus": "no-active-codes",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Adopt Me",
+      "description": "Adopt Me is a Roblox roleplaying and collection experience where players adopt pets, care for their needs, decorate homes, participate in events, and trade pets and items with other players.",
+      "tips": [
+        "Complete your pets' needs regularly to age them up and earn Bucks.",
+        "Participate in limited-time events to obtain pets and items that may become unavailable.",
+        "Check every item carefully before confirming a trade.",
+        "Favorite valuable pets to reduce the chance of trading them accidentally."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Adopt Me",
+          "description": "Adopt Me currently has no active public codes, but new codes can be redeemed at the Code Redemption Kiosk when available.",
+          "steps": [
+            "Open Adopt Me and leave your house.",
+            "Travel to Adoption Island.",
+            "Enter the Safety Hub.",
+            "Find the Code Redemption Kiosk near Agent Ruhi.",
+            "Interact with the kiosk and enter an active code.",
+            "Confirm the redemption to receive the reward."
+          ],
+          "imageAlt": "Adopt Me code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Adopt Me",
+      "description": "Adopt Me é uma experiência de roleplay e coleção no Roblox em que os jogadores adotam animais, cuidam de suas necessidades, decoram casas, participam de eventos e negociam pets e itens com outros jogadores.",
+      "tips": [
+        "Complete regularmente as necessidades dos pets para aumentar sua idade e ganhar Bucks.",
+        "Participe dos eventos temporários para conseguir animais e itens que podem deixar de estar disponíveis.",
+        "Confira cuidadosamente todos os itens antes de confirmar uma troca.",
+        "Mantenha pets valiosos como favoritos para evitar trocá-los acidentalmente."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Adopt Me",
+          "description": "Adopt Me não possui códigos públicos ativos atualmente, mas novos códigos poderão ser resgatados no Code Redemption Kiosk quando estiverem disponíveis.",
+          "steps": [
+            "Abra Adopt Me e saia de sua casa.",
+            "Viaje até Adoption Island.",
+            "Entre no Safety Hub.",
+            "Localize o Code Redemption Kiosk próximo ao Agent Ruhi.",
+            "Interaja com o quiosque e digite um código ativo.",
+            "Confirme o resgate para receber a recompensa."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Adopt Me"
+        }
+      }
+    }
+  }
+}
+
+

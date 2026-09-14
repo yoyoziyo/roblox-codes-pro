@@ -372,6 +372,61 @@
           "description": "MONOCHROME ainda não possui sistema de códigos. Confira dicas e informações do jogo."
         }
       }
+    },
+    {
+      "slug": "brookhaven",
+      "icon": "/assets/games/brookhaven/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-14T17:40:50.242Z",
+      "translations": {
+        "en": { "title": "Brookhaven", "description": "Brookhaven has no code system. Find gameplay tips and information." },
+        "pt-BR": { "title": "Brookhaven", "description": "Brookhaven não possui sistema de códigos. Confira dicas e informações do jogo." }
+      }
+    },
+    {
+      "slug": "blox-fruits",
+      "icon": "/assets/games/blox-fruits/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-14T17:40:50.242Z",
+      "translations": {
+        "en": { "title": "Blox Fruits", "description": "Active Blox Fruits codes, gameplay tips, and redemption instructions." },
+        "pt-BR": { "title": "Blox Fruits", "description": "Códigos ativos de Blox Fruits, dicas de jogo e instruções de resgate." }
+      }
+    },
+    {
+      "slug": "murder-mystery-2",
+      "icon": "/assets/games/murder-mystery-2/icon.webp",
+      "status": "active",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-14T17:40:50.242Z",
+      "translations": {
+        "en": { "title": "Murder Mystery 2", "description": "Murder Mystery 2 currently has no active codes. Find gameplay tips and redemption instructions." },
+        "pt-BR": { "title": "Murder Mystery 2", "description": "Murder Mystery 2 não possui códigos ativos no momento. Confira dicas e instruções de resgate." }
+      }
+    },
+    {
+      "slug": "rivals",
+      "icon": "/assets/games/rivals/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-14T17:40:50.242Z",
+      "translations": {
+        "en": { "title": "RIVALS", "description": "Active RIVALS codes, gameplay tips, and redemption instructions." },
+        "pt-BR": { "title": "RIVALS", "description": "Códigos ativos de RIVALS, dicas de jogo e instruções de resgate." }
+      }
+    },
+    {
+      "slug": "adopt-me",
+      "icon": "/assets/games/adopt-me/icon.webp",
+      "status": "active",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-14T17:40:50.242Z",
+      "translations": {
+        "en": { "title": "Adopt Me", "description": "Adopt Me currently has no active codes. Find gameplay tips and redemption instructions." },
+        "pt-BR": { "title": "Adopt Me", "description": "Adopt Me não possui códigos ativos no momento. Confira dicas e instruções de resgate." }
+      }
     }
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "slug": "brookhaven",
+  "robloxUrl": "https://www.roblox.com/games/4924922222/",
+  "assets": {
+    "icon": "/assets/games/brookhaven/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/brookhaven/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": { "icon": true, "thumbnail": false },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Brookhaven",
+      "description": "Brookhaven is a Roblox roleplaying experience where players explore a city, choose homes, drive vehicles, take on different jobs, and create stories with other players.",
+      "tips": [
+        "Use the vehicle menu to move quickly between different parts of the city.",
+        "Explore houses, buildings, and hidden areas to find interesting locations for roleplay.",
+        "Combine characters, outfits, and jobs to create stories with your friends."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Code redemption information for Brookhaven",
+          "description": "Brookhaven does not currently have a promotional code system. Numbers previously shared as Brookhaven codes were music asset IDs used with radios and boomboxes, not reward codes.",
+          "steps": [],
+          "imageAlt": "Brookhaven code redemption information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Brookhaven",
+      "description": "Brookhaven é uma experiência de roleplay no Roblox em que os jogadores exploram uma cidade, escolhem casas, dirigem veículos, assumem diferentes profissões e criam histórias com outras pessoas.",
+      "tips": [
+        "Use o menu de veículos para se deslocar rapidamente pela cidade.",
+        "Explore casas, edifícios e áreas escondidas para encontrar locais interessantes para roleplay.",
+        "Combine personagens, roupas e profissões para criar histórias com seus amigos."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Informações sobre códigos de Brookhaven",
+          "description": "Brookhaven não possui atualmente um sistema de códigos promocionais. Os números anteriormente compartilhados como códigos de Brookhaven eram IDs de músicas usados em rádios e boomboxes, não códigos de recompensa.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Brookhaven"
+        }
+      }
+    }
+  }
+}
+
+
