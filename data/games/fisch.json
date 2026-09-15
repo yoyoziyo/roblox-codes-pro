@@ -1,0 +1,60 @@
+{
+  "slug": "fisch",
+  "robloxUrl": "https://www.roblox.com/games/16732694052/",
+  "assets": {
+    "icon": "/assets/games/fisch/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/fisch/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "scarlet",
+    "TemporarySubmarine",
+    "CARBON"
+  ],
+  "translations": {
+    "en": {
+      "title": "Fisch",
+      "description": "Explore fishing areas, discover new species, and upgrade your equipment.",
+      "tips": [
+        "Try different rods and bait.",
+        "Visit new areas to discover more species."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Fisch",
+          "description": "Follow these steps to redeem codes in Fisch.",
+          "steps": [
+            "Open Menu and scroll to the Codes section.",
+            "Enter the code and press Enter."
+          ],
+          "imageAlt": "Fisch code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Fisch",
+      "description": "Explore áreas de pesca, descubra novas espécies e melhore seus equipamentos.",
+      "tips": [
+        "Experimente diferentes varas e iscas.",
+        "Visite novas áreas para encontrar outras espécies."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Fisch",
+          "description": "Siga estas etapas para resgatar códigos em Fisch.",
+          "steps": [
+            "Abra Menu e role até a seção Codes.",
+            "Digite o código e pressione Enter."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Fisch"
+        }
+      }
+    }
+  }
+}

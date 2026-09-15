@@ -1,0 +1,58 @@
+{
+  "slug": "jujutsu-shenanigans",
+  "robloxUrl": "https://www.roblox.com/games/9391468976/",
+  "assets": {
+    "icon": "/assets/games/jujutsu-shenanigans/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/jujutsu-shenanigans/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "A7D2L26RNEPG74A3Q"
+  ],
+  "translations": {
+    "en": {
+      "title": "Jujutsu Shenanigans",
+      "description": "Battle other players using anime-inspired characters and abilities.",
+      "tips": [
+        "Practice your character's abilities before entering fights.",
+        "Use the environment to reposition during combat."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Jujutsu Shenanigans",
+          "description": "Follow these steps to redeem codes in Jujutsu Shenanigans.",
+          "steps": [
+            "Open Shop and select Rewards.",
+            "Enter the code and click Redeem."
+          ],
+          "imageAlt": "Jujutsu Shenanigans code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Jujutsu Shenanigans",
+      "description": "Enfrente outros jogadores com personagens e habilidades inspirados em anime.",
+      "tips": [
+        "Pratique as habilidades do seu personagem antes de lutar.",
+        "Use o cenário para se reposicionar durante os combates."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Jujutsu Shenanigans",
+          "description": "Siga estas etapas para resgatar códigos em Jujutsu Shenanigans.",
+          "steps": [
+            "Abra Shop e selecione Rewards.",
+            "Digite o código e clique em Redeem."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Jujutsu Shenanigans"
+        }
+      }
+    }
+  }
+}

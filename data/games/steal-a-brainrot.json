@@ -1,0 +1,56 @@
+{
+  "slug": "steal-a-brainrot",
+  "robloxUrl": "https://www.roblox.com/games/109983668079237/",
+  "assets": {
+    "icon": "/assets/games/steal-a-brainrot/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/steal-a-brainrot/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-active-codes",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Steal a Brainrot",
+      "description": "Collect brainrots, earn money, and protect your base from theft.",
+      "tips": [
+        "Protect your most valuable brainrots.",
+        "Stay near the conveyor and save money to buy new brainrots."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Steal a Brainrot",
+          "description": "Follow these steps to redeem codes in Steal a Brainrot.",
+          "steps": [
+            "Click CODES on the left side.",
+            "Enter a code and press Submit."
+          ],
+          "imageAlt": "Steal a Brainrot code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Steal a Brainrot",
+      "description": "Colecione brainrots, gere dinheiro e proteja sua base contra roubos.",
+      "tips": [
+        "Proteja os brainrots mais valiosos da sua base.",
+        "Fique perto da esteira e reserve dinheiro para comprar novos brainrots."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Steal a Brainrot",
+          "description": "Siga estas etapas para resgatar códigos em Steal a Brainrot.",
+          "steps": [
+            "Clique em CODES na lateral esquerda.",
+            "Digite o código e pressione Submit."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Steal a Brainrot"
+        }
+      }
+    }
+  }
+}

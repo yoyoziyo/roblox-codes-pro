@@ -427,6 +427,91 @@
         "en": { "title": "Adopt Me", "description": "Adopt Me currently has no active codes. Find gameplay tips and redemption instructions." },
         "pt-BR": { "title": "Adopt Me", "description": "Adopt Me não possui códigos ativos no momento. Confira dicas e instruções de resgate." }
       }
+    },
+{
+  "slug": "speed-keyboard-escape",
+  "icon": "/assets/games/speed-keyboard-escape/icon.webp",
+  "status": "active",
+  "codeStatus": "no-active-codes",
+  "lastUpdated": "2026-09-15T15:56:52.954Z",
+  "translations": {
+    "en": {
+      "title": "Speed Keyboard Escape",
+      "description": "Speed Keyboard Escape has no confirmed active codes right now. Find gameplay tips and redemption instructions."
+    },
+    "pt-BR": {
+      "title": "Speed Keyboard Escape",
+      "description": "Speed Keyboard Escape não tem códigos ativos confirmados no momento. Confira dicas e instruções de resgate."
     }
+  }
+},
+    {
+  "slug": "jujutsu-shenanigans",
+  "icon": "/assets/games/jujutsu-shenanigans/icon.webp",
+  "status": "active",
+  "codeStatus": "active",
+  "lastUpdated": "2026-09-15T15:56:52.954Z",
+  "translations": {
+    "en": {
+      "title": "Jujutsu Shenanigans",
+      "description": "Active Jujutsu Shenanigans codes, gameplay tips, and redemption instructions."
+    },
+    "pt-BR": {
+      "title": "Jujutsu Shenanigans",
+      "description": "Códigos ativos de Jujutsu Shenanigans, dicas de jogo e instruções de resgate."
+    }
+  }
+},
+    {
+  "slug": "steal-a-brainrot",
+  "icon": "/assets/games/steal-a-brainrot/icon.webp",
+  "status": "active",
+  "codeStatus": "no-active-codes",
+  "lastUpdated": "2026-09-15T15:56:52.954Z",
+  "translations": {
+    "en": {
+      "title": "Steal a Brainrot",
+      "description": "Steal a Brainrot has no confirmed active codes right now. Find gameplay tips and redemption instructions."
+    },
+    "pt-BR": {
+      "title": "Steal a Brainrot",
+      "description": "Steal a Brainrot não tem códigos ativos confirmados no momento. Confira dicas e instruções de resgate."
+    }
+  }
+},
+    {
+  "slug": "fish-it",
+  "icon": "/assets/games/fish-it/icon.webp",
+  "status": "active",
+  "codeStatus": "active",
+  "lastUpdated": "2026-09-15T15:56:52.954Z",
+  "translations": {
+    "en": {
+      "title": "Fish It!",
+      "description": "Active Fish It! codes, gameplay tips, and redemption instructions."
+    },
+    "pt-BR": {
+      "title": "Fish It!",
+      "description": "Códigos ativos de Fish It!, dicas de jogo e instruções de resgate."
+    }
+  }
+},
+    {
+  "slug": "fisch",
+  "icon": "/assets/games/fisch/icon.webp",
+  "status": "active",
+  "codeStatus": "active",
+  "lastUpdated": "2026-09-15T15:56:52.954Z",
+  "translations": {
+    "en": {
+      "title": "Fisch",
+      "description": "Active Fisch codes, gameplay tips, and redemption instructions."
+    },
+    "pt-BR": {
+      "title": "Fisch",
+      "description": "Códigos ativos de Fisch, dicas de jogo e instruções de resgate."
+    }
+  }
+}
   ]
 }

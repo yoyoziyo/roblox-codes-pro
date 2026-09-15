@@ -1,0 +1,60 @@
+{
+  "slug": "fish-it",
+  "robloxUrl": "https://www.roblox.com/games/121864768012064/",
+  "assets": {
+    "icon": "/assets/games/fish-it/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/fish-it/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "ELEMENTAL26",
+    "MERDEKA",
+    "WORMHYPE"
+  ],
+  "translations": {
+    "en": {
+      "title": "Fish It!",
+      "description": "Fish, explore islands, sell catches, and upgrade your equipment.",
+      "tips": [
+        "Sell fish to buy better rods and bait.",
+        "Reach level 10 to unlock code redemption."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Fish It!",
+          "description": "Follow these steps to redeem codes in Fish It!.",
+          "steps": [
+            "Open Shop and scroll to the ENTER CODE! section.",
+            "Enter the code and click REDEEM."
+          ],
+          "imageAlt": "Fish It! code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Fish It!",
+      "description": "Pesque, explore ilhas, venda suas capturas e melhore os equipamentos.",
+      "tips": [
+        "Venda peixes para comprar varas e iscas melhores.",
+        "Alcance o nível 10 para liberar o uso de códigos."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Fish It!",
+          "description": "Siga estas etapas para resgatar códigos em Fish It!.",
+          "steps": [
+            "Abra Shop e role até a seção ENTER CODE!.",
+            "Digite o código e clique em REDEEM."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Fish It!"
+        }
+      }
+    }
+  }
+}

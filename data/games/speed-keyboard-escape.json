@@ -1,0 +1,56 @@
+{
+  "slug": "speed-keyboard-escape",
+  "robloxUrl": "https://www.roblox.com/games/95082159892680/",
+  "assets": {
+    "icon": "/assets/games/speed-keyboard-escape/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/speed-keyboard-escape/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-active-codes",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Speed Keyboard Escape",
+      "description": "Run across keyboard keys to gain speed and clear escape stages.",
+      "tips": [
+        "Run across the keys to increase your speed.",
+        "Check your Speed counter after redeeming a code."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Speed Keyboard Escape",
+          "description": "Follow these steps to redeem codes in Speed Keyboard Escape.",
+          "steps": [
+            "Open the codes button in the upper-left corner.",
+            "Enter a code and confirm with OK or Redeem."
+          ],
+          "imageAlt": "Speed Keyboard Escape code redemption tutorial"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Speed Keyboard Escape",
+      "description": "Percorra teclas para ganhar velocidade e superar etapas de fuga.",
+      "tips": [
+        "Percorra as teclas para aumentar sua velocidade.",
+        "Confira o contador de Speed depois de resgatar um código."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Speed Keyboard Escape",
+          "description": "Siga estas etapas para resgatar códigos em Speed Keyboard Escape.",
+          "steps": [
+            "Abra o botão de códigos no canto superior esquerdo.",
+            "Digite o código e confirme em OK ou Redeem."
+          ],
+          "imageAlt": "Tutorial de resgate de códigos em Speed Keyboard Escape"
+        }
+      }
+    }
+  }
+}

@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.67codes.com/en</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en"/>
   </url>
   <url>
     <loc>https://www.67codes.com/pt-br</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en"/>
@@ -415,5 +415,75 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/adopt-me"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/adopt-me"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/adopt-me"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/speed-keyboard-escape</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/speed-keyboard-escape"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/speed-keyboard-escape"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/speed-keyboard-escape"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/speed-keyboard-escape</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/speed-keyboard-escape"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/speed-keyboard-escape"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/speed-keyboard-escape"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/jujutsu-shenanigans</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/jujutsu-shenanigans"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/jujutsu-shenanigans"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/jujutsu-shenanigans"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/jujutsu-shenanigans</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/jujutsu-shenanigans"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/jujutsu-shenanigans"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/jujutsu-shenanigans"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/steal-a-brainrot</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/steal-a-brainrot"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/steal-a-brainrot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/steal-a-brainrot"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/steal-a-brainrot</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/steal-a-brainrot"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/steal-a-brainrot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/steal-a-brainrot"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/fish-it</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/fish-it"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/fish-it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/fish-it"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/fish-it</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/fish-it"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/fish-it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/fish-it"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/games/fisch</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/fisch"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/fisch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/fisch"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/games/fisch</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/fisch"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/games/fisch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/games/fisch"/>
   </url>
 </urlset>
