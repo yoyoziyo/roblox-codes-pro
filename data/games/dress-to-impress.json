@@ -1,6 +1,6 @@
 {
   "slug": "dress-to-impress",
-  "robloxUrl": "https://www.roblox.com/games/15101393044/",
+  "robloxUrl": "https://www.roblox.com/games/15101393044/Dress-To-Impress",
   "assets": {
     "icon": "/assets/games/dress-to-impress/icon.webp",
     "banner": "",
@@ -13,57 +13,47 @@
   },
   "codeStatus": "active",
   "codes": [
+    "RDC2026",
     "10BILLION",
     "LANADOLLDRESS",
-    "LNY",
-    "LIONDANCER",
-    "KATSEYE",
-    "BHM26",
     "CA11MEHHALEY",
-    "VANILLAMACE",
+    "CH00P1E_B4CK_AGA1N",
     "PIXIIUWU",
     "3NCHANTEDD1ZZY",
     "ANGELT4NKED",
     "ELLA",
     "1CON1CF4TMA",
-    "CH00P1E_1S_B4CK",
     "MEGANPLAYSBOOTS",
-    "D1ORST4R",
     "S3M_0W3N_Y4Y",
     "KITTYUUHH",
     "BELALASLAY",
     "KREEK",
-    "LANATUTU",
     "ITSJUSTNICHOLAS",
     "M3RM4ID",
-    "C4LLMEHH4LEY",
     "IBELLASLAY",
     "SUBM15CY",
     "ASHLEYBUNNI",
     "LABOOTS",
     "LANA",
     "LEAHASHE",
-    "UMOYAE",
     "TEKKYOOZ",
     "LANABOW"
   ],
   "translations": {
     "en": {
       "title": "Dress To Impress",
-      "description": "Dress To Impress is a Roblox fashion game where players create themed outfits and walk the runway. In each round, participants vote for the best looks to determine the winners. The main goal is to expand your wardrobe with stylish clothing and accessories and earn the highest scores.",
+      "description": "Create outfits for randomly selected themes, walk the runway, and receive votes from other players.",
       "tips": [
-        "Earn cash during matches to unlock new clothing pieces and exclusive items in the dressing room.",
-        "Layer clothing and accessories to create unique outfits that match the round's theme.",
-        "Redeem active codes to obtain special dresses, shoes, and accessories without spending Robux."
+        "Build your outfit around the theme selected for the round.",
+        "Double-check every letter and number before redeeming a code."
       ],
       "tutorials": {
         "redeem": {
           "title": "How to redeem codes in Dress To Impress",
           "description": "Follow these steps to redeem active Dress To Impress codes.",
           "steps": [
-            "Click the handbag icon in the menu on the left side of the screen.",
-            "Type or paste a code into the text field.",
-            "Press the confirmation button to receive the rewards in your inventory."
+            "Click the handbag or codes icon on the left side of the screen.",
+            "Enter one code at a time and click Redeem."
           ],
           "imageAlt": "Dress To Impress code redemption tutorial"
         }
@@ -71,20 +61,18 @@
     },
     "pt-BR": {
       "title": "Dress To Impress",
-      "description": "Dress To Impress é um jogo de moda do Roblox no qual os jogadores criam visuais temáticos e desfilam em uma passarela. A cada rodada, os participantes votam nos melhores trajes para definir os vencedores da competição. O objetivo principal é expandir o guarda-roupa com roupas e acessórios estilosos para conquistar as maiores pontuações.",
+      "description": "Crie looks para temas sorteados, desfile e receba votos dos outros jogadores.",
       "tips": [
-        "Acumule dinheiro nas partidas para desbloquear novas peças de roupa e itens exclusivos no provador.",
-        "Aposte na sobreposição de peças e acessórios para criar composições únicas e alinhadas ao tema proposto.",
-        "Resgate os códigos ativos para obter vestidos, sapatos e acessórios especiais sem precisar gastar Robux."
+        "Monte o visual pensando no tema da rodada.",
+        "Confira letras e números dos códigos antes de resgatar."
       ],
       "tutorials": {
         "redeem": {
           "title": "Como resgatar códigos em Dress To Impress",
           "description": "Siga estas etapas para resgatar códigos ativos de Dress To Impress.",
           "steps": [
-            "Clique no ícone de bolsa localizado no menu no canto esquerdo da tela.",
-            "Digite ou cole o código no campo de texto.",
-            "Pressione o botão de confirmação para receber as recompensas em seu inventário."
+            "Clique no ícone de bolsa ou códigos na lateral esquerda.",
+            "Digite um código por vez e clique em Redeem."
           ],
           "imageAlt": "Tutorial de resgate de códigos em Dress To Impress"
         }

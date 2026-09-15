@@ -1,0 +1,50 @@
+{
+  "slug": "animal-hospital",
+  "robloxUrl": "https://www.roblox.com/games/78515283254292/Animal-Hospital",
+  "assets": {
+    "icon": "/assets/games/animal-hospital/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/animal-hospital/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Animal Hospital (Anomaly)",
+      "description": "Work the night shift at a hospital and identify patients displaying abnormal behavior.",
+      "tips": [
+        "Observe patients carefully before taking action.",
+        "Watch for unusual changes in the environment."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Animal Hospital (Anomaly)",
+          "description": "Animal Hospital (Anomaly) does not have a confirmed code redemption system. If one is added, this page will be updated.",
+          "steps": [],
+          "imageAlt": "Animal Hospital (Anomaly) code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Animal Hospital (Anomaly)",
+      "description": "Trabalhe no turno da noite de um hospital e identifique pacientes com comportamentos anormais.",
+      "tips": [
+        "Observe os pacientes antes de agir.",
+        "Fique atento a mudanças estranhas no ambiente."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Animal Hospital (Anomaly)",
+          "description": "Animal Hospital (Anomaly) não possui um sistema de resgate de códigos confirmado. Se ele for adicionado, esta página será atualizada.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Animal Hospital (Anomaly)"
+        }
+      }
+    }
+  }
+}

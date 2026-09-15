@@ -1,0 +1,50 @@
+{
+  "slug": "clean-all-the-leaves",
+  "robloxUrl": "https://www.roblox.com/games/92637789841354/Clean-all-the-leaves",
+  "assets": {
+    "icon": "/assets/games/clean-all-the-leaves/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/clean-all-the-leaves/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Clean all the leaves!",
+      "description": "Clear the yard's leaves in time, upgrade tools, and discover the secret ending.",
+      "tips": [
+        "Upgrade your tools to clean faster.",
+        "Complete every area to reach 100%."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Clean all the leaves!",
+          "description": "Clean all the leaves! does not have a confirmed code redemption system. If one is added, this page will be updated.",
+          "steps": [],
+          "imageAlt": "Clean all the leaves! code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Clean all the leaves!",
+      "description": "Limpe as folhas do quintal a tempo, melhore ferramentas e descubra o final secreto.",
+      "tips": [
+        "Melhore as ferramentas para limpar mais rápido.",
+        "Complete todas as áreas para chegar a 100%."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Clean all the leaves!",
+          "description": "Clean all the leaves! não possui um sistema de resgate de códigos confirmado. Se ele for adicionado, esta página será atualizada.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Clean all the leaves!"
+        }
+      }
+    }
+  }
+}

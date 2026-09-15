@@ -276,7 +276,7 @@
       "icon": "/assets/games/dress-to-impress/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-08T16:58:07.529Z",
+      "lastUpdated": "2026-09-15T17:28:03.207Z",
       "translations": {
         "en": {
           "title": "Dress To Impress",
@@ -512,6 +512,74 @@
       "description": "Códigos ativos de Fisch, dicas de jogo e instruções de resgate."
     }
   }
-}
+    },
+{
+      "slug": "pet-simulator-99",
+      "icon": "/assets/games/pet-simulator-99/icon.webp",
+      "status": "active",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "translations": {
+        "en": {
+          "title": "Pet Simulator 99!",
+          "description": "Pet Simulator 99! currently has no public active codes. Find gameplay tips and redemption information."
+        },
+        "pt-BR": {
+          "title": "Pet Simulator 99!",
+          "description": "Pet Simulator 99! não possui códigos públicos ativos no momento. Confira dicas e informações de resgate."
+        }
+      }
+    },
+{
+      "slug": "animal-hospital",
+      "icon": "/assets/games/animal-hospital/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "translations": {
+        "en": {
+          "title": "Animal Hospital (Anomaly)",
+          "description": "Animal Hospital (Anomaly) does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Animal Hospital (Anomaly)",
+          "description": "Animal Hospital (Anomaly) ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
+    },
+{
+      "slug": "catalog-avatar-creator",
+      "icon": "/assets/games/catalog-avatar-creator/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "translations": {
+        "en": {
+          "title": "Catalog Avatar Creator",
+          "description": "Active Catalog Avatar Creator codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Catalog Avatar Creator",
+          "description": "Códigos ativos de Catalog Avatar Creator, dicas de jogo e instruções de resgate."
+        }
+      }
+    },
+{
+      "slug": "clean-all-the-leaves",
+      "icon": "/assets/games/clean-all-the-leaves/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "translations": {
+        "en": {
+          "title": "Clean all the leaves!",
+          "description": "Clean all the leaves! does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Clean all the leaves!",
+          "description": "Clean all the leaves! ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
+    }
   ]
 }

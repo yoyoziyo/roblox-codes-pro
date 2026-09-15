@@ -1,0 +1,56 @@
+{
+  "slug": "pet-simulator-99",
+  "robloxUrl": "https://www.roblox.com/games/8737899170/Pet-Simulator-99",
+  "assets": {
+    "icon": "/assets/games/pet-simulator-99/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/pet-simulator-99/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-active-codes",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Pet Simulator 99!",
+      "description": "Collect pets, hatch eggs, and use your team to earn coins and progress.",
+      "tips": [
+        "Upgrade your pets to earn coins faster.",
+        "Physical product codes are unique and should not be shared as free public codes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Pet Simulator 99!",
+          "description": "Follow these steps to redeem a code in Pet Simulator 99!.",
+          "steps": [
+            "If you have a product code, open Shop in the game on a computer.",
+            "Scroll to Redeem and enter the code included with the product."
+          ],
+          "imageAlt": "Pet Simulator 99! code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Pet Simulator 99!",
+      "description": "Colecione pets, abra ovos e use sua equipe para conseguir moedas e avançar.",
+      "tips": [
+        "Melhore seus pets para ganhar moedas mais rápido.",
+        "Códigos de produtos físicos são individuais e não devem ser compartilhados como códigos gratuitos."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Pet Simulator 99!",
+          "description": "Siga estas etapas para resgatar um código em Pet Simulator 99!.",
+          "steps": [
+            "Se tiver um código de produto, abra Shop no jogo usando um computador.",
+            "Role até Redeem e digite o código recebido com o produto."
+          ],
+          "imageAlt": "Informações sobre códigos de Pet Simulator 99!"
+        }
+      }
+    }
+  }
+}

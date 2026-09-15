@@ -1,0 +1,59 @@
+{
+  "slug": "catalog-avatar-creator",
+  "robloxUrl": "https://www.roblox.com/games/7041939546/Catalog-Avatar-Creator",
+  "assets": {
+    "icon": "/assets/games/catalog-avatar-creator/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/catalog-avatar-creator/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "DAPPER",
+    "MASCOT"
+  ],
+  "translations": {
+    "en": {
+      "title": "Catalog Avatar Creator",
+      "description": "Try catalog items, create avatars, and save your outfits.",
+      "tips": [
+        "Try items before purchasing them.",
+        "Do not confuse promotional codes with shared outfit codes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Catalog Avatar Creator",
+          "description": "Follow these steps to redeem a code in Catalog Avatar Creator.",
+          "steps": [
+            "Open the in-game chat.",
+            "Type /redeem, add a space and the code, then press Enter."
+          ],
+          "imageAlt": "Catalog Avatar Creator code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Catalog Avatar Creator",
+      "description": "Experimente itens do catálogo, monte avatares e salve seus visuais.",
+      "tips": [
+        "Experimente os itens antes de comprá-los.",
+        "Não confunda códigos promocionais com códigos de looks compartilhados."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Catalog Avatar Creator",
+          "description": "Siga estas etapas para resgatar um código em Catalog Avatar Creator.",
+          "steps": [
+            "Abra o chat dentro do jogo.",
+            "Digite /redeem, adicione um espaço e o código, depois pressione Enter."
+          ],
+          "imageAlt": "Informações sobre códigos de Catalog Avatar Creator"
+        }
+      }
+    }
+  }
+}
