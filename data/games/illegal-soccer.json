@@ -1,0 +1,52 @@
+{
+  "slug": "illegal-soccer",
+  "robloxUrl": "https://www.roblox.com/games/126987974021910/",
+  "assets": {
+    "icon": "/assets/games/illegal-soccer/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/illegal-soccer/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Illegal Soccer",
+      "description": "Play soccer without referees using weapons, jetpacks, grappling hooks, and other equipment.",
+      "tips": [
+        "Practice shooting and passing before matches.",
+        "Use equipment to create space and regain possession.",
+        "Watch for obstacles left by opponents."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Illegal Soccer",
+          "description": "Illegal Soccer does not have a confirmed promotional code redemption system. If one is added, this page will be updated.",
+          "steps": [],
+          "imageAlt": "Illegal Soccer code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Illegal Soccer",
+      "description": "Jogue futebol sem árbitros usando armas, jetpacks, ganchos e outros equipamentos.",
+      "tips": [
+        "Pratique chutes e passes antes das partidas.",
+        "Use os equipamentos para criar espaço e recuperar a bola.",
+        "Observe os obstáculos deixados pelos adversários."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Illegal Soccer",
+          "description": "Illegal Soccer não possui um sistema de resgate de códigos promocionais confirmado. Se ele for adicionado, esta página será atualizada.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Illegal Soccer"
+        }
+      }
+    }
+  }
+}

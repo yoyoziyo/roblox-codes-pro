@@ -631,6 +631,91 @@
           "description": "Violence District ainda não possui sistema de códigos. Confira dicas e informações do jogo."
         }
       }
+    },
+    {
+      "slug": "anime-dice",
+      "icon": "/assets/games/anime-dice/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "translations": {
+        "en": {
+          "title": "Anime Dice",
+          "description": "Active Anime Dice codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Anime Dice",
+          "description": "Códigos ativos de Anime Dice, dicas de jogo e instruções de resgate."
+        }
+      }
+    },
+    {
+      "slug": "sols-rng",
+      "icon": "/assets/games/sols-rng/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "translations": {
+        "en": {
+          "title": "Sol's RNG",
+          "description": "Active Sol's RNG codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Sol's RNG",
+          "description": "Códigos ativos de Sol's RNG, dicas de jogo e instruções de resgate."
+        }
+      }
+    },
+    {
+      "slug": "the-strongest-battlegrounds",
+      "icon": "/assets/games/the-strongest-battlegrounds/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "translations": {
+        "en": {
+          "title": "The Strongest Battlegrounds",
+          "description": "The Strongest Battlegrounds does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "The Strongest Battlegrounds",
+          "description": "The Strongest Battlegrounds ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
+    },
+    {
+      "slug": "illegal-soccer",
+      "icon": "/assets/games/illegal-soccer/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "translations": {
+        "en": {
+          "title": "Illegal Soccer",
+          "description": "Illegal Soccer does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Illegal Soccer",
+          "description": "Illegal Soccer ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
+    },
+    {
+      "slug": "murderers-vs-sheriffs",
+      "icon": "/assets/games/murderers-vs-sheriffs/icon.webp",
+      "status": "active",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "translations": {
+        "en": {
+          "title": "Murderers VS Sheriffs",
+          "description": "Murderers VS Sheriffs has no confirmed active codes right now. Find gameplay tips and code information."
+        },
+        "pt-BR": {
+          "title": "Murderers VS Sheriffs",
+          "description": "Murderers VS Sheriffs não tem códigos ativos confirmados no momento. Confira dicas e informações sobre códigos."
+        }
+      }
     }
   ]
 }

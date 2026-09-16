@@ -1,0 +1,65 @@
+{
+  "slug": "sols-rng",
+  "robloxUrl": "https://www.roblox.com/games/15532962292/",
+  "assets": {
+    "icon": "/assets/games/sols-rng/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/sols-rng/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "SRY4DEALY",
+    "UPD20260905",
+    "WEARESORRY",
+    "20260815UPD"
+  ],
+  "translations": {
+    "en": {
+      "title": "Sol's RNG",
+      "description": "Roll for rare auras, craft equipment, and use potions to improve your luck.",
+      "tips": [
+        "Save your best potions for longer rolling sessions.",
+        "Craft equipment that increases your luck.",
+        "Check crafting requirements before discarding an aura."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Sol's RNG",
+          "description": "Follow these steps to redeem codes in Sol's RNG.",
+          "steps": [
+            "Open Menu, Settings, and Miscellaneous.",
+            "Click Open next to Redeem Code.",
+            "Enter a code and press Redeem."
+          ],
+          "imageAlt": "Sol's RNG code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Sol's RNG",
+      "description": "Role para obter auras raras, crie equipamentos e use poções para melhorar sua sorte.",
+      "tips": [
+        "Guarde as melhores poções para sessões longas de rolls.",
+        "Crie equipamentos que aumentem sua sorte.",
+        "Confira os requisitos de criação antes de descartar uma aura."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Sol's RNG",
+          "description": "Siga estas etapas para resgatar códigos em Sol's RNG.",
+          "steps": [
+            "Abra Menu, Settings e Miscellaneous.",
+            "Clique em Open ao lado de Redeem Code.",
+            "Digite o código e pressione Redeem."
+          ],
+          "imageAlt": "Informações sobre códigos de Sol's RNG"
+        }
+      }
+    }
+  }
+}

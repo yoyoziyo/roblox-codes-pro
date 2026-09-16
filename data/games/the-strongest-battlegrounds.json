@@ -1,0 +1,52 @@
+{
+  "slug": "the-strongest-battlegrounds",
+  "robloxUrl": "https://www.roblox.com/games/10449761463/",
+  "assets": {
+    "icon": "/assets/games/the-strongest-battlegrounds/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/the-strongest-battlegrounds/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "The Strongest Battlegrounds",
+      "description": "Fight other players, master abilities, and work to become the arena's strongest fighter.",
+      "tips": [
+        "Learn to block and dodge before attacking.",
+        "Combine attacks to limit your opponent's response.",
+        "Do not confuse sound IDs with promotional codes."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in The Strongest Battlegrounds",
+          "description": "The Strongest Battlegrounds does not have a confirmed promotional code redemption system. If one is added, this page will be updated.",
+          "steps": [],
+          "imageAlt": "The Strongest Battlegrounds code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "The Strongest Battlegrounds",
+      "description": "Enfrente outros jogadores, domine habilidades e tente se tornar o lutador mais forte da arena.",
+      "tips": [
+        "Aprenda a bloquear e desviar antes de atacar.",
+        "Combine golpes para dificultar a reação do adversário.",
+        "Não confunda IDs de sons com códigos promocionais."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em The Strongest Battlegrounds",
+          "description": "The Strongest Battlegrounds não possui um sistema de resgate de códigos promocionais confirmado. Se ele for adicionado, esta página será atualizada.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de The Strongest Battlegrounds"
+        }
+      }
+    }
+  }
+}

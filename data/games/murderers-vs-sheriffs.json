@@ -1,0 +1,58 @@
+{
+  "slug": "murderers-vs-sheriffs",
+  "robloxUrl": "https://www.roblox.com/games/133108782275346/",
+  "assets": {
+    "icon": "/assets/games/murderers-vs-sheriffs/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/murderers-vs-sheriffs/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-active-codes",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Murderers VS Sheriffs",
+      "description": "Compete in fast duels between murderers and sheriffs, from 1v1 to 4v4.",
+      "tips": [
+        "Practice your aim and throwing timing.",
+        "Open crates to unlock different weapon appearances.",
+        "Do not use codes belonging to versions with a different creator or Place ID."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Murderers VS Sheriffs",
+          "description": "No current public code or confirmed redemption instructions are available. This section will be updated when the developer provides them.",
+          "steps": [
+            "Check this game's official announcements for newly released codes.",
+            "When a confirmed code is available, follow the developer's redemption instructions."
+          ],
+          "imageAlt": "Murderers VS Sheriffs code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Murderers VS Sheriffs",
+      "description": "Dispute duelos rápidos entre assassinos e xerifes em partidas de 1v1 até 4v4.",
+      "tips": [
+        "Pratique a mira e o tempo dos arremessos.",
+        "Abra caixas para conseguir outras aparências de armas.",
+        "Não use códigos de versões com outro criador ou Place ID."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Murderers VS Sheriffs",
+          "description": "Não há código público atual nem instruções de resgate confirmadas. Esta seção será atualizada quando o desenvolvedor divulgar essas informações.",
+          "steps": [
+            "Confira os anúncios oficiais deste jogo para saber quando um código for disponibilizado.",
+            "Quando houver um código confirmado, siga as instruções de resgate divulgadas pelo desenvolvedor."
+          ],
+          "imageAlt": "Informações sobre códigos de Murderers VS Sheriffs"
+        }
+      }
+    }
+  }
+}

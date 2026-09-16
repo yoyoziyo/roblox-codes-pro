@@ -1,0 +1,73 @@
+{
+  "slug": "anime-dice",
+  "robloxUrl": "https://www.roblox.com/games/113290951185459/",
+  "assets": {
+    "icon": "/assets/games/anime-dice/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/anime-dice/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "active",
+  "codes": [
+    "100KLIKES",
+    "40KCCU",
+    "30KCCU",
+    "UPDATE4",
+    "20KCCU",
+    "10KCCU",
+    "5KCCU",
+    "1KCCU",
+    "UPDATE3",
+    "UPDATE2",
+    "UPDATE1",
+    "RELEASE"
+  ],
+  "translations": {
+    "en": {
+      "title": "Anime Dice",
+      "description": "Roll dice to obtain anime characters, build a team, and improve your luck.",
+      "tips": [
+        "Upgrade your dice to improve your luck.",
+        "Use rerolls on your team's most important characters.",
+        "Make use of the money generated while you are offline."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Anime Dice",
+          "description": "Follow these steps to redeem codes in Anime Dice.",
+          "steps": [
+            "Complete the tutorial and open Shop.",
+            "Scroll to the Enter Code box.",
+            "Enter a code and press Redeem."
+          ],
+          "imageAlt": "Anime Dice code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Anime Dice",
+      "description": "Role dados para conseguir personagens de anime, formar uma equipe e melhorar sua sorte.",
+      "tips": [
+        "Melhore os dados para aumentar sua sorte.",
+        "Use os rerolls nos personagens mais importantes da equipe.",
+        "Aproveite o dinheiro gerado enquanto você está offline."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Anime Dice",
+          "description": "Siga estas etapas para resgatar códigos em Anime Dice.",
+          "steps": [
+            "Complete o tutorial e abra Shop.",
+            "Role até a caixa Enter Code.",
+            "Digite o código e pressione Redeem."
+          ],
+          "imageAlt": "Informações sobre códigos de Anime Dice"
+        }
+      }
+    }
+  }
+}
