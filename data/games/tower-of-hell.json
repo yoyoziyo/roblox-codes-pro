@@ -1,0 +1,52 @@
+{
+  "slug": "tower-of-hell",
+  "robloxUrl": "https://www.roblox.com/games/1962086868/",
+  "assets": {
+    "icon": "/assets/games/tower-of-hell/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/tower-of-hell/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Tower of Hell",
+      "description": "Climb a tower of randomly generated obstacles before time runs out, without checkpoints.",
+      "tips": [
+        "Study each obstacle before jumping.",
+        "Slow down in sections that require precision.",
+        "Adjust your camera to plan your next jump."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Tower of Hell",
+          "description": "Tower of Hell does not have a confirmed code redemption system. If one is added, this page will be updated with the instructions.",
+          "steps": [],
+          "imageAlt": "Tower of Hell code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Tower of Hell",
+      "description": "Suba uma torre de obstáculos aleatórios antes do tempo acabar, sem checkpoints.",
+      "tips": [
+        "Observe cada obstáculo antes de saltar.",
+        "Evite correr nas partes que exigem precisão.",
+        "Ajuste a câmera para planejar o próximo salto."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Tower of Hell",
+          "description": "Tower of Hell não possui um sistema de resgate de códigos confirmado. Se esse recurso for adicionado, esta página será atualizada com as instruções.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Tower of Hell"
+        }
+      }
+    }
+  }
+}

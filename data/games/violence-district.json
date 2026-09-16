@@ -1,0 +1,52 @@
+{
+  "slug": "violence-district",
+  "robloxUrl": "https://www.roblox.com/games/93978595733734/",
+  "assets": {
+    "icon": "/assets/games/violence-district/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/violence-district/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Violence District",
+      "description": "An asymmetrical horror game where five survivors complete objectives and try to escape a killer.",
+      "tips": [
+        "Work with your team to complete objectives.",
+        "Use pallets carefully because they are limited.",
+        "Memorize routes to the exit gates."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Violence District",
+          "description": "Violence District does not have a confirmed code redemption system. If one is added, this page will be updated with the instructions.",
+          "steps": [],
+          "imageAlt": "Violence District code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Violence District",
+      "description": "Terror assimétrico em que cinco sobreviventes cumprem objetivos e tentam escapar de um assassino.",
+      "tips": [
+        "Trabalhe com a equipe para concluir os objetivos.",
+        "Use os pallets com cuidado, pois são limitados.",
+        "Memorize as rotas até os portões de saída."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Violence District",
+          "description": "Violence District não possui um sistema de resgate de códigos confirmado. Se esse recurso for adicionado, esta página será atualizada com as instruções.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Violence District"
+        }
+      }
+    }
+  }
+}

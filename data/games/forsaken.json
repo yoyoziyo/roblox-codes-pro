@@ -1,0 +1,52 @@
+{
+  "slug": "forsaken",
+  "robloxUrl": "https://www.roblox.com/games/18687417158/",
+  "assets": {
+    "icon": "/assets/games/forsaken/icon.webp",
+    "banner": "",
+    "thumbnail": "/assets/games/forsaken/thumbnail.webp",
+    "redeemTutorial": ""
+  },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
+  "codeStatus": "no-code-system",
+  "codes": [],
+  "translations": {
+    "en": {
+      "title": "Forsaken",
+      "description": "An asymmetrical horror game where survivors complete objectives while a killer tries to eliminate them.",
+      "tips": [
+        "Cooperate with your team and prioritize objectives as a survivor.",
+        "Learn the map to find escape routes.",
+        "As the killer, pressure different areas to disrupt the team's objectives."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "How to redeem codes in Forsaken",
+          "description": "Forsaken does not have a confirmed code redemption system. If one is added, this page will be updated with the instructions.",
+          "steps": [],
+          "imageAlt": "Forsaken code information"
+        }
+      }
+    },
+    "pt-BR": {
+      "title": "Forsaken",
+      "description": "Jogo de terror assimétrico em que sobreviventes completam objetivos enquanto um assassino tenta eliminá-los.",
+      "tips": [
+        "Coopere com a equipe e priorize os objetivos ao jogar como sobrevivente.",
+        "Aprenda o mapa para encontrar rotas de fuga.",
+        "Como assassino, pressione diferentes áreas para dificultar os objetivos da equipe."
+      ],
+      "tutorials": {
+        "redeem": {
+          "title": "Como resgatar códigos em Forsaken",
+          "description": "Forsaken não possui um sistema de resgate de códigos confirmado. Se esse recurso for adicionado, esta página será atualizada com as instruções.",
+          "steps": [],
+          "imageAlt": "Informações sobre códigos de Forsaken"
+        }
+      }
+    }
+  }
+}

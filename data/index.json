@@ -580,6 +580,57 @@
           "description": "Clean all the leaves! ainda não possui sistema de códigos. Confira dicas e informações do jogo."
         }
       }
+    },
+    {
+      "slug": "forsaken",
+      "icon": "/assets/games/forsaken/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-16T09:24:57.189Z",
+      "translations": {
+        "en": {
+          "title": "Forsaken",
+          "description": "Forsaken does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Forsaken",
+          "description": "Forsaken ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
+    },
+    {
+      "slug": "tower-of-hell",
+      "icon": "/assets/games/tower-of-hell/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-16T09:24:57.189Z",
+      "translations": {
+        "en": {
+          "title": "Tower of Hell",
+          "description": "Tower of Hell does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Tower of Hell",
+          "description": "Tower of Hell ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
+    },
+    {
+      "slug": "violence-district",
+      "icon": "/assets/games/violence-district/icon.webp",
+      "status": "active",
+      "codeStatus": "no-code-system",
+      "lastUpdated": "2026-09-16T09:24:57.189Z",
+      "translations": {
+        "en": {
+          "title": "Violence District",
+          "description": "Violence District does not have a code system yet. Find gameplay tips and information."
+        },
+        "pt-BR": {
+          "title": "Violence District",
+          "description": "Violence District ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+        }
+      }
     }
   ]
 }
