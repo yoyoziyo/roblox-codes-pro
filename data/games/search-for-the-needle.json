@@ -13,11 +13,9 @@
   },
   "codeStatus": "active",
   "codes": [
-    "RELEASE",
-    "NEEDLE",
-    "SEARCH",
-    "100LIKES",
-    "FINDFREESPINS"
+    "WEATHER",
+    "PETS",
+    "ALIEN"
   ],
   "translations": {
     "en": {

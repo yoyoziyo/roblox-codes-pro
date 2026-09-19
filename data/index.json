@@ -89,7 +89,7 @@
       "slug": "type-soul",
       "icon": "/assets/games/type-soul/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-19T01:30:00.000Z",
       "translations": {
         "en": {
           "title": "TYPE SOUL",
@@ -106,7 +106,7 @@
       "slug": "volleyball-legends",
       "icon": "/assets/games/volleyball-legends/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-06T21:11:29.203Z",
+      "lastUpdated": "2026-09-19T01:30:00.000Z",
       "translations": {
         "en": {
           "title": "Volleyball Legends",
@@ -344,7 +344,7 @@
       "icon": "/assets/games/search-for-the-needle/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-09T21:13:27.524Z",
+      "lastUpdated": "2026-09-19T01:30:00.000Z",
       "translations": {
         "en": {
           "title": "Search For The Needle",
@@ -654,7 +654,7 @@
       "icon": "/assets/games/sols-rng/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "lastUpdated": "2026-09-19T01:30:00.000Z",
       "translations": {
         "en": {
           "title": "Sol's RNG",
