@@ -72,7 +72,7 @@
       "slug": "dig-and-clean",
       "icon": "/assets/games/dig-and-clean/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-04T16:03:40.626Z",
+      "lastUpdated": "2026-09-18T18:00:00.000Z",
       "translations": {
         "en": {
           "title": "Dig & Clean",
@@ -259,7 +259,7 @@
       "icon": "/assets/games/doors/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-18T18:00:00.000Z",
       "translations": {
         "en": {
           "title": "Doors",
@@ -276,7 +276,7 @@
       "icon": "/assets/games/dress-to-impress/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-15T17:28:03.207Z",
+      "lastUpdated": "2026-09-18T18:00:00.000Z",
       "translations": {
         "en": {
           "title": "Dress To Impress",
@@ -310,7 +310,7 @@
       "icon": "/assets/games/dungeon-lootr/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-18T18:00:00.000Z",
       "translations": {
         "en": {
           "title": "Dungeon Lootr",
