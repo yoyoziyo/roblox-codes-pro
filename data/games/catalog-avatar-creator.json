@@ -11,11 +11,8 @@
     "icon": true,
     "thumbnail": false
   },
-  "codeStatus": "active",
-  "codes": [
-    "DAPPER",
-    "MASCOT"
-  ],
+  "codeStatus": "no-active-codes",
+  "codes": [],
   "translations": {
     "en": {
       "title": "Catalog Avatar Creator",

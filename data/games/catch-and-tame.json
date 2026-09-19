@@ -13,10 +13,19 @@
   },
   "codeStatus": "active",
   "codes": [
+    "WEATHERMACHINE",
     "MOUNTAINUPDATE",
     "CLOUDUPDATE",
     "PLUSHIECODE",
-    "FISHINGCLAW"
+    "FISHINGCLAW",
+    "SUBMARINES",
+    "FARMING",
+    "FOOTBALLCUP",
+    "SUNKEN",
+    "LABORATORY",
+    "SUMMEREVENT",
+    "DIGGINGEVENT",
+    "FISHINGKIT"
   ],
   "translations": {
     "en": {

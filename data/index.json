@@ -4,7 +4,7 @@
       "slug": "catch-and-tame",
       "icon": "/assets/games/catch-and-tame/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-18T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Catch and Tame",
@@ -55,7 +55,7 @@
       "slug": "basketball-zero",
       "icon": "/assets/games/basketball-zero/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-04T16:03:40.578Z",
+      "lastUpdated": "2026-09-18T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Basketball Zero",
@@ -378,7 +378,7 @@
       "icon": "/assets/games/brookhaven/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-14T17:40:50.242Z",
+      "lastUpdated": "2026-09-18T15:00:00.000Z",
       "translations": {
         "en": { "title": "Brookhaven", "description": "Brookhaven has no code system. Find gameplay tips and information." },
         "pt-BR": { "title": "Brookhaven", "description": "Brookhaven não possui sistema de códigos. Confira dicas e informações do jogo." }
@@ -551,16 +551,16 @@
       "slug": "catalog-avatar-creator",
       "icon": "/assets/games/catalog-avatar-creator/icon.webp",
       "status": "active",
-      "codeStatus": "active",
-      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-18T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Catalog Avatar Creator",
-          "description": "Active Catalog Avatar Creator codes, gameplay tips, and redemption instructions."
+          "description": "Catalog Avatar Creator currently has no active codes. Find gameplay tips and redemption information."
         },
         "pt-BR": {
           "title": "Catalog Avatar Creator",
-          "description": "Códigos ativos de Catalog Avatar Creator, dicas de jogo e instruções de resgate."
+          "description": "Catalog Avatar Creator não possui códigos ativos no momento. Confira dicas e informações de resgate."
         }
       }
     },
