@@ -11,10 +11,8 @@
     "icon": true,
     "thumbnail": false
   },
-  "codeStatus": "active",
-  "codes": [
-    "restartsorry!"
-  ],
+  "codeStatus": "no-active-codes",
+  "codes": [],
   "translations": {
     "en": {
       "title": "Anime Expeditions",

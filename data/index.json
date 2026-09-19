@@ -38,18 +38,18 @@
       "slug": "anime-expeditions",
       "icon": "/assets/games/anime-expeditions/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-18T23:30:00.000Z",
       "translations": {
         "en": {
           "title": "Anime Expeditions",
-          "description": "Active Anime Expeditions codes, strategy tips, and redemption instructions."
+          "description": "Anime Expeditions currently has no active codes. Find strategy tips and redemption instructions."
         },
         "pt-BR": {
           "title": "Anime Expeditions",
-          "description": "Códigos ativos de Anime Expeditions, dicas de estratégia e instruções de resgate."
+          "description": "Anime Expeditions não possui códigos ativos no momento. Confira dicas de estratégia e instruções de resgate."
         }
       },
-      "codeStatus": "active"
+      "codeStatus": "no-active-codes"
     },
     {
       "slug": "basketball-zero",
@@ -208,7 +208,7 @@
       "icon": "/assets/games/99-nights-in-the-forest/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-08-30T22:59:49.971Z",
+      "lastUpdated": "2026-09-18T23:30:00.000Z",
       "translations": {
         "en": {
           "title": "99 Nights in the Forest",
@@ -293,7 +293,7 @@
       "icon": "/assets/games/anime-vanguards/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-18T23:30:00.000Z",
       "translations": {
         "en": {
           "title": "Anime Vanguards",
