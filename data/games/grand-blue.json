@@ -13,11 +13,20 @@
   },
   "codeStatus": "active",
   "codes": [
+    "DevilsBounty",
+    "AnchorsUp",
+    "LuckOfTheSea",
     "StarShower",
     "OmegaCode",
     "RollWithIt",
     "PocketOfStars",
-    "GrandBlueCode"
+    "GrandBlueCode",
+    "CelestialBlessing",
+    "FruitBasket",
+    "NewYouNewCrew",
+    "HappySunday",
+    "TwitterGoalReached",
+    "Release!"
   ],
   "translations": {
     "en": {

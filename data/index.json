@@ -139,7 +139,7 @@
       "slug": "ghost-driver",
       "icon": "/assets/games/ghost-driver/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-09-04T16:03:40.669Z",
+      "lastUpdated": "2026-09-19T00:30:00.000Z",
       "translations": {
         "en": {
           "title": "Ghost Driver",
@@ -225,7 +225,7 @@
       "icon": "/assets/games/grand-blue/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-18T21:00:00.000Z",
+      "lastUpdated": "2026-09-19T00:30:00.000Z",
       "translations": {
         "en": {
           "title": "Grand Blue",
@@ -327,7 +327,7 @@
       "icon": "/assets/games/last-stop/icon.webp",
       "status": "active",
       "codeStatus": "active",
-      "lastUpdated": "2026-09-12T15:00:00.000Z",
+      "lastUpdated": "2026-09-19T00:30:00.000Z",
       "translations": {
         "en": {
           "title": "Last Stop",
@@ -450,7 +450,7 @@
   "icon": "/assets/games/jujutsu-shenanigans/icon.webp",
   "status": "active",
   "codeStatus": "active",
-  "lastUpdated": "2026-09-15T15:56:52.954Z",
+  "lastUpdated": "2026-09-19T00:30:00.000Z",
   "translations": {
     "en": {
       "title": "Jujutsu Shenanigans",
