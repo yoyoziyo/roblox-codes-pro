@@ -1,0 +1,98 @@
+{
+  "slug": "como-resgatar-codigos-no-roblox",
+  "status": "published",
+  "authorId": "equipe-67codes",
+  "reviewedBy": "equipe-67codes",
+  "publishedAt": "2026-10-03T12:00:00.000Z",
+  "updatedAt": "2026-10-03T12:00:00.000Z",
+  "coverImage": "",
+  "relatedGames": [],
+  "translations": {
+    "en": {
+      "title": "How to redeem Roblox codes safely",
+      "excerpt": "A practical guide to finding the correct code menu, avoiding typing errors, and understanding why a Roblox code may not work.",
+      "seoDescription": "Learn how to redeem Roblox codes safely, avoid common typing mistakes, and solve the most frequent code redemption problems.",
+      "sections": [
+        {
+          "heading": "Where to find the code menu",
+          "paragraphs": [
+            "Each Roblox experience controls its own redemption system. The code field may appear in Settings, Shop, Rewards, Codes, or inside a social-media icon in the game interface.",
+            "Use the instructions on the specific game page before searching every menu. Some experiences also require a tutorial, level, group membership, or a Like before the field becomes available."
+          ],
+          "items": []
+        },
+        {
+          "heading": "How to enter a code correctly",
+          "paragraphs": [
+            "Copy the code exactly as published and paste it into the game's redemption field. Keep uppercase letters, lowercase letters, numbers, spaces, and symbols unchanged."
+          ],
+          "items": [
+            "Avoid adding spaces before or after the code.",
+            "Redeem one code at a time.",
+            "Check whether the reward has already been claimed on your account.",
+            "Restart the experience if the developer has just released an update."
+          ]
+        },
+        {
+          "heading": "Why a code may not work",
+          "paragraphs": [
+            "A code can expire without notice, be limited to a specific event, require account progress, or be disabled temporarily while the game is updated. A message such as Invalid, Expired, or Already Redeemed usually explains the result.",
+            "If a code listed by 67Codes no longer works, use the correction link on that game's page. Include the code and the message shown by Roblox so the list can be reviewed."
+          ],
+          "items": []
+        },
+        {
+          "heading": "Keep your account safe",
+          "paragraphs": [
+            "Real Roblox code redemption never requires your password, browser cookie, authentication code, or an external download. Leave any page that asks for private account information in exchange for rewards.",
+            "67Codes publishes text codes and redemption instructions only. We do not ask visitors to sign in with a Roblox account."
+          ],
+          "items": []
+        }
+      ]
+    },
+    "pt-BR": {
+      "title": "Como resgatar códigos do Roblox com segurança",
+      "excerpt": "Um guia prático para encontrar o menu correto, evitar erros de digitação e entender por que um código do Roblox pode não funcionar.",
+      "seoDescription": "Aprenda a resgatar códigos do Roblox com segurança, evitar erros comuns e resolver os problemas mais frequentes no resgate.",
+      "sections": [
+        {
+          "heading": "Onde encontrar o menu de códigos",
+          "paragraphs": [
+            "Cada experiência do Roblox controla seu próprio sistema de resgate. O campo pode aparecer em Configurações, Loja, Recompensas, Códigos ou dentro de um ícone de rede social na interface do jogo.",
+            "Consulte as instruções na página específica do jogo antes de procurar em todos os menus. Algumas experiências também exigem concluir o tutorial, alcançar um nível, entrar no grupo ou curtir o jogo para liberar o campo."
+          ],
+          "items": []
+        },
+        {
+          "heading": "Como inserir um código corretamente",
+          "paragraphs": [
+            "Copie o código exatamente como foi publicado e cole no campo de resgate do jogo. Mantenha letras maiúsculas, minúsculas, números, espaços e símbolos sem alterações."
+          ],
+          "items": [
+            "Não deixe espaços antes ou depois do código.",
+            "Resgate um código por vez.",
+            "Confira se a recompensa já foi recebida nessa conta.",
+            "Reinicie a experiência caso o desenvolvedor tenha acabado de publicar uma atualização."
+          ]
+        },
+        {
+          "heading": "Por que um código pode não funcionar",
+          "paragraphs": [
+            "Um código pode expirar sem aviso, pertencer a um evento específico, exigir progresso na conta ou ficar desativado temporariamente durante uma atualização. Mensagens como Inválido, Expirado ou Já resgatado normalmente explicam o resultado.",
+            "Se um código listado pelo 67Codes não funcionar mais, use o link de correção na página daquele jogo. Informe o código e a mensagem exibida pelo Roblox para que a lista seja revisada."
+          ],
+          "items": []
+        },
+        {
+          "heading": "Proteja sua conta",
+          "paragraphs": [
+            "O resgate verdadeiro de códigos do Roblox nunca exige sua senha, cookie do navegador, código de autenticação ou download externo. Saia de qualquer página que peça informações privadas da conta em troca de recompensas.",
+            "O 67Codes publica somente códigos em texto e instruções de resgate. Não pedimos que visitantes entrem com uma conta Roblox."
+          ],
+          "items": []
+        }
+      ]
+    }
+  }
+}

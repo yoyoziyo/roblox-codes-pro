@@ -5,12 +5,15 @@ import { fileURLToPath } from "node:url";
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const site=JSON.parse(await fs.readFile(path.join(root,"data/site.json"),"utf8"));
 const index=JSON.parse(await fs.readFile(path.join(root,"data/index.json"),"utf8"));
+const articleIndex=JSON.parse(await fs.readFile(path.join(root,"data/articles/index.json"),"utf8"));
 const origin=site.origin.replace(/\/$/,"");
 const toLastmod=value=>{
   const date=new Date(value);
   return Number.isNaN(date.getTime())?"":date.toISOString().slice(0,10);
 };
 const activeGames=index.games.filter(item=>item.status==="active");
+const articles=[];
+for(const slug of articleIndex.articles){const article=JSON.parse(await fs.readFile(path.join(root,"data/articles",`${slug}.json`),"utf8"));if(article.status==="published")articles.push(article)}
 const latestGameUpdate=activeGames.map(game=>toLastmod(game.lastUpdated)).filter(Boolean).sort().at(-1)||"";
 const pages=[
   {path:"/en",file:"en/index.html",en:"/en",pt:"/pt-br"},
@@ -28,6 +31,8 @@ const pages=[
   {path:"/en/authors/67codes-team",file:"en/authors/67codes-team.html",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
   {path:"/pt-br/autores/equipe-67codes",file:"pt-br/autores/equipe-67codes.html",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"}
 ];
+pages.push({path:"/en/guides",file:"en/guides.html",en:"/en/guides",pt:"/pt-br/guias"},{path:"/pt-br/guias",file:"pt-br/guias.html",en:"/en/guides",pt:"/pt-br/guias"});
+for(const article of articles){pages.push({path:`/en/guides/${article.slug}`,file:`en/guides/${article.slug}.html`,en:`/en/guides/${article.slug}`,pt:`/pt-br/guias/${article.slug}`},{path:`/pt-br/guias/${article.slug}`,file:`pt-br/guias/${article.slug}.html`,en:`/en/guides/${article.slug}`,pt:`/pt-br/guias/${article.slug}`})}
 for(const game of activeGames){
   pages.push({path:`/en/games/${game.slug}`,file:`en/games/${game.slug}.html`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`});
   pages.push({path:`/pt-br/games/${game.slug}`,file:`pt-br/games/${game.slug}.html`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`});
@@ -58,6 +63,12 @@ const groups=[
   {loc:"/pt-br/contato",en:"/en/contact",pt:"/pt-br/contato"},
   {loc:"/en/authors/67codes-team",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
   {loc:"/pt-br/autores/equipe-67codes",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
+  {loc:"/en/guides",en:"/en/guides",pt:"/pt-br/guias"},
+  {loc:"/pt-br/guias",en:"/en/guides",pt:"/pt-br/guias"},
+  ...articles.flatMap(article=>[
+    {loc:`/en/guides/${article.slug}`,en:`/en/guides/${article.slug}`,pt:`/pt-br/guias/${article.slug}`,lastmod:toLastmod(article.updatedAt)},
+    {loc:`/pt-br/guias/${article.slug}`,en:`/en/guides/${article.slug}`,pt:`/pt-br/guias/${article.slug}`,lastmod:toLastmod(article.updatedAt)}
+  ]),
   ...activeGames.flatMap(game=>[
     {loc:`/en/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`,lastmod:toLastmod(game.lastUpdated)},
     {loc:`/pt-br/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`,lastmod:toLastmod(game.lastUpdated)}

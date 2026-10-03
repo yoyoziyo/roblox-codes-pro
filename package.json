@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "create:game": "node scripts/create-game.js",
+    "create:article": "node scripts/create-article.js",
     "update:codes": "node scripts/update-codes.js",
     "generate:pages": "node scripts/generate-pages.js",
-    "generate": "node scripts/generate-pages.js && node scripts/generate-editorial.js && node scripts/generate-seo.js",
+    "generate": "node scripts/generate-pages.js && node scripts/generate-articles.js && node scripts/generate-editorial.js && node scripts/generate-seo.js",
+    "generate:articles": "node scripts/generate-articles.js",
     "generate:editorial": "node scripts/generate-editorial.js",
     "generate:seo": "node scripts/generate-seo.js",
     "notify:indexnow": "node scripts/submit-indexnow.js",

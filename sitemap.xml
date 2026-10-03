@@ -87,6 +87,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/authors/67codes-team"/>
   </url>
   <url>
+    <loc>https://www.67codes.com/en/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/guias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/guides"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/guias</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/guias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/guides"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/guides/como-resgatar-codigos-no-roblox</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/guides/como-resgatar-codigos-no-roblox"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/guias/como-resgatar-codigos-no-roblox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/guides/como-resgatar-codigos-no-roblox"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/guias/como-resgatar-codigos-no-roblox</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/guides/como-resgatar-codigos-no-roblox"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/guias/como-resgatar-codigos-no-roblox"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/guides/como-resgatar-codigos-no-roblox"/>
+  </url>
+  <url>
     <loc>https://www.67codes.com/en/games/catch-and-tame</loc>
     <lastmod>2026-09-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/catch-and-tame"/>

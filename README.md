@@ -24,6 +24,12 @@ A detecção ocorre exclusivamente na raiz. Acessar diretamente uma URL com idio
 
 ```text
 data/
+├── articles/
+│   ├── index.json
+│   └── como-resgatar-codigos-no-roblox.json
+├── authors/
+│   ├── index.json
+│   └── equipe-67codes.json
 ├── site.json
 ├── game-template.json
 ├── index.json
@@ -37,6 +43,9 @@ data/
 
 en/
 ├── index.html
+├── guides.html
+├── guides/
+│   └── como-resgatar-codigos-no-roblox.html
 └── games/
     ├── anime-expeditions.html
     ├── catch-and-tame.html
@@ -44,6 +53,9 @@ en/
 
 pt-br/
 ├── index.html
+├── guias.html
+├── guias/
+│   └── como-resgatar-codigos-no-roblox.html
 └── games/
     ├── anime-expeditions.html
     ├── catch-and-tame.html
@@ -110,6 +122,32 @@ npm run generate
 `generate:pages` cria os HTMLs bilíngues a partir do template compartilhado em `templates/game.html`. `generate:seo` atualiza os metadados de domínio, sitemap e robots.txt.
 
 Não adicione tags ou códigos expirados.
+
+## Criar um artigo ou guia
+
+Use o assistente para preparar um novo rascunho bilíngue:
+
+```bash
+npm run create:article -- nome-do-artigo
+```
+
+O comando cria `data/articles/<slug>.json`, registra o artigo em `data/articles/index.json` e mantém o novo conteúdo com `status: "draft"`. Revise e complete as seções, altere o status para `published` e execute:
+
+```bash
+npm run generate
+npm test
+```
+
+Os artigos publicados aparecem automaticamente em `/en/guides` e `/pt-br/guias`, no perfil do autor e no sitemap. Cada artigo possui:
+
+- autor e revisor;
+- datas de publicação e atualização;
+- título, resumo, descrição de SEO e seções nos dois idiomas;
+- imagem de capa opcional, sem espaço vazio quando não for usada;
+- dados estruturados `Article`;
+- link para informar correções.
+
+Use `|` para separar parágrafos durante a criação. O conteúdo final pode ter quantas seções, parágrafos e listas forem necessários, desde que a mesma estrutura seja mantida nos dois idiomas.
 
 ## Atualizar códigos de um jogo
 
@@ -226,7 +264,7 @@ As páginas da Equipe Editorial são geradas em:
 /pt-br/autores/equipe-67codes
 ```
 
-O comando `npm run generate` cria os perfis, insere autoria e revisão nas páginas dos jogos e atualiza os dados estruturados `Organization`, `ProfilePage`, `author` e `reviewedBy`.
+O comando `npm run generate` cria os perfis, insere autoria e revisão nas páginas dos jogos e artigos e atualiza os dados estruturados `Organization`, `ProfilePage`, `Article`, `author` e `reviewedBy`.
 
 ## Páginas editoriais
 

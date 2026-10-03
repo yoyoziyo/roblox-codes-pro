@@ -4,6 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { parseCodes, parseSteps, validSlug } from "../scripts/create-game.js";
+import { parseArticleList, validArticleSlug } from "../scripts/create-article.js";
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),"utf8"));
@@ -280,6 +281,44 @@ test("páginas de jogos identificam revisor e permitem informar correções",()=
       assert.ok(json["@graph"][0].reviewedBy,`${game.slug}: reviewedBy estruturado`);
     }
   }
+});
+
+test("sistema de guias gera listagem, artigos, autoria e SEO bilíngue",()=>{
+  const articleIndex=readJson("data/articles/index.json");
+  assert.ok(articleIndex.articles.length>0);
+  for(const slug of articleIndex.articles){
+    const article=readJson(`data/articles/${slug}.json`);
+    assert.ok(["draft","published"].includes(article.status));
+    for(const locale of ["en","pt-BR"]){
+      const translation=article.translations[locale];
+      assert.ok(translation.title&&translation.excerpt&&translation.seoDescription);
+      assert.ok(translation.sections.length);
+      for(const section of translation.sections){assert.ok(section.heading);assert.ok(Array.isArray(section.paragraphs));assert.ok(Array.isArray(section.items))}
+    }
+    if(article.status!=="published")continue;
+    for(const [file,canonical,alternate] of [[`en/guides/${slug}.html`,`/en/guides/${slug}`,`/pt-br/guias/${slug}`],[`pt-br/guias/${slug}.html`,`/pt-br/guias/${slug}`,`/en/guides/${slug}`]]){
+      const html=read(file);
+      assert.ok(html.includes(`<link rel="canonical" href="${site.origin}${canonical}">`),file);
+      assert.ok(html.includes(`href="${alternate}" data-language=`),file);
+      assert.ok(html.includes('"@type":"Article"'),file);
+      assert.ok(html.includes("privacy@67codes.com"),file);
+      assert.equal(html.includes("{{"),false,file);
+      assert.equal(html.split(adsenseSource).length-1,1,file);
+    }
+  }
+  for(const file of ["en/guides.html","pt-br/guias.html"]){const html=read(file);assert.ok(html.includes('class="guide-card"'));assert.equal(html.includes("{{"),false)}
+  assert.ok(read("sitemap.xml").includes(`${site.origin}/en/guides/como-resgatar-codigos-no-roblox`));
+  assert.ok(read("en/authors/67codes-team.html").includes("How to redeem Roblox codes safely"));
+  assert.ok(read("pt-br/autores/equipe-67codes.html").includes("Como resgatar códigos do Roblox com segurança"));
+});
+
+test("assistente de artigos cria slugs e listas seguras",()=>{
+  assert.equal(validArticleSlug("guia-de-roblox"),true);
+  assert.equal(validArticleSlug("Guia de Roblox"),false);
+  assert.deepEqual(parseArticleList("Primeiro | Segundo | "),["Primeiro","Segundo"]);
+  const pkg=readJson("package.json");
+  assert.ok(pkg.scripts["create:article"]);
+  assert.ok(pkg.scripts["generate:articles"]);
 });
 
 test("sincronizador não referencia nem remove traduções",()=>{
