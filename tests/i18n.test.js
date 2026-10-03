@@ -155,7 +155,7 @@ test("verificação do jogo é exibida apenas como ícone acessível",()=>{
   for(const file of pages){
     const html=read(file);
     assert.equal(html.includes('id="verified-at"'),false,`${file}: selo antigo`);
-    assert.match(html,/<span class="verified icon-swap" aria-label="(?:Verified|Verificado)">/);
+    assert.match(html,/<span class="verified icon-swap" aria-label="(?:Editorially reviewed|Revisado editorialmente)">/);
     assert.equal(html.includes("Loading game data..."),false,`${file}: texto de carregamento`);
     assert.equal(html.includes("Carregando dados do jogo..."),false,`${file}: texto de carregamento`);
   }
@@ -243,6 +243,42 @@ test("páginas legais estão conectadas, localizadas e sem links genéricos",()=
     const html=read(file);
     assert.equal(html.includes("https://discord.com/"),false,`${file}: link genérico do Discord`);
     assert.match(html,/href="\/(?:en\/(?:privacy|terms)|pt-br\/(?:privacidade|termos))"/);
+  }
+});
+
+test("estrutura editorial apresenta autoria, metodologia e contato",()=>{
+  const pages=[
+    ["en/about.html","/pt-br/sobre"],["pt-br/sobre.html","/en/about"],
+    ["en/editorial-policy.html","/pt-br/politica-editorial"],["pt-br/politica-editorial.html","/en/editorial-policy"],
+    ["en/contact.html","/pt-br/contato"],["pt-br/contato.html","/en/contact"],
+    ["en/authors/67codes-team.html","/pt-br/autores/equipe-67codes"],["pt-br/autores/equipe-67codes.html","/en/authors/67codes-team"]
+  ];
+  for(const [file,alternate] of pages){
+    const html=read(file);
+    assert.equal(html.includes("{{"),false,`${file}: token não resolvido`);
+    assert.ok(html.includes(`href="${alternate}" data-language=`),`${file}: idioma alternativo`);
+    assert.match(html,/<script type="application\/ld\+json">[^<]+<\/script>/);
+    assert.ok(html.includes(adsenseMeta),`${file}: verificação do AdSense`);
+    assert.equal(html.includes(adsenseSource),false,`${file}: páginas institucionais não exibem anúncios`);
+  }
+  const author=readJson("data/authors/equipe-67codes.json");
+  assert.equal(author.active,true);
+  assert.ok(author.translations.en.bio&&author.translations["pt-BR"].bio);
+  assert.ok(read("en/editorial-policy.html").includes("A reviewed code is not necessarily tested inside the game"));
+  assert.ok(read("pt-br/politica-editorial.html").includes("não foi necessariamente testado dentro do jogo"));
+});
+
+test("páginas de jogos identificam revisor e permitem informar correções",()=>{
+  for(const game of index.games.filter(game=>game.status==="active")){
+    for(const [dir,authorPath,label] of [["en","/en/authors/67codes-team","Report a correction"],["pt-br","/pt-br/autores/equipe-67codes","Informar correção"]]){
+      const html=read(`${dir}/games/${game.slug}.html`);
+      assert.ok(html.includes(`href="${authorPath}"`),`${game.slug}: autoria`);
+      assert.ok(html.includes(label),`${game.slug}: correção`);
+      assert.ok(html.includes("mailto:privacy@67codes.com"),`${game.slug}: e-mail editorial`);
+      const json=JSON.parse(html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);
+      assert.ok(json["@graph"][0].author,`${game.slug}: author estruturado`);
+      assert.ok(json["@graph"][0].reviewedBy,`${game.slug}: reviewedBy estruturado`);
+    }
   }
 });
 

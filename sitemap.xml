@@ -39,6 +39,54 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/terms"/>
   </url>
   <url>
+    <loc>https://www.67codes.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/sobre"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/about"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/sobre</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/sobre"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/about"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/editorial-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/politica-editorial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/editorial-policy"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/politica-editorial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/politica-editorial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/editorial-policy"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/contato"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/contact"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/contato</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/contato"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/contact"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/en/authors/67codes-team</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/authors/67codes-team"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/autores/equipe-67codes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/authors/67codes-team"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/autores/equipe-67codes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/authors/67codes-team"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/autores/equipe-67codes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/authors/67codes-team"/>
+  </url>
+  <url>
     <loc>https://www.67codes.com/en/games/catch-and-tame</loc>
     <lastmod>2026-09-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/games/catch-and-tame"/>

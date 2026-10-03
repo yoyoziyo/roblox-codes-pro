@@ -205,7 +205,43 @@ Cada página localizada possui:
 - dados estruturados `WebSite`, `WebPage` e `BreadcrumbList`;
 - conteúdo principal traduzido.
 
-O sitemap contém as duas Homes, as duas páginas de cada jogo e as páginas legais, com `xhtml:link` para todas as alternativas. As páginas dos jogos recebem automaticamente um `<lastmod>` baseado em `lastUpdated`; as Homes usam a atualização mais recente entre os jogos.
+O sitemap contém as duas Homes, as duas páginas de cada jogo, as páginas institucionais e os perfis editoriais, com `xhtml:link` para todas as alternativas. As páginas dos jogos recebem automaticamente um `<lastmod>` baseado em `lastUpdated`; as Homes usam a atualização mais recente entre os jogos.
+
+## Autores e responsabilidade editorial
+
+Os autores ficam em `data/authors/`. O arquivo `data/authors/index.json` registra quais perfis devem ser publicados, e cada autor possui um JSON próprio com:
+
+- identificador estável;
+- tipo (`Person` ou `Organization`);
+- avatar;
+- situação ativa;
+- nome, função, biografia e especialidades nos dois idiomas.
+
+O autor padrão do site é configurado em `data/site.json` por `defaultAuthorId`. Uma página de jogo pode usar outro perfil no futuro adicionando `authorId` à entrada correspondente em `data/index.json`.
+
+As páginas da Equipe Editorial são geradas em:
+
+```text
+/en/authors/67codes-team
+/pt-br/autores/equipe-67codes
+```
+
+O comando `npm run generate` cria os perfis, insere autoria e revisão nas páginas dos jogos e atualiza os dados estruturados `Organization`, `ProfilePage`, `author` e `reviewedBy`.
+
+## Páginas editoriais
+
+O conteúdo institucional fica em `data/editorial-pages.json` e gera:
+
+```text
+/en/about
+/en/editorial-policy
+/en/contact
+/pt-br/sobre
+/pt-br/politica-editorial
+/pt-br/contato
+```
+
+A página de contato usa temporariamente o endereço definido em `editorialEmail`, dentro de `data/site.json`. Quando existir um e-mail editorial dedicado, basta alterar esse campo e executar `npm run generate`.
 
 ## Privacidade, termos e publicidade
 

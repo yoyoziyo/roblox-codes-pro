@@ -1,0 +1,21 @@
+{
+  "id": "equipe-67codes",
+  "type": "Organization",
+  "avatar": "/assets/ui/logo.webp",
+  "active": true,
+  "joinedAt": "2026-08-01",
+  "translations": {
+    "en": {
+      "name": "67Codes Editorial Team",
+      "role": "Editorial team",
+      "bio": "The team responsible for researching, reviewing, and maintaining the Roblox code pages and practical guides published by 67Codes.",
+      "specialties": ["Roblox codes", "Game guides", "Information review"]
+    },
+    "pt-BR": {
+      "name": "Equipe Editorial 67Codes",
+      "role": "Equipe editorial",
+      "bio": "Equipe responsável por pesquisar, revisar e manter as páginas de códigos e os guias práticos de Roblox publicados pelo 67Codes.",
+      "specialties": ["Códigos de Roblox", "Guias de jogos", "Revisão de informações"]
+    }
+  }
+}

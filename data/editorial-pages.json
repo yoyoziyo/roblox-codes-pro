@@ -1,0 +1,103 @@
+{
+  "pages": {
+    "about": {
+      "updatedAt": "2026-10-03",
+      "translations": {
+        "en": {
+          "slug": "about",
+          "title": "About 67Codes",
+          "kicker": "About us",
+          "description": "Learn why 67Codes exists and how our team maintains Roblox code information.",
+          "intro": "67Codes is an independent publication that helps Roblox players find codes, understand how to redeem them, and access practical information about the games they play.",
+          "sections": [
+            {"title": "Our purpose", "paragraphs": ["We created 67Codes to make code information easier to find and use. Each page is organized around a specific Roblox experience and is reviewed when we receive or discover relevant changes."]},
+            {"title": "What we publish", "paragraphs": ["We publish active-code lists, redemption instructions, gameplay tips, and, as our editorial library grows, original guides about progression, systems, items, and strategies."]},
+            {"title": "How we work", "paragraphs": ["Our team compares reliable public sources, checks official game channels when available, preserves codes exactly as published, and records the date of each meaningful review. We do not create or guess codes."]},
+            {"title": "Independence", "paragraphs": ["67Codes is not affiliated with Roblox Corporation or with the developers of the experiences listed on this website. Roblox and game names belong to their respective owners."]},
+            {"title": "Help us improve", "paragraphs": ["If you find an expired code or incorrect instruction, contact our editorial team. Reports help us correct pages faster and keep the site useful."]}
+          ]
+        },
+        "pt-BR": {
+          "slug": "sobre",
+          "title": "Sobre o 67Codes",
+          "kicker": "Sobre nós",
+          "description": "Conheça o propósito do 67Codes e como nossa equipe mantém as informações sobre códigos de Roblox.",
+          "intro": "O 67Codes é uma publicação independente que ajuda jogadores de Roblox a encontrar códigos, entender como resgatá-los e acessar informações práticas sobre os jogos que acompanham.",
+          "sections": [
+            {"title": "Nosso propósito", "paragraphs": ["Criamos o 67Codes para tornar as informações sobre códigos mais fáceis de encontrar e usar. Cada página é organizada em torno de uma experiência específica do Roblox e revisada quando recebemos ou encontramos mudanças relevantes."]},
+            {"title": "O que publicamos", "paragraphs": ["Publicamos listas de códigos ativos, instruções de resgate, dicas de jogo e, conforme nossa biblioteca editorial crescer, guias originais sobre progressão, sistemas, itens e estratégias."]},
+            {"title": "Como trabalhamos", "paragraphs": ["Nossa equipe compara fontes públicas confiáveis, consulta canais oficiais dos jogos quando disponíveis, preserva os códigos exatamente como foram publicados e registra a data de cada revisão relevante. Não criamos nem adivinhamos códigos."]},
+            {"title": "Independência", "paragraphs": ["O 67Codes não é afiliado à Roblox Corporation nem aos desenvolvedores das experiências listadas neste site. Roblox e os nomes dos jogos pertencem aos seus respectivos proprietários."]},
+            {"title": "Ajude-nos a melhorar", "paragraphs": ["Se você encontrar um código expirado ou uma instrução incorreta, fale com nossa equipe editorial. Os relatos ajudam a corrigir páginas mais rapidamente e manter o site útil."]}
+          ]
+        }
+      }
+    },
+    "editorial": {
+      "updatedAt": "2026-10-03",
+      "translations": {
+        "en": {
+          "slug": "editorial-policy",
+          "title": "Editorial Policy",
+          "kicker": "Our standards",
+          "description": "Understand how 67Codes researches, reviews, updates, and corrects its Roblox content.",
+          "intro": "This policy describes the standards used by the 67Codes editorial team to produce and maintain code pages and game guides.",
+          "sections": [
+            {"title": "Research and sources", "paragraphs": ["We use official game pages, developer announcements, update logs, community channels, and established gaming publications. External information is rewritten and organized for our readers; we do not republish complete articles from other websites."]},
+            {"title": "Code status", "paragraphs": ["Active means a code is currently presented as redeemable by the sources reviewed. No active codes means the game has a redemption feature but no confirmed code at the time of review. No code system means we found no confirmed redemption feature in the experience."]},
+            {"title": "Verification", "paragraphs": ["A reviewed code is not necessarily tested inside the game. We only describe a code as tested when a member of our team has redeemed it directly. Codes are preserved with their original capitalization, spacing, numbers, and symbols."]},
+            {"title": "Updates and dates", "paragraphs": ["The review date changes only after a meaningful check or content update. Pages may be reviewed more often when a game receives an update or new codes are announced."]},
+            {"title": "Corrections", "paragraphs": ["When we confirm an error, we correct the page and update its review date. Readers can report expired codes, missing codes, incorrect instructions, or other factual problems through our contact page."]},
+            {"title": "Authors and responsibility", "paragraphs": ["Every editorial page identifies the team member or editorial group responsible for it. Future contributors will receive public profiles listing their role, biography, specialties, and published work."]}
+          ]
+        },
+        "pt-BR": {
+          "slug": "politica-editorial",
+          "title": "Política Editorial",
+          "kicker": "Nossos padrões",
+          "description": "Entenda como o 67Codes pesquisa, revisa, atualiza e corrige seus conteúdos sobre Roblox.",
+          "intro": "Esta política descreve os padrões usados pela equipe editorial do 67Codes para produzir e manter páginas de códigos e guias de jogos.",
+          "sections": [
+            {"title": "Pesquisa e fontes", "paragraphs": ["Consultamos páginas oficiais dos jogos, anúncios dos desenvolvedores, registros de atualização, canais da comunidade e publicações de jogos estabelecidas. As informações externas são reescritas e organizadas para nossos leitores; não republicamos artigos completos de outros sites."]},
+            {"title": "Status dos códigos", "paragraphs": ["Ativo significa que o código aparece como resgatável nas fontes revisadas. Sem códigos ativos significa que o jogo possui recurso de resgate, mas nenhum código foi confirmado na revisão. Sem sistema de códigos significa que não encontramos uma função de resgate confirmada na experiência."]},
+            {"title": "Verificação", "paragraphs": ["Um código revisado não foi necessariamente testado dentro do jogo. Só afirmamos que um código foi testado quando um integrante da equipe o resgatou diretamente. Preservamos letras maiúsculas, minúsculas, espaços, números e símbolos originais."]},
+            {"title": "Atualizações e datas", "paragraphs": ["A data de revisão muda somente após uma verificação relevante ou alteração de conteúdo. As páginas podem ser revistas com maior frequência quando um jogo recebe atualização ou novos códigos são anunciados."]},
+            {"title": "Correções", "paragraphs": ["Quando confirmamos um erro, corrigimos a página e atualizamos sua data de revisão. Os leitores podem informar códigos expirados, códigos ausentes, instruções incorretas ou outros problemas factuais pela página de contato."]},
+            {"title": "Autores e responsabilidade", "paragraphs": ["Toda página editorial identifica o integrante ou grupo editorial responsável. Futuros colaboradores receberão perfis públicos com função, biografia, especialidades e trabalhos publicados."]}
+          ]
+        }
+      }
+    },
+    "contact": {
+      "updatedAt": "2026-10-03",
+      "translations": {
+        "en": {
+          "slug": "contact",
+          "title": "Contact and Corrections",
+          "kicker": "Talk to us",
+          "description": "Contact the 67Codes editorial team or report an expired code and incorrect information.",
+          "intro": "Found an expired code, a missing code, or an incorrect instruction? Send the details to our editorial team.",
+          "sections": [
+            {"title": "What you can report", "paragraphs": ["You can report expired or missing codes, incorrect redemption steps, broken links, wrong game information, image problems, and other factual errors."]},
+            {"title": "What to include", "paragraphs": ["Include the game name, the page URL, the code or information involved, and a short explanation. If possible, mention where you found the corrected information."]},
+            {"title": "Editorial contact", "paragraphs": ["Email: privacy@67codes.com. Until a dedicated editorial address is available, this inbox also receives correction reports. We do not provide support for Roblox accounts, purchases, bans, or problems inside individual games."]},
+            {"title": "Correction process", "paragraphs": ["We review the report, compare it with reliable sources, update the page when the correction is confirmed, and record a new review date for meaningful changes."]}
+          ]
+        },
+        "pt-BR": {
+          "slug": "contato",
+          "title": "Contato e Correções",
+          "kicker": "Fale conosco",
+          "description": "Entre em contato com a equipe editorial do 67Codes ou informe códigos expirados e dados incorretos.",
+          "intro": "Encontrou um código expirado, um código ausente ou uma instrução incorreta? Envie os detalhes para nossa equipe editorial.",
+          "sections": [
+            {"title": "O que você pode informar", "paragraphs": ["Você pode comunicar códigos expirados ou ausentes, etapas de resgate incorretas, links quebrados, informações erradas sobre jogos, problemas em imagens e outros erros factuais."]},
+            {"title": "O que incluir", "paragraphs": ["Informe o nome do jogo, a URL da página, o código ou informação envolvida e uma explicação curta. Se possível, diga onde encontrou a informação corrigida."]},
+            {"title": "Contato editorial", "paragraphs": ["E-mail: privacy@67codes.com. Até termos um endereço editorial dedicado, esta caixa também receberá relatos de correção. Não oferecemos suporte para contas do Roblox, compras, banimentos ou problemas internos de jogos específicos."]},
+            {"title": "Processo de correção", "paragraphs": ["Analisamos o relato, comparamos com fontes confiáveis, atualizamos a página quando a correção é confirmada e registramos uma nova data de revisão para mudanças relevantes."]}
+          ]
+        }
+      }
+    }
+  }
+}

@@ -18,7 +18,15 @@ const pages=[
   {path:"/en/privacy",file:"en/privacy.html",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {path:"/pt-br/privacidade",file:"pt-br/privacidade.html",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {path:"/en/terms",file:"en/terms.html",en:"/en/terms",pt:"/pt-br/termos"},
-  {path:"/pt-br/termos",file:"pt-br/termos.html",en:"/en/terms",pt:"/pt-br/termos"}
+  {path:"/pt-br/termos",file:"pt-br/termos.html",en:"/en/terms",pt:"/pt-br/termos"},
+  {path:"/en/about",file:"en/about.html",en:"/en/about",pt:"/pt-br/sobre"},
+  {path:"/pt-br/sobre",file:"pt-br/sobre.html",en:"/en/about",pt:"/pt-br/sobre"},
+  {path:"/en/editorial-policy",file:"en/editorial-policy.html",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
+  {path:"/pt-br/politica-editorial",file:"pt-br/politica-editorial.html",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
+  {path:"/en/contact",file:"en/contact.html",en:"/en/contact",pt:"/pt-br/contato"},
+  {path:"/pt-br/contato",file:"pt-br/contato.html",en:"/en/contact",pt:"/pt-br/contato"},
+  {path:"/en/authors/67codes-team",file:"en/authors/67codes-team.html",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
+  {path:"/pt-br/autores/equipe-67codes",file:"pt-br/autores/equipe-67codes.html",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"}
 ];
 for(const game of activeGames){
   pages.push({path:`/en/games/${game.slug}`,file:`en/games/${game.slug}.html`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`});
@@ -42,6 +50,14 @@ const groups=[
   {loc:"/pt-br/privacidade",en:"/en/privacy",pt:"/pt-br/privacidade"},
   {loc:"/en/terms",en:"/en/terms",pt:"/pt-br/termos"},
   {loc:"/pt-br/termos",en:"/en/terms",pt:"/pt-br/termos"},
+  {loc:"/en/about",en:"/en/about",pt:"/pt-br/sobre"},
+  {loc:"/pt-br/sobre",en:"/en/about",pt:"/pt-br/sobre"},
+  {loc:"/en/editorial-policy",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
+  {loc:"/pt-br/politica-editorial",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
+  {loc:"/en/contact",en:"/en/contact",pt:"/pt-br/contato"},
+  {loc:"/pt-br/contato",en:"/en/contact",pt:"/pt-br/contato"},
+  {loc:"/en/authors/67codes-team",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
+  {loc:"/pt-br/autores/equipe-67codes",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
   ...activeGames.flatMap(game=>[
     {loc:`/en/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`,lastmod:toLastmod(game.lastUpdated)},
     {loc:`/pt-br/games/${game.slug}`,en:`/en/games/${game.slug}`,pt:`/pt-br/games/${game.slug}`,lastmod:toLastmod(game.lastUpdated)}
