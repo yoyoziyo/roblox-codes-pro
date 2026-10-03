@@ -75,6 +75,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/contact"/>
   </url>
   <url>
+    <loc>https://www.67codes.com/en/authors/yoite</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/authors/yoite"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/autores/yoite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/authors/yoite"/>
+  </url>
+  <url>
+    <loc>https://www.67codes.com/pt-br/autores/yoite</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/authors/yoite"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/autores/yoite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.67codes.com/en/authors/yoite"/>
+  </url>
+  <url>
     <loc>https://www.67codes.com/en/authors/67codes-team</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.67codes.com/en/authors/67codes-team"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.67codes.com/pt-br/autores/equipe-67codes"/>

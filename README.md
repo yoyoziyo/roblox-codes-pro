@@ -255,16 +255,28 @@ Os autores ficam em `data/authors/`. O arquivo `data/authors/index.json` registr
 - situação ativa;
 - nome, função, biografia e especialidades nos dois idiomas.
 
-O autor padrão do site é configurado em `data/site.json` por `defaultAuthorId`. Uma página de jogo pode usar outro perfil no futuro adicionando `authorId` à entrada correspondente em `data/index.json`.
+Para cadastrar um colaborador, execute:
+
+```bash
+npm run create:author -- nome-do-autor
+```
+
+O assistente usa `data/author-template.json`, cria o perfil bilíngue, registra o autor e atualiza sitemap e páginas. Inicialmente ele usa a logo do 67Codes como avatar; depois, altere o campo `avatar` no JSON para a imagem escolhida.
+
+O autor padrão do site é configurado em `data/site.json` por `defaultAuthorId`, e o revisor padrão por `defaultReviewerId`. Uma página de jogo pode usar outros perfis adicionando `authorId` e `reviewedBy` à entrada correspondente em `data/index.json`. Artigos já possuem os dois campos no próprio JSON.
 
 As páginas da Equipe Editorial são geradas em:
 
 ```text
 /en/authors/67codes-team
 /pt-br/autores/equipe-67codes
+/en/authors/yoite
+/pt-br/autores/yoite
 ```
 
 O comando `npm run generate` cria os perfis, insere autoria e revisão nas páginas dos jogos e artigos e atualiza os dados estruturados `Organization`, `ProfilePage`, `Article`, `author` e `reviewedBy`.
+
+Atualmente, Yoite aparece como autor e responsável pelas atualizações, enquanto a Equipe Editorial 67Codes aparece como revisora. Essa separação também deixa os dados preparados para um futuro painel administrativo com login, permissões, histórico e publicação por autor.
 
 ## Páginas editoriais
 

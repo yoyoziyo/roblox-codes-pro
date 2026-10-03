@@ -22,8 +22,8 @@ export async function createArticle(slug,{rl}={}){
     const excerptPt=await required(prompt,"Resumo em português"),excerptEn=await required(prompt,"Resumo em inglês");
     const headingPt=await required(prompt,"Título da primeira seção em português"),headingEn=await required(prompt,"Título da primeira seção em inglês");
     const paragraphsPt=parseArticleList(await required(prompt,"Parágrafos em português separados por |")),paragraphsEn=parseArticleList(await required(prompt,"Parágrafos em inglês separados por |"));
-    const now=new Date().toISOString();
-    const article={slug,status:"draft",authorId:"equipe-67codes",reviewedBy:"equipe-67codes",publishedAt:now,updatedAt:now,coverImage:"",relatedGames:[],translations:{en:{title:titleEn,excerpt:excerptEn,seoDescription:excerptEn,sections:[{heading:headingEn,paragraphs:paragraphsEn,items:[]}]},"pt-BR":{title:titlePt,excerpt:excerptPt,seoDescription:excerptPt,sections:[{heading:headingPt,paragraphs:paragraphsPt,items:[]}]}}};
+    const now=new Date().toISOString(),site=JSON.parse(await fs.readFile(path.join(root,"data/site.json"),"utf8"));
+    const article={slug,status:"draft",authorId:site.defaultAuthorId,reviewedBy:site.defaultReviewerId||site.defaultAuthorId,publishedAt:now,updatedAt:now,coverImage:"",relatedGames:[],translations:{en:{title:titleEn,excerpt:excerptEn,seoDescription:excerptEn,sections:[{heading:headingEn,paragraphs:paragraphsEn,items:[]}]},"pt-BR":{title:titlePt,excerpt:excerptPt,seoDescription:excerptPt,sections:[{heading:headingPt,paragraphs:paragraphsPt,items:[]}]}}};
     const indexPath=path.join(root,"data/articles/index.json"),index=JSON.parse(await fs.readFile(indexPath,"utf8"));
     index.articles.push(slug);
     await fs.writeFile(target,`${JSON.stringify(article,null,2)}\n`);await fs.writeFile(indexPath,`${JSON.stringify(index,null,2)}\n`);await generateArticles();

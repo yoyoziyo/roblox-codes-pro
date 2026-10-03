@@ -5,6 +5,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { parseCodes, parseSteps, validSlug } from "../scripts/create-game.js";
 import { parseArticleList, validArticleSlug } from "../scripts/create-article.js";
+import { parseSpecialties, validAuthorId } from "../scripts/create-author.js";
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),"utf8"));
@@ -271,9 +272,10 @@ test("estrutura editorial apresenta autoria, metodologia e contato",()=>{
 
 test("páginas de jogos identificam revisor e permitem informar correções",()=>{
   for(const game of index.games.filter(game=>game.status==="active")){
-    for(const [dir,authorPath,label] of [["en","/en/authors/67codes-team","Report a correction"],["pt-br","/pt-br/autores/equipe-67codes","Informar correção"]]){
+    for(const [dir,authorPath,reviewerPath,label] of [["en","/en/authors/yoite","/en/authors/67codes-team","Report a correction"],["pt-br","/pt-br/autores/yoite","/pt-br/autores/equipe-67codes","Informar correção"]]){
       const html=read(`${dir}/games/${game.slug}.html`);
       assert.ok(html.includes(`href="${authorPath}"`),`${game.slug}: autoria`);
+      assert.ok(html.includes(`href="${reviewerPath}"`),`${game.slug}: revisão`);
       assert.ok(html.includes(label),`${game.slug}: correção`);
       assert.ok(html.includes("mailto:privacy@67codes.com"),`${game.slug}: e-mail editorial`);
       const json=JSON.parse(html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);
@@ -319,6 +321,26 @@ test("assistente de artigos cria slugs e listas seguras",()=>{
   const pkg=readJson("package.json");
   assert.ok(pkg.scripts["create:article"]);
   assert.ok(pkg.scripts["generate:articles"]);
+});
+
+test("autores individuais possuem perfil padronizado e associação editorial",()=>{
+  const authorTemplate=readJson("data/author-template.json"),authorIndex=readJson("data/authors/index.json");
+  assert.ok(authorIndex.authors.includes("yoite"));
+  assert.equal(site.defaultAuthorId,"yoite");
+  assert.equal(site.defaultReviewerId,"equipe-67codes");
+  for(const id of authorIndex.authors){
+    const author=readJson(`data/authors/${id}.json`);
+    assert.deepEqual(Object.keys(author).sort(),Object.keys(authorTemplate).sort());
+    for(const locale of ["en","pt-BR"]){assert.ok(author.translations[locale].slug);assert.ok(author.translations[locale].name);assert.ok(author.translations[locale].bio)}
+    const enSlug=author.translations.en.slug,ptSlug=author.translations["pt-BR"].slug;
+    assert.ok(fs.existsSync(path.join(root,`en/authors/${enSlug}.html`)));
+    assert.ok(fs.existsSync(path.join(root,`pt-br/autores/${ptSlug}.html`)));
+    assert.ok(read("sitemap.xml").includes(`${site.origin}/en/authors/${enSlug}`));
+  }
+  assert.equal(validAuthorId("novo-autor"),true);
+  assert.equal(validAuthorId("Novo Autor"),false);
+  assert.deepEqual(parseSpecialties("Roblox, SEO | Roblox"),["Roblox","SEO"]);
+  assert.ok(readJson("package.json").scripts["create:author"]);
 });
 
 test("sincronizador não referencia nem remove traduções",()=>{

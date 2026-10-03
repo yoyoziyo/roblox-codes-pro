@@ -6,6 +6,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const site=JSON.parse(await fs.readFile(path.join(root,"data/site.json"),"utf8"));
 const index=JSON.parse(await fs.readFile(path.join(root,"data/index.json"),"utf8"));
 const articleIndex=JSON.parse(await fs.readFile(path.join(root,"data/articles/index.json"),"utf8"));
+const authorIndex=JSON.parse(await fs.readFile(path.join(root,"data/authors/index.json"),"utf8"));
 const origin=site.origin.replace(/\/$/,"");
 const toLastmod=value=>{
   const date=new Date(value);
@@ -14,6 +15,8 @@ const toLastmod=value=>{
 const activeGames=index.games.filter(item=>item.status==="active");
 const articles=[];
 for(const slug of articleIndex.articles){const article=JSON.parse(await fs.readFile(path.join(root,"data/articles",`${slug}.json`),"utf8"));if(article.status==="published")articles.push(article)}
+const authors=[];
+for(const id of authorIndex.authors){const author=JSON.parse(await fs.readFile(path.join(root,"data/authors",`${id}.json`),"utf8"));if(author.active)authors.push(author)}
 const latestGameUpdate=activeGames.map(game=>toLastmod(game.lastUpdated)).filter(Boolean).sort().at(-1)||"";
 const pages=[
   {path:"/en",file:"en/index.html",en:"/en",pt:"/pt-br"},
@@ -27,10 +30,9 @@ const pages=[
   {path:"/en/editorial-policy",file:"en/editorial-policy.html",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
   {path:"/pt-br/politica-editorial",file:"pt-br/politica-editorial.html",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
   {path:"/en/contact",file:"en/contact.html",en:"/en/contact",pt:"/pt-br/contato"},
-  {path:"/pt-br/contato",file:"pt-br/contato.html",en:"/en/contact",pt:"/pt-br/contato"},
-  {path:"/en/authors/67codes-team",file:"en/authors/67codes-team.html",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
-  {path:"/pt-br/autores/equipe-67codes",file:"pt-br/autores/equipe-67codes.html",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"}
+  {path:"/pt-br/contato",file:"pt-br/contato.html",en:"/en/contact",pt:"/pt-br/contato"}
 ];
+for(const author of authors){const enPath=`/en/authors/${author.translations.en.slug}`,ptPath=`/pt-br/autores/${author.translations["pt-BR"].slug}`;pages.push({path:enPath,file:`en/authors/${author.translations.en.slug}.html`,en:enPath,pt:ptPath},{path:ptPath,file:`pt-br/autores/${author.translations["pt-BR"].slug}.html`,en:enPath,pt:ptPath})}
 pages.push({path:"/en/guides",file:"en/guides.html",en:"/en/guides",pt:"/pt-br/guias"},{path:"/pt-br/guias",file:"pt-br/guias.html",en:"/en/guides",pt:"/pt-br/guias"});
 for(const article of articles){pages.push({path:`/en/guides/${article.slug}`,file:`en/guides/${article.slug}.html`,en:`/en/guides/${article.slug}`,pt:`/pt-br/guias/${article.slug}`},{path:`/pt-br/guias/${article.slug}`,file:`pt-br/guias/${article.slug}.html`,en:`/en/guides/${article.slug}`,pt:`/pt-br/guias/${article.slug}`})}
 for(const game of activeGames){
@@ -61,8 +63,7 @@ const groups=[
   {loc:"/pt-br/politica-editorial",en:"/en/editorial-policy",pt:"/pt-br/politica-editorial"},
   {loc:"/en/contact",en:"/en/contact",pt:"/pt-br/contato"},
   {loc:"/pt-br/contato",en:"/en/contact",pt:"/pt-br/contato"},
-  {loc:"/en/authors/67codes-team",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
-  {loc:"/pt-br/autores/equipe-67codes",en:"/en/authors/67codes-team",pt:"/pt-br/autores/equipe-67codes"},
+  ...authors.flatMap(author=>{const enPath=`/en/authors/${author.translations.en.slug}`,ptPath=`/pt-br/autores/${author.translations["pt-BR"].slug}`;return [{loc:enPath,en:enPath,pt:ptPath},{loc:ptPath,en:enPath,pt:ptPath}]}),
   {loc:"/en/guides",en:"/en/guides",pt:"/pt-br/guias"},
   {loc:"/pt-br/guias",en:"/en/guides",pt:"/pt-br/guias"},
   ...articles.flatMap(article=>[

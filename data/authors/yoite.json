@@ -1,0 +1,23 @@
+{
+  "id": "yoite",
+  "type": "Person",
+  "avatar": "/assets/ui/logo.webp",
+  "active": true,
+  "joinedAt": "2026-08-01",
+  "translations": {
+    "en": {
+      "slug": "yoite",
+      "name": "Yoite",
+      "role": "Founder and editor",
+      "bio": "Founder and editor of 67Codes, responsible for selecting games, updating code lists, and improving the site's guides and publishing standards.",
+      "specialties": ["Roblox codes", "Content updates", "Editorial curation"]
+    },
+    "pt-BR": {
+      "slug": "yoite",
+      "name": "Yoite",
+      "role": "Fundador e editor",
+      "bio": "Fundador e editor do 67Codes, responsável por selecionar jogos, atualizar listas de códigos e aprimorar os guias e padrões de publicação do site.",
+      "specialties": ["Códigos de Roblox", "Atualização de conteúdo", "Curadoria editorial"]
+    }
+  }
+}

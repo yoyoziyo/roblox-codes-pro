@@ -6,12 +6,14 @@
   "joinedAt": "2026-08-01",
   "translations": {
     "en": {
+      "slug": "67codes-team",
       "name": "67Codes Editorial Team",
       "role": "Editorial team",
       "bio": "The team responsible for researching, reviewing, and maintaining the Roblox code pages and practical guides published by 67Codes.",
       "specialties": ["Roblox codes", "Game guides", "Information review"]
     },
     "pt-BR": {
+      "slug": "equipe-67codes",
       "name": "Equipe Editorial 67Codes",
       "role": "Equipe editorial",
       "bio": "Equipe responsável por pesquisar, revisar e manter as páginas de códigos e os guias práticos de Roblox publicados pelo 67Codes.",

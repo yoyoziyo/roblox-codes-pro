@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "type": "Person",
+  "avatar": "/assets/ui/logo.webp",
+  "active": true,
+  "joinedAt": "",
+  "translations": {
+    "en": {
+      "slug": "",
+      "name": "",
+      "role": "",
+      "bio": "",
+      "specialties": []
+    },
+    "pt-BR": {
+      "slug": "",
+      "name": "",
+      "role": "",
+      "bio": "",
+      "specialties": []
+    }
+  }
+}
