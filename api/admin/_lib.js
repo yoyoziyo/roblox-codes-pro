@@ -39,7 +39,7 @@ export async function requireAdmin(request){
   const identity=await check.json();
   const email=String(identity.email||"").toLowerCase();
   const allowed=adminEmails();
-  if(identity.aud!==projectId||identity.email_verified!=="true"||!allowed.has(email)){
+  if(identity.aud!==projectId||!email||!allowed.has(email)){
     throw Object.assign(new Error("Esta conta não tem acesso ao painel."),{statusCode:403});
   }
   let authorId=process.env.DEFAULT_ADMIN_AUTHOR_ID||"yoite";
