@@ -1,0 +1,59 @@
+name: Publish Admin Content
+
+on:
+  repository_dispatch:
+    types: [admin_publish]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: admin-publish-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Read repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate and apply editorial change
+        id: content
+        env:
+          ADMIN_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: node scripts/admin-publish.js
+
+      - name: Download official Roblox images
+        if: steps.content.outputs.action == 'upsert' && steps.content.outputs.sync_assets == 'true'
+        run: npm run sync:roblox -- "${{ steps.content.outputs.slug }}"
+
+      - name: Generate static pages
+        run: npm run generate
+
+      - name: Validate project
+        run: npm test
+
+      - name: Publish validated files
+        env:
+          ADMIN_ACTOR: ${{ github.event.client_payload.actorEmail }}
+          ADMIN_REQUEST_ID: ${{ github.event.client_payload.requestId }}
+          ADMIN_SLUG: ${{ github.event.client_payload.slug }}
+        run: |
+          git config user.name "67Codes Editorial Bot"
+          git config user.email "editorial-bot@67codes.com"
+          git add data public/assets/games en pt-br sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No publishable changes found."
+            exit 0
+          fi
+          git commit -m "Update ${ADMIN_SLUG} from editorial panel" -m "Editor: ${ADMIN_ACTOR}" -m "Request: ${ADMIN_REQUEST_ID}"
+          git push origin HEAD:main

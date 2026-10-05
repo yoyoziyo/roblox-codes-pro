@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Painel editorial — 67Codes</title><link rel="icon" href="/assets/ui/favicon.png"><link rel="stylesheet" href="/admin/admin.css"><link rel="stylesheet" href="/admin/responsive.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="auth-card" id="auth-view">
+      <img src="/assets/ui/logo.webp" alt="67Codes" class="admin-logo"><p class="eyebrow">ÁREA RESTRITA</p><h1>Painel editorial</h1><p>Acesso exclusivo para administradores e autores autorizados.</p>
+      <form id="login-form"><label>E-mail<input id="login-email" type="email" autocomplete="username" required></label><label>Senha<input id="login-password" type="password" autocomplete="current-password" required></label><button type="submit">Entrar</button><p class="form-message" id="login-message" role="status"></p></form>
+    </section>
+    <section class="dashboard" id="dashboard" hidden>
+      <header class="admin-header"><div><img src="/assets/ui/logo.webp" alt="" class="header-logo"><span>Painel editorial</span></div><div><span id="admin-email"></span><button class="button-quiet" id="logout" type="button">Sair</button></div></header>
+      <div class="dashboard-grid">
+        <aside class="game-sidebar"><div class="sidebar-head"><div><p class="eyebrow">CONTEÚDO</p><h2>Jogos</h2></div><button id="new-game" type="button">+ Novo</button></div><input id="game-search" type="search" placeholder="Pesquisar jogo..."><div class="game-list" id="game-list"></div></aside>
+        <section class="editor-card">
+          <div class="editor-empty" id="editor-empty"><h2>Selecione um jogo</h2><p>Escolha um jogo da lista ou crie um novo cadastro.</p></div>
+          <form id="game-form" hidden>
+            <div class="editor-title"><div><p class="eyebrow" id="editor-mode">EDITAR JOGO</p><h2 id="editor-heading">Jogo</h2></div><span class="draft-badge">Rascunho local</span></div>
+            <nav class="tabs" aria-label="Seções do formulário"><button class="tab active" type="button" data-tab="basic">Informações</button><button class="tab" type="button" data-tab="content">Conteúdo</button><button class="tab" type="button" data-tab="codes">Códigos</button><button class="tab" type="button" data-tab="assets">Imagens</button></nav>
+            <div class="tab-panel active" data-panel="basic"><div class="field-grid"><label>Slug<input name="slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*"></label><label>Link oficial do Roblox<input name="robloxUrl" type="url" required placeholder="https://www.roblox.com/games/..."></label><label>Nome em português<input name="titlePt" required></label><label>Nome em inglês<input name="titleEn" required></label></div><label>Descrição em português<textarea name="descriptionPt" required rows="4"></textarea></label><label>Descrição em inglês<textarea name="descriptionEn" required rows="4"></textarea></label></div>
+            <div class="tab-panel" data-panel="content"><div class="field-grid"><label>Dicas em português <small>uma por linha</small><textarea name="tipsPt" rows="7"></textarea></label><label>Dicas em inglês <small>uma por linha</small><textarea name="tipsEn" rows="7"></textarea></label></div><h3>Tutorial de resgate</h3><div class="field-grid"><label>Título em português<input name="tutorialTitlePt"></label><label>Título em inglês<input name="tutorialTitleEn"></label><label>Introdução em português<textarea name="tutorialDescriptionPt" rows="3"></textarea></label><label>Introdução em inglês<textarea name="tutorialDescriptionEn" rows="3"></textarea></label><label>Etapas em português <small>uma por linha</small><textarea name="stepsPt" rows="7"></textarea></label><label>Etapas em inglês <small>uma por linha</small><textarea name="stepsEn" rows="7"></textarea></label></div></div>
+            <div class="tab-panel" data-panel="codes"><label>Status dos códigos<select name="codeStatus"><option value="active">Possui códigos ativos</option><option value="no-active-codes">Sem códigos ativos</option><option value="no-code-system">Sem sistema de códigos</option></select></label><label>Códigos <small>separados por vírgula ou linha</small><textarea name="codes" rows="12" spellcheck="false"></textarea></label></div>
+            <div class="tab-panel" data-panel="assets"><div class="asset-options"><label class="check"><input name="syncIcon" type="checkbox" checked><span><strong>Atualizar ícone pelo Roblox</strong><small>Busca o ícone oficial ao publicar e nas atualizações semanais.</small></span></label><label class="check"><input name="syncThumbnail" type="checkbox" checked><span><strong>Buscar thumbnail oficial</strong><small>Usa a primeira thumbnail oficial quando não houver imagem personalizada.</small></span></label></div><label>Imagem personalizada do tutorial <small>caminho opcional</small><input name="redeemTutorial" placeholder="/assets/games/slug/redeem-tutorial.webp"></label><p class="notice">O banner visual da página utiliza a thumbnail. Imagens personalizadas existentes não serão substituídas sem sua autorização.</p></div>
+            <div class="editor-actions"><button class="danger" id="archive-game" type="button">Arquivar jogo</button><div><button class="button-quiet" id="preview-json" type="button">Revisar dados</button><button id="publish-game" type="submit">Publicar alterações</button></div></div><p class="form-message" id="editor-message" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+  <dialog id="review-dialog"><form method="dialog"><div class="dialog-head"><h2>Revisão antes de publicar</h2><button value="cancel" aria-label="Fechar">×</button></div><pre id="review-content"></pre><button value="cancel">Voltar ao editor</button></form></dialog>
+  <script type="module" src="/admin/admin.js"></script>
+</body></html>

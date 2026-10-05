@@ -265,6 +265,22 @@ O assistente usa `data/author-template.json`, cria o perfil bilíngue, registra 
 
 O autor padrão do site é configurado em `data/site.json` por `defaultAuthorId`, e o revisor padrão por `defaultReviewerId`. Uma página de jogo pode usar outros perfis adicionando `authorId` e `reviewedBy` à entrada correspondente em `data/index.json`. Artigos já possuem os dois campos no próprio JSON.
 
+## Painel editorial privado
+
+O painel em `/admin` não é divulgado no site público, possui `noindex` e exige uma conta autorizada no Firebase Authentication. Visitantes não precisam de conta e não veem links de acesso administrativo.
+
+Variáveis necessárias na Vercel:
+
+- `FIREBASE_API_KEY`: chave pública Web API do projeto Firebase;
+- `FIREBASE_PROJECT_ID`: ID do projeto Firebase;
+- `ADMIN_EMAILS`: e-mails autorizados separados por vírgula;
+- `DEFAULT_ADMIN_AUTHOR_ID`: perfil editorial padrão, por exemplo `yoite`;
+- `ADMIN_AUTHOR_MAP`: JSON opcional ligando e-mails a IDs de autores;
+- `GITHUB_ADMIN_TOKEN`: token fine-grained limitado ao repositório, com Contents e Actions em leitura/escrita;
+- `GITHUB_REPOSITORY`: `yoyoziyo/roblox-codes-pro`.
+
+O navegador nunca recebe `GITHUB_ADMIN_TOKEN`. Depois do login, o backend confirma o token do Firebase e solicita o workflow `Publish Admin Content`. O workflow valida os dados, sincroniza imagens permitidas, gera as páginas, executa os testes e só então publica na `main`. O campo `lastUpdated`, os itens recentes, o sitemap e a autoria são atualizados automaticamente.
+
 As páginas da Equipe Editorial são geradas em:
 
 ```text
