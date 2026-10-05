@@ -32,14 +32,19 @@ export async function requireAdmin(request){
   const authorization=request.headers.authorization||"";
   const token=authorization.startsWith("Bearer ")?authorization.slice(7):"";
   if(!token)throw Object.assign(new Error("Faça login para continuar."),{statusCode:401});
-  const projectId=process.env.FIREBASE_PROJECT_ID;
-  if(!projectId)throw Object.assign(new Error("A autenticação administrativa ainda não foi configurada."),{statusCode:503});
-  const check=await fetch(`https://oauth2.googleapis.com/tokeninfo?id_token=${encodeURIComponent(token)}`,{signal:AbortSignal.timeout(8_000)});
+  const apiKey=process.env.FIREBASE_API_KEY;
+  if(!apiKey||!process.env.FIREBASE_PROJECT_ID)throw Object.assign(new Error("A autenticação administrativa ainda não foi configurada."),{statusCode:503});
+  const check=await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${encodeURIComponent(apiKey)}`,{
+    method:"POST",
+    headers:{"content-type":"application/json"},
+    body:JSON.stringify({idToken:token}),
+    signal:AbortSignal.timeout(8_000)
+  });
   if(!check.ok)throw Object.assign(new Error("Sua sessão expirou. Entre novamente."),{statusCode:401});
-  const identity=await check.json();
+  const result=await check.json(),identity=result.users?.[0]||{};
   const email=String(identity.email||"").toLowerCase();
   const allowed=adminEmails();
-  if(identity.aud!==projectId||!email||!allowed.has(email)){
+  if(!identity.localId||!email||!allowed.has(email)){
     throw Object.assign(new Error("Esta conta não tem acesso ao painel."),{statusCode:403});
   }
   let authorId=process.env.DEFAULT_ADMIN_AUTHOR_ID||"yoite";
@@ -47,7 +52,7 @@ export async function requireAdmin(request){
     const mapping=JSON.parse(process.env.ADMIN_AUTHOR_MAP||"{}");
     authorId=mapping[email]||authorId;
   }catch{}
-  return {email,uid:identity.user_id||identity.sub,authorId};
+  return {email,uid:identity.localId,authorId};
 }
 
 export function githubSettings(){
