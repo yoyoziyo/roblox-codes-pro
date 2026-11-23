@@ -6,7 +6,12 @@
   "publishedAt": "2026-10-03T12:00:00.000Z",
   "updatedAt": "2026-10-03T12:00:00.000Z",
   "coverImage": "",
-  "relatedGames": [],
+  "relatedGames": [
+    "catch-and-tame",
+    "type-soul",
+    "rivals",
+    "adopt-me"
+  ],
   "translations": {
     "en": {
       "title": "How to redeem Roblox codes safely",

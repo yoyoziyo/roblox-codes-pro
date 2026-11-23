@@ -1,0 +1,133 @@
+{
+  "slug": "onde-os-jogos-roblox-colocam-os-codigos",
+  "status": "published",
+  "authorId": "yoite",
+  "reviewedBy": "equipe-67codes",
+  "publishedAt": "2026-11-23T16:00:00.000Z",
+  "updatedAt": "2026-11-23T16:00:00.000Z",
+  "coverImage": "",
+  "relatedGames": [
+    "volleyball-legends",
+    "ghost-driver",
+    "dress-to-impress",
+    "type-soul",
+    "adopt-me",
+    "catalog-avatar-creator"
+  ],
+  "translations": {
+    "en": {
+      "title": "Where Roblox games hide their code menus",
+      "excerpt": "We compared the redemption instructions from 34 games in the 67Codes catalog to identify the menus, requirements, and unusual systems players encounter most often.",
+      "seoDescription": "See where 34 Roblox games place their code menu, which requirements can block redemption, and what to check before assuming a code is invalid.",
+      "sections": [
+        {
+          "heading": "What we analyzed",
+          "paragraphs": [
+            "We reviewed the redemption instructions from the 34 games in our catalog that currently have a code field, have used one recently, or provide a different official redemption method. The goal was not to create a universal path—Roblox does not control these menus—but to identify the interface patterns that appear repeatedly.",
+            "The comparison also shows why a code can be correct while the player still cannot find the field. Some developers place redemption behind a shop, a tutorial, account progress, a physical location, or a command that does not resemble a normal Codes button."
+          ],
+          "items": []
+        },
+        {
+          "heading": "The shop is the most common starting point",
+          "paragraphs": [
+            "Shop and Store menus appear repeatedly in our instructions. Volleyball Legends places codes inside the shop, Ghost Driver uses Shop followed by Rewards or Codes, and games such as Runaways, Fish It!, Anime Dice, and DOORS require the player to open a store and sometimes scroll before the field becomes visible.",
+            "When a store has several tabs, look for Rewards, Codes, Gift, or a text field near the bottom. Scrolling matters: a field placed below products can be missed on a small screen even when the correct menu is already open."
+          ],
+          "items": [
+            "Open Shop or Store and inspect every tab.",
+            "Scroll to the bottom before leaving the menu.",
+            "Check Rewards and Gift sections even when there is no tab named Codes."
+          ]
+        },
+        {
+          "heading": "Dedicated icons are faster, but not always obvious",
+          "paragraphs": [
+            "Several experiences expose redemption directly through an icon. Dress To Impress uses the bag or codes icon on the left, Anime Vanguards and Dungeon Lootr use dedicated code controls, and Speed Keyboard Escape places its button near the top-left corner.",
+            "The symbol may look like a gift, ticket, social-media logo, or generic menu button. This is why the instructions on each game page describe the location and visual context instead of telling every player to search for the same icon."
+          ],
+          "items": []
+        },
+        {
+          "heading": "Requirements that can hide or block redemption",
+          "paragraphs": [
+            "A missing field does not always mean that the feature was removed. Fish an Anime RNG asks the player to finish its introductory tutorial, while TYPE SOUL requires account progress before its gift control can be used. RIVALS may ask for initial tasks or an official follow requirement before a reward is released.",
+            "Other systems are completely different. Adopt Me uses a redemption kiosk in a specific map location, Catalog Avatar Creator accepts a chat command, and Pet Simulator 99 distinguishes individual product codes from free public codes. These cases should not be forced into the usual Shop-and-Redeem instructions."
+          ],
+          "items": []
+        },
+        {
+          "heading": "A practical search order",
+          "paragraphs": [
+            "If you have a confirmed code but no instructions, first inspect the main interface for a Codes or gift icon. Then check Shop, Settings, Menu, and Rewards, including content below the visible area. If the field remains unavailable, complete the tutorial and read any requirement shown near the button.",
+            "Use the specific game page whenever possible. A precise route is safer than assuming every Roblox experience follows the same menu structure, especially after an interface update."
+          ],
+          "items": [
+            "Dedicated Codes, gift, or ticket icon.",
+            "Shop or Store, including Rewards tabs and the bottom of the page.",
+            "Settings or the main menu.",
+            "Tutorial, rank, group, or location requirements.",
+            "Alternative official methods such as a kiosk or chat command."
+          ]
+        }
+      ]
+    },
+    "pt-BR": {
+      "title": "Onde ficam os códigos nos jogos do Roblox",
+      "excerpt": "Comparamos as instruções de resgate de 34 jogos do catálogo do 67Codes para identificar os menus, requisitos e sistemas incomuns encontrados com mais frequência.",
+      "seoDescription": "Veja onde 34 jogos do Roblox colocam o menu de códigos, quais requisitos podem bloquear o resgate e o que conferir antes de considerar um código inválido.",
+      "sections": [
+        {
+          "heading": "O que analisamos",
+          "paragraphs": [
+            "Revisamos as instruções de resgate dos 34 jogos do nosso catálogo que possuem um campo de códigos, utilizaram um recentemente ou oferecem outra forma oficial de resgate. O objetivo não foi criar um caminho universal — o Roblox não controla esses menus —, mas identificar os padrões de interface que se repetem.",
+            "A comparação também mostra por que um código pode estar correto mesmo quando a pessoa não encontra o campo. Alguns desenvolvedores colocam o resgate dentro da loja, depois de um tutorial, atrás do progresso da conta, em um local do mapa ou em um comando que não se parece com um botão comum de códigos."
+          ],
+          "items": []
+        },
+        {
+          "heading": "A loja é o ponto de partida mais comum",
+          "paragraphs": [
+            "Os menus Shop e Store aparecem repetidamente nas nossas instruções. Volleyball Legends coloca os códigos dentro da loja, Ghost Driver usa Shop seguido por Rewards ou Codes, e jogos como Runaways, Fish It!, Anime Dice e DOORS exigem abrir uma loja e, em alguns casos, rolar a página até o campo aparecer.",
+            "Quando a loja possui várias abas, procure Rewards, Codes, Gift ou um campo de texto próximo ao final. A rolagem faz diferença: um campo localizado abaixo dos produtos pode passar despercebido em telas pequenas, mesmo quando o menu correto já está aberto."
+          ],
+          "items": [
+            "Abra Shop ou Store e confira todas as abas.",
+            "Role até o final antes de sair do menu.",
+            "Confira as áreas Rewards e Gift mesmo quando não existir uma aba chamada Codes."
+          ]
+        },
+        {
+          "heading": "Ícones dedicados são rápidos, mas nem sempre óbvios",
+          "paragraphs": [
+            "Várias experiências oferecem o resgate diretamente por um ícone. Dress To Impress usa a bolsa ou o ícone de códigos na lateral esquerda, Anime Vanguards e Dungeon Lootr possuem controles dedicados, e Speed Keyboard Escape posiciona o botão perto do canto superior esquerdo.",
+            "O símbolo pode parecer um presente, ingresso, rede social ou botão genérico de menu. Por isso as instruções de cada página descrevem a posição e o contexto visual, em vez de mandar todo jogador procurar o mesmo desenho."
+          ],
+          "items": []
+        },
+        {
+          "heading": "Requisitos que escondem ou bloqueiam o resgate",
+          "paragraphs": [
+            "Um campo ausente nem sempre significa que a função foi removida. Fish an Anime RNG pede a conclusão do tutorial inicial, enquanto TYPE SOUL exige progresso na conta antes que o controle de presente possa ser usado. RIVALS pode solicitar tarefas iniciais ou um requisito oficial antes de liberar a recompensa.",
+            "Outros sistemas são completamente diferentes. Adopt Me usa um quiosque de resgate em uma área específica do mapa, Catalog Avatar Creator aceita um comando no chat e Pet Simulator 99 diferencia códigos individuais de produtos e códigos públicos gratuitos. Esses casos não devem ser forçados para o tutorial comum de Shop e Redeem."
+          ],
+          "items": []
+        },
+        {
+          "heading": "Uma ordem prática de procura",
+          "paragraphs": [
+            "Se você possui um código confirmado, mas não tem as instruções, primeiro procure um ícone de Codes ou presente na interface principal. Depois confira Shop, Settings, Menu e Rewards, incluindo o conteúdo abaixo da parte visível. Se o campo continuar indisponível, conclua o tutorial e leia qualquer requisito mostrado perto do botão.",
+            "Sempre que possível, use a página específica do jogo. Um caminho preciso é mais seguro do que presumir que todas as experiências do Roblox seguem a mesma estrutura, principalmente depois de uma atualização da interface."
+          ],
+          "items": [
+            "Ícone dedicado de Codes, presente ou ingresso.",
+            "Shop ou Store, incluindo a aba Rewards e o final da página.",
+            "Settings ou o menu principal.",
+            "Requisitos de tutorial, patente, grupo ou localização.",
+            "Métodos oficiais alternativos, como quiosque ou comando no chat."
+          ]
+        }
+      ]
+    }
+  }
+}

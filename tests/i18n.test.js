@@ -314,7 +314,10 @@ test("sistema de guias gera listagem, artigos, autoria e SEO bilíngue",()=>{
       assert.ok(translation.title&&translation.excerpt&&translation.seoDescription);
       assert.ok(translation.sections.length);
       for(const section of translation.sections){assert.ok(section.heading);assert.ok(Array.isArray(section.paragraphs));assert.ok(Array.isArray(section.items))}
+      const editorialWords=translation.sections.flatMap(section=>[...section.paragraphs,...section.items]).join(" ").split(/\s+/).filter(Boolean).length;
+      assert.ok(editorialWords>=180,`${slug}: conteúdo editorial superficial em ${locale}`);
     }
+    for(const relatedSlug of article.relatedGames||[])assert.ok(index.games.some(game=>game.slug===relatedSlug&&game.status==="active"),`${slug}: jogo relacionado inválido ${relatedSlug}`);
     if(article.status!=="published")continue;
     for(const [file,canonical,alternate] of [[`en/guides/${slug}.html`,`/en/guides/${slug}`,`/pt-br/guias/${slug}`],[`pt-br/guias/${slug}.html`,`/pt-br/guias/${slug}`,`/en/guides/${slug}`]]){
       const html=read(file);
@@ -322,14 +325,15 @@ test("sistema de guias gera listagem, artigos, autoria e SEO bilíngue",()=>{
       assert.ok(html.includes(`href="${alternate}" data-language=`),file);
       assert.ok(html.includes('"@type":"Article"'),file);
       assert.ok(html.includes("privacy@67codes.com"),file);
+      if(article.relatedGames?.length)assert.ok(html.includes('class="article-related"'),`${file}: jogos relacionados`);
       assert.equal(html.includes("{{"),false,file);
       assert.equal(html.split(adsenseSource).length-1,1,file);
     }
   }
   for(const file of ["en/guides.html","pt-br/guias.html"]){const html=read(file);assert.ok(html.includes('class="guide-card"'));assert.equal(html.includes("{{"),false)}
   assert.ok(read("sitemap.xml").includes(`${site.origin}/en/guides/como-resgatar-codigos-no-roblox`));
-  assert.ok(read("en/authors/67codes-team.html").includes("How to redeem Roblox codes safely"));
-  assert.ok(read("pt-br/autores/equipe-67codes.html").includes("Como resgatar códigos do Roblox com segurança"));
+  assert.ok(read("en/authors/67codes-team.html").includes("Where Roblox games hide their code menus"));
+  assert.ok(read("pt-br/autores/equipe-67codes.html").includes("Onde ficam os códigos nos jogos do Roblox"));
 });
 
 test("assistente de artigos cria slugs e listas seguras",()=>{

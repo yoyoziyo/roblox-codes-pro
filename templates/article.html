@@ -6,7 +6,7 @@
   <title>{{SEO_TITLE}}</title><meta name="description" content="{{DESCRIPTION}}"><meta name="author" content="{{AUTHOR_NAME}}">
   <meta property="og:title" content="{{SEO_TITLE}}"><meta property="og:description" content="{{DESCRIPTION}}"><meta property="og:type" content="article"><meta property="article:published_time" content="{{PUBLISHED_ISO}}"><meta property="article:modified_time" content="{{UPDATED_ISO}}"><meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="{{CANONICAL}}"><link rel="alternate" hreflang="en" href="{{EN_URL}}"><link rel="alternate" hreflang="pt-BR" href="{{PT_URL}}"><link rel="alternate" hreflang="x-default" href="{{EN_URL}}">
-  <link rel="icon" href="/assets/ui/favicon.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/article.css"><script type="application/ld+json">{{STRUCTURED_DATA}}</script>
+  <link rel="icon" href="/assets/ui/favicon.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/article.css"><link rel="stylesheet" href="/article-related.css"><script type="application/ld+json">{{STRUCTURED_DATA}}</script>
 </head>
 <body>
   <a class="skip-link" href="#content">{{SKIP}}</a>
@@ -21,6 +21,7 @@
     <header class="article-header"><span class="section-kicker">{{KICKER}}</span><h1>{{TITLE}}</h1><p class="article-excerpt">{{EXCERPT}}</p><div class="article-byline"><a href="{{AUTHOR_URL}}"><img src="{{AUTHOR_AVATAR}}" alt=""><span><strong>{{AUTHOR_NAME}}</strong><small>{{AUTHOR_ROLE}}</small></span></a><span>{{PUBLISHED_LABEL}} <time datetime="{{PUBLISHED_ISO}}">{{PUBLISHED_DATE}}</time></span><span>{{UPDATED_LABEL}} <time datetime="{{UPDATED_ISO}}">{{UPDATED_DATE}}</time></span></div></header>
     {{COVER}}
     <div class="article-content">{{BODY}}</div>
+    {{RELATED_GAMES}}
     <footer class="article-review"><strong>{{REVIEW_TITLE}}</strong><p>{{REVIEW_TEXT}} <a href="{{REVIEWER_URL}}">{{REVIEWER_NAME}}</a>.</p><a href="{{CORRECTION_URL}}">{{CORRECTION_LABEL}}</a></footer>
   </article></main>
   <footer class="footer"><div class="container footer-bottom"><span>© 2026 67Codes. {{AFFILIATION}}</span><span class="footer-legal"><a href="{{GUIDES_URL}}">{{GUIDES_LABEL}}</a><a href="{{ABOUT_URL}}">{{ABOUT_LABEL}}</a><a href="{{EDITORIAL_URL}}">{{EDITORIAL_LABEL}}</a><a href="{{CONTACT_URL}}">{{CONTACT_LABEL}}</a><a href="{{AUTHOR_URL}}">{{TEAM_LABEL}}</a><a href="{{PRIVACY_URL}}">{{PRIVACY_LABEL}}</a><a href="{{TERMS_URL}}">{{TERMS_LABEL}}</a></span></div></footer>
