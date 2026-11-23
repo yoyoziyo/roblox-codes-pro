@@ -7,10 +7,32 @@
     "thumbnail": "/assets/games/blox-fruits/thumbnail.webp",
     "redeemTutorial": ""
   },
-  "assetSync": { "icon": true, "thumbnail": false },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
   "codeStatus": "active",
   "codes": [
-    "EASTEREXP", "LIGHTNINGABUSE", "KITT_RESET", "Sub2CaptainMaui", "Axiore", "TantaiGaming", "StrawHatMaine", "Sub2OfficialNoobie", "Fudd10", "Bignews", "TheGreatAce", "kittgaming", "Enyu_is_Pro", "Magicbus", "JCWK", "Bluxxy", "fudd10_v2", "Sub2NoobMaster123", "Sub2UncleKizaru", "Sub2Daigrock"
+    "EASTEREXP",
+    "LIGHTNINGABUSE",
+    "KITT_RESET",
+    "Sub2CaptainMaui",
+    "Axiore",
+    "TantaiGaming",
+    "StrawHatMaine",
+    "Sub2OfficialNoobie",
+    "Fudd10",
+    "Bignews",
+    "TheGreatAce",
+    "kittgaming",
+    "Enyu_is_Pro",
+    "Magicbus",
+    "JCWK",
+    "Bluxxy",
+    "fudd10_v2",
+    "Sub2NoobMaster123",
+    "Sub2UncleKizaru",
+    "Sub2Daigrock"
   ],
   "translations": {
     "en": {
@@ -36,6 +58,12 @@
           ],
           "imageAlt": "Blox Fruits code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -61,9 +89,13 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Blox Fruits"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }
 }
-
-

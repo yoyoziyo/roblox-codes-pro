@@ -38,6 +38,12 @@
           ],
           "imageAlt": "99 Nights in the Forest code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -59,6 +65,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em 99 Nights in the Forest"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

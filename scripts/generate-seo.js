@@ -77,6 +77,6 @@ const groups=[
 ];
 const entries=groups.map(page=>`  <url>\n    <loc>${origin}${page.loc}</loc>${page.lastmod?`\n    <lastmod>${page.lastmod}</lastmod>`:""}\n    <xhtml:link rel="alternate" hreflang="en" href="${origin}${page.en}"/>\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${origin}${page.pt}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${origin}${page.en}"/>\n  </url>`).join("\n");
 await fs.writeFile(path.join(root,"sitemap.xml"),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries}\n</urlset>\n`);
-await fs.writeFile(path.join(root,"robots.txt"),`User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
+await fs.writeFile(path.join(root,"robots.txt"),`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/admin/\n\nSitemap: ${origin}/sitemap.xml\n`);
 console.log(`SEO generated for ${pages.length} localized pages using ${origin}`);
 

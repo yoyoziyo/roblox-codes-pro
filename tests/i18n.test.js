@@ -27,11 +27,16 @@ test("todos os jogos seguem o template e têm as duas traduções",()=>{
     assert.deepEqual(Object.keys(game.assetSync).sort(),Object.keys(template.assetSync).sort());
     for(const locale of ["en","pt-BR"]){
       assert.deepEqual(Object.keys(game.translations[locale]).sort(),requiredTranslationKeys);
+      assert.deepEqual(Object.keys(game.translations[locale].guide).sort(),["introduction","mechanics","progression","resources"]);
       assert.deepEqual(Object.keys(game.translations[locale].tutorials).sort(),["redeem"]);
       assert.deepEqual(Object.keys(game.translations[locale].tutorials.redeem).sort(),["description","imageAlt","steps","title"]);
       for(const field of ["title","description"])assert.ok(game.translations[locale][field].trim(),`${file}: ${locale}.${field}`);
       assert.ok(game.translations[locale].tutorials.redeem.title.trim());
       if(game.codeStatus!=="no-code-system")assert.ok(game.translations[locale].tutorials.redeem.steps.length);
+      else{
+        assert.ok(game.translations[locale].guide.introduction.trim(),`${file}: ${locale}.guide.introduction`);
+        for(const section of ["progression","mechanics","resources"])assert.ok(game.translations[locale].guide[section].length>=2,`${file}: ${locale}.guide.${section}`);
+      }
     }
     assert.ok(["active","no-active-codes","no-code-system"].includes(game.codeStatus),`${file}: codeStatus inválido`);
     if(game.codeStatus==="active")assert.ok(game.codes.length,`${file}: jogo ativo deve ter códigos`);
@@ -125,12 +130,12 @@ test("páginas de jogos não possuem guia para iniciantes nem FAQ",()=>{
   assert.equal(read("game-page.js").includes("renderFaq"),false);
 });
 
-test("páginas de jogos usam apenas códigos, dicas e tutorial com coluna para anúncios",()=>{
+test("páginas de códigos e guias usam o layout editorial correto",()=>{
   const pages=index.games.filter(game=>game.status==="active").flatMap(game=>[`en/games/${game.slug}.html`,`pt-br/games/${game.slug}.html`]);
   for(const file of pages){
     const html=read(file);
     for(const removed of ["redeem-summary","play-summary","redeem-steps","how-to-play"])assert.equal(html.includes(removed),false,`${file}: ${removed}`);
-    assert.equal((html.match(/data-ad-slot=/g)||[]).length,3,`${file}: ad slots`);
+    assert.equal((html.match(/data-ad-slot=/g)||[]).length,4,`${file}: ad slots`);
     assert.ok(html.indexOf('id="redeem-tutorial-steps"')<html.indexOf('id="redeem-tutorial-image"'),`${file}: tutorial image order`);
     assert.equal(html.includes("asset-placeholder"),false,`${file}: placeholder antigo`);
   }
@@ -140,6 +145,19 @@ test("páginas de jogos usam apenas códigos, dicas e tutorial com coluna para a
   assert.equal(source.includes("code-status"),false);
   assert.equal(source.includes("redeem-tutorial-placeholder"),false);
   assert.equal(read("game.css").includes("asset-placeholder"),false);
+});
+
+test("jogos sem sistema de códigos são publicados como guias reais",()=>{
+  for(const game of index.games.filter(game=>game.status==="active"&&game.codeStatus==="no-code-system")){
+    for(const [locale,dir] of [["en","en"],["pt-BR","pt-br"]]){
+      const html=read(`${dir}/games/${game.slug}.html`);
+      assert.ok(html.includes('class="panel game-guide-panel '),`${game.slug}: guia ausente`);
+      assert.equal((html.match(/class="guide-topic"/g)||[]).length,3,`${game.slug}: seções do guia`);
+      assert.ok(html.includes(locale==="pt-BR"?`<title>Guia de `:` Guide — 67Codes</title>`),`${game.slug}: SEO de guia`);
+      assert.ok(html.includes(locale==="pt-BR"?">Ver guia<":">View guide<"),`${game.slug}: CTA de guia`);
+      assert.ok(html.includes('codes-panel content-hidden'),`${game.slug}: painel de códigos deveria estar oculto`);
+    }
+  }
 });
 
 test("dados compartilhados não mantêm categorias sem uso",()=>{

@@ -46,6 +46,12 @@
           ],
           "imageAlt": "Anime Vanguards code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -67,6 +73,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Anime Vanguards"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

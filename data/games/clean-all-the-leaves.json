@@ -28,6 +28,24 @@
           "steps": [],
           "imageAlt": "Clean all the leaves! code information"
         }
+      },
+      "guide": {
+        "introduction": "This Clean all the leaves! guide focuses on clearing each area efficiently, choosing useful upgrades, and keeping track of what remains before you pursue full completion and the secret ending.",
+        "progression": [
+          "Clear one section at a time so your route remains easy to follow.",
+          "Invest in tool upgrades when the current equipment begins to slow your progress.",
+          "Return to partially completed areas before moving on to the final objective."
+        ],
+        "mechanics": [
+          "Cleaning removes leaves from the yard and increases the completion shown for the area.",
+          "Better tools reduce the time needed to clear larger groups of leaves.",
+          "The map rewards complete coverage, so isolated corners matter as much as the main path."
+        ],
+        "resources": [
+          "Treat time and tool efficiency as resources when deciding where to clean next.",
+          "Use visible landmarks to divide a large yard into smaller search zones.",
+          "Check the completion indicator before assuming an area is finished."
+        ]
       }
     },
     "pt-BR": {
@@ -44,6 +62,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Clean all the leaves!"
         }
+      },
+      "guide": {
+        "introduction": "Este guia de Clean all the leaves! mostra como limpar cada área com eficiência, escolher melhorias úteis e acompanhar o que falta antes de buscar 100% de conclusão e o final secreto.",
+        "progression": [
+          "Limpe uma seção por vez para manter uma rota fácil de acompanhar.",
+          "Invista em melhorias de ferramenta quando o equipamento atual começar a atrasar seu progresso.",
+          "Volte às áreas parcialmente concluídas antes de avançar para o objetivo final."
+        ],
+        "mechanics": [
+          "A limpeza remove as folhas do quintal e aumenta a porcentagem concluída da área.",
+          "Ferramentas melhores reduzem o tempo necessário para limpar grupos maiores de folhas.",
+          "O mapa recompensa uma cobertura completa, então os cantos isolados importam tanto quanto o caminho principal."
+        ],
+        "resources": [
+          "Considere o tempo e a eficiência da ferramenta ao decidir onde limpar em seguida.",
+          "Use pontos visíveis do cenário para dividir um quintal grande em zonas menores.",
+          "Confira o indicador de conclusão antes de considerar uma área finalizada."
+        ]
       }
     }
   }

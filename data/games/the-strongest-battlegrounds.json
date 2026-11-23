@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "The Strongest Battlegrounds code information"
         }
+      },
+      "guide": {
+        "introduction": "The Strongest Battlegrounds is centered on player-versus-player combat, movement, and learning a character's moveset. This guide covers the fundamentals that matter before advanced combos.",
+        "progression": [
+          "Choose one character and learn the range and purpose of each move.",
+          "Practice short, reliable combinations before attempting longer sequences.",
+          "Review your spacing after each fight and identify when you attacked from an unsafe position."
+        ],
+        "mechanics": [
+          "Blocking and dodging create openings when they are timed against a predictable attack.",
+          "Combos depend on positioning and timing, not only on pressing abilities quickly.",
+          "Movement helps you control distance and avoid being surrounded by several players."
+        ],
+        "resources": [
+          "Health, space, and available abilities should be managed throughout every fight.",
+          "Do not spend every move to start a fight if you will need an escape option afterward.",
+          "Use the environment to separate opponents and reduce attacks coming from outside your view."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de The Strongest Battlegrounds"
         }
+      },
+      "guide": {
+        "introduction": "The Strongest Battlegrounds é focado em combate entre jogadores, movimentação e domínio das habilidades de cada personagem. Este guia reúne os fundamentos que importam antes dos combos avançados.",
+        "progression": [
+          "Escolha um personagem e aprenda o alcance e a função de cada golpe.",
+          "Pratique combinações curtas e consistentes antes de tentar sequências longas.",
+          "Revise seu posicionamento depois de cada luta e identifique quando atacou de uma distância insegura."
+        ],
+        "mechanics": [
+          "Bloqueios e esquivas criam oportunidades quando são usados no tempo de um ataque previsível.",
+          "Os combos dependem de posicionamento e ritmo, não apenas de apertar habilidades rapidamente.",
+          "A movimentação ajuda a controlar a distância e evita que vários jogadores cerquem você."
+        ],
+        "resources": [
+          "Vida, espaço e habilidades disponíveis precisam ser administrados durante toda a luta.",
+          "Não gaste todos os golpes para iniciar o confronto se ainda precisar de uma opção de saída.",
+          "Use o cenário para separar adversários e reduzir ataques que chegam fora do seu campo de visão."
+        ]
       }
     }
   }

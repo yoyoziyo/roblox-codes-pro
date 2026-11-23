@@ -31,6 +31,12 @@
           ],
           "imageAlt": "Catalog Avatar Creator code information"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -50,6 +56,12 @@
           ],
           "imageAlt": "Informações sobre códigos de Catalog Avatar Creator"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

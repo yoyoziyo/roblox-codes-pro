@@ -7,7 +7,10 @@
     "thumbnail": "/assets/games/murder-mystery-2/thumbnail.webp",
     "redeemTutorial": ""
   },
-  "assetSync": { "icon": true, "thumbnail": false },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
   "codeStatus": "no-active-codes",
   "codes": [],
   "translations": {
@@ -33,6 +36,12 @@
           ],
           "imageAlt": "Murder Mystery 2 code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -57,9 +66,13 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Murder Mystery 2"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }
 }
-
-

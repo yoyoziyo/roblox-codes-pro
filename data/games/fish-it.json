@@ -40,6 +40,12 @@
           ],
           "imageAlt": "Fish It! code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -59,6 +65,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Fish It!"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

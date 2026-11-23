@@ -36,6 +36,12 @@
           ],
           "imageAlt": "Protect The House From Monsters code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -57,6 +63,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Protect The House From Monsters"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

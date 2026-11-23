@@ -35,6 +35,12 @@
           ],
           "imageAlt": "Anime Expeditions code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -58,6 +64,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Anime Expeditions"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

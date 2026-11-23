@@ -31,6 +31,12 @@
           ],
           "imageAlt": "Pet Simulator 99! code information"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -50,6 +56,12 @@
           ],
           "imageAlt": "Informações sobre códigos de Pet Simulator 99!"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

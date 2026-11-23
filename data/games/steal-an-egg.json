@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "Steal An Egg code redemption information"
         }
+      },
+      "guide": {
+        "introduction": "Steal An Egg combines risky egg collection with a base that produces income over time. This guide explains how eggs, pets, speed training, and upgrades connect to steady progression.",
+        "progression": [
+          "Train movement speed before contesting eggs that are difficult to carry safely.",
+          "Hatch collected eggs and place useful pets in your base to improve income.",
+          "Reinvest earnings in upgrades before chasing rarer sizes and mutations."
+        ],
+        "mechanics": [
+          "Eggs become collectible creatures that contribute to your growing collection.",
+          "Pets generate money that supports base upgrades and faster progression.",
+          "Rare eggs, sizes, and mutations make some collection attempts more valuable and more competitive."
+        ],
+        "resources": [
+          "Balance money between immediate upgrades and saving for the next meaningful improvement.",
+          "Protect valuable eggs and pets instead of leaving the base unattended at a risky moment.",
+          "Use quieter opportunities to collect rather than contesting every crowded egg."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Steal An Egg"
         }
+      },
+      "guide": {
+        "introduction": "Steal An Egg combina a coleta arriscada de ovos com uma base que produz dinheiro ao longo do tempo. Este guia explica como ovos, pets, treino de velocidade e melhorias formam o ciclo de progressão.",
+        "progression": [
+          "Treine sua velocidade antes de disputar ovos difíceis de carregar em segurança.",
+          "Choque os ovos coletados e posicione pets úteis na base para aumentar a renda.",
+          "Reinvista os ganhos em melhorias antes de buscar tamanhos e mutações mais raros."
+        ],
+        "mechanics": [
+          "Os ovos se transformam em criaturas colecionáveis que ampliam sua coleção.",
+          "Os pets geram dinheiro usado em melhorias da base e na progressão.",
+          "Ovos raros, tamanhos e mutações tornam algumas tentativas de coleta mais valiosas e disputadas."
+        ],
+        "resources": [
+          "Equilibre o dinheiro entre melhorias imediatas e a próxima compra realmente importante.",
+          "Proteja ovos e pets valiosos em vez de deixar a base desatendida em um momento arriscado.",
+          "Aproveite oportunidades mais tranquilas de coleta em vez de disputar todo ovo cercado por jogadores."
+        ]
       }
     }
   }

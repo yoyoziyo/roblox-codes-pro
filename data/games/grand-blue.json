@@ -47,6 +47,12 @@
           ],
           "imageAlt": "Grand Blue code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -67,6 +73,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Grand Blue"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

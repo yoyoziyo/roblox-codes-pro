@@ -7,7 +7,10 @@
     "thumbnail": "/assets/games/adopt-me/thumbnail.webp",
     "redeemTutorial": ""
   },
-  "assetSync": { "icon": true, "thumbnail": false },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
   "codeStatus": "no-active-codes",
   "codes": [],
   "translations": {
@@ -34,6 +37,12 @@
           ],
           "imageAlt": "Adopt Me code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -59,9 +68,13 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Adopt Me"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }
 }
-
-

@@ -32,6 +32,12 @@
           ],
           "imageAlt": "Murderers VS Sheriffs code information"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -52,6 +58,12 @@
           ],
           "imageAlt": "Informações sobre códigos de Murderers VS Sheriffs"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

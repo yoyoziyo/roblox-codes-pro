@@ -7,7 +7,10 @@
     "thumbnail": "/assets/games/brookhaven/thumbnail.webp",
     "redeemTutorial": ""
   },
-  "assetSync": { "icon": true, "thumbnail": false },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
   "codeStatus": "no-code-system",
   "codes": [],
   "translations": {
@@ -26,6 +29,24 @@
           "steps": [],
           "imageAlt": "Brookhaven code redemption information"
         }
+      },
+      "guide": {
+        "introduction": "Brookhaven is an open roleplaying experience rather than a game with a fixed campaign. This guide shows how to choose a role, use the city's tools, and build clearer stories with other players.",
+        "progression": [
+          "Start by choosing a simple role and a location that supports the story you want to play.",
+          "Expand the scenario gradually with a home, vehicle, job, and other characters.",
+          "Try different parts of the city to discover settings that fit new roleplay ideas."
+        ],
+        "mechanics": [
+          "Homes and vehicles help establish where your character lives and how they move around the city.",
+          "Jobs, outfits, emotes, and props communicate your role to other players.",
+          "Roleplay works best when actions are clear and everyone has room to participate."
+        ],
+        "resources": [
+          "Use the vehicle menu when a scene moves to another part of the map.",
+          "Save outfit and character ideas that can be reused in future stories.",
+          "Agree on the basic scenario with friends before adding conflicts or surprises."
+        ]
       }
     },
     "pt-BR": {
@@ -43,9 +64,25 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Brookhaven"
         }
+      },
+      "guide": {
+        "introduction": "Brookhaven é uma experiência aberta de roleplay, sem uma campanha fixa. Este guia mostra como escolher um papel, usar os recursos da cidade e criar histórias mais claras com outras pessoas.",
+        "progression": [
+          "Comece escolhendo um papel simples e um local que combine com a história que você deseja interpretar.",
+          "Amplie o cenário aos poucos com uma casa, veículo, profissão e novos personagens.",
+          "Explore diferentes áreas da cidade para descobrir ambientes que funcionem em outras ideias de roleplay."
+        ],
+        "mechanics": [
+          "Casas e veículos ajudam a definir onde o personagem vive e como ele circula pela cidade.",
+          "Profissões, roupas, emotes e objetos comunicam seu papel aos outros jogadores.",
+          "O roleplay funciona melhor quando as ações são claras e todos têm espaço para participar."
+        ],
+        "resources": [
+          "Use o menu de veículos quando a cena precisar mudar para outra parte do mapa.",
+          "Guarde ideias de roupas e personagens que possam ser reutilizadas em histórias futuras.",
+          "Combine o cenário básico com os amigos antes de adicionar conflitos ou surpresas."
+        ]
       }
     }
   }
 }
-
-

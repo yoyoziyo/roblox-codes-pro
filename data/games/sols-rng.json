@@ -36,6 +36,12 @@
           ],
           "imageAlt": "Sol's RNG code information"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -57,6 +63,12 @@
           ],
           "imageAlt": "Informações sobre códigos de Sol's RNG"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

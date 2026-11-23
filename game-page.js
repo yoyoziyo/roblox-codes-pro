@@ -20,7 +20,7 @@ function renderGame(game,translation,messages){
   gameById("breadcrumb-game").textContent=translation.title;gameById("game-name").textContent=translation.title;gameById("game-summary").textContent=translation.description;
   gameById("game-cover").src=image;gameById("game-cover").alt=`${translation.title}`;
   const codeStatus=game.codeStatus||"active";
-  gameById("codes-link").textContent=codeStatus==="active"?`${messages.viewCodes} (${activeCodes.length})`:messages.codeAvailability;gameById("roblox-link").href=game.robloxUrl;
+  if(codeStatus!=="no-code-system")gameById("codes-link").textContent=codeStatus==="active"?`${messages.viewCodes} (${activeCodes.length})`:messages.codeAvailability;gameById("roblox-link").href=game.robloxUrl;
   renderCodes(activeCodes,messages,codeStatus,translation.title);renderList("game-tips",translation.tips);renderTutorial(game,translation);
 }
 function renderCodes(codes,messages,status,title){

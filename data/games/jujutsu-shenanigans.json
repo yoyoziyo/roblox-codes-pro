@@ -33,6 +33,12 @@
           ],
           "imageAlt": "Jujutsu Shenanigans code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -52,6 +58,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Jujutsu Shenanigans"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

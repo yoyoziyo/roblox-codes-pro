@@ -51,6 +51,12 @@
           ],
           "imageAlt": "Sailor Piece code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -73,6 +79,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Sailor Piece"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

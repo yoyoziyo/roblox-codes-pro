@@ -31,6 +31,12 @@
           ],
           "imageAlt": "Speed Keyboard Escape code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -50,6 +56,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Speed Keyboard Escape"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

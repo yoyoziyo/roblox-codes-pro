@@ -17,6 +17,10 @@ export function validateAdminGame(input){
   for(const locale of ["en","pt-BR"]){
     const translation=input.translations?.[locale];
     if(!text(translation?.title,100)||!text(translation?.description,700))throw new Error(`Título ou descrição inválidos em ${locale}.`);
+    if(input.codeStatus==="no-code-system"){
+      const guide=translation.guide;
+      if(!text(guide?.introduction,900)||!["progression","mechanics","resources"].every(section=>cleanList(guide?.[section],8,400).length>=2))throw new Error(`Guia incompleto em ${locale}. Informe a introdução e ao menos dois pontos por seção.`);
+    }
     const redeem=translation.tutorials?.redeem;
     if(!text(redeem?.title,160)||!text(redeem?.description,700))throw new Error(`Tutorial incompleto em ${locale}.`);
   }
@@ -27,7 +31,7 @@ export function validateAdminGame(input){
 export function normalizeAdminGame(input){
   validateAdminGame(input);
   const slug=input.slug;
-  const locale=key=>{const source=input.translations[key],redeem=source.tutorials.redeem;return {title:source.title.trim(),description:source.description.trim(),tips:cleanList(source.tips,12,300),tutorials:{redeem:{title:redeem.title.trim(),description:redeem.description.trim(),steps:cleanList(redeem.steps,12,400),imageAlt:String(redeem.imageAlt||`${source.title} code redemption tutorial`).trim().slice(0,180)}}}};
+  const locale=key=>{const source=input.translations[key],redeem=source.tutorials.redeem,guide=source.guide||{};return {title:source.title.trim(),description:source.description.trim(),tips:cleanList(source.tips,12,300),guide:{introduction:String(guide.introduction||"").trim().slice(0,900),progression:cleanList(guide.progression,8,400),mechanics:cleanList(guide.mechanics,8,400),resources:cleanList(guide.resources,8,400)},tutorials:{redeem:{title:redeem.title.trim(),description:redeem.description.trim(),steps:cleanList(redeem.steps,12,400),imageAlt:String(redeem.imageAlt||`${source.title} code redemption tutorial`).trim().slice(0,180)}}}};
   return {slug,robloxUrl:input.robloxUrl.trim(),assets:{icon:`/assets/games/${slug}/icon.webp`,banner:String(input.assets?.banner||"").trim(),thumbnail:`/assets/games/${slug}/thumbnail.webp`,redeemTutorial:String(input.assets?.redeemTutorial||"").trim()},assetSync:{icon:input.assetSync?.icon!==false,thumbnail:input.assetSync?.thumbnail===true},codeStatus:input.codeStatus,codes:input.codeStatus==="active"?cleanList(input.codes,100,100):[],translations:{en:locale("en"),"pt-BR":locale("pt-BR")}};
 }
 
@@ -49,7 +53,7 @@ export async function applyAdminPublication(payload,{base=root}={}){
   const game=normalizeAdminGame(payload.game);
   if(game.slug!==payload.slug)throw new Error("O slug do cadastro não corresponde à publicação.");
   const now=new Date().toISOString(),noCodes=game.codeStatus==="no-code-system";
-  const indexEntry={slug:game.slug,icon:game.assets.icon,status:"active",lastUpdated:now,authorId:payload.authorId,codeStatus:game.codeStatus,translations:{en:{title:game.translations.en.title,description:noCodes?`${game.translations.en.title} does not have a code system yet. Find gameplay tips and information.`:`Active ${game.translations.en.title} codes, gameplay tips, and redemption instructions.`},"pt-BR":{title:game.translations["pt-BR"].title,description:noCodes?`${game.translations["pt-BR"].title} ainda não possui sistema de códigos. Confira dicas e informações do jogo.`:`Códigos ativos de ${game.translations["pt-BR"].title}, dicas de jogo e instruções de resgate.`}}};
+  const indexEntry={slug:game.slug,icon:game.assets.icon,status:"active",lastUpdated:now,authorId:payload.authorId,codeStatus:game.codeStatus,translations:{en:{title:game.translations.en.title,description:noCodes?`${game.translations.en.title} gameplay guide with progression, mechanics, resources, and practical tips.`:`Active ${game.translations.en.title} codes, gameplay tips, and redemption instructions.`},"pt-BR":{title:game.translations["pt-BR"].title,description:noCodes?`Guia de ${game.translations["pt-BR"].title} com progressão, mecânicas, recursos e dicas práticas.`:`Códigos ativos de ${game.translations["pt-BR"].title}, dicas de jogo e instruções de resgate.`}}};
   if(position>=0)index.games[position]={...index.games[position],...indexEntry};else index.games.push(indexEntry);
   await fs.mkdir(path.join(base,"data/games"),{recursive:true});
   await fs.writeFile(path.join(base,"data/games",`${game.slug}.json`),`${JSON.stringify(game,null,2)}\n`);

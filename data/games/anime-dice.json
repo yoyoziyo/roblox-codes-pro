@@ -46,6 +46,12 @@
           ],
           "imageAlt": "Anime Dice code information"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -67,6 +73,12 @@
           ],
           "imageAlt": "Informações sobre códigos de Anime Dice"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

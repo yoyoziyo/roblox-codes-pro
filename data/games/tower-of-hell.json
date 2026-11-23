@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "Tower of Hell code information"
         }
+      },
+      "guide": {
+        "introduction": "Tower of Hell is a timed obstacle course without checkpoints. This guide explains how to read each stage, protect a good run, and build consistency instead of relying on rushed attempts.",
+        "progression": [
+          "Study the first moving obstacle before committing to a jump.",
+          "Build consistency on simple stages so more time remains for unfamiliar sections.",
+          "Treat each fall as information about timing, camera angle, or the route you selected."
+        ],
+        "mechanics": [
+          "The tower combines different obstacle stages into a run with a shared timer.",
+          "Falling can erase a large part of your progress because there are no checkpoints.",
+          "Camera control is part of movement and helps reveal the safest landing point."
+        ],
+        "resources": [
+          "Time is the main resource, but a careful attempt can be faster than several rushed failures.",
+          "Use stable platforms to adjust the camera before the next precise jump.",
+          "Watch players ahead to learn obstacle timing without risking your current position."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Tower of Hell"
         }
+      },
+      "guide": {
+        "introduction": "Tower of Hell é uma torre de obstáculos com tempo limitado e sem checkpoints. Este guia mostra como analisar cada etapa, preservar uma boa tentativa e ganhar consistência sem depender de corridas apressadas.",
+        "progression": [
+          "Observe o primeiro obstáculo em movimento antes de iniciar o salto.",
+          "Ganhe consistência nas etapas simples para sobrar mais tempo nas partes desconhecidas.",
+          "Use cada queda como informação sobre o tempo, o ângulo da câmera ou a rota escolhida."
+        ],
+        "mechanics": [
+          "A torre combina diferentes etapas de obstáculos em uma tentativa com cronômetro compartilhado.",
+          "Uma queda pode apagar grande parte do progresso porque não existem checkpoints.",
+          "O controle da câmera faz parte da movimentação e ajuda a enxergar o ponto de aterrissagem mais seguro."
+        ],
+        "resources": [
+          "O tempo é o principal recurso, mas uma tentativa cuidadosa pode ser mais rápida do que várias falhas apressadas.",
+          "Use plataformas estáveis para ajustar a câmera antes do próximo salto preciso.",
+          "Observe os jogadores à frente para aprender o ritmo do obstáculo sem arriscar sua posição atual."
+        ]
       }
     }
   }

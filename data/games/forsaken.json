@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "Forsaken code information"
         }
+      },
+      "guide": {
+        "introduction": "Forsaken is an asymmetrical horror game built around two different roles. This guide explains the survivor objective loop, the killer's pressure, and the map knowledge that helps both sides make better decisions.",
+        "progression": [
+          "Learn one role and its abilities before switching repeatedly between characters.",
+          "Study common objective and escape routes during each match.",
+          "Review why a chase succeeded or failed and adjust your positioning in the next round."
+        ],
+        "mechanics": [
+          "Survivors cooperate on objectives while avoiding the killer and creating time for teammates.",
+          "The killer disrupts progress by controlling important areas and forcing survivors to move.",
+          "Character abilities are most effective when used with a clear purpose instead of immediately on cooldown."
+        ],
+        "resources": [
+          "Map routes and teammate information are resources that can prevent unnecessary chases.",
+          "Preserve escape options when the killer is nearby rather than using everything at once.",
+          "Coordinate objectives so the whole team is not concentrated in the same vulnerable area."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Forsaken"
         }
+      },
+      "guide": {
+        "introduction": "Forsaken é um jogo de terror assimétrico construído em torno de dois papéis diferentes. Este guia explica os objetivos dos sobreviventes, a pressão do assassino e o conhecimento de mapa que ajuda os dois lados.",
+        "progression": [
+          "Aprenda primeiro um papel e suas habilidades antes de trocar constantemente de personagem.",
+          "Observe as rotas comuns entre objetivos e saídas durante cada partida.",
+          "Analise por que uma perseguição deu certo ou errado e ajuste seu posicionamento na rodada seguinte."
+        ],
+        "mechanics": [
+          "Os sobreviventes cooperam nos objetivos enquanto evitam o assassino e criam tempo para a equipe.",
+          "O assassino atrasa o progresso controlando áreas importantes e obrigando os sobreviventes a se mover.",
+          "As habilidades funcionam melhor quando são usadas com um propósito claro, e não imediatamente sempre que ficam disponíveis."
+        ],
+        "resources": [
+          "Rotas do mapa e informações da equipe são recursos que evitam perseguições desnecessárias.",
+          "Preserve opções de fuga quando o assassino estiver próximo, sem gastar tudo de uma vez.",
+          "Divida os objetivos para que o grupo inteiro não fique concentrado na mesma área vulnerável."
+        ]
       }
     }
   }

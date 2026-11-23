@@ -49,6 +49,12 @@
           ],
           "imageAlt": "Catch and Tame code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -72,6 +78,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Catch and Tame"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

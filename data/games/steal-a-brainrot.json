@@ -31,6 +31,12 @@
           ],
           "imageAlt": "Steal a Brainrot code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -50,6 +56,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Steal a Brainrot"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

@@ -28,6 +28,24 @@
           "steps": [],
           "imageAlt": "Animal Hospital (Anomaly) code information"
         }
+      },
+      "guide": {
+        "introduction": "This Animal Hospital guide explains the observation loop, how to make safer decisions during the night shift, and which details deserve your attention when a patient or room seems unusual.",
+        "progression": [
+          "Learn the normal hospital routine before trying to identify unusual behavior.",
+          "Compare each new patient with what you observed earlier instead of judging from a single detail.",
+          "Use mistakes to refine a repeatable inspection order for later shifts."
+        ],
+        "mechanics": [
+          "Observe patients and the environment before choosing how to respond.",
+          "Treat changes in behavior, appearance, or the room as clues that should be considered together.",
+          "Move carefully and avoid rushing a decision when the evidence is still unclear."
+        ],
+        "resources": [
+          "Your most important resources are time, attention, and the information collected during the shift.",
+          "Keep a mental checklist so small changes are less likely to be missed.",
+          "When playing with others, share specific observations instead of vague warnings."
+        ]
       }
     },
     "pt-BR": {
@@ -44,6 +62,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Animal Hospital (Anomaly)"
         }
+      },
+      "guide": {
+        "introduction": "Este guia de Animal Hospital explica o ciclo de observação, como tomar decisões mais seguras durante o turno da noite e quais detalhes merecem atenção quando um paciente ou ambiente parece anormal.",
+        "progression": [
+          "Aprenda primeiro como funciona a rotina normal do hospital antes de tentar identificar comportamentos estranhos.",
+          "Compare cada novo paciente com o que você observou anteriormente, sem decidir com base em um único detalhe.",
+          "Use os erros para montar uma ordem de inspeção consistente nos turnos seguintes."
+        ],
+        "mechanics": [
+          "Observe os pacientes e o ambiente antes de escolher como agir.",
+          "Considere mudanças de comportamento, aparência ou cenário como pistas que precisam ser analisadas em conjunto.",
+          "Avance com cuidado e evite tomar uma decisão apressada quando as evidências ainda forem insuficientes."
+        ],
+        "resources": [
+          "Seus principais recursos são tempo, atenção e as informações reunidas durante o turno.",
+          "Mantenha uma lista mental de verificação para diminuir a chance de ignorar pequenas mudanças.",
+          "Ao jogar com outras pessoas, compartilhe observações específicas em vez de alertas vagos."
+        ]
       }
     }
   }

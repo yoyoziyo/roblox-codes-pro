@@ -40,6 +40,12 @@
           ],
           "imageAlt": "Basketball Zero code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -61,6 +67,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Basketball Zero"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

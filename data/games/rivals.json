@@ -7,14 +7,30 @@
     "thumbnail": "/assets/games/rivals/thumbnail.webp",
     "redeemTutorial": ""
   },
-  "assetSync": { "icon": true, "thumbnail": false },
+  "assetSync": {
+    "icon": true,
+    "thumbnail": false
+  },
   "codeStatus": "active",
   "codes": [
-    "RIVALSSUMMER", "IMMELTINGHELP", "FREE196", "COCONUTBONK",
-    "COMMUNITY25", "CANNONBALLLLL", "FREE192", "FREE184",
-    "COMMUNITY24", "COMMUNITY23", "BOOST", "COMMUNITY22",
-    "COMMUNITY21", "COMMUNITY20", "MERRYMERRYXMAS<3", "SORRY",
-    "BONUS", "roblox_rtc"
+    "RIVALSSUMMER",
+    "IMMELTINGHELP",
+    "FREE196",
+    "COCONUTBONK",
+    "COMMUNITY25",
+    "CANNONBALLLLL",
+    "FREE192",
+    "FREE184",
+    "COMMUNITY24",
+    "COMMUNITY23",
+    "BOOST",
+    "COMMUNITY22",
+    "COMMUNITY21",
+    "COMMUNITY20",
+    "MERRYMERRYXMAS<3",
+    "SORRY",
+    "BONUS",
+    "roblox_rtc"
   ],
   "translations": {
     "en": {
@@ -40,6 +56,12 @@
           ],
           "imageAlt": "RIVALS code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -65,9 +87,13 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em RIVALS"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }
 }
-
-

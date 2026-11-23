@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "Violence District code information"
         }
+      },
+      "guide": {
+        "introduction": "Violence District is an asymmetrical horror match between a killer and a team of survivors. This guide focuses on objectives, escape routes, and the limited defensive options that decide a chase.",
+        "progression": [
+          "Learn the location of objectives and exit routes before trying risky rescues.",
+          "Practice moving between safe areas without leading the killer toward teammates.",
+          "After each match, identify which route or defensive resource changed the chase."
+        ],
+        "mechanics": [
+          "Survivors split attention between completing objectives, helping the team, and preparing an escape.",
+          "The killer creates pressure by interrupting progress and controlling important routes.",
+          "Pallets can interrupt a chase, but poor timing may remove an option the team needs later."
+        ],
+        "resources": [
+          "Pallets are limited, so use them to create meaningful distance rather than for a small delay.",
+          "Share information about the killer and finished objectives whenever possible.",
+          "Remember the route to an exit before the final phase begins."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Violence District"
         }
+      },
+      "guide": {
+        "introduction": "Violence District é uma partida de terror assimétrico entre um assassino e uma equipe de sobreviventes. Este guia foca nos objetivos, rotas de fuga e opções defensivas limitadas que decidem uma perseguição.",
+        "progression": [
+          "Aprenda onde ficam os objetivos e as saídas antes de tentar resgates arriscados.",
+          "Pratique o deslocamento entre áreas seguras sem levar o assassino até seus companheiros.",
+          "Depois de cada partida, identifique qual rota ou recurso defensivo mudou o resultado da perseguição."
+        ],
+        "mechanics": [
+          "Os sobreviventes dividem a atenção entre concluir objetivos, ajudar a equipe e preparar a fuga.",
+          "O assassino cria pressão interrompendo o progresso e controlando rotas importantes.",
+          "Os pallets podem interromper uma perseguição, mas o uso no momento errado remove uma opção que a equipe pode precisar depois."
+        ],
+        "resources": [
+          "Os pallets são limitados; use-os para criar distância real, e não apenas um pequeno atraso.",
+          "Compartilhe informações sobre o assassino e os objetivos concluídos sempre que possível.",
+          "Memorize a rota até uma saída antes de a fase final começar."
+        ]
       }
     }
   }

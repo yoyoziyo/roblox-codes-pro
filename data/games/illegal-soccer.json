@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "Illegal Soccer code information"
         }
+      },
+      "guide": {
+        "introduction": "Illegal Soccer mixes football with disruptive equipment and unusual movement tools. This guide covers the match flow, how gadgets change possession, and how to create safer attacking chances.",
+        "progression": [
+          "Practice basic passes and shots before relying on special equipment.",
+          "Learn which tools help your preferred position instead of changing loadouts every play.",
+          "Improve decision-making by watching where opponents leave open space."
+        ],
+        "mechanics": [
+          "Ball control still matters even when weapons, jetpacks, and hooks can interrupt a play.",
+          "Equipment can create space, recover possession, or help a player reposition quickly.",
+          "A coordinated pass is often safer than carrying the ball through several opponents."
+        ],
+        "resources": [
+          "Treat open space and teammate positioning as resources during an attack.",
+          "Avoid spending every movement option at once, especially when possession can change quickly.",
+          "Watch hazards left by opponents before choosing a direct route to the goal."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de Illegal Soccer"
         }
+      },
+      "guide": {
+        "introduction": "Illegal Soccer mistura futebol com equipamentos capazes de interromper jogadas e ferramentas de movimentação incomuns. Este guia explica o ritmo das partidas, o uso dos dispositivos e a criação de ataques mais seguros.",
+        "progression": [
+          "Pratique passes e chutes básicos antes de depender dos equipamentos especiais.",
+          "Aprenda quais ferramentas combinam com sua posição preferida em vez de trocar a cada jogada.",
+          "Melhore suas decisões observando os espaços que os adversários deixam livres."
+        ],
+        "mechanics": [
+          "O controle da bola continua importante mesmo com armas, jetpacks e ganchos capazes de interromper uma jogada.",
+          "Os equipamentos podem abrir espaço, recuperar a posse ou reposicionar um jogador rapidamente.",
+          "Um passe coordenado costuma ser mais seguro do que carregar a bola entre vários adversários."
+        ],
+        "resources": [
+          "Considere o espaço livre e o posicionamento dos companheiros como recursos durante o ataque.",
+          "Evite gastar todas as opções de movimento ao mesmo tempo, principalmente quando a posse pode mudar rápido.",
+          "Observe os obstáculos deixados pelos adversários antes de escolher a rota direta até o gol."
+        ]
       }
     }
   }

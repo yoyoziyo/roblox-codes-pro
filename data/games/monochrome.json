@@ -29,6 +29,24 @@
           "steps": [],
           "imageAlt": "MONOCHROME code redemption information"
         }
+      },
+      "guide": {
+        "introduction": "This MONOCHROME guide focuses on exploring dark environments, reading the clues hidden in the scenery, and surviving encounters without losing track of the puzzle you are solving.",
+        "progression": [
+          "Inspect each new area before interacting with the first object you see.",
+          "Connect visual and audio clues to the room or puzzle where they are likely to matter.",
+          "Remember safe paths so you can return quickly after discovering new information."
+        ],
+        "mechanics": [
+          "Exploration reveals interactive objects, puzzle clues, and possible threats.",
+          "Sound can warn you about movement that is difficult to see in the dark.",
+          "Careful pacing reduces the chance of attracting danger or missing a small clue."
+        ],
+        "resources": [
+          "Visibility, sound, and memory are the main tools available while exploring.",
+          "Keep track of doors, landmarks, and objects that have not been used yet.",
+          "Use headphones and a stable screen brightness so subtle cues remain noticeable."
+        ]
       }
     },
     "pt-BR": {
@@ -46,6 +64,24 @@
           "steps": [],
           "imageAlt": "Informações sobre códigos de MONOCHROME"
         }
+      },
+      "guide": {
+        "introduction": "Este guia de MONOCHROME mostra como explorar os ambientes escuros, interpretar pistas escondidas no cenário e sobreviver aos encontros sem perder o objetivo do enigma atual.",
+        "progression": [
+          "Observe cada nova área antes de interagir com o primeiro objeto encontrado.",
+          "Relacione pistas visuais e sonoras ao ambiente ou enigma em que elas podem ser úteis.",
+          "Memorize caminhos seguros para retornar rapidamente depois de encontrar novas informações."
+        ],
+        "mechanics": [
+          "A exploração revela objetos interativos, pistas de enigmas e possíveis ameaças.",
+          "O som pode alertar sobre movimentos difíceis de enxergar no escuro.",
+          "Um ritmo cuidadoso reduz a chance de atrair perigo ou ignorar uma pista pequena."
+        ],
+        "resources": [
+          "Visibilidade, som e memória são as principais ferramentas durante a exploração.",
+          "Acompanhe portas, pontos de referência e objetos que ainda não foram utilizados.",
+          "Use fones de ouvido e um brilho de tela estável para perceber sinais discretos."
+        ]
       }
     }
   }

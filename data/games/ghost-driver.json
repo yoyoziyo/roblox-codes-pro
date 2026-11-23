@@ -47,6 +47,12 @@
           ],
           "imageAlt": "Ghost Driver code redemption tutorial"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     },
     "pt-BR": {
@@ -70,6 +76,12 @@
           ],
           "imageAlt": "Tutorial de resgate de códigos em Ghost Driver"
         }
+      },
+      "guide": {
+        "introduction": "",
+        "progression": [],
+        "mechanics": [],
+        "resources": []
       }
     }
   }

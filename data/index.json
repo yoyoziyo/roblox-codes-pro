@@ -156,16 +156,16 @@
       "slug": "steal-an-egg",
       "icon": "/assets/games/steal-an-egg/icon.webp",
       "status": "active",
-      "lastUpdated": "2026-08-25T15:00:00Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "codeStatus": "no-code-system",
       "translations": {
         "en": {
           "title": "Steal An Egg",
-          "description": "Steal An Egg has no code system yet. Find gameplay tips and information."
+          "description": "Steal An Egg gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Steal An Egg",
-          "description": "Steal An Egg ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Steal An Egg com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -361,15 +361,15 @@
       "icon": "/assets/games/monochrome/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-10T16:15:54.188Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "MONOCHROME",
-          "description": "MONOCHROME does not have a code system yet. Find gameplay tips and information."
+          "description": "MONOCHROME gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "MONOCHROME",
-          "description": "MONOCHROME ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de MONOCHROME com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -378,10 +378,16 @@
       "icon": "/assets/games/brookhaven/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-18T15:00:00.000Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
-        "en": { "title": "Brookhaven", "description": "Brookhaven has no code system. Find gameplay tips and information." },
-        "pt-BR": { "title": "Brookhaven", "description": "Brookhaven não possui sistema de códigos. Confira dicas e informações do jogo." }
+        "en": {
+          "title": "Brookhaven",
+          "description": "Brookhaven gameplay guide with progression, mechanics, resources, and practical tips."
+        },
+        "pt-BR": {
+          "title": "Brookhaven",
+          "description": "Guia de Brookhaven com progressão, mecânicas, recursos e dicas práticas."
+        }
       }
     },
     {
@@ -391,8 +397,14 @@
       "codeStatus": "active",
       "lastUpdated": "2026-09-14T17:40:50.242Z",
       "translations": {
-        "en": { "title": "Blox Fruits", "description": "Active Blox Fruits codes, gameplay tips, and redemption instructions." },
-        "pt-BR": { "title": "Blox Fruits", "description": "Códigos ativos de Blox Fruits, dicas de jogo e instruções de resgate." }
+        "en": {
+          "title": "Blox Fruits",
+          "description": "Active Blox Fruits codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Blox Fruits",
+          "description": "Códigos ativos de Blox Fruits, dicas de jogo e instruções de resgate."
+        }
       }
     },
     {
@@ -402,8 +414,14 @@
       "codeStatus": "no-active-codes",
       "lastUpdated": "2026-09-14T17:40:50.242Z",
       "translations": {
-        "en": { "title": "Murder Mystery 2", "description": "Murder Mystery 2 currently has no active codes. Find gameplay tips and redemption instructions." },
-        "pt-BR": { "title": "Murder Mystery 2", "description": "Murder Mystery 2 não possui códigos ativos no momento. Confira dicas e instruções de resgate." }
+        "en": {
+          "title": "Murder Mystery 2",
+          "description": "Murder Mystery 2 currently has no active codes. Find gameplay tips and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Murder Mystery 2",
+          "description": "Murder Mystery 2 não possui códigos ativos no momento. Confira dicas e instruções de resgate."
+        }
       }
     },
     {
@@ -413,8 +431,14 @@
       "codeStatus": "active",
       "lastUpdated": "2026-09-19T01:00:00.000Z",
       "translations": {
-        "en": { "title": "RIVALS", "description": "Active RIVALS codes, gameplay tips, and redemption instructions." },
-        "pt-BR": { "title": "RIVALS", "description": "Códigos ativos de RIVALS, dicas de jogo e instruções de resgate." }
+        "en": {
+          "title": "RIVALS",
+          "description": "Active RIVALS codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "RIVALS",
+          "description": "Códigos ativos de RIVALS, dicas de jogo e instruções de resgate."
+        }
       }
     },
     {
@@ -424,96 +448,102 @@
       "codeStatus": "no-active-codes",
       "lastUpdated": "2026-09-14T17:40:50.242Z",
       "translations": {
-        "en": { "title": "Adopt Me", "description": "Adopt Me currently has no active codes. Find gameplay tips and redemption instructions." },
-        "pt-BR": { "title": "Adopt Me", "description": "Adopt Me não possui códigos ativos no momento. Confira dicas e instruções de resgate." }
+        "en": {
+          "title": "Adopt Me",
+          "description": "Adopt Me currently has no active codes. Find gameplay tips and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Adopt Me",
+          "description": "Adopt Me não possui códigos ativos no momento. Confira dicas e instruções de resgate."
+        }
       }
     },
-{
-  "slug": "speed-keyboard-escape",
-  "icon": "/assets/games/speed-keyboard-escape/icon.webp",
-  "status": "active",
-  "codeStatus": "no-active-codes",
-  "lastUpdated": "2026-09-15T15:56:52.954Z",
-  "translations": {
-    "en": {
-      "title": "Speed Keyboard Escape",
-      "description": "Speed Keyboard Escape has no confirmed active codes right now. Find gameplay tips and redemption instructions."
-    },
-    "pt-BR": {
-      "title": "Speed Keyboard Escape",
-      "description": "Speed Keyboard Escape não tem códigos ativos confirmados no momento. Confira dicas e instruções de resgate."
-    }
-  }
-},
     {
-  "slug": "jujutsu-shenanigans",
-  "icon": "/assets/games/jujutsu-shenanigans/icon.webp",
-  "status": "active",
-  "codeStatus": "active",
-  "lastUpdated": "2026-09-19T00:30:00.000Z",
-  "translations": {
-    "en": {
-      "title": "Jujutsu Shenanigans",
-      "description": "Active Jujutsu Shenanigans codes, gameplay tips, and redemption instructions."
+      "slug": "speed-keyboard-escape",
+      "icon": "/assets/games/speed-keyboard-escape/icon.webp",
+      "status": "active",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-15T15:56:52.954Z",
+      "translations": {
+        "en": {
+          "title": "Speed Keyboard Escape",
+          "description": "Speed Keyboard Escape has no confirmed active codes right now. Find gameplay tips and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Speed Keyboard Escape",
+          "description": "Speed Keyboard Escape não tem códigos ativos confirmados no momento. Confira dicas e instruções de resgate."
+        }
+      }
     },
-    "pt-BR": {
-      "title": "Jujutsu Shenanigans",
-      "description": "Códigos ativos de Jujutsu Shenanigans, dicas de jogo e instruções de resgate."
-    }
-  }
-},
     {
-  "slug": "steal-a-brainrot",
-  "icon": "/assets/games/steal-a-brainrot/icon.webp",
-  "status": "active",
-  "codeStatus": "no-active-codes",
-  "lastUpdated": "2026-09-15T15:56:52.954Z",
-  "translations": {
-    "en": {
-      "title": "Steal a Brainrot",
-      "description": "Steal a Brainrot has no confirmed active codes right now. Find gameplay tips and redemption instructions."
+      "slug": "jujutsu-shenanigans",
+      "icon": "/assets/games/jujutsu-shenanigans/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-19T00:30:00.000Z",
+      "translations": {
+        "en": {
+          "title": "Jujutsu Shenanigans",
+          "description": "Active Jujutsu Shenanigans codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Jujutsu Shenanigans",
+          "description": "Códigos ativos de Jujutsu Shenanigans, dicas de jogo e instruções de resgate."
+        }
+      }
     },
-    "pt-BR": {
-      "title": "Steal a Brainrot",
-      "description": "Steal a Brainrot não tem códigos ativos confirmados no momento. Confira dicas e instruções de resgate."
-    }
-  }
-},
     {
-  "slug": "fish-it",
-  "icon": "/assets/games/fish-it/icon.webp",
-  "status": "active",
-  "codeStatus": "active",
-  "lastUpdated": "2026-09-18T21:00:00.000Z",
-  "translations": {
-    "en": {
-      "title": "Fish It!",
-      "description": "Active Fish It! codes, gameplay tips, and redemption instructions."
+      "slug": "steal-a-brainrot",
+      "icon": "/assets/games/steal-a-brainrot/icon.webp",
+      "status": "active",
+      "codeStatus": "no-active-codes",
+      "lastUpdated": "2026-09-15T15:56:52.954Z",
+      "translations": {
+        "en": {
+          "title": "Steal a Brainrot",
+          "description": "Steal a Brainrot has no confirmed active codes right now. Find gameplay tips and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Steal a Brainrot",
+          "description": "Steal a Brainrot não tem códigos ativos confirmados no momento. Confira dicas e instruções de resgate."
+        }
+      }
     },
-    "pt-BR": {
-      "title": "Fish It!",
-      "description": "Códigos ativos de Fish It!, dicas de jogo e instruções de resgate."
-    }
-  }
-},
     {
-  "slug": "fisch",
-  "icon": "/assets/games/fisch/icon.webp",
-  "status": "active",
-  "codeStatus": "active",
-  "lastUpdated": "2026-09-18T21:00:00.000Z",
-  "translations": {
-    "en": {
-      "title": "Fisch",
-      "description": "Active Fisch codes, gameplay tips, and redemption instructions."
+      "slug": "fish-it",
+      "icon": "/assets/games/fish-it/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-18T21:00:00.000Z",
+      "translations": {
+        "en": {
+          "title": "Fish It!",
+          "description": "Active Fish It! codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Fish It!",
+          "description": "Códigos ativos de Fish It!, dicas de jogo e instruções de resgate."
+        }
+      }
     },
-    "pt-BR": {
-      "title": "Fisch",
-      "description": "Códigos ativos de Fisch, dicas de jogo e instruções de resgate."
-    }
-  }
+    {
+      "slug": "fisch",
+      "icon": "/assets/games/fisch/icon.webp",
+      "status": "active",
+      "codeStatus": "active",
+      "lastUpdated": "2026-09-18T21:00:00.000Z",
+      "translations": {
+        "en": {
+          "title": "Fisch",
+          "description": "Active Fisch codes, gameplay tips, and redemption instructions."
+        },
+        "pt-BR": {
+          "title": "Fisch",
+          "description": "Códigos ativos de Fisch, dicas de jogo e instruções de resgate."
+        }
+      }
     },
-{
+    {
       "slug": "pet-simulator-99",
       "icon": "/assets/games/pet-simulator-99/icon.webp",
       "status": "active",
@@ -530,24 +560,24 @@
         }
       }
     },
-{
+    {
       "slug": "animal-hospital",
       "icon": "/assets/games/animal-hospital/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Animal Hospital (Anomaly)",
-          "description": "Animal Hospital (Anomaly) does not have a code system yet. Find gameplay tips and information."
+          "description": "Animal Hospital (Anomaly) gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Animal Hospital (Anomaly)",
-          "description": "Animal Hospital (Anomaly) ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Animal Hospital (Anomaly) com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
-{
+    {
       "slug": "catalog-avatar-creator",
       "icon": "/assets/games/catalog-avatar-creator/icon.webp",
       "status": "active",
@@ -564,20 +594,20 @@
         }
       }
     },
-{
+    {
       "slug": "clean-all-the-leaves",
       "icon": "/assets/games/clean-all-the-leaves/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-15T17:27:55.132Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Clean all the leaves!",
-          "description": "Clean all the leaves! does not have a code system yet. Find gameplay tips and information."
+          "description": "Clean all the leaves! gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Clean all the leaves!",
-          "description": "Clean all the leaves! ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Clean all the leaves! com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -586,15 +616,15 @@
       "icon": "/assets/games/forsaken/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-16T09:24:57.189Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Forsaken",
-          "description": "Forsaken does not have a code system yet. Find gameplay tips and information."
+          "description": "Forsaken gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Forsaken",
-          "description": "Forsaken ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Forsaken com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -603,15 +633,15 @@
       "icon": "/assets/games/tower-of-hell/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-16T09:24:57.189Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Tower of Hell",
-          "description": "Tower of Hell does not have a code system yet. Find gameplay tips and information."
+          "description": "Tower of Hell gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Tower of Hell",
-          "description": "Tower of Hell ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Tower of Hell com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -620,15 +650,15 @@
       "icon": "/assets/games/violence-district/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-16T09:24:57.189Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Violence District",
-          "description": "Violence District does not have a code system yet. Find gameplay tips and information."
+          "description": "Violence District gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Violence District",
-          "description": "Violence District ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Violence District com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -671,15 +701,15 @@
       "icon": "/assets/games/the-strongest-battlegrounds/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "The Strongest Battlegrounds",
-          "description": "The Strongest Battlegrounds does not have a code system yet. Find gameplay tips and information."
+          "description": "The Strongest Battlegrounds gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "The Strongest Battlegrounds",
-          "description": "The Strongest Battlegrounds ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de The Strongest Battlegrounds com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
@@ -688,15 +718,15 @@
       "icon": "/assets/games/illegal-soccer/icon.webp",
       "status": "active",
       "codeStatus": "no-code-system",
-      "lastUpdated": "2026-09-16T09:30:09.826Z",
+      "lastUpdated": "2026-11-23T15:00:00.000Z",
       "translations": {
         "en": {
           "title": "Illegal Soccer",
-          "description": "Illegal Soccer does not have a code system yet. Find gameplay tips and information."
+          "description": "Illegal Soccer gameplay guide with progression, mechanics, resources, and practical tips."
         },
         "pt-BR": {
           "title": "Illegal Soccer",
-          "description": "Illegal Soccer ainda não possui sistema de códigos. Confira dicas e informações do jogo."
+          "description": "Guia de Illegal Soccer com progressão, mecânicas, recursos e dicas práticas."
         }
       }
     },
